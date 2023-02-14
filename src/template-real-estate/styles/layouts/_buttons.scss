@@ -1,0 +1,338 @@
+/*-----------------------------------------------------------------------------------------*/
+/* 3. Buttons Styles */
+/*-----------------------------------------------------------------------------------------*/
+.w-btn {
+  --btn-height: 44px;
+
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+  height: var(--btn-height);
+  line-height: var(--btn-height);
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0 1.5rem;
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.25s;
+
+  &:focus {
+    @include focusStyle();
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+  }
+
+  &::before {
+    z-index: -2;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  &::after {
+    z-index: -1;
+    width: 0;
+  }
+
+  // style 1
+  &--s1 {
+    &::after {
+      bottom: 0;
+      height: 100%;
+      transition: all 0.25s;
+
+      @include appDir() {
+        #{dirs(right, left)}: 0;
+      }
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+
+        @include appDir() {
+          #{dirs(left, right)}: 0;
+        }
+      }
+    }
+  }
+
+  // style 2
+  &--s2 {
+    overflow: hidden;
+
+    &::after {
+      top: 50%;
+      height: 200%;
+      transition: all 0.5s;
+
+      @include appDir() {
+        #{dirs(right, left)}: -50%;
+        transform: dirs(
+          translateY(-50%) skew(45deg),
+          translateY(-50%) skew(-45deg)
+        );
+      }
+    }
+
+    &:hover {
+      &::after {
+        width: 200%;
+
+        @include appDir() {
+          #{dirs(left, right)}: -50%;
+        }
+      }
+    }
+  }
+
+  // solid styles
+  &--primary {
+    color: hsl(var(--light-color));
+
+    &::before {
+      background-color: hsl(var(--primary-color));
+    }
+
+    &::after {
+      background-color: hsl(var(--bg-color-reverse));
+    }
+
+    &:hover {
+      color: hsl(var(--primary-color));
+    }
+  }
+
+  &--secondary {
+    color: hsl(var(--light-color));
+
+    &::before {
+      background-color: hsl(var(--main-color-two));
+    }
+
+    &::after {
+      background-color: hsl(var(--bg-color-reverse));
+    }
+
+    &:hover {
+      color: hsl(var(--primary-color));
+    }
+  }
+
+  &--light {
+    color: hsl(var(--bg-color-reverse));
+
+    &::before {
+      background-color: hsl(var(--bg-color-one));
+    }
+
+    &::after {
+      background-color: hsl(var(--bg-color-reverse));
+    }
+
+    &:hover {
+      color: hsl(var(--bg-color-one));
+    }
+  }
+
+  &--dark {
+    color: hsl(var(--bg-color-one));
+
+    &::before {
+      background-color: hsl(var(--bg-color-reverse));
+    }
+
+    &::after {
+      background-color: hsl(var(--bg-color-one));
+    }
+
+    &:hover {
+      color: hsl(var(--bg-color-reverse));
+    }
+  }
+
+  &--success {
+    color: hsl(var(--light-color));
+
+    &::before {
+      background-color: hsl(var(--success-color));
+    }
+
+    &::after {
+      background-color: hsl(var(--bg-color-reverse));
+    }
+
+    &:hover {
+      color: hsl(var(--success-color));
+    }
+  }
+
+  &--info {
+    color: hsl(var(--light-color));
+
+    &::before {
+      background-color: hsl(var(--info-color));
+    }
+
+    &::after {
+      background-color: hsl(var(--bg-color-reverse));
+    }
+
+    &:hover {
+      color: hsl(var(--info-color));
+    }
+  }
+
+  &--warning {
+    color: hsl(var(--dark-color));
+
+    &::before {
+      background-color: hsl(var(--warning-color));
+    }
+
+    &::after {
+      background-color: hsl(var(--bg-color-reverse));
+    }
+
+    &:hover {
+      color: hsl(var(--warning-color));
+    }
+  }
+
+  &--danger {
+    color: hsl(var(--light-color));
+
+    &::before {
+      background-color: hsl(var(--danger-color));
+    }
+
+    &::after {
+      background-color: hsl(var(--bg-color-reverse));
+    }
+
+    &:hover {
+      color: hsl(var(--danger-color));
+    }
+  }
+
+  // outline styles
+  &--outline-primary {
+    background-color: transparent;
+    color: hsl(var(--primary-color));
+    border: 1px solid hsl(var(--primary-color));
+
+    &::after {
+      background-color: hsl(var(--primary-color));
+    }
+
+    &:hover {
+      color: hsl(var(--light-color));
+    }
+  }
+
+  &--outline-secondary {
+    background-color: transparent;
+    color: hsl(var(--secondary-color));
+    border: 1px solid hsl(var(--secondary-color));
+
+    &::after {
+      background-color: hsl(var(--secondary-color));
+    }
+
+    &:hover {
+      color: hsl(var(--light-color));
+    }
+  }
+
+  &--outline-light {
+    background-color: transparent;
+    color: hsl(var(--bg-color-one));
+    border: 1px solid hsl(var(--bg-color-one));
+
+    &::after {
+      background-color: hsl(var(--bg-color-one));
+    }
+
+    &:hover {
+      color: hsl(var(--bg-color-reverse));
+    }
+  }
+
+  &--outline-dark {
+    background-color: transparent;
+    color: hsl(var(--bg-color-reverse));
+    border: 1px solid hsl(var(--bg-color-reverse));
+
+    &::after {
+      background-color: hsl(var(--bg-color-reverse));
+    }
+
+    &:hover {
+      color: hsl(var(--bg-color-one));
+    }
+  }
+
+  &--outline-success {
+    background-color: transparent;
+    color: hsl(var(--success-color));
+    border: 1px solid hsl(var(--success-color));
+
+    &::after {
+      background-color: hsl(var(--success-color));
+    }
+
+    &:hover {
+      color: hsl(var(--light-color));
+    }
+  }
+
+  &--outline-info {
+    background-color: transparent;
+    color: hsl(var(--info-color));
+    border: 1px solid hsl(var(--info-color));
+
+    &::after {
+      background-color: hsl(var(--info-color));
+    }
+
+    &:hover {
+      color: hsl(var(--light-color));
+    }
+  }
+
+  &--outline-warning {
+    background-color: transparent;
+    color: hsl(var(--warning-color));
+    border: 1px solid hsl(var(--warning-color));
+
+    &::after {
+      background-color: hsl(var(--warning-color));
+    }
+
+    &:hover {
+      color: hsl(var(--dark-color));
+    }
+  }
+
+  &--outline-danger {
+    background-color: transparent;
+    color: hsl(var(--danger-color));
+    border: 1px solid hsl(var(--danger-color));
+
+    &::after {
+      background-color: hsl(var(--danger-color));
+    }
+
+    &:hover {
+      color: hsl(var(--light-color));
+    }
+  }
+}

@@ -1,0 +1,118 @@
+<article id="@@id" class="propertyItem">
+
+  <!-- image box -->
+  <div class="propertyItem__imgBox spotlight-group">
+    @@if (hasMultipleImgs === true) {<div class="splide" data-splide='{
+      "direction": "${{ index.i18n.dir }}$",
+      "type": "slide",
+      "perPage": 1,
+      "autoplay": false,
+      "pagination": false,
+      "slideFocus": false
+    }'>
+      <div class="splide__track">
+        <!-- More info about 'glightbox' plugin => https://github.com/biati-digital/glightbox/ -->
+        <ul class="splide__list">
+          @@for (var i = 0; i < slides.length; i++) { @@include('./ui/property-item/multipleImgs.template.html', `+(JSON.stringify(slides[i]))+`) }
+        </ul>
+      </div>
+    </div>
+    } @@if (hasMultipleImgs === false) {
+      <!-- More info about 'glightbox' plugin => https://github.com/biati-digital/glightbox/ -->
+      @@for (var i = 0; i < 1; i++) { @@include('./ui/property-item/singleImg.template.html', `+(JSON.stringify(slides[i]))+`) }
+    }
+    <!-- property labels -->
+    <ul class="propertyItem__imgBox__labels">
+      <li v-if="@@sale === true" class="propertyItem__imgBox__labels__item propertyItem__imgBox__labels__item--sale">${{ index.components.propertyItem.labels.sale }}$</li>
+      <li v-if="@@rent === true" class="propertyItem__imgBox__labels__item propertyItem__imgBox__labels__item--rent">${{ index.components.propertyItem.labels.rent }}$</li>
+      <li v-if="@@new === true" class="propertyItem__imgBox__labels__item propertyItem__imgBox__labels__item--new">${{ index.components.propertyItem.labels.new }}$</li>
+      <li v-if="@@featured === true"
+        class="propertyItem__imgBox__labels__item propertyItem__imgBox__labels__item--featured">${{ index.components.propertyItem.labels.featured }}$</li>
+    </ul>
+
+    <!-- property views -->
+    <div class="propertyItem__imgBox__views">
+      <i class="propertyItem__imgBox__views__fa fa fa-eye" aria-hidden="true"></i>
+      <span class="propertyItem__imgBox__views__num">${{ @@views }}$</span>
+    </div>
+
+    <!-- property location -->
+    <div class="propertyItem__imgBox__location">
+      <i class="propertyItem__imgBox__location__fa fa fa-map-marker" aria-hidden="true"></i>
+      <a class="propertyItem__imgBox__location__link" href="${{ index.prefix }}$properties.html">${{ @@location.city }}$</a>
+      <a class="propertyItem__imgBox__location__link" href="${{ index.prefix }}$properties.html">${{ @@location.town }}$</a>
+    </div>
+
+    <!-- property media -->
+    <ul class="propertyItem__imgBox__media">
+      <li v-if="@@hasVideo" class="propertyItem__imgBox__media__item">
+        <img class="propertyItem__imgBox__media__icon" src="assets/images/icons/video-camera.png"
+          alt="${{ index.components.propertyItem.media.video }}$"
+          title="${{ index.components.propertyItem.media.video }}$">
+      </li>
+      <li v-if="@@hasMultipleImgs" class="propertyItem__imgBox__media__item">
+        <img class="propertyItem__imgBox__media__icon" src="assets/images/icons/pictures.png"
+          alt="${{ index.components.propertyItem.media.multipleImgs }}$"
+          title="${{ index.components.propertyItem.media.multipleImgs }}$">
+      </li>
+    </ul>
+  </div>
+
+  <!-- content box -->
+  <div class="propertyItem__contentBox">
+    <div class="propertyItem__body">
+      <strong class="propertyItem__body__price">${{ index.i18n.currencies.us }}$${{ @@price }}$${{ index.i18n.currencies.eg }}$</strong>
+      <h3 class="propertyItem__body__title">
+        <a class="propertyItem__body__title__link" href="${{ index.prefix }}$property-details.html">${{ @@title }}$</a>
+      </h3>
+      <p class="propertyItem__body__desc">${{ @@desc }}$...</p>
+      <ul class="propertyItem__body__features">
+        <li class="propertyItem__body__features__item"
+          title="${{ @@rooms }}$ ${{ index.components.propertyItem.features.rooms }}$">
+          <i class="propertyItem__body__features__icon fa fa-th-large" aria-hidden="true"></i>
+          <span>${{ @@rooms }}$</span>
+        </li>
+        <li class="propertyItem__body__features__item"
+          title="${{ @@beds }}$ ${{ index.components.propertyItem.features.beds }}$">
+          <i class="propertyItem__body__features__icon fa fa-bed" aria-hidden="true"></i>
+          <span>${{ @@beds }}$</span>
+        </li>
+        <li class="propertyItem__body__features__item"
+          title="${{ @@baths }}$ ${{ index.components.propertyItem.features.baths }}$">
+          <i class="propertyItem__body__features__icon fa fa-bath" aria-hidden="true"></i>
+          <span>${{ @@baths }}$</span>
+        </li>
+        <li class="propertyItem__body__features__item"
+          title="${{ @@space }}$ ${{ index.components.propertyItem.features.space }}$">
+          <i class="propertyItem__body__features__icon fa fa-arrows-alt" aria-hidden="true"></i>
+          <span>${{ @@space }}$ ${{ index.components.propertyItem.features.space }}$</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="propertyItem__footer">
+      <a class="propertyItem__footer__agent" href="${{ index.prefix }}$agent-details.html">
+        <div class="propertyItem__footer__agent__avatar">
+          <img class="propertyItem__footer__agent__avatar__img" loading="lazy" src="@@agentImg" data-placeholder="@@agentPlaceholder" alt="${{ @@agentName }}$">
+        </div>
+        <strong class="propertyItem__footer__agent__name">${{ @@agentName }}$</strong>
+      </a>
+
+      <ul class="propertyItem__footer__actions">
+        <li class="propertyItem__footer__actions__item">
+          <button class="propertyItem__footer__actions__btn propertyItem__footer__actions__btn--compare"
+            title="${{ index.components.propertyItem.actions.addToCompare }}$"
+            @click="addPropToCompare">
+            <i class="propertyItem__footer__actions__fa fa fa-exchange" aria-hidden="true"></i>
+          </button>
+        </li>
+        <li class="propertyItem__footer__actions__item">
+          <button class="propertyItem__footer__actions__btn propertyItem__footer__actions__btn--favorite"
+            title="${{ index.components.propertyItem.actions.addToFavorites }}$">
+            <i class="propertyItem__footer__actions__fa fa fa-heart" aria-hidden="true"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</article>

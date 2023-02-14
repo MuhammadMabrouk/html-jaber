@@ -1,0 +1,42 @@
+/* Dropcaps */
+/*----------*/
+.dropcaps {
+  text-align: center;
+  font-weight: 500;
+
+  @include appDir() {
+    float: dirs(left, right);
+  }
+
+  &:not(.square):not(.circle) {
+    width: 1em;
+    height: 1em;
+    color: hsl(var(--main-color-one));
+    font-size: 3rem;
+    margin-top: 6px;
+
+    @include appDir() {
+      line-height: dirs(right, null);
+      margin-#{dirs(right, left)}: 10px;
+    }
+  }
+
+  &.square,
+  &.circle {
+    width: 2em;
+    height: 2em;
+    background-color: hsl(var(--main-color-one));
+    color: hsl(var(--t-color-one));
+    font-size: 1.5em;
+    margin-top: 3px;
+
+    @include appDir() {
+      line-height: dirs(2em, 1.5em);
+      margin-#{dirs(right, left)}: 14px;
+    }
+  }
+
+  &.circle {
+    border-radius: 50%;
+  }
+}

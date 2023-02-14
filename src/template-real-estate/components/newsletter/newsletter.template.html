@@ -1,0 +1,32 @@
+<!-- add class 'newsletter_banner--fluid' for full width -->
+<div class="newsletter_banner">
+  <div class="container">
+    <div class="newsletter_banner__content row">
+      <div class="col-lg-6">
+        <div class="newsletter_banner__text">
+          <h2 class="newsletter_banner__text__title m-0">${{ index.homepage.newsletter.text.title }}$</h2>
+        </div>
+      </div>
+
+      <!-- subscribe form -->
+      <div class="col-lg-6">
+        <form class="newsletter_banner__subscribeForm form-styled" action="#">
+          <div class="group d-flex">
+            <div class="control flex-grow-1">
+              <input class="newsletter_banner__subscribeForm__emailInput rounded-0" type="email" name="email"
+                placeholder="${{ index.homepage.newsletter.form.placeholder }}$" required>
+            </div>
+            <button class="newsletter_banner__subscribeForm__btn w-btn w-btn--s1 w-btn--primary"
+              type="submit"
+              title="${{ index.homepage.newsletter.form.submitBtn }}$">
+              <span class="newsletter_banner__subscribeForm__btn__text">${{ index.homepage.newsletter.form.submitBtn }}$</span>
+              <span class="newsletter_banner__subscribeForm__btn__icon">
+                <i class="fa fa-paper-plane" aria-hidden="true"></i>
+              </span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

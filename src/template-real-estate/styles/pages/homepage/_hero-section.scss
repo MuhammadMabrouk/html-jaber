@@ -1,0 +1,173 @@
+/* 1. Hero Section Styles */
+/*------------------------*/
+.hero {
+  position: relative;
+  min-height: 100vh;
+
+  &__propsMap {
+    min-height: inherit;
+
+    &__filters {
+      z-index: 3900;
+      left: 50%;
+      background-color: hsl(var(--bg-color-two));
+      padding: 14px;
+      cursor: default;
+      filter: var(--drop-shadow);
+
+      @media #{$min_992} {
+        position: absolute;
+        bottom: 30px;
+        transform: translateX(-50%);
+        width: 70%;
+        max-width: 900px;
+      }
+
+      @media #{$max_991} {
+        position: fixed;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 85%;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &__tabs {
+        @include flexbox(flex, "", center, "", "", "");
+        position: absolute;
+        bottom: 100%;
+        margin-bottom: 2px;
+
+        @include appDir() {
+          #{dirs(left, right)}: 0;
+        }
+
+        input {
+          position: absolute;
+          height: 0;
+          width: 0;
+          opacity: 0;
+
+          &:focus + label {
+            @include focusStyle();
+          }
+        }
+
+        label {
+          background-color: hsl(var(--bg-color-two));
+          color: hsl(var(--t-color-one));
+          padding: 6px 22px;
+          margin: 0;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+
+          @media #{$min_992} {
+            &:not(:last-of-type) {
+              @include appDir() {
+                margin-#{dirs(right, left)}: 2px;
+              }
+            }
+          }
+        }
+
+        input:checked + label,
+        label:hover {
+          background-color: hsl(var(--main-color-one));
+          color: hsl(var(--light-color));
+        }
+
+        @media #{$max_991} {
+          width: 100%;
+          flex-wrap: wrap;
+
+          label,
+          .hero__propsMap__filters__count {
+            width: calc(50% - 2px);
+            text-align: center;
+            margin: 1px;
+          }
+        }
+      }
+
+      &__count {
+        background-color: hsl(var(--bg-color-two));
+        color: hsl(var(--t-color-one));
+        padding: 6px 22px;
+
+        @media #{$min_992} {
+          @include appDir() {
+            margin-#{dirs(left, right)}: 2px;
+          }
+        }
+
+        @media #{$max_991} {
+          order: -1;
+        }
+      }
+
+      &__price {
+        --primary-color: hsl(var(--main-color-one));
+        --text-color: hsl(var(--light-color));
+        --line-color: hsl(var(--inputs-bg-color));
+
+        padding: 0 14px;
+
+        @media #{$max_991} {
+          margin-top: 20px;
+        }
+      }
+    }
+
+    &__openFilters {
+      @media #{$min_992} {
+        display: none !important;
+      }
+
+      @media #{$max_991} {
+        position: absolute;
+        z-index: 3700;
+        bottom: 10px;
+        box-shadow: hsl(var(--card-shadow));
+
+        @include appDir() {
+          #{dirs(left, right)}: 55px;
+        }
+      }
+    }
+
+    &:focus {
+      @include focusStyle();
+    }
+  }
+
+  &__overlay {
+    @media #{$min_992} {
+      display: none;
+    }
+
+    @media #{$max_991} {
+      position: fixed;
+      z-index: 3800;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: hsla(0, 0%, 0%, 0.8);
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:focus {
+        @include focusStyle(null, true);
+      }
+    }
+  }
+
+  @media #{$max_991} {
+    &:not(.filters-open) {
+      .hero__propsMap__filters,
+      .hero__overlay {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+}

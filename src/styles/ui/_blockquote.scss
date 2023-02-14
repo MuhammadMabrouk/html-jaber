@@ -1,0 +1,30 @@
+/* Blockquote */
+/*------------*/
+blockquote {
+  background-color: hsl(var(--bg-color-two));
+  padding: 12px 20px;
+  border: solid hsl(var(--main-color-one));
+
+  @include appDir() {
+    border-width: dirs(0 0 0 2px, 0 2px 0 0);
+  }
+
+  @media #{$min_768} {
+    margin: 30px 0;
+  }
+
+  @media #{$max_767} {
+    font-style: italic;
+    margin: 20px 0;
+  }
+
+  p {
+    line-height: 1.6 !important;
+    font-size: 25px;
+    color: hsl(var(--t-color-one));
+
+    @media #{$max_767} {
+      font-size: 1.125rem;
+    }
+  }
+}

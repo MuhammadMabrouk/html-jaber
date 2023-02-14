@@ -1,0 +1,97 @@
+<section id="blog-section" class="section section--blog">
+
+  <!-- section title -->
+  <div class="section__title">
+    <div class="container">
+      <h2 class="section__title__heading">
+        <span class="section__title__leading">${{ index.homepage.blog.title.leading }}$</span>
+        <span class="section__title__tagline">${{ index.homepage.blog.title.tagline }}$</span>
+      </h2>
+    </div>
+  </div>
+
+  <!-- section content -->
+  <div class="section__content section__content--blog">
+    <div class="container">
+      <div class="blogSC">
+        <ul class="blogSC__blogList">
+          <li class="blogSC__blogList__item">
+            <!-- blog item component -->
+            @@include('./ui/blog-item/blog-item.template.html', {
+              "style": "grid",
+              "imgUrl": "assets/images/properties/properties-1200-1.jpg",
+              "imgPlaceholder": "305x485",
+              "date": "index.homepage.blog.content.blogList.i1.date",
+              "cats": {
+                "c1": "index.homepage.blog.content.blogList.i1.cats.c1",
+                "c2": "index.homepage.blog.content.blogList.i1.cats.c2"
+              },
+              "title": "index.homepage.blog.content.blogList.i1.title",
+              "excerpt": "index.homepage.blog.content.blogList.i1.excerpt"
+            })
+          </li>
+          <li class="blogSC__blogList__item">
+            <!-- blog item component -->
+            @@include('./ui/blog-item/blog-item.template.html', {
+              "style": "grid",
+              "imgUrl": "assets/images/properties/properties-1200-2.jpg",
+              "imgPlaceholder": "636x230",
+              "date": "index.homepage.blog.content.blogList.i2.date",
+              "cats": {
+                "c1": "index.homepage.blog.content.blogList.i2.cats.c1",
+                "c2": "index.homepage.blog.content.blogList.i2.cats.c2"
+              },
+              "title": "index.homepage.blog.content.blogList.i2.title",
+              "excerpt": "index.homepage.blog.content.blogList.i2.excerpt"
+            })
+          </li>
+          <li class="blogSC__blogList__item">
+            <!-- blog item component -->
+            @@include('./ui/blog-item/blog-item.template.html', {
+              "style": "grid",
+              "imgUrl": "assets/images/properties/properties-1200-4.jpg",
+              "imgPlaceholder": "305x230",
+              "date": "index.homepage.blog.content.blogList.i3.date",
+              "cats": {
+                "c1": "index.homepage.blog.content.blogList.i3.cats.c1",
+                "c2": "index.homepage.blog.content.blogList.i3.cats.c2"
+              },
+              "title": "index.homepage.blog.content.blogList.i3.title",
+              "excerpt": "index.homepage.blog.content.blogList.i3.excerpt"
+            })
+          </li>
+          <li class="blogSC__blogList__item">
+            <!-- blog item component -->
+            @@include('./ui/blog-item/blog-item.template.html', {
+              "style": "grid",
+              "imgUrl": "assets/images/properties/properties-1200-3.jpg",
+              "imgPlaceholder": "305x230",
+              "date": "index.homepage.blog.content.blogList.i4.date",
+              "cats": {
+                "c1": "index.homepage.blog.content.blogList.i4.cats.c1",
+                "c2": "index.homepage.blog.content.blogList.i4.cats.c2"
+              },
+              "title": "index.homepage.blog.content.blogList.i4.title",
+              "excerpt": "index.homepage.blog.content.blogList.i4.excerpt"
+            })
+          </li>
+          <li class="blogSC__blogList__item">
+            <!-- blog item component -->
+            @@include('./ui/blog-item/blog-item.template.html', {
+              "style": "grid",
+              "imgUrl": "assets/images/properties/properties-1200-5.jpg",
+              "imgPlaceholder": "636x230",
+              "date": "index.homepage.blog.content.blogList.i5.date",
+              "cats": {
+                "c1": "index.homepage.blog.content.blogList.i5.cats.c1",
+                "c2": "index.homepage.blog.content.blogList.i5.cats.c2"
+              },
+              "title": "index.homepage.blog.content.blogList.i5.title",
+              "excerpt": "index.homepage.blog.content.blogList.i5.excerpt"
+            })
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

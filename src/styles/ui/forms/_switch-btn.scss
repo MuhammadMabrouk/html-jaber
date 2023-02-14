@@ -1,0 +1,80 @@
+/* Switch Button Styles */
+/*----------------------*/
+.switchContainer {
+  @include flexbox(flex, "", center, "", "", "");
+  gap: 1.125rem;
+}
+
+.switch {
+  --switch-width: 3.75rem;
+  --switch-height: 2.125rem;
+  --slider-size: 1.625rem;
+
+  position: relative;
+  display: inline-block;
+  height: var(--switch-height);
+  width: var(--switch-width);
+
+  &__slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: hsl(var(--inputs-bg-color));
+    box-shadow: var(--inset-shadow);
+    cursor: pointer;
+    transition: 0.4s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: var(--slider-size);
+      width: var(--slider-size);
+      bottom: 0.25rem;
+      background-color: hsl(var(--t-color-two));
+      transition: 0.4s;
+
+      @include appDir() {
+        #{dirs(left, right)}: 0.25rem;
+      }
+    }
+
+    &--round {
+      border-radius: var(--switch-height);
+
+      &::before {
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__input {
+    height: 0;
+    width: 0;
+    opacity: 0;
+
+    &:checked + .switch__slider {
+      background-color: hsl(var(--main-color-one));
+
+      &::before {
+        background-color: hsl(var(--light-color));
+
+        @include appDir() {
+          transform: dirs(
+            translateX(var(--slider-size)),
+            translateX(calc(var(--slider-size) * -1))
+          );
+        }
+      }
+    }
+
+    &:focus + .switch__slider {
+      box-shadow: 0 0 1px hsl(var(--main-color-one));
+    }
+  }
+
+  &:focus-within {
+    @include focusStyle();
+  }
+}

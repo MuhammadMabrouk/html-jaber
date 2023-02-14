@@ -1,0 +1,19 @@
+/* User Add Property Page Styles */
+/*-------------------------------*/
+.userAddPropertySC {
+  &__addProperty {
+    background-color: hsl(var(--bg-color-two));
+    padding: 20px;
+    filter: var(--drop-shadow);
+
+    &__form {
+      .group {
+        &.oneColumn {
+          @media #{$max_991} {
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+}

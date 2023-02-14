@@ -1,0 +1,211 @@
+@@include('./schema/page-start.html')
+
+    <!-- start skip links -->
+    @@include('./components/skip-links/skip-links.template.html')
+    <!-- end skip links -->
+
+    <!-- start of header -->
+    @@include('./components/header/header.template.html')
+    <!-- end of header -->
+
+    <!-- start of inner pages header -->
+    @@include('./components/inner-pages-header/inner-pages-header.template.html', { pageTitle: "index.reviewsPage.title" })
+    <!-- end of inner pages header -->
+
+    <!-- start page content -->
+    <div class="section section--reviewsPage">
+      <div class="section__content section__content--reviewsPage">
+        <div class="container">
+          <div class="reviewsSC">
+            <ul class="reviewsSC__reviewsList row">
+              <li class="col-md-6 col-lg-4 d-flex">
+                <div class="reviewsSC__reviewsList__item">
+                  <div class="reviewsSC__reviewsList__banner">
+                    @@include('../ui/rating-score/rating-score.template.html', { "score": "50" })
+                    <div class="reviewsSC__reviewsList__avatar">
+                      <img class="reviewsSC__reviewsList__avatar__img" loading="lazy" src="assets/images/ratings/ratings-1.jpg" data-placeholder="96" alt="${{ index.homepage.ratings.content.ratingsList.i1.name }}$">
+                    </div>
+                  </div>
+                  <div class="reviewsSC__reviewsList__text">
+                    <strong class="reviewsSC__reviewsList__text__name">${{ index.homepage.ratings.content.ratingsList.i1.name }}$</strong>
+                    <p class="reviewsSC__reviewsList__text__review">${{ index.reviewsPage.list.i1 }}$</p>
+                  </div>
+                </div>
+              </li>
+              <li class="col-md-6 col-lg-4 d-flex">
+                <div class="reviewsSC__reviewsList__item">
+                  <div class="reviewsSC__reviewsList__banner">
+                    @@include('../ui/rating-score/rating-score.template.html', { "score": "80" })
+                    <div class="reviewsSC__reviewsList__avatar">
+                      <img class="reviewsSC__reviewsList__avatar__img" loading="lazy" src="assets/images/ratings/ratings-2.jpg" data-placeholder="96" alt="${{ index.homepage.ratings.content.ratingsList.i2.name }}$">
+                    </div>
+                  </div>
+                  <div class="reviewsSC__reviewsList__text">
+                    <strong class="reviewsSC__reviewsList__text__name">${{ index.homepage.ratings.content.ratingsList.i2.name }}$</strong>
+                    <p class="reviewsSC__reviewsList__text__review">${{ index.reviewsPage.list.i2 }}$</p>
+                  </div>
+                </div>
+              </li>
+              <li class="col-md-6 col-lg-4 d-flex">
+                <div class="reviewsSC__reviewsList__item">
+                  <div class="reviewsSC__reviewsList__banner">
+                    @@include('../ui/rating-score/rating-score.template.html', { "score": "60" })
+                    <div class="reviewsSC__reviewsList__avatar">
+                      <img class="reviewsSC__reviewsList__avatar__img" loading="lazy" src="assets/images/ratings/ratings-3.jpg" data-placeholder="96" alt="${{ index.homepage.ratings.content.ratingsList.i3.name }}$">
+                    </div>
+                  </div>
+                  <div class="reviewsSC__reviewsList__text">
+                    <strong class="reviewsSC__reviewsList__text__name">${{ index.homepage.ratings.content.ratingsList.i3.name }}$</strong>
+                    <p class="reviewsSC__reviewsList__text__review">${{ index.reviewsPage.list.i3 }}$</p>
+                  </div>
+                </div>
+              </li>
+              <li class="col-md-6 col-lg-4 d-flex">
+                <div class="reviewsSC__reviewsList__item">
+                  <div class="reviewsSC__reviewsList__banner">
+                    @@include('../ui/rating-score/rating-score.template.html', { "score": "90" })
+                    <div class="reviewsSC__reviewsList__avatar">
+                      <img class="reviewsSC__reviewsList__avatar__img" loading="lazy" src="assets/images/ratings/ratings-4.jpg" data-placeholder="96" alt="${{ index.homepage.ratings.content.ratingsList.i4.name }}$">
+                    </div>
+                  </div>
+                  <div class="reviewsSC__reviewsList__text">
+                    <strong class="reviewsSC__reviewsList__text__name">${{ index.homepage.ratings.content.ratingsList.i4.name }}$</strong>
+                    <p class="reviewsSC__reviewsList__text__review">${{ index.reviewsPage.list.i4 }}$</p>
+                  </div>
+                </div>
+              </li>
+              <li class="col-md-6 col-lg-4 d-flex">
+                <div class="reviewsSC__reviewsList__item">
+                  <div class="reviewsSC__reviewsList__banner">
+                    @@include('../ui/rating-score/rating-score.template.html', { "score": "40" })
+                    <div class="reviewsSC__reviewsList__avatar">
+                      <img class="reviewsSC__reviewsList__avatar__img" loading="lazy" src="assets/images/ratings/ratings-5.jpg" data-placeholder="96" alt="${{ index.homepage.ratings.content.ratingsList.i5.name }}$">
+                    </div>
+                  </div>
+                  <div class="reviewsSC__reviewsList__text">
+                    <strong class="reviewsSC__reviewsList__text__name">${{ index.homepage.ratings.content.ratingsList.i5.name }}$</strong>
+                    <p class="reviewsSC__reviewsList__text__review">${{ index.reviewsPage.list.i5 }}$</p>
+                  </div>
+                </div>
+              </li>
+              <li class="col-md-6 col-lg-4 d-flex">
+                <div class="reviewsSC__reviewsList__item">
+                  <div class="reviewsSC__reviewsList__banner">
+                    @@include('../ui/rating-score/rating-score.template.html', { "score": "50" })
+                    <div class="reviewsSC__reviewsList__avatar">
+                      <img class="reviewsSC__reviewsList__avatar__img" loading="lazy" src="assets/images/ratings/ratings-1.jpg" data-placeholder="96" alt="${{ index.homepage.ratings.content.ratingsList.i1.name }}$">
+                    </div>
+                  </div>
+                  <div class="reviewsSC__reviewsList__text">
+                    <strong class="reviewsSC__reviewsList__text__name">${{ index.homepage.ratings.content.ratingsList.i1.name }}$</strong>
+                    <p class="reviewsSC__reviewsList__text__review">${{ index.reviewsPage.list.i1 }}$</p>
+                  </div>
+                </div>
+              </li>
+              <li class="col-md-6 col-lg-4 d-flex">
+                <div class="reviewsSC__reviewsList__item">
+                  <div class="reviewsSC__reviewsList__banner">
+                    @@include('../ui/rating-score/rating-score.template.html', { "score": "80" })
+                    <div class="reviewsSC__reviewsList__avatar">
+                      <img class="reviewsSC__reviewsList__avatar__img" loading="lazy" src="assets/images/ratings/ratings-2.jpg" data-placeholder="96" alt="${{ index.homepage.ratings.content.ratingsList.i2.name }}$">
+                    </div>
+                  </div>
+                  <div class="reviewsSC__reviewsList__text">
+                    <strong class="reviewsSC__reviewsList__text__name">${{ index.homepage.ratings.content.ratingsList.i2.name }}$</strong>
+                    <p class="reviewsSC__reviewsList__text__review">${{ index.reviewsPage.list.i2 }}$</p>
+                  </div>
+                </div>
+              </li>
+              <li class="col-md-6 col-lg-4 d-flex">
+                <div class="reviewsSC__reviewsList__item">
+                  <div class="reviewsSC__reviewsList__banner">
+                    @@include('../ui/rating-score/rating-score.template.html', { "score": "60" })
+                    <div class="reviewsSC__reviewsList__avatar">
+                      <img class="reviewsSC__reviewsList__avatar__img" loading="lazy" src="assets/images/ratings/ratings-3.jpg" data-placeholder="96" alt="${{ index.homepage.ratings.content.ratingsList.i3.name }}$">
+                    </div>
+                  </div>
+                  <div class="reviewsSC__reviewsList__text">
+                    <strong class="reviewsSC__reviewsList__text__name">${{ index.homepage.ratings.content.ratingsList.i3.name }}$</strong>
+                    <p class="reviewsSC__reviewsList__text__review">${{ index.reviewsPage.list.i3 }}$</p>
+                  </div>
+                </div>
+              </li>
+              <li class="col-md-6 col-lg-4 d-flex">
+                <div class="reviewsSC__reviewsList__item">
+                  <div class="reviewsSC__reviewsList__banner">
+                    @@include('../ui/rating-score/rating-score.template.html', { "score": "90" })
+                    <div class="reviewsSC__reviewsList__avatar">
+                      <img class="reviewsSC__reviewsList__avatar__img" loading="lazy" src="assets/images/ratings/ratings-4.jpg" data-placeholder="96" alt="${{ index.homepage.ratings.content.ratingsList.i4.name }}$">
+                    </div>
+                  </div>
+                  <div class="reviewsSC__reviewsList__text">
+                    <strong class="reviewsSC__reviewsList__text__name">${{ index.homepage.ratings.content.ratingsList.i4.name }}$</strong>
+                    <p class="reviewsSC__reviewsList__text__review">${{ index.reviewsPage.list.i4 }}$</p>
+                  </div>
+                </div>
+              </li>
+              <li class="col-md-6 col-lg-4 d-flex">
+                <div class="reviewsSC__reviewsList__item">
+                  <div class="reviewsSC__reviewsList__banner">
+                    @@include('../ui/rating-score/rating-score.template.html', { "score": "40" })
+                    <div class="reviewsSC__reviewsList__avatar">
+                      <img class="reviewsSC__reviewsList__avatar__img" loading="lazy" src="assets/images/ratings/ratings-5.jpg" data-placeholder="96" alt="${{ index.homepage.ratings.content.ratingsList.i5.name }}$">
+                    </div>
+                  </div>
+                  <div class="reviewsSC__reviewsList__text">
+                    <strong class="reviewsSC__reviewsList__text__name">${{ index.homepage.ratings.content.ratingsList.i5.name }}$</strong>
+                    <p class="reviewsSC__reviewsList__text__review">${{ index.reviewsPage.list.i5 }}$</p>
+                  </div>
+                </div>
+              </li>
+              <li class="col-md-6 col-lg-4 d-flex">
+                <div class="reviewsSC__reviewsList__item">
+                  <div class="reviewsSC__reviewsList__banner">
+                    @@include('../ui/rating-score/rating-score.template.html', { "score": "50" })
+                    <div class="reviewsSC__reviewsList__avatar">
+                      <img class="reviewsSC__reviewsList__avatar__img" loading="lazy" src="assets/images/ratings/ratings-1.jpg" data-placeholder="96" alt="${{ index.homepage.ratings.content.ratingsList.i1.name }}$">
+                    </div>
+                  </div>
+                  <div class="reviewsSC__reviewsList__text">
+                    <strong class="reviewsSC__reviewsList__text__name">${{ index.homepage.ratings.content.ratingsList.i1.name }}$</strong>
+                    <p class="reviewsSC__reviewsList__text__review">${{ index.reviewsPage.list.i1 }}$</p>
+                  </div>
+                </div>
+              </li>
+              <li class="col-md-6 col-lg-4 d-flex">
+                <div class="reviewsSC__reviewsList__item">
+                  <div class="reviewsSC__reviewsList__banner">
+                    @@include('../ui/rating-score/rating-score.template.html', { "score": "80" })
+                    <div class="reviewsSC__reviewsList__avatar">
+                      <img class="reviewsSC__reviewsList__avatar__img" loading="lazy" src="assets/images/ratings/ratings-2.jpg" data-placeholder="96" alt="${{ index.homepage.ratings.content.ratingsList.i2.name }}$">
+                    </div>
+                  </div>
+                  <div class="reviewsSC__reviewsList__text">
+                    <strong class="reviewsSC__reviewsList__text__name">${{ index.homepage.ratings.content.ratingsList.i2.name }}$</strong>
+                    <p class="reviewsSC__reviewsList__text__review">${{ index.reviewsPage.list.i2 }}$</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <!-- pagination -->
+            @@include('../ui/pagination/pagination.template.html')
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- newsletter banner -->
+    @@include('./components/newsletter/newsletter.template.html')
+
+    <!-- start of footer -->
+    @@include('./components/footer/footer.template.html')
+    <!-- end of footer -->
+
+    <!-- back to top button -->
+    <webrouk-back-top-scroll-indicator
+      title="${{ index.scrollToTop }}$"
+      show-at="50">
+    </webrouk-back-top-scroll-indicator>
+
+@@include('./schema/page-end.html')

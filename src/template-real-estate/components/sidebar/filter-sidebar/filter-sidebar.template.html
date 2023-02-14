@@ -1,0 +1,155 @@
+<aside class="filterSidebar stickySidebar">
+  <div class="stickySidebar__inner">
+    <form class="filterSidebar__form form-styled" action="#">
+      <div class="filterSidebar__widget filterSidebar__widget--sorting">
+        <h4 class="filterSidebar__widget__title" @click="toggleAccordion">${{ index.propertiesPage.filters.sorting.title }}$</h4>
+        <div class="filterSidebar__widget__content">
+          <div class="radioContainer">
+            <div class="radio">
+              <input id="newest" type="radio" name="sorting" value="newest" checked>
+              <label for="newest"></label>
+            </div>
+            <label for="newest">${{ index.propertiesPage.filters.sorting.newest }}$</label>
+          </div>
+          <div class="radioContainer">
+            <div class="radio">
+              <input id="mostViewed" type="radio" name="sorting" value="mostViewed">
+              <label for="mostViewed"></label>
+            </div>
+            <label for="mostViewed">${{ index.propertiesPage.filters.sorting.mostViewed }}$</label>
+          </div>
+          <div class="radioContainer">
+            <div class="radio">
+              <input id="priceLowToHigh" type="radio" name="sorting" value="priceLowToHigh">
+              <label for="priceLowToHigh"></label>
+            </div>
+            <label for="priceLowToHigh">${{ index.propertiesPage.filters.sorting.priceLowToHigh }}$</label>
+          </div>
+          <div class="radioContainer">
+            <div class="radio">
+              <input id="priceHighToLow" type="radio" name="sorting" value="priceHighToLow">
+              <label for="priceHighToLow"></label>
+            </div>
+            <label for="priceHighToLow">${{ index.propertiesPage.filters.sorting.priceHighToLow }}$</label>
+          </div>
+        </div>
+      </div>
+      <div class="filterSidebar__widget filterSidebar__widget--category">
+        <h4 class="filterSidebar__widget__title" @click="toggleAccordion">${{ index.propertiesPage.filters.category.title }}$</h4>
+        <div class="filterSidebar__widget__content">
+          <div class="radioContainer">
+            <div class="radio">
+              <input id="allCats" type="radio" name="category" value="all" checked>
+              <label for="allCats"></label>
+            </div>
+            <label for="allCats">${{ index.propertiesPage.filters.category.all }}$</label>
+          </div>
+          <div class="radioContainer">
+            <div class="radio">
+              <input id="sales" type="radio" name="category" value="sales">
+              <label for="sales"></label>
+            </div>
+            <label for="sales">${{ index.propertiesPage.filters.category.sales }}$</label>
+          </div>
+          <div class="radioContainer">
+            <div class="radio">
+              <input id="rentals" type="radio" name="category" value="rentals">
+              <label for="rentals"></label>
+            </div>
+            <label for="rentals">${{ index.propertiesPage.filters.category.rentals }}$</label>
+          </div>
+        </div>
+      </div>
+      <div class="filterSidebar__widget filterSidebar__widget--type">
+        <h4 class="filterSidebar__widget__title" @click="toggleAccordion">${{ index.propertiesPage.filters.type.title }}$</h4>
+        <div class="filterSidebar__widget__content">
+          <div class="checkboxContainer checkboxContainer--toggleAll">
+            <div class="checkbox">
+              <input id="allTypes" type="checkbox" name="type" value="all" checked>
+              <label for="allTypes"></label>
+            </div>
+            <label for="allTypes">${{ index.propertiesPage.filters.type.all }}$</label>
+          </div>
+          <div class="checkboxesGroup">
+            <div class="checkboxContainer">
+              <div class="checkbox">
+                <input id="house" type="checkbox" name="type" value="house">
+                <label for="house"></label>
+              </div>
+              <label for="house">${{ index.propertiesPage.filters.type.house }}$</label>
+            </div>
+            <div class="checkboxContainer">
+              <div class="checkbox">
+                <input id="apartment" type="checkbox" name="type" value="apartment">
+                <label for="apartment"></label>
+              </div>
+              <label for="apartment">${{ index.propertiesPage.filters.type.apartment }}$</label>
+            </div>
+            <div class="checkboxContainer">
+              <div class="checkbox">
+                <input id="villa" type="checkbox" name="type" value="villa">
+                <label for="villa"></label>
+              </div>
+              <label for="villa">${{ index.propertiesPage.filters.type.villa }}$</label>
+            </div>
+            <div class="checkboxContainer">
+              <div class="checkbox">
+                <input id="commercial" type="checkbox" name="type" value="commercial">
+                <label for="commercial"></label>
+              </div>
+              <label for="commercial">${{ index.propertiesPage.filters.type.commercial }}$</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="filterSidebar__widget filterSidebar__widget--price">
+        <h4 class="filterSidebar__widget__title" @click="toggleAccordion">${{ index.propertiesPage.filters.price.title }}$</h4>
+        <div class="filterSidebar__widget__content">
+          <webrouk-custom-range
+            start="0"
+            end="3000000"
+            from="450000"
+            to="2500000"
+            prefix-char="${{ index.i18n.currencies.us }}$"
+            suffix-char="${{ index.i18n.currencies.eg }}$">
+            <input type="hidden" name="price">
+          </webrouk-custom-range>
+        </div>
+      </div>
+      <div class="filterSidebar__widget filterSidebar__widget--radioGrid">
+        <h4 class="filterSidebar__widget__title" @click="toggleAccordion">${{ index.propertiesPage.filters.beds.title }}$</h4>
+        <div class="filterSidebar__widget__content">
+          <input id="anyBeds" type="radio" name="beds" value="any" checked>
+          <label for="anyBeds">${{ index.propertiesPage.filters.beds.any }}$</label>
+          <input id="1Bed" type="radio" name="beds" value="one">
+          <label for="1Bed">${{ index.numbers.1 }}$</label>
+          <input id="2Beds" type="radio" name="beds" value="two">
+          <label for="2Beds">${{ index.numbers.2 }}$</label>
+          <input id="3Beds" type="radio" name="beds" value="three">
+          <label for="3Beds">${{ index.numbers.3 }}$</label>
+          <input id="4Beds" type="radio" name="beds" value="four">
+          <label for="4Beds">${{ index.numbers.4 }}$</label>
+          <input id="5Beds" type="radio" name="beds" value="fivePlus">
+          <label for="5Beds">${{ index.numbers.5 }}$+</label>
+        </div>
+      </div>
+      <div class="filterSidebar__widget filterSidebar__widget--radioGrid">
+        <h4 class="filterSidebar__widget__title" @click="toggleAccordion">${{ index.propertiesPage.filters.baths.title }}$</h4>
+        <div class="filterSidebar__widget__content">
+          <input id="anyBaths" type="radio" name="baths" value="any" checked>
+          <label for="anyBaths">${{ index.propertiesPage.filters.baths.any }}$</label>
+          <input id="1Bath" type="radio" name="baths" value="one">
+          <label for="1Bath">${{ index.numbers.1 }}$</label>
+          <input id="2Baths" type="radio" name="baths" value="two">
+          <label for="2Baths">${{ index.numbers.2 }}$</label>
+          <input id="3Baths" type="radio" name="baths" value="three">
+          <label for="3Baths">${{ index.numbers.3 }}$</label>
+          <input id="4Baths" type="radio" name="baths" value="four">
+          <label for="4Baths">${{ index.numbers.4 }}$</label>
+          <input id="5Baths" type="radio" name="baths" value="fivePlus">
+          <label for="5Baths">${{ index.numbers.5 }}$+</label>
+        </div>
+      </div>
+    </form>
+  </div>
+</aside>

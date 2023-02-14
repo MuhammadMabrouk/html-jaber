@@ -1,0 +1,129 @@
+@@include('./schema/page-start.html')
+
+    <!-- start skip links -->
+    @@include('./components/skip-links/skip-links.template.html')
+    <!-- end skip links -->
+
+    <!-- start of header -->
+    @@include('./components/header/header.template.html')
+    <!-- end of header -->
+
+    <!-- start of inner pages header -->
+    @@include('./components/inner-pages-header/inner-pages-header.template.html', { pageTitle: "index.signInPage.title" })
+    <!-- end of inner pages header -->
+
+    <!-- start page content -->
+    <section id="signIn-section" class="section section--signInPage">
+      <div class="section__content section__content--signInPage">
+        <div class="container">
+          <div class="signInSC">
+            <div class="signInSC__textBox">
+              <h3 class="signInSC__leading">${{ index.signInPage.signToAccount }}$</h3>
+              <p class="signInSC__tagline">${{ index.signInPage.signBySocial }}$</p>
+              <ul class="signInSC__social d-flex justify-content-center"
+                data-or="${{ index.signInPage.or }}$">
+                <li class="signInSC__social__item mx-2">
+                  <a href="#" class="signInSC__social__link btn btn-circle text-light btn-lg"
+                    title="${{ index.global.social.google }}$"
+                    style="background-color: #ea4335;">
+                    <i class="fa fa-google" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li class="signInSC__social__item mx-2">
+                  <a href="#" class="signInSC__social__link btn btn-circle text-light btn-lg"
+                    title="${{ index.global.social.facebook }}$"
+                    style="background-color: #4267b2;">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li class="signInSC__social__item mx-2">
+                  <a href="#" class="signInSC__social__link btn btn-circle text-light btn-lg"
+                    title="${{ index.global.social.twitter }}$"
+                    style="background-color: #2aa9e0;">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- action value is only test url, you can remove it -->
+            <form class="signInSC__form form-styled pt-4"
+              action="https://reqres.in/api/users"
+              data-success-msg="${{ index.toastNotifications.successfullyLoggedIn }}$"
+              data-err-msg="${{ index.toastNotifications.oopsSomethingWrong }}$"
+              ref="signInForm">
+              <div class="group">
+                <label for="email">${{ index.signInPage.form.emailLabel }}$</label>
+                <div class="control has-prefix-icon">
+                  <input id="email" class="ltr-dir"
+                    type="email"
+                    inputmode="email"
+                    name="email"
+                    placeholder="${{ index.signInPage.form.emailPlaceholder }}$"
+                    required>
+                  <i class="fa fa-envelope prefix-icon" aria-hidden="true"></i>
+
+                  <!-- validation errors messages -->
+                  <div class="errors-msgs">
+                    <input class="required" type="hidden" value="${{ index.signInPage.form.emailLabel }}$ ${{ index.toastNotifications.formsValidation.isRequired }}$">
+                    <input class="invalid" type="hidden" value="${{ index.toastNotifications.formsValidation.enterValidEmail }}$">
+                  </div>
+                </div>
+              </div>
+              <div class="group">
+                <label for="password">${{ index.signInPage.form.passwordLabel }}$</label>
+                <div class="control has-prefix-icon">
+                  <input id="password"
+                    type="password"
+                    name="password"
+                    placeholder="${{ index.signInPage.form.passwordPlaceholder }}$"
+                    minlength="6"
+                    required>
+                  <i class="fa fa-lock prefix-icon" aria-hidden="true"></i>
+                  <i class="fa fa-eye action-icon" aria-hidden="true" @click="togglePasswordVisibility"></i>
+    
+                  <!-- validation errors messages -->
+                  <div class="errors-msgs">
+                    <input class="required" type="hidden" value="${{ index.signInPage.form.passwordLabel }}$ ${{ index.toastNotifications.formsValidation.isRequired }}$">
+                  </div>
+                </div>
+              </div>
+              <div class="group">
+                <div class="control">
+                  <div class="d-flex justify-content-between flex-wrap w-100">
+                    <div class="checkboxContainer">
+                      <div class="checkbox">
+                        <input id="rememberMe" type="checkbox" name="rememberMe">
+                        <label for="rememberMe"></label>
+                      </div>
+                      <label for="rememberMe">${{ index.signInPage.form.rememberMe }}$</label>
+                    </div>
+                    <a class="btn-link" href="#" target="_blank" rel="noopener noreferrer">${{ index.signInPage.form.forgotPassword }}$</a>
+                  </div>
+                </div>
+              </div>
+              <div class="group">
+                <div class="control mt-3">
+                  <button class="submit-btn w-btn w-btn--s1 w-btn--primary w-100" type="button" @click="signInFormValidation">${{ index.signInPage.form.submitBtn }}$</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- newsletter banner -->
+    @@include('./components/newsletter/newsletter.template.html')
+
+    <!-- start of footer -->
+    @@include('./components/footer/footer.template.html')
+    <!-- end of footer -->
+
+    <!-- back to top button -->
+    <webrouk-back-top-scroll-indicator
+      title="${{ index.scrollToTop }}$"
+      show-at="50">
+    </webrouk-back-top-scroll-indicator>
+
+@@include('./schema/page-end.html')

@@ -1,0 +1,12 @@
+//------------------------------------------------------------------------------------------/
+// Mixins
+//------------------------------------------------------------------------------------------/
+
+// Import 'Global Mixins' File
+@import "../../../styles/helpers/mixins";
+
+// Base Top Border Mixin /
+//-----------------------/
+@mixin baseTopBorder() {
+  border-top: 2px solid hsl(var(--main-color-one));
+}

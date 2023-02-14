@@ -1,0 +1,127 @@
+<section class="section section--featured">
+
+  <!-- section content -->
+  <div class="section__content section__content--featured">
+    <div class="container">
+      <div class="featuredSC row">
+
+        <!-- title & description on mobile -->
+        <div class="featuredSC__header">
+          <h2 class="featuredSC__header__leading">${{ index.homepage.featured.title.leading }}$</h2>
+          <p class="featuredSC__header__tagline">${{ index.homepage.featured.title.tagline }}$</p>
+        </div>
+
+        <!-- image box -->
+        <div class="col-lg-6">
+          <div class="featuredSC__imgBox spotlight-group">
+            <div id="featuredPropertySlider" class="splide" data-splide='{
+              "direction": "${{ index.i18n.dir }}$",
+              "type": "slide",
+              "perPage": 1,
+              "autoplay": false,
+              "arrows": false,
+              "pagination": false,
+              "slideFocus": false
+            }'>
+              <div class="splide__track">
+                <!-- More info about 'glightbox' plugin => https://github.com/biati-digital/glightbox/ -->
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <!-- href points to the fully sized image -->
+                    <a class="featuredSC__imgBox__link glightbox" href="assets/images/properties/properties-1200-5.jpg" data-placeholder="1200x800" data-gallery="featuredProperty">
+                      <!-- thumbnails -->
+                      <img class="featuredSC__imgBox__img" loading="lazy" src="assets/images/properties/properties-420-5.jpg" data-placeholder="636x400" alt="${{ index.homepage.hot.content.propertiesList.i2.title }}$">
+                    </a>
+                  </li>
+                  <li class="splide__slide">
+                    <!-- href points to the fully sized image -->
+                    <a class="featuredSC__imgBox__link glightbox" href="assets/images/properties/properties-1200-4.jpg" data-placeholder="1200x800" data-gallery="featuredProperty">
+                      <!-- thumbnails -->
+                      <img class="featuredSC__imgBox__img" loading="lazy" src="assets/images/properties/properties-420-4.jpg" data-placeholder="636x400" alt="${{ index.homepage.hot.content.propertiesList.i2.title }}$">
+                    </a>
+                  </li>
+                  <li class="splide__slide">
+                    <!-- href points to the video url -->
+                    <a class="featuredSC__imgBox__link glightbox" href="https://youtu.be/Wlfe8Pg6Yxc" data-gallery="featuredProperty">
+                      <!-- thumbnails -->
+                      <img class="featuredSC__imgBox__img" loading="lazy" src="assets/images/properties/properties-420-6.jpg" data-placeholder="636x400" alt="${{ index.homepage.hot.content.propertiesList.i2.title }}$">
+                      <i class="featuredSC__imgBox__link__fa fa fa-play" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- featured property price -->
+            <div class="featuredSC__imgBox__price">
+              <strong class="featuredSC__imgBox__price__val">${{ index.i18n.currencies.us }}$${{ index.homepage.hot.content.propertiesList.i1.price }}$${{ index.i18n.currencies.eg }}$</strong>
+            </div>
+
+            <!-- featured property labels -->
+            <ul class="featuredSC__imgBox__labels">
+              <li class="featuredSC__imgBox__labels__item featuredSC__imgBox__labels__item--new">${{ index.components.propertyItem.labels.new }}$</li>
+              <li class="featuredSC__imgBox__labels__item featuredSC__imgBox__labels__item--rent">${{ index.components.propertyItem.labels.rent }}$</li>
+            </ul>
+
+            <!-- featured property controls -->
+            <div class="featuredSC__imgBox__controls">
+              <button
+                class="w-btn w-btn--s1 w-btn--secondary"
+                title="${{ index.global.prevPage }}$"
+                @click="featuredPropertySliderGoPrev">
+                <i class="fa fa-chevron-left rtl-mirror" aria-hidden="true"></i>
+              </button>
+              <button
+                class="w-btn w-btn--s1 w-btn--secondary"
+                title="${{ index.global.nextPage }}$"
+                @click="featuredPropertySliderGoNext">
+                <i class="fa fa-chevron-right rtl-mirror" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      
+        <!-- content box -->
+        <div class="col-lg-6">
+          <div class="featuredSC__contentBox">
+            <h2 class="featuredSC__contentBox__leading">${{ index.homepage.featured.title.leading }}$</h2>
+            <p class="featuredSC__contentBox__tagline">${{ index.homepage.featured.title.tagline }}$</p>
+
+            <!-- property features list -->
+            <ol class="featuredSC__contentBox__list list-styled">
+              <li>${{ index.homepage.featured.content.list.i1 }}$</li>
+              <li>${{ index.homepage.featured.content.list.i2 }}$</li>
+              <li>${{ index.homepage.featured.content.list.i3 }}$</li>
+            </ol>
+
+            <!-- property features table -->
+            <table class="featuredSC__contentBox__features">
+              <tr>
+                <td class="featuredSC__contentBox__features__item">
+                  <i class="featuredSC__contentBox__features__icon fa fa-arrows-alt" aria-hidden="true"></i>
+                  ${{ index.components.propertyItem.features.area }}$: <span>${{ index.homepage.hot.content.propertiesList.i1.features.space }}$ ${{ index.components.propertyItem.features.space }}$</span>
+                </td>
+                <td class="featuredSC__contentBox__features__item">
+                  <i class="featuredSC__contentBox__features__icon fa fa-th-large" aria-hidden="true"></i>
+                  ${{ index.components.propertyItem.features.rooms }}$: <span>${{ index.homepage.hot.content.propertiesList.i1.features.rooms }}$</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="featuredSC__contentBox__features__item">
+                  <i class="featuredSC__contentBox__features__icon fa fa-bath" aria-hidden="true"></i>
+                  ${{ index.components.propertyItem.features.baths }}$: <span>${{ index.homepage.hot.content.propertiesList.i1.features.baths }}$</span>
+                </td>
+                <td class="featuredSC__contentBox__features__item">
+                  <i class="featuredSC__contentBox__features__icon fa fa-bed" aria-hidden="true"></i>
+                  ${{ index.components.propertyItem.features.beds }}$: <span>${{ index.homepage.hot.content.propertiesList.i1.features.beds }}$</span>
+                </td>
+              </tr>
+            </table>
+
+            <a href="#" class="w-btn w-btn--s1 w-btn--primary">${{ index.homepage.featured.content.viewDetailsBtn }}$</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,39 @@
+/* 6. Agents Section Styles */
+/*--------------------------*/
+.agentsSC {
+  margin-bottom: -50px;
+
+  .textbox,
+  .splide {
+    margin-bottom: 50px;
+  }
+
+  .splide__track {
+    padding: 5px !important;
+  }
+
+  .splide__pagination {
+    bottom: -2.5em;
+  }
+
+  &__agentsList {
+    line-height: initial;
+  }
+
+  .textbox {
+    &__btns {
+      .w-btn {
+        padding: {
+          left: 1rem;
+          right: 1rem;
+        }
+
+        &:not(:last-of-type) {
+          @include appDir() {
+            margin-#{dirs(right, left)}: 5px;
+          }
+        }
+      }
+    }
+  }
+}

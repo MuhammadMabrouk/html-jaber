@@ -1,0 +1,197 @@
+@@include('./schema/page-start.html')
+
+    <!-- start skip links -->
+    @@include('./components/skip-links/skip-links.template.html')
+    <!-- end skip links -->
+
+    <!-- start of header -->
+    @@include('./components/header/header.template.html')
+    <!-- end of header -->
+
+    <!-- start of inner pages header -->
+    @@include('./components/inner-pages-header/inner-pages-header.template.html', { pageTitle: "index.userAddPropertyPage.title" })
+    <!-- end of inner pages header -->
+
+    <!-- start page content -->
+    <div class="section section--userAddPropertyPage">
+      <div class="section__content section__content--userAddPropertyPage">
+        <div class="container">
+          <div class="userAddPropertySC hasStickySidebar uDSH">
+            <!-- user sidebar -->
+            @@include('./components/sidebar/user-sidebar/user-sidebar.template.html')
+
+            <!-- main content -->
+            <div class="userAddPropertySC__mainCont uDSH__mainCont">
+
+              <!-- user account security form -->
+              <div class="userAddPropertySC__addProperty">
+                <h4 class="blockTitle">${{ index.userAddPropertyPage.form.title }}$</h4>
+
+                <form class="userAddPropertySC__addProperty__form form-styled" action="#">
+                  <div class="row">
+                    <div class="group col-lg-6">
+                      <label>${{ index.userAddPropertyPage.form.category.label }}$</label>
+                      <div class="control">
+                        <webrouk-custom-select search-placeholder="${{ index.global.search }}$" no-results="${{ index.global.noResults }}$">
+                          <select class="customSelect__select" name="category" required>
+                            <option value="">${{ index.userAddPropertyPage.form.category.placeholder }}$</option>
+                            <option value="sales">${{ index.userAddPropertyPage.form.category.sales }}$</option>
+                            <option value="rentals">${{ index.userAddPropertyPage.form.category.rentals }}$</option>
+                          </select>
+                        </webrouk-custom-select>
+                      </div>
+                    </div>
+                    <div class="group col-lg-6">
+                      <label for="confirmPassword">${{ index.userAddPropertyPage.form.type.label }}$</label>
+                      <div class="control">
+                        <webrouk-custom-select search-placeholder="${{ index.global.search }}$" no-results="${{ index.global.noResults }}$">
+                          <select class="customSelect__select" name="type" required>
+                            <option value="">${{ index.userAddPropertyPage.form.type.placeholder }}$</option>
+                            <option value="house">${{ index.userAddPropertyPage.form.type.house }}$</option>
+                            <option value="apartment">${{ index.userAddPropertyPage.form.type.apartment }}$</option>
+                            <option value="villa">${{ index.userAddPropertyPage.form.type.villa }}$</option>
+                            <option value="commercial">${{ index.userAddPropertyPage.form.type.commercial }}$</option>
+                          </select>
+                        </webrouk-custom-select>
+                      </div>
+                    </div>
+                    <div class="group col-lg-6">
+                      <label for="title">${{ index.userAddPropertyPage.form.propertyTitle.label }}$</label>
+                      <div class="control has-prefix-icon">
+                        <input id="title" type="text"
+                          name="title"
+                          placeholder="${{ index.userAddPropertyPage.form.propertyTitle.placeholder }}$"
+                          required>
+                        <i class="fa fa-pencil prefix-icon" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                    <div class="group col-lg-6">
+                      <label>${{ index.userAddPropertyPage.form.price.label }}$ <span class="optional">(${{ index.userAddPropertyPage.form.price.placeholder }}$)</span></label>
+                      <div class="control">
+                        <webrouk-custom-number min="0">
+                          <input type="hidden" name="price">
+                        </webrouk-custom-number>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="group oneColumn">
+                    <label for="description">${{ index.userAddPropertyPage.form.desc.label }}$</label>
+                    <div class="control has-prefix-icon">
+                      <textarea id="description" name="description" placeholder="${{ index.userAddPropertyPage.form.desc.placeholder }}$"></textarea>
+                      <i class="fa fa-comments prefix-icon" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="group">
+                    <label for="location">${{ index.userAddPropertyPage.form.location.label }}$</label>
+                    <div class="control has-prefix-icon">
+                      <input id="location" type="text"
+                        name="location"
+                        placeholder="${{ index.userAddPropertyPage.form.location.placeholder }}$"
+                        required>
+                      <i class="fa fa-map-marker prefix-icon" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="group col-lg-6">
+                      <label>${{ index.userAddPropertyPage.form.rooms }}$</label>
+                      <div class="control">
+                        <webrouk-custom-number min="0">
+                          <input type="hidden" name="rooms">
+                        </webrouk-custom-number>
+                      </div>
+                    </div>
+                    <div class="group col-lg-6">
+                      <label>${{ index.userAddPropertyPage.form.beds }}$</label>
+                      <div class="control">
+                        <webrouk-custom-number min="0">
+                          <input type="hidden" name="beds">
+                        </webrouk-custom-number>
+                      </div>
+                    </div>
+                    <div class="group col-lg-6">
+                      <label>${{ index.userAddPropertyPage.form.baths }}$</label>
+                      <div class="control">
+                        <webrouk-custom-number min="0">
+                          <input type="hidden" name="baths">
+                        </webrouk-custom-number>
+                      </div>
+                    </div>
+                    <div class="group col-lg-6">
+                      <label>${{ index.userAddPropertyPage.form.area.label }}$ <span class="optional">(${{ index.userAddPropertyPage.form.area.placeholder }}$)</span></label>
+                      <div class="control">
+                        <webrouk-custom-number min="0">
+                          <input type="hidden" name="area">
+                        </webrouk-custom-number>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="group oneColumn">
+                    <label for="profileImage">${{ index.userAddPropertyPage.form.media }}$</label>
+                    <div class="control">
+                      <label for="profileImage" class="fileUpload">
+                        <input id="profileImage"
+                          class="fileUpload__input"
+                          type="file"
+                          name="profileImage"
+                          multiple
+                          accept="image/*, video/*"
+                          required>
+                        <span class="fileUpload__text">
+                          <i class="fileUpload__text__icon fa fa-cloud-upload" aria-hidden="true"></i>
+                          <span class="fileUpload__text__placeholder" data-content="${{ index.global.dropFiles }}$"></span>
+                        </span>
+                      </label>
+                      <ul class="fileUpload__previewImgs" hidden></ul>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="group col-lg-6">
+                      <div class="control">
+                        <div class="switchContainer">
+                          <label for="newLabel" class="switch">
+                            <input id="newLabel" class="switch__input" type="checkbox" name="newLabel" checked>
+                            <span class="switch__slider switch__slider--round"></span>
+                          </label>
+                          <label for="newLabel">${{ index.userAddPropertyPage.form.newLabel }}$</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group col-lg-6">
+                      <div class="control">
+                        <div class="switchContainer">
+                          <label for="featuredLabel" class="switch">
+                            <input id="featuredLabel" class="switch__input" type="checkbox" name="featuredLabel">
+                            <span class="switch__slider switch__slider--round"></span>
+                          </label>
+                          <label for="featuredLabel">${{ index.userAddPropertyPage.form.featuredLabel }}$</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="group mt-2">
+                    <div class="control">
+                      <button class="submit-btn w-btn w-btn--s1 w-btn--primary w-100" type="submit">${{ index.userAddPropertyPage.form.submitBtn }}$</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- newsletter banner -->
+    @@include('./components/newsletter/newsletter.template.html')
+
+    <!-- start of footer -->
+    @@include('./components/footer/footer.template.html')
+    <!-- end of footer -->
+
+    <!-- back to top button -->
+    <webrouk-back-top-scroll-indicator
+      title="${{ index.scrollToTop }}$"
+      show-at="50">
+    </webrouk-back-top-scroll-indicator>
+
+@@include('./schema/page-end.html')

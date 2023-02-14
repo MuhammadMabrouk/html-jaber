@@ -1,0 +1,187 @@
+/* 3. Stats Section Styles */
+/*-------------------------*/
+.section--stats {
+  position: relative;
+  background: url("../assets/images/real-estate-bg.jpg") fixed center no-repeat;
+  background-size: cover;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: hsla(var(--bg-color-one), 80%);
+  }
+}
+
+.statsSC {
+  position: relative;
+
+  &__shapes {
+    &__square {
+      position: absolute;
+      height: 30px;
+      width: 30px;
+      border: 2px solid;
+
+      &:nth-of-type(1),
+      &:nth-of-type(2) {
+        top: 0;
+      }
+
+      &:nth-of-type(3),
+      &:nth-of-type(4) {
+        bottom: 0;
+      }
+
+      &:nth-of-type(1),
+      &:nth-of-type(3) {
+        @include appDir() {
+          #{dirs(left, right)}: 0;
+        }
+      }
+
+      &:nth-of-type(2),
+      &:nth-of-type(4) {
+        @include appDir() {
+          #{dirs(right, left)}: 0;
+        }
+      }
+
+      &:nth-of-type(1) {
+        @include appDir() {
+          border-color: dirs(
+            hsl(var(--main-color-one)) transparent transparent hsl(var(--main-color-one)),
+            hsl(var(--main-color-one)) hsl(var(--main-color-one)) transparent transparent
+          );
+        }
+      }
+
+      &:nth-of-type(2) {
+        @include appDir() {
+          border-color: dirs(
+            hsl(var(--main-color-one)) hsl(var(--main-color-one)) transparent transparent,
+            hsl(var(--main-color-one)) transparent transparent hsl(var(--main-color-one))
+          );
+        }
+      }
+
+      &:nth-of-type(3) {
+        @include appDir() {
+          border-color: dirs(
+            transparent transparent hsl(var(--main-color-one)) hsl(var(--main-color-one)),
+            transparent hsl(var(--main-color-one)) hsl(var(--main-color-one)) transparent
+          );
+        }
+      }
+
+      &:nth-of-type(4) {
+        @include appDir() {
+          border-color: dirs(
+            transparent hsl(var(--main-color-one)) hsl(var(--main-color-one)) transparent,
+            transparent transparent hsl(var(--main-color-one)) hsl(var(--main-color-one))
+          );
+        }
+      }
+    }
+  }
+
+  &__statsList {
+    $statBox_size: 200px;
+
+    &__item {
+      position: relative;
+      @include flexbox(flex, center, center, center, "", wrap);
+      text-align: center;
+      height: $statBox_size;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 65%;
+        width: 2px;
+        background-color: hsl(var(--main-color-one));
+
+        @include appDir() {
+          #{dirs(right, left)}: -1px;
+        }
+      }
+
+      @media #{$min_992} {
+        &:nth-of-type(4) {
+          &::after {
+            content: none;
+          }
+        }
+      }
+
+      @media #{$min_768} and #{$max_991} {
+        &:nth-of-type(2) {
+          &::after {
+            content: none;
+          }
+        }
+
+        &:nth-of-type(3) {
+          &::before {
+            content: "";
+            position: absolute;
+            top: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 2px;
+            width: 65%;
+            background-color: hsl(var(--main-color-one));
+          }
+        }
+
+        &:nth-of-type(4) {
+          &::after {
+            top: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 2px;
+            width: 65%;
+          }
+        }
+      }
+
+      @media #{$max_767} {
+        &:nth-of-type(1) {
+          &::after {
+            content: none;
+          }
+        }
+
+        &:not(:first-of-type) {
+          &::after {
+            content: "";
+            position: absolute;
+            top: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 2px;
+            width: 65%;
+            background-color: hsl(var(--main-color-one));
+          }
+        }
+      }
+
+      &__count {
+        display: block;
+        font-size: 2.375rem;
+        line-height: 1;
+      }
+
+      &__title {
+        display: block;
+        width: 100%;
+        font-size: 1.25rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+/* Contact us Page Styles */
+/*------------------------*/
+.contactInfoSC__infoItem__content,
+.contactFormSC {
+  background-color: hsl(var(--bg-color-two));
+  box-shadow: var(--card-shadow);
+}
+
+.contactInfoSC {
+  &__infoItems {
+    margin-bottom: -24px;
+  }
+
+  &__infoItem {
+    margin-bottom: 24px;
+
+    &__content {
+      text-align: center;
+      height: 100%;
+      padding: 20px;
+
+      a {
+        &:hover {
+          text-decoration: underline;
+        }
+
+        &:focus {
+          @include focusStyle();
+        }
+      }
+    }
+
+    &__icon {
+      width: 64px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.contactFormSC {
+  padding: 30px;
+
+  &__form {
+    .group {
+      @include flexbox(flex, "", "", "", column, "");
+
+      &.phone-number {
+        .prefix-icon {
+          @include appDir() {
+            transform: dirs(null, rotateY(180deg) translateY(-50%));
+          }
+        }
+      }
+
+      &.message {
+        @media #{$min_992} {
+          height: 100%;
+
+          @include appDir() {
+            padding-#{dirs(left, right)}: 16px;
+          }
+
+          .control {
+            flex-grow: 1;
+
+            textarea {
+              height: 100%;
+              resize: none;
+            }
+          }
+        }
+
+        @media #{$max_991} {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+.section--contactMap {
+  margin-bottom: -75px;
+
+  .contactMap {
+    height: 500px;
+  }
+
+  + .newsletter_banner {
+    z-index: 3950;
+  }
+}

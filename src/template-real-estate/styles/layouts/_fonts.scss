@@ -1,0 +1,13 @@
+/*-----------------------------------------------------------------------------------------*/
+/* 2. Fonts Family */
+/*-----------------------------------------------------------------------------------------*/
+
+html[dir="ltr"] body {
+  --headings-font-family: "Montserrat", sans-serif;
+  --body-font-family: "Open Sans", sans-serif;
+}
+
+html[dir="rtl"] body {
+  --headings-font-family: "Tajawal", sans-serif;
+  --body-font-family: "Tajawal", sans-serif;
+}

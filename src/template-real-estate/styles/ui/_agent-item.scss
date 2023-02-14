@@ -1,0 +1,100 @@
+/* Agent Item Styles */
+/*-------------------*/
+.agentItem {
+  // image box
+  &__imgBox {
+    @include flexbox(flex, "", start, "", "", "");
+
+    &__link {
+      position: relative;
+      display: block;
+      background-color: hsl(
+        var(--primary-h),
+        var(--primary-s),
+        calc(var(--primary-l) + 35%)
+      );
+      overflow: hidden;
+
+      &:focus {
+        @include focusStyle();
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: -30px;
+        height: 60px;
+        width: 60px;
+        background-color: hsl(var(--bg-color-one));
+        transition: background-color var(--global-transition);
+
+        @include appDir() {
+          #{dirs(right, left)}: -30px;
+          transform: dirs(rotate(45deg), rotate(-45deg));
+        }
+      }
+    }
+
+    &__img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &__socialList {
+      position: relative;
+      width: 25px;
+      padding-top: 40px;
+
+      @include appDir() {
+        margin-#{dirs(left, right)}: 8px;
+      }
+
+      &__item {
+        margin-bottom: 14px;
+      }
+
+      &__link {
+        @include flexbox(flex, "", center, center, "", "");
+        height: 25px;
+        width: 25px;
+
+        &:focus {
+          @include focusStyle();
+        }
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        height: 40px;
+        width: 1px;
+        background-color: hsl(var(--t-color-two));
+        margin: auto;
+      }
+    }
+  }
+
+  // content box
+  &__contentBox {
+    margin-top: 24px;
+
+    &__title {
+      font-size: 1.125rem;
+
+      &__link {
+        &:hover {
+          color: hsl(var(--main-color-one));
+        }
+
+        &:focus {
+          @include focusStyle();
+        }
+      }
+    }
+
+    &__position {
+      font-size: 0.875rem;
+    }
+  }
+}

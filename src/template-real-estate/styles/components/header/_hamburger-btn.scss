@@ -1,0 +1,70 @@
+/* Hamburger Button Styles */
+/*-------------------------*/
+.hamburgerBtn {
+  position: relative;
+  display: block;
+  height: 17px;
+  width: 20px;
+
+  &__item {
+    display: block;
+    position: absolute;
+    height: 3px;
+    background-color: hsl(var(--bg-color-reverse));
+    border-radius: 5px;
+    transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+
+    @include appDir() {
+      #{dirs(right, left)}: 0;
+    }
+
+    &:nth-of-type(1) {
+      top: 0;
+      width: 66%;
+    }
+
+    &:nth-of-type(2) {
+      top: 7px;
+      width: 100%;
+    }
+
+    &:nth-of-type(3) {
+      top: 14px;
+      width: 40%;
+    }
+  }
+
+  &--open {
+    .hamburgerBtn__item {
+      &:nth-of-type(1),
+      &:nth-of-type(3) {
+        width: 19px;
+      }
+
+      &:nth-of-type(1) {
+        @include appDir() {
+          transform-origin: dirs(bottom right, bottom left);
+          transform: dirs(rotate(-44deg), rotate(44deg));
+        }
+      }
+
+      &:nth-of-type(2) {
+        width: 0;
+      }
+
+      &:nth-of-type(3) {
+        @include appDir() {
+          transform: dirs(rotate(44deg), rotate(-44deg));
+        }
+
+        @include appDir() {
+          transform-origin: dirs(top right, top left);
+        }
+      }
+    }
+  }
+
+  &:focus {
+    @include focusStyle();
+  }
+}

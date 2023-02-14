@@ -1,0 +1,38 @@
+/* Positive Negative Marks */
+/*-------------------------*/
+.positiveMark,
+.negativeMark {
+  position: relative;
+  display: inline-block;
+  height: 1.25rem;
+  width: 1.25rem;
+  color: hsl(var(--light-color));
+  font-size: 0.75rem;
+
+  &--circle {
+    border-radius: 50%;
+  }
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.positiveMark {
+  background-color: hsl(var(--main-color-one));
+
+  &::after {
+    content: "✔";
+  }
+}
+
+.negativeMark {
+  background-color: hsl(var(--danger-color));
+
+  &::after {
+    content: "✘";
+  }
+}

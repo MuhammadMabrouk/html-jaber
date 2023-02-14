@@ -1,0 +1,170 @@
+/* Properties Page Styles */
+/*------------------------*/
+.section--propertiesPage {
+  .propertiesSC {
+    @include flexbox(flex, "", start, between, "", wrap);
+
+    .filterSidebar {
+      width: 300px;
+
+      @media #{$max_991} {
+        position: fixed;
+        z-index: 3900;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 85%;
+        max-height: 85%;
+        overflow-y: auto;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+
+    &__mainContent {
+      @media #{$min_992} {
+        width: calc(100% - 336px);
+      }
+
+      @media #{$max_991} {
+        width: 100%;
+      }
+    }
+
+    &__controlsBar {
+      position: relative;
+      z-index: 10;
+      @include flexbox(flex, "", "", between, "", wrap);
+      min-height: 2.75rem;
+      background-color: hsl(var(--bg-color-two));
+      margin-bottom: 24px;
+      filter: var(--drop-shadow);
+
+      &__item {
+        @include flexbox(flex, "", center, center, "", "");
+        min-height: 2.75rem;
+
+        @media #{$min_768} {
+          &:not(:last-child) {
+            @include appDir() {
+              border-#{dirs(right, left)}: 1px solid hsl(var(--border-color));
+            }
+          }
+        }
+
+        @media #{$max_767} {
+          width: 100%;
+
+          &:not(:only-child):not(:last-child) {
+            border-bottom: 1px solid hsl(var(--border-color));
+          }
+        }
+
+        &--results {
+          padding: 0 1rem;
+
+          @include appDir() {
+            margin-#{dirs(left, right)}: auto;
+          }
+        }
+
+        &--layout {
+          @media #{$max_767} {
+            display: none;
+          }
+        }
+
+        .firstPart {
+          @include appDir() {
+            margin-#{dirs(right, left)}: 0.5rem;
+          }
+        }
+      }
+
+      &__btn {
+        height: 100%;
+        width: 100%;
+        padding: 0 1rem;
+
+        &:hover {
+          color: hsl(var(--main-color-one));
+        }
+
+        &:focus {
+          @include focusStyle();
+        }
+      }
+    }
+
+    &__list {
+      @include flexbox(flex, "", "", "", "", wrap);
+      gap: 1.5rem;
+
+      &.layout-grid {
+        .propertiesSC__list__item {
+          @media #{$min_768} {
+            width: calc(50% - 0.75rem);
+          }
+
+          @media #{$max_767} {
+            width: 100%;
+          }
+        }
+      }
+
+      &.layout-list {
+        .propertiesSC__list__item {
+          width: 100%;
+        }
+      }
+    }
+
+    &__openFilters {
+      @media #{$min_992} {
+        display: none !important;
+      }
+
+      @media #{$max_991} {
+        position: fixed;
+        z-index: 3700;
+        bottom: 15px;
+        box-shadow: hsl(var(--card-shadow));
+
+        @include appDir() {
+          #{dirs(left, right)}: 15px;
+        }
+      }
+    }
+
+    &__overlay {
+      @media #{$min_992} {
+        display: none;
+      }
+
+      @media #{$max_991} {
+        position: fixed;
+        z-index: 3800;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: hsla(0, 0%, 0%, 0.8);
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:focus {
+          @include focusStyle(null, true);
+        }
+      }
+    }
+
+    @media #{$max_991} {
+      &:not(.filters-open) {
+        .filterSidebar,
+        .propertiesSC__overlay {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+    }
+  }
+}

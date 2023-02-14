@@ -1,0 +1,189 @@
+@@include('./schema/page-start.html')
+
+    <!-- start skip links -->
+    @@include('./components/skip-links/skip-links.template.html')
+    <!-- end skip links -->
+
+    <!-- start of header -->
+    @@include('./components/header/header.template.html')
+    <!-- end of header -->
+
+    <!-- start of inner pages header -->
+    @@include('./components/inner-pages-header/inner-pages-header.template.html', { pageTitle: "index.userProfilePage.title" })
+    <!-- end of inner pages header -->
+
+    <!-- start page content -->
+    <div class="section section--userProfilePage">
+      <div class="section__content section__content--userProfilePage">
+        <div class="container">
+          <div class="userProfileSC hasStickySidebar uDSH">
+            <!-- user sidebar -->
+            @@include('./components/sidebar/user-sidebar/user-sidebar.template.html')
+
+            <!-- main content -->
+            <div class="userProfileSC__mainCont uDSH__mainCont">
+
+              <!-- user account settings form -->
+              <div class="userProfileSC__settings">
+                <h4 class="blockTitle">${{ index.userProfilePage.settingsForm.title }}$</h4>
+
+                <form class="userProfileSC__settings__form form-styled" action="#">
+                  <div class="row">
+                    <div class="group col-lg-6">
+                      <label for="firstName">${{ index.signUpPage.form.firstNameLabel }}$</label>
+                      <div class="control has-prefix-icon">
+                        <input id="firstName" type="text"
+                          name="firstName"
+                          placeholder="${{ index.signUpPage.form.firstNamePlaceholder }}$"
+                          minlength="3"
+                          required>
+                        <i class="fa fa-pencil prefix-icon" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                    <div class="group col-lg-6">
+                      <label for="lastName">${{ index.signUpPage.form.lastNameLabel }}$</label>
+                      <div class="control has-prefix-icon">
+                        <input id="lastName" type="text"
+                          name="lastName"
+                          placeholder="${{ index.signUpPage.form.lastNamePlaceholder }}$"
+                          minlength="3"
+                          required>
+                        <i class="fa fa-pencil prefix-icon" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                    <div class="group col-lg-6">
+                      <label for="email">${{ index.signUpPage.form.emailLabel }}$</label>
+                      <div class="control has-prefix-icon">
+                        <input id="email" class="ltr-dir"
+                          type="email"
+                          inputmode="email"
+                          name="email"
+                          placeholder="${{ index.signUpPage.form.emailPlaceholder }}$"
+                          required>
+                        <i class="fa fa-envelope prefix-icon" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                    <div class="group phone-number col-lg-6">
+                      <label for="phone">${{ index.signUpPage.form.phoneLabel }}$ <span class="optional">${{ index.global.optional }}$</span></label>
+                      <div class="control has-prefix-icon">
+                        <input id="phoneNumber"
+                          type="tel"
+                          inputmode="tel"
+                          name="phone"
+                          placeholder="${{ index.signUpPage.form.phonePlaceholder }}$">
+                        <i class="fa fa-phone prefix-icon" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="group mt-2">
+                    <div class="control">
+                      <button class="submit-btn w-btn w-btn--s1 w-btn--primary w-100" type="submit">${{ index.global.saveChanges }}$</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <!-- user account security form -->
+              <div class="userProfileSC__security">
+                <h4 class="blockTitle">${{ index.userProfilePage.securityForm.title }}$</h4>
+
+                <form class="userProfileSC__security__form form-styled" action="#">
+                  <div class="group">
+                    <label for="oldPassword">${{ index.userProfilePage.securityForm.oldPasswordLabel }}$</label>
+                    <div class="control has-prefix-icon">
+                      <input id="oldPassword"
+                        type="password"
+                        name="oldPassword"
+                        placeholder="${{ index.signUpPage.form.passwordPlaceholder }}$"
+                        minlength="6"
+                        required>
+                      <i class="fa fa-lock prefix-icon" aria-hidden="true"></i>
+                      <i class="fa fa-eye action-icon" aria-hidden="true" @click="togglePasswordVisibility"></i>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="group col-lg-6">
+                      <label for="newPassword">${{ index.userProfilePage.securityForm.newPasswordLabel }}$</label>
+                      <div class="control has-prefix-icon">
+                        <input id="newPassword"
+                          type="password"
+                          name="newPassword"
+                          placeholder="${{ index.signUpPage.form.passwordPlaceholder }}$"
+                          minlength="6"
+                          required>
+                        <i class="fa fa-lock prefix-icon" aria-hidden="true"></i>
+                        <i class="fa fa-eye action-icon" aria-hidden="true" @click="togglePasswordVisibility"></i>
+                      </div>
+                    </div>
+                    <div class="group col-lg-6">
+                      <label for="confirmPassword">${{ index.signUpPage.form.confirmPasswordLabel }}$</label>
+                      <div class="control has-prefix-icon">
+                        <input id="confirmPassword"
+                          type="password"
+                          name="confirmPassword"
+                          placeholder="${{ index.signUpPage.form.passwordPlaceholder }}$"
+                          minlength="6"
+                          required>
+                        <i class="fa fa-lock prefix-icon" aria-hidden="true"></i>
+                        <i class="fa fa-eye action-icon" aria-hidden="true" @click="togglePasswordVisibility"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="group mt-2">
+                    <div class="control">
+                      <button class="submit-btn w-btn w-btn--s1 w-btn--primary w-100" type="submit">${{ index.global.saveChanges }}$</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <!-- user account image form -->
+              <div class="userProfileSC__image">
+                <h4 class="blockTitle">${{ index.userProfilePage.imageForm.title }}$</h4>
+
+                <form class="userProfileSC__image__form form-styled" action="#">
+                  <div class="group">
+                    <div class="control">
+                      <label for="profileImage" class="fileUpload">
+                        <input id="profileImage"
+                          class="fileUpload__input"
+                          type="file"
+                          name="profileImage"
+                          accept="image/*"
+                          required
+                          @change="displayUploadedImg($event, 'userCardImg', 'assets/images/user.png')">
+                        <span class="fileUpload__text">
+                          <i class="fileUpload__text__icon fa fa-cloud-upload" aria-hidden="true"></i>
+                          <span class="fileUpload__text__placeholder" data-content="${{ index.global.dropFiles }}$"></span>
+                        </span>
+                      </label>
+                      <ul class="fileUpload__previewImgs" hidden></ul>
+                    </div>
+                  </div>
+                  <div class="group mt-2">
+                    <div class="control">
+                      <button class="submit-btn w-btn w-btn--s1 w-btn--primary w-100" type="submit">${{ index.global.saveChanges }}$</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- newsletter banner -->
+    @@include('./components/newsletter/newsletter.template.html')
+
+    <!-- start of footer -->
+    @@include('./components/footer/footer.template.html')
+    <!-- end of footer -->
+
+    <!-- back to top button -->
+    <webrouk-back-top-scroll-indicator
+      title="${{ index.scrollToTop }}$"
+      show-at="50">
+    </webrouk-back-top-scroll-indicator>
+
+@@include('./schema/page-end.html')

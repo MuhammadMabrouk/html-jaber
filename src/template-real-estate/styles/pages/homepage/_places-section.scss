@@ -1,0 +1,99 @@
+/* 4. Places Section Styles */
+/*--------------------------*/
+.placesSC {
+  &__placesList {
+    $parent: &;
+
+    margin-bottom: -24px;
+
+    &__item {
+      margin-bottom: 24px;
+    }
+
+    &__link {
+      position: relative;
+      display: block;
+      height: 350px;
+      box-shadow: var(--card-shadow);
+      overflow: hidden;
+
+      &:after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        inset: 0;
+        height: 100%;
+        width: 100%;
+        box-shadow: 0px -150px 150px -80px #000 inset;
+      }
+
+      &:hover {
+        #{$parent}__img {
+          transform: scale(1.1, 1.1);
+          opacity: 0.8;
+        }
+
+        #{$parent}__heading,
+        #{$parent}__count {
+          @include appDir() {
+            padding-#{dirs(left, right)}: 10px;
+          }
+        }
+      }
+
+      &:focus {
+        @include focusStyle();
+      }
+    }
+
+    &__img {
+      display: block;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: all 0.7s ease;
+    }
+
+    &__contentText {
+      position: absolute;
+      z-index: 2;
+      bottom: 25px;
+
+      @include appDir() {
+        #{dirs(left, right)}: 45px;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 50px;
+        width: 3px;
+        background-color: hsl(var(--main-color-one));
+
+        @include appDir() {
+          #{dirs(left, right)}: -20px;
+        }
+      }
+    }
+
+    &__heading,
+    &__count {
+      line-height: 25px !important;
+    }
+
+    &__heading {
+      color: #fff !important;
+      font-size: 1.25rem;
+      transition: all 0.4s ease;
+    }
+
+    &__count {
+      color: #ccc;
+      font-size: 0.875rem;
+      margin: 0;
+      transition: all 0.4s ease 0.1s;
+    }
+  }
+}

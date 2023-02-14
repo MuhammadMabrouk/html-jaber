@@ -1,0 +1,127 @@
+/* Toast Notifications Styles */
+/*----------------------------*/
+
+// animations
+@keyframes timer {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+$notify_width: 250px;
+$notify_side_size: 80px;
+
+.notificationsContainer {
+  position: fixed;
+  z-index: 3000;
+  bottom: 25px;
+
+  @include appDir() {
+    #{dirs(right, left)}: $notify_side_size;
+  }
+
+  @media #{$max_576} {
+    width: calc(100% - 30px);
+    max-width: $notify_width;
+  }
+
+  .notification {
+    position: relative;
+    line-height: 1.5;
+    color: #fff;
+
+    @include appDir() {
+      padding: dirs(10px 28px 10px 14px, 10px 14px 10px 28px);
+    }
+
+    @media #{$min_577} {
+      width: $notify_width;
+    }
+
+    @media #{$max_767} {
+      width: 100%;
+    }
+
+    &.timer {
+      .disappearing-time {
+        $height: 3px;
+
+        display: block;
+        position: absolute;
+        bottom: -$height;
+        height: $height;
+        background-color: inherit;
+        opacity: 0.6;
+        animation-name: timer;
+        animation-timing-function: linear;
+        animation-fill-mode: both;
+
+        @include appDir() {
+          #{dirs(left, right)}: 0;
+        }
+      }
+    }
+
+    &.success {
+      background-color: hsl(var(--success-color));
+    }
+
+    &.danger {
+      background-color: hsl(var(--danger-color));
+    }
+
+    &.warning {
+      background-color: hsl(var(--warning-color));
+      color: hsl(var(--dark-color));
+    }
+
+    &.info {
+      background-color: hsl(var(--info-color));
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
+
+    .fa {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      opacity: 0.7;
+      transition: all 0.3s ease-in-out;
+
+      @include appDir() {
+        #{dirs(right, left)}: 12px;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .notify-enter-active {
+    animation: 0.3s ease-in-out;
+
+    @include appDir() {
+      animation-name: dirs(slideInLeft, slideInRight);
+    }
+  }
+
+  .notify-leave-active {
+    animation: 0.3s ease-in-out reverse;
+
+    @include appDir() {
+      animation-name: dirs(slideInLeft, slideInRight);
+    }
+  }
+
+  .notify-move {
+    transition: transform 0.3s ease-in-out;
+  }
+}

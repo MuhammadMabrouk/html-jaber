@@ -1,0 +1,25 @@
+/* 5. Hot Section Styles */
+/*-----------------------*/
+.section--hot {
+  background-color: hsl(var(--bg-color-two));
+}
+
+.hotSC {
+  .splide__track {
+    padding-bottom: 35px;
+    padding-top: 10px;
+    margin-top: -10px;
+  }
+
+  .splide__pagination {
+    bottom: -1.5em;
+  }
+
+  &__propertiesList {
+    line-height: initial;
+
+    .propertyItem {
+      background-color: hsla(var(--main-color-two), 10%);
+    }
+  }
+}

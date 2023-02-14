@@ -1,0 +1,14 @@
+@@if (type === "image") {<li class="splide__slide">
+  <!-- href points to the fully sized image -->
+  <a class="propertyItem__imgBox__link glightbox" href="@@imgUrl" data-placeholder="@@imgPlaceholder" data-gallery="@@id">
+    <!-- thumbnails -->
+    <img class="propertyItem__imgBox__img" loading="lazy" src="@@thumbUrl" data-placeholder="@@thumbPlaceholder" alt="${{ @@title }}$">
+  </a>
+</li>} @@if (type === "video") {<li class="splide__slide">
+  <!-- href points to the video url -->
+  <a class="propertyItem__imgBox__link glightbox" href="@@videoUrl" data-gallery="@@id">
+    <!-- thumbnails -->
+    <img class="propertyItem__imgBox__img" loading="lazy" src="@@thumbUrl" data-placeholder="@@thumbPlaceholder" alt="${{ @@title }}$">
+    <i class="propertyItem__imgBox__link__fa fa fa-play" aria-hidden="true"></i>
+  </a>
+</li>}

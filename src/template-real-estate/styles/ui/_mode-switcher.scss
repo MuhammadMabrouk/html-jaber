@@ -1,0 +1,129 @@
+/* Mode Switcher Styles */
+/*----------------------*/
+.modeSwitcher {
+  --circle-size: 1.5rem;
+  --duration: 0.5s;
+  --timing: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  position: relative;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--circle-size);
+  width: var(--circle-size);
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all var(--duration) var(--timing), visibility 0s;
+
+  &:focus {
+    @include focusStyle();
+  }
+
+  &__mainBody {
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    transition: all var(--duration) var(--timing), visibility 0s;
+  }
+
+  &__shadowShape {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 80%;
+    width: 80%;
+    background-color: hsl(var(--dark-color));
+    border-radius: 50%;
+    transform-origin: 100% 100%;
+    transition: all var(--duration) var(--timing), visibility 0s;
+  }
+
+  &__sunray {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(var(--circle-size) * 0.12);
+    transition: all var(--duration) var(--timing), visibility 0s;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      height: calc(var(--circle-size) * 0.12);
+      width: calc(var(--circle-size) * 0.12);
+      background-color: hsl(var(--light-color));
+      border-radius: 50%;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+    &--sunray-1 {
+      transform: translate(-50%, -50%);
+    }
+
+    &--sunray-2 {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &--sunray-3 {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+
+    &--sunray-4 {
+      transform: translate(-50%, -50%) rotate(135deg);
+    }
+  }
+
+  &--lightTheme {
+    background-color: hsl(var(--dark-color));
+    opacity: 0.8;
+    transform: rotate(0deg);
+
+    .modeSwitcher__mainBody {
+      background-color: hsl(var(--bg-color-two));
+      transform: scale(0.7);
+    }
+
+    .modeSwitcher__shadowShape {
+      transform: rotate(20deg);
+    }
+
+    .modeSwitcher__sunray {
+      height: 20%;
+      opacity: 0;
+    }
+  }
+
+  &--darkTheme {
+    background-color: transparent;
+    transform: rotate(45deg);
+
+    .modeSwitcher__mainBody {
+      background-color: hsl(var(--light-color));
+      transform: scale(0.5);
+    }
+
+    .modeSwitcher__shadowShape {
+      transform: rotate(90deg);
+    }
+
+    .modeSwitcher__sunray {
+      height: 90%;
+      opacity: 1;
+    }
+  }
+}

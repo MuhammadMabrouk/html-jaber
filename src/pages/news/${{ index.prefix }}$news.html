@@ -1,0 +1,127 @@
+@@include('./schema/page-start.html')
+
+    <!-- start skip links -->
+    @@include('./components/skip-links/skip-links.template.html')
+    <!-- end skip links -->
+
+    <!-- start of header -->
+    @@include('./components/header/header.template.html')
+    <!-- end of header -->
+
+    <!-- start of inner pages header -->
+    @@include('./components/inner-pages-header/inner-pages-header.template.html', { pageTitle: "index.newsPage.title" })
+    <!-- end of inner pages header -->
+
+    <!-- start page content -->
+    <div id="news-section" class="section section--newsPage">
+      <div class="section__content section__content--newsPage">
+        <div class="container">
+          <div class="newsSC">
+            <ul class="newsSC__blogList row">
+              <li class="newsSC__blogList__item col-md-6 col-lg-4">
+                @@include('./ui/blog-item/blog-item.template.html', {
+                  "style": "list",
+                  "imgUrl": "assets/images/properties/properties-1200-1.jpg",
+                  "imgPlaceholder": "415x250",
+                  "date": "index.homepage.blog.content.blogList.i1.date",
+                  "cats": {
+                    "c1": "index.homepage.blog.content.blogList.i1.cats.c1",
+                    "c2": "index.homepage.blog.content.blogList.i1.cats.c2"
+                  },
+                  "title": "index.homepage.blog.content.blogList.i1.title",
+                  "excerpt": "index.homepage.blog.content.blogList.i1.excerpt"
+                })
+              </li>
+              <li class="newsSC__blogList__item col-md-6 col-lg-4">
+                @@include('./ui/blog-item/blog-item.template.html', {
+                  "style": "list",
+                  "imgUrl": "assets/images/properties/properties-1200-2.jpg",
+                  "imgPlaceholder": "415x250",
+                  "date": "index.homepage.blog.content.blogList.i2.date",
+                  "cats": {
+                    "c1": "index.homepage.blog.content.blogList.i2.cats.c1",
+                    "c2": "index.homepage.blog.content.blogList.i2.cats.c2"
+                  },
+                  "title": "index.homepage.blog.content.blogList.i2.title",
+                  "excerpt": "index.homepage.blog.content.blogList.i2.excerpt"
+                })
+              </li>
+              <li class="newsSC__blogList__item col-md-6 col-lg-4">
+                @@include('./ui/blog-item/blog-item.template.html', {
+                  "style": "list",
+                  "imgUrl": "assets/images/properties/properties-1200-4.jpg",
+                  "imgPlaceholder": "415x250",
+                  "date": "index.homepage.blog.content.blogList.i3.date",
+                  "cats": {
+                    "c1": "index.homepage.blog.content.blogList.i3.cats.c1",
+                    "c2": "index.homepage.blog.content.blogList.i3.cats.c2"
+                  },
+                  "title": "index.homepage.blog.content.blogList.i3.title",
+                  "excerpt": "index.homepage.blog.content.blogList.i3.excerpt"
+                })
+              </li>
+              <li class="newsSC__blogList__item col-md-6 col-lg-4">
+                @@include('./ui/blog-item/blog-item.template.html', {
+                  "style": "list",
+                  "imgUrl": "assets/images/properties/properties-1200-3.jpg",
+                  "imgPlaceholder": "415x250",
+                  "date": "index.homepage.blog.content.blogList.i4.date",
+                  "cats": {
+                    "c1": "index.homepage.blog.content.blogList.i4.cats.c1",
+                    "c2": "index.homepage.blog.content.blogList.i4.cats.c2"
+                  },
+                  "title": "index.homepage.blog.content.blogList.i4.title",
+                  "excerpt": "index.homepage.blog.content.blogList.i4.excerpt"
+                })
+              </li>
+              <li class="newsSC__blogList__item col-md-6 col-lg-4">
+                @@include('./ui/blog-item/blog-item.template.html', {
+                  "style": "list",
+                  "imgUrl": "assets/images/properties/properties-1200-5.jpg",
+                  "imgPlaceholder": "415x250",
+                  "date": "index.homepage.blog.content.blogList.i5.date",
+                  "cats": {
+                    "c1": "index.homepage.blog.content.blogList.i5.cats.c1",
+                    "c2": "index.homepage.blog.content.blogList.i5.cats.c2"
+                  },
+                  "title": "index.homepage.blog.content.blogList.i5.title",
+                  "excerpt": "index.homepage.blog.content.blogList.i5.excerpt"
+                })
+              </li>
+              <li class="newsSC__blogList__item col-md-6 col-lg-4">
+                @@include('./ui/blog-item/blog-item.template.html', {
+                  "style": "list",
+                  "imgUrl": "assets/images/properties/properties-1200-6.jpg",
+                  "imgPlaceholder": "415x250",
+                  "date": "index.homepage.blog.content.blogList.i1.date",
+                  "cats": {
+                    "c1": "index.homepage.blog.content.blogList.i1.cats.c1",
+                    "c2": "index.homepage.blog.content.blogList.i1.cats.c2"
+                  },
+                  "title": "index.homepage.blog.content.blogList.i1.title",
+                  "excerpt": "index.homepage.blog.content.blogList.i1.excerpt"
+                })
+              </li>
+            </ul>
+
+            <!-- pagination -->
+            @@include('../ui/pagination/pagination.template.html')
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- newsletter banner -->
+    @@include('./components/newsletter/newsletter.template.html')
+
+    <!-- start of footer -->
+    @@include('./components/footer/footer.template.html')
+    <!-- end of footer -->
+
+    <!-- back to top button -->
+    <webrouk-back-top-scroll-indicator
+      title="${{ index.scrollToTop }}$"
+      show-at="50">
+    </webrouk-back-top-scroll-indicator>
+
+@@include('./schema/page-end.html')

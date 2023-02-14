@@ -1,0 +1,60 @@
+/* User Dashboard Page Styles */
+/*----------------------------*/
+.userDashboardSC {
+  &__list {
+    margin-bottom: -24px;
+
+    &__item {
+      margin-bottom: 24px;
+    }
+
+    &__link {
+      display: block;
+      height: 100%;
+      background-color: hsl(var(--bg-color-two));
+      color: hsl(var(--t-color-one));
+      text-align: center;
+      padding: 20px;
+      box-shadow: var(--card-shadow);
+      will-change: transform;
+
+      &__icon {
+        width: 64px;
+        margin-bottom: 20px;
+      }
+
+      &:hover {
+        transform: translateY(-8px);
+      }
+
+      &:focus {
+        @include focusStyle();
+      }
+    }
+  }
+}
+
+.uDSH {
+  @include flexbox(flex, "", start, between, "", wrap);
+
+  .userSidebar {
+    @media #{$min_992} {
+      width: 300px;
+    }
+
+    @media #{$max_991} {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__mainCont {
+    @media #{$min_992} {
+      width: calc(100% - 336px);
+    }
+
+    @media #{$max_991} {
+      width: 100%;
+    }
+  }
+}

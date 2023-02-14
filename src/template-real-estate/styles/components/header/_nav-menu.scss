@@ -1,0 +1,216 @@
+/* Navigation Menu Styles */
+/*------------------------*/
+.sideMenuWrapper {
+  $parent: &;
+
+  @media #{$min_992} {
+    @include flexbox(flex, "", center, "", "", "");
+    height: inherit;
+
+    &__searchForm {
+      display: none;
+    }
+  }
+
+  &__overlay {
+    position: fixed;
+    z-index: 1800;
+    top: 0;
+    height: 100%;
+    background-color: hsla(0, 0%, 0%, 0.8);
+    cursor: pointer;
+    transition: all var(--global-transition);
+
+    @include appDir() {
+      #{dirs(right, left)}: 0;
+    }
+
+    @media #{$min_992} {
+      display: none;
+    }
+
+    @media #{$max_991} {
+      display: block;
+    }
+
+    &:focus {
+      @include focusStyle(null, true);
+    }
+  }
+
+  @media #{$max_991} {
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    height: 100%;
+    width: var(--side-menu-width);
+    background-color: hsl(var(--bg-color-two));
+    padding: 30px 0;
+    overflow-y: auto;
+    transition: all var(--global-transition);
+
+    &__searchForm {
+      margin: 0 16px 16px;
+
+      &__searchInput {
+        height: 100% !important;
+        background-color: hsl(var(--bg-color-one)) !important;
+
+        @include appDir() {
+          border-radius: dirs(
+            var(--radius-size) 0 0 var(--radius-size) !important,
+            0 var(--radius-size) var(--radius-size) 0 !important
+          );
+        }
+      }
+
+      &__btn {
+        height: 42px;
+        min-width: 42px;
+        padding: 0 !important;
+
+        @include appDir() {
+          border-radius: dirs(
+            0 var(--radius-size) var(--radius-size) 0 !important,
+            var(--radius-size) 0 0 var(--radius-size) !important
+          );
+        }
+
+        &:focus {
+          z-index: 1;
+          @include focusStyle();
+        }
+      }
+    }
+
+    &:not(&--open) {
+      @include appDir() {
+        #{dirs(left, right)}: calc(var(--side-menu-width) * -1);
+      }
+
+      * {
+        visibility: hidden;
+      }
+
+      #{$parent}__overlay {
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+
+        @include appDir() {
+          #{dirs(left, right)}: 0;
+        }
+      }
+    }
+
+    &--open {
+      box-shadow: var(--card-shadow);
+
+      @include appDir() {
+        #{dirs(left, right)}: 0;
+      }
+
+      #{$parent}__overlay {
+        width: calc(100% - var(--side-menu-width));
+
+        @include appDir() {
+          #{dirs(left, right)}: var(--side-menu-width);
+        }
+      }
+    }
+  }
+}
+
+.header__links {
+  @media #{$min_992} {
+    @include flexbox(flex, "", center, "", "", "");
+    height: 100%;
+  }
+
+  &__item {
+    @media #{$min_992} {
+      height: 100%;
+
+      &--user,
+      &--langs {
+        display: none;
+      }
+
+      &:hover {
+        & ~ .header__links__item {
+          .header__links__link {
+            &:before {
+              @include appDir() {
+                #{dirs(left, right)}: 0;
+                #{dirs(right, left)}: 100%;
+              }
+            }
+          }
+        }
+
+        & .header__links__link {
+          &:before {
+            @include appDir() {
+              #{dirs(left, right)}: 0;
+              #{dirs(right, left)}: 0;
+            }
+          }
+        }
+      }
+
+      &:focus-within {
+        & .header__links__link {
+          @include focusStyle(null, true);
+        }
+      }
+    }
+
+    @media #{$max_991} {
+      &:not(:last-of-type) {
+        border-bottom: 1px solid hsl(var(--border-color));
+      }
+    }
+  }
+
+  &__link {
+    @include flexbox(flex, "", center, "", "", "");
+    position: relative;
+    height: 100%;
+    color: hsl(var(--t-color-one));
+    font-family: var(--headings-font-family);
+    font-weight: bold;
+    padding: 0 1rem;
+
+    @media #{$min_992} {
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        @include baseTopBorder();
+        transition: 0.16s all 0.025s;
+
+        @include appDir() {
+          #{dirs(left, right)}: 100%;
+          #{dirs(right, left)}: 0;
+        }
+      }
+    }
+
+    @media #{$max_991} {
+      line-height: var(--side-menu-line-height);
+
+      &:hover {
+        background-color: hsl(var(--main-color-one));
+
+        &,
+        + .hasDropdown__toggle {
+          color: hsl(var(--light-color));
+        }
+      }
+
+      &:focus {
+        @include focusStyle(null, true);
+      }
+    }
+  }
+}

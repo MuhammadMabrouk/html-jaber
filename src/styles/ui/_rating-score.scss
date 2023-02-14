@@ -1,0 +1,124 @@
+/* Rating Score Styles */
+/*---------------------*/
+.ratingScore {
+  $parent: &;
+
+  display: flex;
+  line-height: initial;
+
+  &__item {
+    &:not(:last-of-type) {
+      @include appDir() {
+        margin-#{dirs(right, left)}: 2px;
+      }
+    }
+  }
+
+  &__star {
+    position: relative;
+    display: block;
+    height: 18px;
+    width: 18px;
+    background-color: #aaa;
+    clip-path: polygon(
+      50% 0%,
+      61% 35%,
+      98% 35%,
+      68% 57%,
+      79% 91%,
+      50% 70%,
+      21% 91%,
+      32% 57%,
+      2% 35%,
+      39% 35%
+    );
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      height: 100%;
+      background-color: hsl(var(--main-color-one));
+
+      @include appDir() {
+        #{dirs(left, right)}: 0;
+      }
+    }
+  }
+
+  &--10score {
+    #{$parent}__item:nth-of-type(1) #{$parent}__star::after {
+      width: 50%;
+    }
+  }
+
+  &--20score {
+    #{$parent}__item:nth-of-type(1) #{$parent}__star::after {
+      width: 100%;
+    }
+  }
+
+  &--30score {
+    #{$parent}__item:nth-of-type(1) #{$parent}__star::after {
+      width: 100%;
+    }
+
+    #{$parent}__item:nth-of-type(2) #{$parent}__star::after {
+      width: 50%;
+    }
+  }
+
+  &--40score {
+    #{$parent}__item:nth-of-type(-1n + 2) #{$parent}__star::after {
+      width: 100%;
+    }
+  }
+
+  &--50score {
+    #{$parent}__item:nth-of-type(-1n + 2) #{$parent}__star::after {
+      width: 100%;
+    }
+
+    #{$parent}__item:nth-of-type(3) #{$parent}__star::after {
+      width: 50%;
+    }
+  }
+
+  &--60score {
+    #{$parent}__item:nth-of-type(-1n + 3) #{$parent}__star::after {
+      width: 100%;
+    }
+  }
+
+  &--70score {
+    #{$parent}__item:nth-of-type(-1n + 3) #{$parent}__star::after {
+      width: 100%;
+    }
+
+    #{$parent}__item:nth-of-type(4) #{$parent}__star::after {
+      width: 50%;
+    }
+  }
+
+  &--80score {
+    #{$parent}__item:nth-of-type(-1n + 4) #{$parent}__star::after {
+      width: 100%;
+    }
+  }
+
+  &--90score {
+    #{$parent}__item:nth-of-type(-1n + 4) #{$parent}__star::after {
+      width: 100%;
+    }
+
+    #{$parent}__item:nth-of-type(5) #{$parent}__star::after {
+      width: 50%;
+    }
+  }
+
+  &--100score {
+    #{$parent}__item:nth-of-type(-1n + 5) #{$parent}__star::after {
+      width: 100%;
+    }
+  }
+}

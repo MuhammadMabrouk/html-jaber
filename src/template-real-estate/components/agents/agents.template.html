@@ -1,0 +1,119 @@
+<section class="section section--agents">
+
+  <!-- section content -->
+  <div class="section__content section__content--agents">
+    <div class="container">
+      <div class="agentsSC row align-items-center">
+
+        <!-- textbox -->
+        <div class="textbox textbox--agents col-lg-4">
+          <h2 class="textbox__title">
+            <span class="anim-underline-fx">${{ index.homepage.agents.textbox.title }}$</span>
+          </h2>
+          <p class="textbox__paragraph">${{ index.homepage.agents.textbox.paragraph }}$</p>
+          <div class="textbox__btns">
+            <button
+              class="w-btn w-btn--s1 w-btn--secondary"
+              title="${{ index.global.prevPage }}$"
+              @click="agentsSliderGoPrev">
+              <i class="fa fa-chevron-left rtl-mirror" aria-hidden="true"></i>
+            </button>
+            <button
+              class="w-btn w-btn--s1 w-btn--secondary"
+              title="${{ index.global.nextPage }}$"
+              @click="agentsSliderGoNext">
+              <i class="fa fa-chevron-right rtl-mirror" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- agents list -->
+        <div id="agentsSlider" class="splide col-lg-8" data-splide='{
+          "direction": "${{ index.i18n.dir }}$",
+          "type": "loop",
+          "perPage": 3,
+          "perMove": 1,
+          "autoplay": true,
+          "gap": "24px",
+          "arrows": false,
+          "pagination": true,
+          "lazyLoad": true,
+          "slideFocus": false,
+          "breakpoints": {
+            "1199": {
+              "perPage": 2
+            },
+            "991": {
+              "perPage": 3
+            },
+            "767": {
+              "perPage": 2
+            },
+            "575": {
+              "perPage": 1
+            }
+          }
+        }'>
+          <div class="splide__track">
+            <ul class="agentsSC__agentsList splide__list">
+              <li class="agentsSC__agentsList__item splide__slide">
+                <!-- agent item component -->
+                @@include('./ui/agent-item/agent-item.template.html', {
+                  "imgUrl": "assets/images/agents/agents-600-1.jpg",
+                  "imgPlaceholder": "233",
+                  "title": "index.homepage.agents.content.agentsList.i1.name",
+                  "position": "index.homepage.agents.content.agentsList.i1.position"
+                })
+              </li>
+              <li class="agentsSC__agentsList__item splide__slide">
+                <!-- agent item component -->
+                @@include('./ui/agent-item/agent-item.template.html', {
+                  "imgUrl": "assets/images/agents/agents-600-2.jpg",
+                  "imgPlaceholder": "233",
+                  "title": "index.homepage.agents.content.agentsList.i2.name",
+                  "position": "index.homepage.agents.content.agentsList.i2.position"
+                })
+              </li>
+              <li class="agentsSC__agentsList__item splide__slide">
+                <!-- agent item component -->
+                @@include('./ui/agent-item/agent-item.template.html', {
+                  "imgUrl": "assets/images/agents/agents-600-3.jpg",
+                  "imgPlaceholder": "233",
+                  "title": "index.homepage.agents.content.agentsList.i3.name",
+                  "position": "index.homepage.agents.content.agentsList.i3.position"
+                })
+              </li>
+              <li class="agentsSC__agentsList__item splide__slide">
+                <!-- agent item component -->
+                @@include('./ui/agent-item/agent-item.template.html', {
+                  "imgUrl": "assets/images/agents/agents-600-1.jpg",
+                  "imgPlaceholder": "233",
+                  "title": "index.homepage.agents.content.agentsList.i1.name",
+                  "position": "index.homepage.agents.content.agentsList.i1.position"
+                })
+              </li>
+              <li class="agentsSC__agentsList__item splide__slide">
+                <!-- agent item component -->
+                @@include('./ui/agent-item/agent-item.template.html', {
+                  "imgUrl": "assets/images/agents/agents-600-2.jpg",
+                  "imgPlaceholder": "233",
+                  "title": "index.homepage.agents.content.agentsList.i2.name",
+                  "position": "index.homepage.agents.content.agentsList.i2.position"
+                })
+              </li>
+              <li class="agentsSC__agentsList__item splide__slide">
+                <!-- agent item component -->
+                @@include('./ui/agent-item/agent-item.template.html', {
+                  "imgUrl": "assets/images/agents/agents-600-3.jpg",
+                  "imgPlaceholder": "233",
+                  "title": "index.homepage.agents.content.agentsList.i3.name",
+                  "position": "index.homepage.agents.content.agentsList.i3.position"
+                })
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

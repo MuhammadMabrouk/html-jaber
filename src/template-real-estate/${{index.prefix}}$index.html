@@ -1,0 +1,60 @@
+@@include('./schema/page-start.html')
+
+    <!-- start skip links -->
+    @@include('./components/skip-links/skip-links.template.html')
+    <!-- end skip links -->
+
+    <!-- start of header -->
+    @@include('./components/header/header.template.html')
+    <!-- end of header -->
+
+    <!-- start of hero section -->
+    @@include('./components/hero/hero.template.html')
+    <!-- end of hero section -->
+
+    <!-- start of steps section -->
+    @@include('./components/steps/steps.template.html')
+    <!-- end of steps section -->
+
+    <!-- start of stats section -->
+    @@include('./components/stats/stats.template.html')
+    <!-- end of stats section -->
+
+    <!-- start of places section -->
+    @@include('./components/places/places.template.html')
+    <!-- end of places section -->
+
+    <!-- start of hot section -->
+    @@include('./components/hot/hot.template.html')
+    <!-- end of hot section -->
+
+    <!-- start of agents section -->
+    @@include('./components/agents/agents.template.html')
+    <!-- end of agents section -->
+
+    <!-- start of featured section -->
+    @@include('./components/featured/featured.template.html')
+    <!-- end of featured section -->
+
+    <!-- start of ratings section -->
+    @@include('./components/ratings/ratings.template.html')
+    <!-- end of ratings section -->
+
+    <!-- start of blog section -->
+    @@include('./components/blog/blog.template.html')
+    <!-- end of blog section -->
+
+    <!-- newsletter banner -->
+    @@include('./components/newsletter/newsletter.template.html')
+
+    <!-- start of footer -->
+    @@include('./components/footer/footer.template.html')
+    <!-- end of footer -->
+
+    <!-- back to top button -->
+    <webrouk-back-top-scroll-indicator
+      title="${{ index.scrollToTop }}$"
+      show-at="250">
+    </webrouk-back-top-scroll-indicator>
+
+@@include('./schema/page-end.html')

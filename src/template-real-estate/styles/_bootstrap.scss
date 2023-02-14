@@ -1,0 +1,43 @@
+// override theme colors in Bootstrap 5
+$primary: #9a7a54;
+$secondary: #232a3e;
+
+$light: #f8f8f7;
+$dark: #212121;
+
+$success: #28a745;
+$info: #17a2b8;
+$warning: #ffc107;
+$danger: #dc3545;
+
+// main bootstrap file
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// overrides bootstrap buttons
+[data-theme="lightTheme"] {
+  .btn {
+    &.btn-light,
+    &.btn-dark {
+      @extend .btn-dark;
+    }
+
+    &.btn-outline-light,
+    &.btn-outline-dark {
+      @extend .btn-outline-dark;
+    }
+  }
+}
+
+[data-theme="darkTheme"] {
+  .btn {
+    &.btn-light,
+    &.btn-dark {
+      @extend .btn-light;
+    }
+
+    &.btn-outline-light,
+    &.btn-outline-dark {
+      @extend .btn-outline-light;
+    }
+  }
+}

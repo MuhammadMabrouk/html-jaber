@@ -1,0 +1,285 @@
+/* 7. Featured Section Styles */
+/*----------------------------*/
+.section--featured {
+  position: relative;
+  background: url("../assets/images/real-estate-bg.jpg") fixed center no-repeat;
+  background-size: cover;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: hsla(var(--bg-color-one), 80%);
+  }
+}
+
+.featuredSC {
+  margin-bottom: -50px;
+
+  > * {
+    margin-bottom: 50px;
+  }
+
+  // image box
+  &__imgBox {
+    $line_height: 24px;
+    $corner_size: 14px;
+
+    position: relative;
+    background-color: grey;
+
+    @media #{$min_577} {
+      height: 400px;
+
+      .splide {
+        .splide__list {
+          height: 400px;
+        }
+      }
+    }
+
+    @media #{$max_576} {
+      height: 300px;
+
+      .splide {
+        .splide__list {
+          height: 300px;
+        }
+      }
+    }
+
+    &__link {
+      display: block;
+      position: absolute;
+      z-index: 2;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      cursor: zoom-in;
+      overflow: hidden;
+
+      &__fa {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        background: #333;
+        width: 40px;
+        height: 40px;
+        font-size: 1.125rem;
+        border-radius: 50%;
+        opacity: 0.8;
+        display: grid;
+        place-items: center;
+      }
+
+      &:hover {
+        .fa {
+          opacity: 1;
+        }
+      }
+    }
+
+    &__img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &__labels,
+    &__price {
+      position: absolute;
+      z-index: 2;
+      top: $corner_size;
+
+      @include appDir() {
+        text-transform: dirs(uppercase, null);
+      }
+    }
+
+    &__labels {
+      line-height: $line_height;
+      font-size: 0.75rem;
+
+      @include appDir() {
+        #{dirs(right, left)}: $corner_size;
+      }
+
+      &__item {
+        display: inline-block;
+        color: #fff;
+        padding: 0px 12px;
+        box-shadow: var(--card-shadow);
+
+        &:not(:last-child) {
+          @include appDir() {
+            margin-#{dirs(right, left)}: 5px;
+          }
+        }
+
+        &--rent {
+          background-color: hsl(var(--rent-label-color));
+        }
+
+        &--sale {
+          background-color: hsl(var(--sale-label-color));
+        }
+
+        &--new {
+          background-color: hsl(var(--new-label-color));
+        }
+
+        &--featured {
+          background-color: hsl(var(--featured-label-color));
+        }
+      }
+    }
+
+    &__price {
+      --price-height: 42px;
+
+      height: var(--price-height);
+      line-height: var(--price-height);
+      background-color: hsl(var(--main-color-one));
+      filter: var(--drop-shadow);
+
+      @include appDir() {
+        #{dirs(left, right)}: -$corner_size;
+        padding-#{dirs(left, right)}: calc(var(--price-height) / 2);
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        height: calc(var(--price-height) / 4);
+        width: $corner_size;
+        background-color: hsl(
+          var(--primary-h),
+          var(--primary-s),
+          calc(var(--primary-l) - 20%)
+        );
+
+        @include appDir() {
+          #{dirs(left, right)}: 0;
+          clip-path: dirs(
+            polygon(100% 0, 0 0, 100% 100%),
+            polygon(100% 0, 0 0, 0 100%)
+          );
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        height: var(--price-height);
+        width: var(--price-height);
+        background-color: hsl(var(--primary-color));
+
+        @include appDir() {
+          #{dirs(right, left)}: calc((var(--price-height) - 1px) * -1);
+          clip-path: dirs(
+            polygon(100% 0, 50% 50%, 100% 100%, 0 100%, 0 50%, 0 0),
+            polygon(100% 0, 100% 50%, 100% 100%, 0 100%, 50% 50%, 0 0)
+          );
+        }
+      }
+
+      &__val {
+        color: hsl(var(--light-color)) !important;
+      }
+    }
+
+    &__controls {
+      position: absolute;
+      z-index: 2;
+      bottom: $corner_size;
+      left: 50%;
+      transform: translateX(-50%);
+
+      .w-btn {
+        height: 32px;
+        line-height: 32px;
+        padding: {
+          left: 0.75rem;
+          right: 0.75rem;
+        }
+
+        &:not(:last-of-type) {
+          @include appDir() {
+            margin-#{dirs(right, left)}: 5px;
+          }
+        }
+      }
+    }
+
+    &:focus-within {
+      @include focusStyle();
+    }
+  }
+
+  // content box
+  &__contentBox {
+    position: relative;
+
+    > *:not(:last-child) {
+      margin-bottom: 25px;
+    }
+
+    @media #{$min_992} {
+      @include appDir() {
+        padding-#{dirs(left, right)}: 48px;
+      }
+    }
+
+    @media #{$max_991} {
+      &__leading,
+      &__tagline {
+        display: none;
+      }
+
+      .w-btn {
+        width: 100%;
+      }
+    }
+
+    &__list {
+      color: hsl(var(--t-color-one));
+    }
+
+    &__features {
+      width: 100%;
+      max-width: 400px;
+
+      &__item {
+        font-size: 1.125rem;
+      }
+
+      &__icon {
+        width: 20px;
+
+        @include appDir() {
+          margin-#{dirs(right, left)}: 5px;
+        }
+      }
+    }
+  }
+
+  &__header {
+    position: relative;
+
+    > *:not(:last-child) {
+      margin-bottom: 25px;
+    }
+
+    @media #{$min_992} {
+      display: none;
+    }
+  }
+}

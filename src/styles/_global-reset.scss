@@ -1,0 +1,174 @@
+//------------------------------------------------------------------------------------------/
+// Global Reset Styles
+//------------------------------------------------------------------------------------------/
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: hsl(var(--main-color-one));
+  color: hsl(var(--light-color));
+}
+
+html {
+  scroll-behavior: smooth;
+
+  body {
+    text-align: initial;
+    overflow-x: hidden;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.ltr-dir {
+  direction: ltr;
+  display: inline-block;
+}
+
+.rtl-mirror {
+  @include appDir() {
+    transform: dirs(null, rotateY(180deg));
+  }
+}
+
+hr {
+  width: 100%;
+  margin: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+  line-height: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+a,
+button {
+  transition: all 0.3s ease-in-out;
+  outline: 0 !important;
+  cursor: pointer;
+}
+
+button {
+  background: none;
+  padding: 0;
+  border: none;
+}
+
+a,
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit !important;
+}
+
+input:invalid,
+input:required,
+textarea:invalid,
+textarea:required {
+  box-shadow: none;
+}
+
+#app-inner {
+  min-height: 100vh;
+  width: 100%;
+  background-color: hsl(var(--bg-color-one));
+  color: hsl(var(--t-color-two));
+  font-family: var(--body-font-family);
+  padding-top: var(--space-above-hero-section);
+  overflow-x: hidden;
+
+  /* for changing the active mode */
+  transition: background var(--global-transition);
+
+  @include appDir() {
+    font-size: dirs(1rem, 1.1rem);
+    line-height: dirs(null, 1.5rem);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+label {
+  color: hsl(var(--t-color-one));
+  font-family: var(--headings-font-family);
+  font-weight: bold;
+
+  /* for changing the active mode */
+  transition: color var(--global-transition);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include appDir() {
+    line-height: dirs(null, 1.4);
+  }
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  line-height: 1.8rem;
+}
+
+.btns-container {
+  > * {
+    @media #{$max_767} {
+      width: 100%;
+    }
+
+    &:not(:last-of-type) {
+      @media #{$min_768} {
+        @include appDir() {
+          margin-#{dirs(right, left)}: 20px;
+        }
+      }
+
+      @media #{$max_767} {
+        margin-bottom: 12px;
+      }
+    }
+  }
+}
+
+.invert-in-light {
+  filter: var(--filter-invert-true);
+}
+
+.invert-in-dark {
+  filter: var(--filter-invert-false);
+}
+
+// disable focusing for the hidden items
+.DOM-slider-hidden {
+  * {
+    visibility: hidden;
+  }
+}

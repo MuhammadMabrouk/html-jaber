@@ -1,0 +1,89 @@
+/* 8. Ratings Section Styles */
+/*---------------------------*/
+.section--ratings {
+  background: linear-gradient(
+    180deg,
+    hsl(var(--bg-color-two)) 0%,
+    hsl(var(--bg-color-one)) 90%
+  );
+}
+
+.ratingsSC {
+  margin-bottom: -50px;
+
+  > * {
+    margin-bottom: 50px;
+  }
+
+  .textbox {
+    @media #{$min_992} {
+      @include appDir() {
+        padding-#{dirs(right, left)}: 48px;
+      }
+    }
+
+    &__paragraph {
+      @media #{$max_991} {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    &__btns {
+      @media #{$max_991} {
+        display: none;
+      }
+
+      .w-btn {
+        min-width: 200px;
+      }
+    }
+  }
+
+  &__ratingsList {
+    line-height: initial;
+    margin-bottom: -24px;
+
+    &__item {
+      display: flex;
+      background-color: hsla(var(--main-color-two), 10%);
+      padding: 14px;
+      margin-bottom: 24px;
+      box-shadow: var(--card-shadow);
+    }
+
+    &__avatar {
+      @include appDir() {
+        margin-#{dirs(right, left)}: 16px;
+      }
+
+      &__img {
+        height: 64px;
+        width: 64px;
+        background-color: hsla(var(--main-color-one), 80%);
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+
+    &__text {
+      &__name {
+        display: inline-block;
+        margin: 20px 0 0;
+      }
+
+      &__review {
+        margin: 10px 0 0;
+      }
+    }
+  }
+
+  &__btns {
+    @media #{$min_992} {
+      display: none;
+    }
+
+    .w-btn {
+      width: 100%;
+    }
+  }
+}

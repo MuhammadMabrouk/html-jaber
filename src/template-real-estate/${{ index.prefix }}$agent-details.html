@@ -1,0 +1,232 @@
+@@include('./schema/page-start.html')
+
+    <!-- start skip links -->
+    @@include('./components/skip-links/skip-links.template.html')
+    <!-- end skip links -->
+
+    <!-- start of header -->
+    @@include('./components/header/header.template.html')
+    <!-- end of header -->
+
+    <!-- start of inner pages header -->
+    @@include('./components/inner-pages-header/inner-pages-header.template.html', { pageTitle: "index.agentDetailsPage.title" })
+    <!-- end of inner pages header -->
+
+    <!-- start page content -->
+    <div class="section section--agentDetailsPage">
+      <div class="section__content section__content--agentDetailsPage">
+        <div class="container">
+          <div class="agentDetailsSC hasStickySidebar row">
+
+            <!-- main content -->
+            <div class="agentDetailsSC__main col-lg-8">
+              <!-- agent info -->
+              <div class="agentDetailsSC__info row">
+  
+                <!-- agent image -->
+                <div class="col-lg-5">
+                  <div class="agentDetailsSC__info__agent">
+                    <!-- social icons -->
+                    <ul class="agentDetailsSC__info__agent__socials">
+                      <li class="agentDetailsSC__info__agent__socials__item">
+                        <a class="agentDetailsSC__info__agent__socials__link" title="${{ index.global.social.linkedin }}$" href="#" target="_blank"
+                          rel="noopener noreferrer">
+                          <i class="agentDetailsSC__info__agent__socials__fa fa fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                      <li class="agentDetailsSC__info__agent__socials__item">
+                        <a class="agentDetailsSC__info__agent__socials__link" title="${{ index.global.social.twitter }}$" href="#" target="_blank"
+                          rel="noopener noreferrer">
+                          <i class="agentDetailsSC__info__agent__socials__fa fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                      <li class="agentDetailsSC__info__agent__socials__item">
+                        <a class="agentDetailsSC__info__agent__socials__link" title="${{ index.global.social.facebook }}$" href="#" target="_blank"
+                          rel="noopener noreferrer">
+                          <i class="agentDetailsSC__info__agent__socials__fa fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                      <li class="agentDetailsSC__info__agent__socials__item">
+                        <a class="agentDetailsSC__info__agent__socials__link" title="${{ index.global.social.vimeo }}$" href="#" target="_blank"
+                          rel="noopener noreferrer">
+                          <i class="agentDetailsSC__info__agent__socials__fa fa fa-vimeo" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                    </ul>
+  
+                    <!-- agent image -->
+                    <div class="agentDetailsSC__info__agent__imgBox" title="${{ index.homepage.agents.content.agentsList.i5.name }}$">
+                      <img class="agentDetailsSC__info__agent__img" loading="lazy" src="assets/images/agents/agents-600-5.jpg" data-placeholder="310x330" alt="${{ index.homepage.agents.content.agentsList.i5.name }}$">
+                    </div>
+  
+                    <!-- listings count label -->
+                    <span class="agentDetailsSC__info__agent__label">${{ index.numbers.7 }}$ ${{ index.agentDetailsPage.info.listings }}$</span>
+                  </div>
+                </div>
+  
+                <!-- agent info -->
+                <div class="col-lg-7">
+                  <div class="agentDetailsSC__info__details">
+                    <div class="agentDetailsSC__info__details__content">
+  
+                      <!-- name and position -->
+                      <div>
+                        <h3 class="agentDetailsSC__info__details__title">${{ index.homepage.agents.content.agentsList.i5.name }}$</h3>
+                        <span class="agentDetailsSC__info__details__position">${{ index.homepage.agents.content.agentsList.i5.position }}$</span>
+                      </div>
+  
+                      <!-- contacts table -->
+                      <table class="agentDetailsSC__info__details__contacts">
+                        <tr>
+                          <th>${{ index.agentDetailsPage.info.office }}$:</th>
+                          <td><a href="tel:02966202290"><span class="ltr-dir">(02) 966 202 290</span></a></td>
+                        </tr>
+                        <tr>
+                          <th>${{ index.agentDetailsPage.info.mobile }}$:</th>
+                          <td><a href="tel:02966202291"><span class="ltr-dir">(02) 966 202 291</span></a></td>
+                        </tr>
+                        <tr>
+                          <th>${{ index.agentDetailsPage.info.fax }}$:</th>
+                          <td><a href="8091230951"><span class="ltr-dir">809 123 0951</span></a></td>
+                        </tr>
+                        <tr>
+                          <th>${{ index.agentDetailsPage.info.email }}$:</th>
+                          <td><a href="mailto:info@agent.com"><span class="ltr-dir">info@agent.com</span></a></td>
+                        </tr>
+                        <tr>
+                          <th>${{ index.agentDetailsPage.info.website }}$:</th>
+                          <td><a href="https://mywebsiteurl.com/"><span class="ltr-dir">mywebsiteurl.com</span></a></td>
+                        </tr>
+                      </table>
+
+                      <a class="agentDetailsSC__info__details__listingsBtn w-btn w-btn--s1 w-btn--primary" href="#">${{ index.agentDetailsPage.info.viewListings }}$</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- agent overview -->
+              <div class="agentDetailsSC__overview agentDetailsSC__block agentDetailsSC__pushStart mt-4">
+                <h4 class="blockTitle">${{ index.agentDetailsPage.overview.title }}$</h4>
+                <p class="m-0">${{ index.agentDetailsPage.overview.text }}$</p>
+              </div>
+
+              <!-- agent reviews -->
+              <div class="agentDetailsSC__reviews agentDetailsSC__block agentDetailsSC__pushStart mt-4">
+                <h4 class="blockTitle">${{ index.agentDetailsPage.reviews.title }}$</h4>
+                <ul class="agentDetailsSC__reviews__list">
+                  <li class="agentDetailsSC__reviews__item">
+
+                    <!-- review author image -->
+                    <div class="agentDetailsSC__reviews__avatar">
+                      <img class="agentDetailsSC__reviews__avatar__img" loading="lazy" src="assets/images/ratings/ratings-1.jpg" data-placeholder="64" alt="${{ index.homepage.ratings.content.ratingsList.i1.name }}$">
+                    </div>
+
+                    <!-- review item body -->
+                    <div class="agentDetailsSC__reviews__itemBody">
+
+                      <!-- name & date -->
+                      <div class="agentDetailsSC__reviews__itemBody__meta">
+                        <h4 class="agentDetailsSC__reviews__itemBody__authorName">${{ index.homepage.ratings.content.ratingsList.i1.name }}$</h4>
+                        <span class="agentDetailsSC__reviews__itemBody__reviewDate">${{ index.numbers.2 }}$ ${{ index.global.monthsAgoTime }}$</span>
+                        @@include('../ui/rating-score/rating-score.template.html', { "score": "80" })
+                      </div>
+
+                      <!-- review item text -->
+                      <p class="agentDetailsSC__reviews__itemBody__text">${{ index.agentDetailsPage.reviews.text1 }}$</p>
+                    </div>
+                  </li>
+                  <li class="agentDetailsSC__reviews__item">
+
+                    <!-- review author image -->
+                    <div class="agentDetailsSC__reviews__avatar">
+                      <img class="agentDetailsSC__reviews__avatar__img" loading="lazy" src="assets/images/ratings/ratings-2.jpg" data-placeholder="64" alt="${{ index.homepage.ratings.content.ratingsList.i2.name }}$">
+                    </div>
+
+                    <!-- review item body -->
+                    <div class="agentDetailsSC__reviews__itemBody">
+
+                      <!-- name & date -->
+                      <div class="agentDetailsSC__reviews__itemBody__meta">
+                        <h4 class="agentDetailsSC__reviews__itemBody__authorName">${{ index.homepage.ratings.content.ratingsList.i2.name }}$</h4>
+                        <span class="agentDetailsSC__reviews__itemBody__reviewDate">${{ index.numbers.3 }}$ ${{ index.global.monthsAgoTime }}$</span>
+                        @@include('../ui/rating-score/rating-score.template.html', { "score": "70" })
+                      </div>
+
+                      <!-- review item text -->
+                      <p class="agentDetailsSC__reviews__itemBody__text">${{ index.agentDetailsPage.reviews.text2 }}$</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- add new reviews form -->
+              <div class="agentDetailsSC__newReviews agentDetailsSC__block agentDetailsSC__pushStart mt-4">
+                <h4 class="blockTitle">${{ index.agentDetailsPage.reviewsForm.title }}$</h4>
+
+                <!-- action value is only test url, you can remove it -->
+                <form class="agentDetailsSC__newReviews__form form-styled"
+                  action="https://reqres.in/api/users"
+                  data-success-msg="${{ index.toastNotifications.successfullyReviewPosted }}$"
+                  data-err-msg="${{ index.toastNotifications.oopsSomethingWrong }}$"
+                  ref="agentReviewsForm">
+                  <div class="group">
+                    <label>${{ index.agentDetailsPage.reviewsForm.form.ratingLabel }}$</label>
+                    <div class="control">
+                      @@include('../ui/rating-control/rating-control.template.html', { "name": "rating" })
+
+                      <!-- validation errors messages -->
+                      <div class="errors-msgs">
+                        <input class="required" type="hidden" value="${{ index.agentDetailsPage.reviewsForm.form.ratingLabel }}$ ${{ index.toastNotifications.formsValidation.isRequired }}$">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="group">
+                    <label for="review">${{ index.agentDetailsPage.reviewsForm.form.reviewLabel }}$</label>
+                    <div class="control has-prefix-icon">
+                      <textarea id="review" name="review" placeholder="${{ index.agentDetailsPage.reviewsForm.form.reviewPlaceholder }}$"></textarea>
+                      <i class="fa fa-comments prefix-icon" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="group">
+                    <div class="control">
+                      <button class="submit-btn w-btn w-btn--s1 w-btn--primary w-100" type="button" @click="agentReviewsFormValidation">${{ index.agentDetailsPage.reviewsForm.form.submitBtn }}$</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <!-- sidebar -->
+            <div class="col-lg-4">
+              @@include('./components/sidebar/blog-sidebar/blog-sidebar.template.html', {
+                "search": false,
+                "favCompSha": false,
+                "agent": false,
+                "contactForm": true,
+                "propertyDocs": false,
+                "featuredProps": true,
+                "categories": false,
+                "tags": false,
+                "social": false
+              })
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- newsletter banner -->
+    @@include('./components/newsletter/newsletter.template.html')
+
+    <!-- start of footer -->
+    @@include('./components/footer/footer.template.html')
+    <!-- end of footer -->
+
+    <!-- back to top button -->
+    <webrouk-back-top-scroll-indicator
+      title="${{ index.scrollToTop }}$"
+      show-at="50">
+    </webrouk-back-top-scroll-indicator>
+
+@@include('./schema/page-end.html')

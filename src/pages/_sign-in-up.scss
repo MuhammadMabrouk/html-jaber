@@ -1,0 +1,56 @@
+/* Sign In & Up Pages Styles */
+/*---------------------------*/
+.signInSC,
+.signUpSC {
+  background-color: hsl(var(--bg-color-two));
+  padding: 30px;
+  margin: auto;
+  box-shadow: var(--card-shadow);
+
+  &__textBox {
+    text-align: center;
+  }
+
+  &__social {
+    position: relative;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid hsl(var(--border-color));
+
+    &:after {
+      content: attr(data-or);
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      background-color: hsl(var(--bg-color-two));
+      padding: 0 8px;
+    }
+  }
+}
+
+.signInSC {
+  max-width: 450px;
+}
+
+.signUpSC {
+  max-width: 700px;
+
+  &__form {
+    .group {
+      &.phone-number {
+        .prefix-icon {
+          @include appDir() {
+            transform: dirs(null, rotateY(180deg) translateY(-50%));
+          }
+        }
+      }
+
+      &.terms {
+        @media #{$max_991} {
+          margin-top: 24px;
+        }
+      }
+    }
+  }
+}

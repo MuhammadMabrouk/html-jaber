@@ -1,0 +1,12 @@
+<button
+  :class="['modeSwitcher', `modeSwitcher--${savedTheme}`]"
+  title="${{ index.themes.changeMode }}$"
+  @click="useTheme(savedTheme === 'lightTheme' ? 'darkTheme' : 'lightTheme')"
+>
+  <span class="modeSwitcher__mainBody"></span>
+  <span class="modeSwitcher__shadowShape"></span>
+  <span class="modeSwitcher__sunray modeSwitcher__sunray--sunray-1"></span>
+  <span class="modeSwitcher__sunray modeSwitcher__sunray--sunray-2"></span>
+  <span class="modeSwitcher__sunray modeSwitcher__sunray--sunray-3"></span>
+  <span class="modeSwitcher__sunray modeSwitcher__sunray--sunray-4"></span>
+</button>

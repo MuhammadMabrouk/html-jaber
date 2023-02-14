@@ -1,0 +1,99 @@
+/*-----------------------------------------------------------------------------------------*/
+/* 5. Global & Reset Styles */
+/*-----------------------------------------------------------------------------------------*/
+
+// Import 'Global & Reset' File
+@import "../../styles/global-reset";
+
+/* overrides bootstrap buttons */
+.btn {
+  &:not(.btn-circle) {
+    font-weight: bold;
+    padding: 0.5rem 1.5rem;
+
+    @include appDir() {
+      text-transform: dirs(uppercase, null);
+    }
+  }
+
+  &.btn-circle {
+    @include flexbox(flex, "", center, center, "", "");
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+  }
+
+  &.btn-primary {
+    color: #fff;
+  }
+
+  &.disabled,
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.btn-link:focus {
+  @include focusStyle();
+}
+
+/* back to top button */
+webrouk-back-top-scroll-indicator {
+  --primary-color: var(--main-color-one);
+  z-index: 3000;
+  border-radius: 50%;
+
+  &:focus-within {
+    @include focusStyle();
+  }
+}
+
+/* Inner pages text blocks title */
+.blockTitle {
+  position: relative;
+  font-size: 1.375rem;
+  padding-bottom: 12px;
+  margin-bottom: 1.5rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    width: 60px;
+    background-color: hsl(var(--border-color));
+
+    @include appDir() {
+      #{dirs("left", "right")}: 0;
+    }
+  }
+}
+
+/* Underline Fill Effect */
+.anim-underline-fx {
+  background-size: 200% 3px;
+  background-repeat: no-repeat;
+  transition: background-position 0.3s;
+
+  @include appDir() {
+    background-image: linear-gradient(
+      to dirs(right, left),
+      hsl(var(--main-color-one)) 50%,
+      hsla(var(--main-color-one), 20%) 50%
+    );
+    background-position: dirs(100% 100%, 0% 100%);
+
+    &:hover {
+      background-position: dirs(0% 100%, 100% 100%);
+    }
+  }
+}
+
+/* splide slider customization */
+.splide__pagination {
+  &__page {
+    &:focus {
+      @include focusStyle();
+    }
+  }
+}

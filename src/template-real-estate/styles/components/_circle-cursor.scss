@@ -1,0 +1,38 @@
+/* Circle Cursor Styles */
+/*----------------------*/
+.circlecursor {
+  position: fixed;
+  z-index: 99999999;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  visibility: hidden;
+
+  &--outer {
+    height: 30px;
+    width: 30px;
+    border: 1px solid hsl(var(--secondary-color));
+    opacity: 0.5;
+    transition: all 0.08s ease-out;
+  }
+
+  &--inner {
+    height: 6px;
+    width: 6px;
+    background-color: hsl(var(--secondary-color));
+    transition: top 0.02s ease-out, left 0.02s ease-out, height 0.2s ease-in-out,
+      width 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  }
+
+  &--linkhover {
+    height: 20px;
+    width: 20px;
+    opacity: 0.5;
+  }
+
+  &--clickeffect {
+    height: 13px;
+    width: 13px;
+  }
+}

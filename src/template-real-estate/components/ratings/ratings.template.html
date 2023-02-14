@@ -1,0 +1,97 @@
+<section class="section section--ratings">
+
+  <!-- section content -->
+  <div class="section__content section__content--ratings">
+    <div class="container">
+      <div class="ratingsSC row">
+
+        <!-- textbox -->
+        <div class="textbox textbox--ratings col-lg-5">
+          <h2 class="textbox__title">
+            <span class="anim-underline-fx">${{ index.homepage.ratings.textbox.title }}$</span>
+          </h2>
+          <p class="textbox__paragraph">${{ index.homepage.ratings.textbox.paragraph }}$</p>
+          <div class="textbox__btns btns-container">
+            <a href="${{ index.prefix }}$reviews.html" class="w-btn w-btn--s1 w-btn--secondary">${{ index.homepage.ratings.textbox.viewAll }}$</a>
+          </div>
+        </div>
+
+        <!-- ratings list -->
+        <div class="col-lg-7">
+          <ul class="ratingsSC__ratingsList row">
+            <li class="col-md-12 col-lg-6">
+              <div class="ratingsSC__ratingsList__item">
+                <div class="ratingsSC__ratingsList__avatar">
+                  <img class="ratingsSC__ratingsList__avatar__img" loading="lazy" src="assets/images/ratings/ratings-1.jpg" data-placeholder="64" alt="${{ index.homepage.ratings.content.ratingsList.i1.name }}$">
+                </div>
+                <div class="ratingsSC__ratingsList__text">
+                  <!-- rating score component -->
+                  @@include('../ui/rating-score/rating-score.template.html', { "score": "50" })
+                  <strong class="ratingsSC__ratingsList__text__name">${{ index.homepage.ratings.content.ratingsList.i1.name }}$</strong>
+                  <p class="ratingsSC__ratingsList__text__review">${{ index.homepage.ratings.content.ratingsList.i1.review }}$</p>
+                </div>
+              </div>
+            </li>
+            <li class="col-md-12 col-lg-6">
+              <div class="ratingsSC__ratingsList__item">
+                <div class="ratingsSC__ratingsList__avatar">
+                  <img class="ratingsSC__ratingsList__avatar__img" loading="lazy" src="assets/images/ratings/ratings-2.jpg" data-placeholder="64" alt="${{ index.homepage.ratings.content.ratingsList.i2.name }}$">
+                </div>
+                <div class="ratingsSC__ratingsList__text">
+                  <!-- rating score component -->
+                  @@include('../ui/rating-score/rating-score.template.html', { "score": "80" })
+                  <strong class="ratingsSC__ratingsList__text__name">${{ index.homepage.ratings.content.ratingsList.i2.name }}$</strong>
+                  <p class="ratingsSC__ratingsList__text__review">${{ index.homepage.ratings.content.ratingsList.i2.review }}$</p>
+                </div>
+              </div>
+            </li>
+            <li class="col-md-12 col-lg-6">
+              <div class="ratingsSC__ratingsList__item">
+                <div class="ratingsSC__ratingsList__avatar">
+                  <img class="ratingsSC__ratingsList__avatar__img" loading="lazy" src="assets/images/ratings/ratings-3.jpg" data-placeholder="64" alt="${{ index.homepage.ratings.content.ratingsList.i3.name }}$">
+                </div>
+                <div class="ratingsSC__ratingsList__text">
+                  <!-- rating score component -->
+                  @@include('../ui/rating-score/rating-score.template.html', { "score": "60" })
+                  <strong class="ratingsSC__ratingsList__text__name">${{ index.homepage.ratings.content.ratingsList.i3.name }}$</strong>
+                  <p class="ratingsSC__ratingsList__text__review">${{ index.homepage.ratings.content.ratingsList.i3.review }}$</p>
+                </div>
+              </div>
+            </li>
+            <li class="col-md-12 col-lg-6">
+              <div class="ratingsSC__ratingsList__item">
+                <div class="ratingsSC__ratingsList__avatar">
+                  <img class="ratingsSC__ratingsList__avatar__img" loading="lazy" src="assets/images/ratings/ratings-4.jpg" data-placeholder="64" alt="${{ index.homepage.ratings.content.ratingsList.i4.name }}$">
+                </div>
+                <div class="ratingsSC__ratingsList__text">
+                  <!-- rating score component -->
+                  @@include('../ui/rating-score/rating-score.template.html', { "score": "90" })
+                  <strong class="ratingsSC__ratingsList__text__name">${{ index.homepage.ratings.content.ratingsList.i4.name }}$</strong>
+                  <p class="ratingsSC__ratingsList__text__review">${{ index.homepage.ratings.content.ratingsList.i4.review }}$</p>
+                </div>
+              </div>
+            </li>
+            <li class="col-md-12 col-lg-6">
+              <div class="ratingsSC__ratingsList__item">
+                <div class="ratingsSC__ratingsList__avatar">
+                  <img class="ratingsSC__ratingsList__avatar__img" loading="lazy" src="assets/images/ratings/ratings-5.jpg" data-placeholder="64" alt="${{ index.homepage.ratings.content.ratingsList.i5.name }}$">
+                </div>
+                <div class="ratingsSC__ratingsList__text">
+                  <!-- rating score component -->
+                  @@include('../ui/rating-score/rating-score.template.html', { "score": "40" })
+                  <strong class="ratingsSC__ratingsList__text__name">${{ index.homepage.ratings.content.ratingsList.i5.name }}$</strong>
+                  <p class="ratingsSC__ratingsList__text__review">${{ index.homepage.ratings.content.ratingsList.i5.review }}$</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 'view all' button on mobile -->
+        <div class="ratingsSC__btns btns-container">
+          <a href="#" class="w-btn w-btn--s1 w-btn--secondary">${{ index.homepage.ratings.textbox.viewAll }}$</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

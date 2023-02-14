@@ -1,0 +1,104 @@
+/* Reviews Page Styles */
+/*---------------------*/
+.reviewsSC {
+  &__reviewsList {
+    margin-bottom: -3rem;
+
+    &__item {
+      position: relative;
+      background-color: hsl(var(--bg-color-two));
+      padding: calc(2.5rem + 6px) 20px 20px;
+      border-radius: var(--radius-size);
+      filter: var(--drop-shadow);
+
+      @include appDir() {
+        margin: dirs(3rem 0.375rem 3rem 1.5rem, 3rem 1.5rem 3rem 0.375rem);
+      }
+    }
+
+    &__banner {
+      --banner-height: 2.25rem;
+
+      @include flexbox(flex, "", center, "", "", "");
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(-50%);
+      width: 100%;
+
+      @include appDir() {
+        filter: dirs(
+          drop-shadow(10px 10px 5px hsla(0, 0%, 0%, 0.05)),
+          drop-shadow(-10px 10px 5px hsla(0, 0%, 0%, 0.05))
+        );
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 1.125rem;
+
+        @include appDir() {
+          #{dirs(right, left)}: 100%;
+          border-radius: dirs(20px 0 0 20px, 0 20px 20px 0);
+        }
+      }
+
+      &::before {
+        transform: translateY(-25%);
+        height: calc(var(--banner-height) * 2);
+        background-color: hsl(var(--secondary-color));
+      }
+
+      &::after {
+        transform: translateY(50%);
+        height: var(--banner-height);
+        background-color: hsl(
+          var(--secondary-h),
+          var(--secondary-s),
+          calc(var(--secondary-l) - 8%)
+        );
+      }
+    }
+
+    .ratingScore {
+      @include flexbox(flex, "", center, "", "", "");
+      height: var(--banner-height);
+      width: calc(100% - (6rem + 1.125rem));
+      background-color: hsl(var(--secondary-color));
+      padding: 0 5px;
+
+      &__star {
+        &::after {
+          background-color: hsl(var(--warning-color));
+        }
+      }
+    }
+
+    &__avatar {
+      @include appDir() {
+        margin-#{dirs(left, right)}: -0.25rem;
+      }
+
+      &__img {
+        height: 6rem;
+        width: 6rem;
+        background-color: hsl(var(--main-color-one));
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+
+    &__text {
+      &__name {
+        display: block;
+      }
+
+      &__review {
+        margin: 7px 0 0;
+      }
+    }
+  }
+}

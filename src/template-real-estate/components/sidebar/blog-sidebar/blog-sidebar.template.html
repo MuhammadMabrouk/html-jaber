@@ -1,0 +1,291 @@
+<aside class="sidebar stickySidebar">
+  <div class="stickySidebar__inner">
+  @@if (search === true) {<!-- search widget -->
+    <div class="sidebar__widget sidebar__widget--search">
+      <h4 class="sidebar__widget__title blockTitle">${{ index.components.sidebar.search.title }}$</h4>
+      <div class="sidebar__widget__content">
+        <form class="form-styled d-flex" action="#">
+          <div class="group inputField">
+            <div class="control">
+              <input type="search" name="search" placeholder="${{ index.components.sidebar.search.placeholder }}$" required>
+            </div>
+          </div>
+          <div class="group">
+            <div class="control">
+              <button class="submit-btn btn btn-secondary text-light" type="submit" title="${{ index.components.sidebar.search.submitBtn }}$">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>}
+  @@if (favCompSha === true) {<!-- favorite, compare & share widget -->
+    <div class="sidebar__widget sidebar__widget--favCompSha">
+      <button class="favCompSha__item favCompSha__item--favorite">
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        <span>${{ index.components.sidebar.favCompSha.favorite }}$</span>
+      </button>
+      <button class="favCompSha__item favCompSha__item--compare">
+        <i class="fa fa-exchange" aria-hidden="true"></i>
+        <span>${{ index.components.sidebar.favCompSha.compare }}$</span>
+      </button>
+      <button class="favCompSha__item favCompSha__item--share">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+        <span>${{ index.components.sidebar.favCompSha.share }}$</span>
+      </button>
+    </div>}
+  @@if (agent === true) {<!-- about agent widget -->
+    <div class="sidebar__widget sidebar__widget--agent propAgentWidget">
+      <a class="propAgentWidget__imgBox" href="${{ index.prefix }}$agent-details.html">
+        <img class="propAgentWidget__img" loading="lazy" src="assets/images/agents/agents-600-5.jpg" data-placeholder="122" alt="${{ index.userProfilePage.imageForm.title }}$">
+      </a>
+      <h4 class="propAgentWidget__title">
+        <a href="${{ index.prefix }}$agent-details.html">${{ index.homepage.agents.content.agentsList.i5.name }}$</a>
+      </h4>
+      <span class="propAgentWidget__position">${{ index.homepage.agents.content.agentsList.i5.position }}$</span>
+      <div class="propAgentWidget__rating">
+        @@include('../ui/rating-score/rating-score.template.html', { "score": "70" })
+        <span>(${{ index.numbers.1 }}$${{ index.numbers.9 }}$ ${{ index.global.reviews }}$)</span>
+      </div>
+      <a class="w-btn w-btn--s1 w-btn--secondary w-100 mt-4" href="${{ index.prefix }}$agent-details.html">${{ index.components.sidebar.agent.viewProfile }}$</a>
+    </div>}
+  @@if (contactForm === true) {<!-- contact form widget -->
+    <div class="sidebar__widget sidebar__widget--contactForm">
+      <h4 class="sidebar__widget__title blockTitle">${{ index.components.sidebar.contact.title }}$</h4>
+      <div class="sidebar__widget__content">
+        <!-- action value is only test url, you can remove it -->
+        <form class="contactFormSC__form form-styled"
+          action="https://reqres.in/api/users"
+          data-success-msg="${{ index.toastNotifications.messageSent }}$"
+          data-err-msg="${{ index.toastNotifications.oopsSomethingWrong }}$"
+          ref="contactUsForm">
+          <div class="group">
+            <label for="name">${{ index.contactUsPage.form.nameLabel }}$</label>
+            <div class="control has-prefix-icon">
+              <input id="name" type="text"
+                name="name"
+                placeholder="${{ index.contactUsPage.form.namePlaceholder }}$"
+                minlength="3"
+                required>
+              <i class="fa fa-user-circle prefix-icon" aria-hidden="true"></i>
+
+              <!-- validation errors messages -->
+              <div class="errors-msgs">
+                <input class="required" type="hidden" value="${{ index.contactUsPage.form.nameLabel }}$ ${{ index.toastNotifications.formsValidation.isRequired }}$">
+                <input class="minLength" type="hidden" value="${{ index.contactUsPage.form.nameLabel }}$ ${{ index.toastNotifications.formsValidation.mustBeAtLeast }}$ ${{ index.numbers.3 }}$ ${{ index.toastNotifications.formsValidation.characters }}$">
+              </div>
+            </div>
+          </div>
+          <div class="group">
+            <label for="email">${{ index.contactUsPage.form.emailLabel }}$</label>
+            <div class="control has-prefix-icon">
+              <input id="email" class="ltr-dir"
+                type="email"
+                inputmode="email"
+                name="email"
+                placeholder="${{ index.contactUsPage.form.emailPlaceholder }}$"
+                required>
+              <i class="fa fa-envelope prefix-icon" aria-hidden="true"></i>
+
+              <!-- validation errors messages -->
+              <div class="errors-msgs">
+                <input class="required" type="hidden" value="${{ index.contactUsPage.form.emailLabel }}$ ${{ index.toastNotifications.formsValidation.isRequired }}$">
+                <input class="invalid" type="hidden" value="${{ index.toastNotifications.formsValidation.enterValidEmail }}$">
+              </div>
+            </div>
+          </div>
+          <div class="group phone-number">
+            <label for="phone">${{ index.contactUsPage.form.phoneLabel }}$ <span class="optional">${{ index.global.optional }}$</span></label>
+            <div class="control has-prefix-icon">
+              <input id="phoneNumber"
+                type="tel"
+                inputmode="tel"
+                name="phone"
+                placeholder="${{ index.contactUsPage.form.phonePlaceholder }}$">
+              <i class="fa fa-phone prefix-icon" aria-hidden="true"></i>
+
+              <!-- validation errors messages -->
+              <div class="errors-msgs">
+                <input class="invalid" type="hidden" value="${{ index.toastNotifications.formsValidation.enterValidPhone }}$">
+              </div>
+            </div>
+          </div>
+          <div class="group">
+            <label for="message">${{ index.contactUsPage.form.messageLabel }}$</label>
+            <div class="control has-prefix-icon">
+              <textarea id="message"
+                name="message"
+                placeholder="${{ index.contactUsPage.form.messagePlaceholder }}$"
+                required></textarea>
+              <i class="fa fa-comments prefix-icon" aria-hidden="true"></i>
+
+              <!-- validation errors messages -->
+              <div class="errors-msgs">
+                <input class="required" type="hidden" value="${{ index.contactUsPage.form.messageLabel }}$ ${{ index.toastNotifications.formsValidation.isRequired }}$">
+              </div>
+            </div>
+          </div>
+          <div class="group">
+            <div class="control">
+              <button class="submit-btn w-btn w-btn--s1 w-btn--secondary w-100" type="button" @click="contactUsFormValidation">${{ index.contactUsPage.form.submitBtn }}$</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>}
+  @@if (propertyDocs === true) {<!-- property documents widget -->
+    <div class="sidebar__widget sidebar__widget--docs">
+      <h4 class="sidebar__widget__title blockTitle">${{ index.components.sidebar.propertyDocs.title }}$</h4>
+      <div class="sidebar__widget__content">
+        <ul class="docsList">
+          <li class="docsList__item">
+            <img class="docsList__item__icon" src="assets/images/files/pdf.png" alt="pdf">
+            <a class="btn-link" href="assets/sample.pdf" title="${{ index.global.download }}$" download>${{ index.components.sidebar.propertyDocs.i1 }}$</a>
+          </li>
+          <li class="docsList__item">
+            <img class="docsList__item__icon" src="assets/images/files/xls.png" alt="xls">
+            <a class="btn-link" href="assets/sample.pdf" title="${{ index.global.download }}$" download>${{ index.components.sidebar.propertyDocs.i2 }}$</a>
+          </li>
+          <li class="docsList__item">
+            <img class="docsList__item__icon" src="assets/images/files/mpg.png" alt="mpg">
+            <a class="btn-link" href="assets/sample.pdf" title="${{ index.global.download }}$" download>${{ index.components.sidebar.propertyDocs.i3 }}$</a>
+          </li>
+        </ul>
+      </div>
+    </div>}
+  @@if (featuredProps === true) {<!-- featured properties widget -->
+    <div class="sidebar__widget sidebar__widget--posts">
+      <h4 class="sidebar__widget__title blockTitle">${{ index.components.sidebar.featured.title }}$</h4>
+      <div class="sidebar__widget__content">
+        <ul class="postsList">
+          <li class="postsList__item">
+            <a class="postsList__imgBox" href="#">
+              <img class="postsList__imgBox__img" loading="lazy" src="assets/images/properties/properties-420-1.jpg" data-placeholder="80x64" alt="${{ index.components.sidebar.featured.i1.title }}$">
+            </a>
+            <div class="postsList__textBox">
+              <h5 class="postsList__textBox__title"><a href="#">${{ index.components.sidebar.featured.i1.title }}$</a></h5>
+              <span class="postsList__textBox__date">${{ index.components.sidebar.featured.i1.date }}$</span>
+            </div>
+          </li>
+          <li class="postsList__item">
+            <a class="postsList__imgBox" href="#">
+              <img class="postsList__imgBox__img" loading="lazy" src="assets/images/properties/properties-420-2.jpg" data-placeholder="80x64" alt="${{ index.components.sidebar.featured.i2.title }}$">
+            </a>
+            <div class="postsList__textBox">
+              <h5 class="postsList__textBox__title"><a href="#">${{ index.components.sidebar.featured.i2.title }}$</a></h5>
+              <span class="postsList__textBox__date">${{ index.components.sidebar.featured.i2.date }}$</span>
+            </div>
+          </li>
+          <li class="postsList__item">
+            <a class="postsList__imgBox" href="#">
+              <img class="postsList__imgBox__img" loading="lazy" src="assets/images/properties/properties-420-3.jpg" data-placeholder="80x64" alt="${{ index.components.sidebar.featured.i3.title }}$">
+            </a>
+            <div class="postsList__textBox">
+              <h5 class="postsList__textBox__title"><a href="#">${{ index.components.sidebar.featured.i3.title }}$</a></h5>
+              <span class="postsList__textBox__date">${{ index.components.sidebar.featured.i3.date }}$</span>
+            </div>
+          </li>
+          <li class="postsList__item">
+            <a class="postsList__imgBox" href="#">
+              <img class="postsList__imgBox__img" loading="lazy" src="assets/images/properties/properties-420-4.jpg" data-placeholder="80x64" alt="${{ index.components.sidebar.featured.i4.title }}$">
+            </a>
+            <div class="postsList__textBox">
+              <h5 class="postsList__textBox__title"><a href="#">${{ index.components.sidebar.featured.i4.title }}$</a></h5>
+              <span class="postsList__textBox__date">${{ index.components.sidebar.featured.i4.date }}$</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>}
+  @@if (categories === true) {<!-- categories widget -->
+    <div class="sidebar__widget sidebar__widget--links">
+      <h4 class="sidebar__widget__title blockTitle">${{ index.components.sidebar.categories.title }}$</h4>
+      <div class="sidebar__widget__content">
+        <ul class="linksList">
+          <li class="linksList__item">
+            <a class="linksList__link" href="#">
+              <span>${{ index.components.sidebar.categories.i1 }}$</span>
+              <span>(${{ index.numbers.9 }}$)</span>
+            </a>
+          </li>
+          <li class="linksList__item">
+            <a class="linksList__link" href="#">
+              <span>${{ index.components.sidebar.categories.i2 }}$</span>
+              <span>(${{ index.numbers.7 }}$)</span>
+            </a>
+          </li>
+          <li class="linksList__item">
+            <a class="linksList__link" href="#">
+              <span>${{ index.components.sidebar.categories.i3 }}$</span>
+              <span>(${{ index.numbers.8 }}$)</span>
+            </a>
+          </li>
+          <li class="linksList__item">
+            <a class="linksList__link" href="#">
+              <span>${{ index.components.sidebar.categories.i4 }}$</span>
+              <span>(${{ index.numbers.5 }}$)</span>
+            </a>
+          </li>
+          <li class="linksList__item">
+            <a class="linksList__link" href="#">
+              <span>${{ index.components.sidebar.categories.i5 }}$</span>
+              <span>(${{ index.numbers.6 }}$)</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>}
+  @@if (tags === true) {<!-- tags widget -->
+    <div class="sidebar__widget sidebar__widget--tags">
+      <h4 class="sidebar__widget__title blockTitle">${{ index.components.sidebar.tags.title }}$</h4>
+      <div class="sidebar__widget__content">
+        <ul class="tagsList">
+          <li class="tagsList__item"><a class="tagsList__link" href="#">${{ index.components.sidebar.tags.i1 }}$</a></li>
+          <li class="tagsList__item"><a class="tagsList__link" href="#">${{ index.components.sidebar.tags.i2 }}$</a></li>
+          <li class="tagsList__item"><a class="tagsList__link" href="#">${{ index.components.sidebar.tags.i3 }}$</a></li>
+          <li class="tagsList__item"><a class="tagsList__link" href="#">${{ index.components.sidebar.tags.i4 }}$</a></li>
+          <li class="tagsList__item"><a class="tagsList__link" href="#">${{ index.components.sidebar.tags.i5 }}$</a></li>
+          <li class="tagsList__item"><a class="tagsList__link" href="#">${{ index.components.sidebar.tags.i6 }}$</a></li>
+          <li class="tagsList__item"><a class="tagsList__link" href="#">${{ index.components.sidebar.tags.i7 }}$</a></li>
+          <li class="tagsList__item"><a class="tagsList__link" href="#">${{ index.components.sidebar.tags.i8 }}$</a></li>
+          <li class="tagsList__item"><a class="tagsList__link" href="#">${{ index.components.sidebar.tags.i9 }}$</a></li>
+          <li class="tagsList__item"><a class="tagsList__link" href="#">${{ index.components.sidebar.tags.i10 }}$</a></li>
+          <li class="tagsList__item"><a class="tagsList__link" href="#">${{ index.components.sidebar.tags.i11 }}$</a></li>
+        </ul>
+      </div>
+    </div>}
+  @@if (social === true) {<!-- social widget -->
+    <div class="sidebar__widget sidebar__widget--social">
+      <h4 class="sidebar__widget__title blockTitle">${{ index.global.social.title }}$</h4>
+      <div class="sidebar__widget__content">
+        <ul class="socialList">
+          <li class="socialList__item">
+            <a class="socialList__link" href="#" title="${{ index.global.social.facebook }}$"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          </li>
+          <li class="socialList__item">
+            <a class="socialList__link" href="#" title="${{ index.global.social.twitter }}$"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          </li>
+          <li class="socialList__item">
+            <a class="socialList__link" href="#" title="${{ index.global.social.instagram }}$"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          </li>
+          <li class="socialList__item">
+            <a class="socialList__link" href="#" title="${{ index.global.social.linkedin }}$"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+          </li>
+          <li class="socialList__item">
+            <a class="socialList__link" href="#" title="${{ index.global.social.vimeo }}$"><i class="fa fa-vimeo" aria-hidden="true"></i></a>
+          </li>
+          <li class="socialList__item">
+            <a class="socialList__link" href="#" title="${{ index.global.social.youtube }}$"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+          </li>
+          <li class="socialList__item">
+            <a class="socialList__link" href="#" title="${{ index.global.social.dribbble }}$"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+          </li>
+          <li class="socialList__item">
+            <a class="socialList__link" href="#" title="${{ index.global.social.pinterest }}$"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>}
+  </div>
+</aside>

@@ -1,0 +1,13 @@
+/* Agents Page Styles */
+/*--------------------*/
+.section--agentsPage {
+  .agentsSC {
+    &__agentsList {
+      margin-bottom: -50px;
+
+      .agentItem {
+        margin-bottom: 50px;
+      }
+    }
+  }
+}

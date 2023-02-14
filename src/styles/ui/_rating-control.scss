@@ -1,0 +1,77 @@
+/* Rating Control Styles */
+/*-----------------------*/
+.ratingControl {
+  --star-size: 48px;
+
+  position: relative;
+  display: inline-flex;
+
+  @include appDir() {
+    direction: dirs(rtl, ltr);
+  }
+
+  &__radio {
+    position: absolute;
+    height: 0;
+    width: 0;
+    opacity: 0;
+  }
+
+  &__star {
+    position: relative;
+    display: block;
+    height: var(--star-size);
+    width: calc(var(--star-size) / 2);
+    cursor: pointer;
+    overflow: hidden;
+
+    &:nth-last-of-type(odd) {
+      &::before,
+      &::after {
+        @include appDir() {
+          #{dirs(left, right)}: 0;
+          clip-path: dirs(
+            polygon(50% 0%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%),
+            polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%)
+          );
+        }
+      }
+    }
+
+    &:nth-last-of-type(even) {
+      &::before,
+      &::after {
+        @include appDir() {
+          #{dirs(right, left)}: 0;
+          clip-path: dirs(
+            polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%),
+            polygon(50% 0%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)
+          );
+        }
+      }
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      height: 100%;
+    }
+
+    &::before {
+      width: 200%;
+      background-color: #aaa;
+    }
+
+    &::after {
+      background-color: hsl(var(--main-color-one));
+    }
+  }
+
+  &__star:hover::after,
+  &__star:hover ~ .ratingControl__star::after,
+  &__radio:checked ~ .ratingControl__star::after {
+    width: 200%;
+  }
+}

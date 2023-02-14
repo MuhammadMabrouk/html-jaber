@@ -1,0 +1,409 @@
+/* Property Details Page Styles */
+/*------------------------------*/
+.propertyDetailsSC {
+  .mainContent > *:not(.propertyDetailsSC__gallery) {
+    background-color: hsl(var(--bg-color-two));
+    padding: 20px;
+    filter: var(--drop-shadow);
+  }
+
+  .mainContent > *:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+
+  &__gallery {
+    &__imgBox {
+      $line_height: 24px;
+      $corner_size: 14px;
+
+      position: relative;
+
+      @media #{$min_768} {
+        height: 450px;
+
+        .splide__list {
+          height: 450px;
+        }
+      }
+
+      @media #{$max_767} {
+        height: 300px;
+
+        .splide__list {
+          height: 300px;
+        }
+      }
+
+      &__link {
+        display: block;
+        height: 100%;
+        cursor: zoom-in;
+      }
+
+      &__img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      &__labels,
+      &__price {
+        position: absolute;
+        z-index: 2;
+        top: $corner_size;
+
+        @include appDir() {
+          text-transform: dirs(uppercase, null);
+        }
+      }
+
+      &__labels {
+        line-height: $line_height;
+        font-size: 0.75rem;
+
+        @include appDir() {
+          #{dirs(right, left)}: $corner_size;
+        }
+
+        &__item {
+          display: inline-block;
+          color: #fff;
+          padding: 0px 12px;
+          box-shadow: var(--card-shadow);
+
+          &:not(:last-child) {
+            @include appDir() {
+              margin-#{dirs(right, left)}: 5px;
+            }
+          }
+
+          &--rent {
+            background-color: hsl(var(--rent-label-color));
+          }
+
+          &--sale {
+            background-color: hsl(var(--sale-label-color));
+          }
+
+          &--new {
+            background-color: hsl(var(--new-label-color));
+          }
+
+          &--featured {
+            background-color: hsl(var(--featured-label-color));
+          }
+        }
+      }
+
+      &__price {
+        --price-height: 42px;
+
+        height: var(--price-height);
+        line-height: var(--price-height);
+        background-color: hsl(var(--main-color-one));
+        filter: var(--drop-shadow);
+
+        @include appDir() {
+          #{dirs(left, right)}: -$corner_size;
+          padding-#{dirs(left, right)}: calc(var(--price-height) / 2);
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 100%;
+          height: calc(var(--price-height) / 4);
+          width: $corner_size;
+          background-color: hsl(
+            var(--primary-h),
+            var(--primary-s),
+            calc(var(--primary-l) - 20%)
+          );
+
+          @include appDir() {
+            #{dirs(left, right)}: 0;
+            clip-path: dirs(
+              polygon(100% 0, 0 0, 100% 100%),
+              polygon(100% 0, 0 0, 0 100%)
+            );
+          }
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          height: var(--price-height);
+          width: var(--price-height);
+          background-color: hsl(var(--primary-color));
+
+          @include appDir() {
+            #{dirs(right, left)}: calc((var(--price-height) - 1px) * -1);
+            clip-path: dirs(
+              polygon(100% 0, 50% 50%, 100% 100%, 0 100%, 0 50%, 0 0),
+              polygon(100% 0, 100% 50%, 100% 100%, 0 100%, 50% 50%, 0 0)
+            );
+          }
+        }
+
+        &__val {
+          color: hsl(var(--light-color)) !important;
+        }
+      }
+
+      &:focus-within {
+        @include focusStyle();
+      }
+    }
+
+    &__thumbnail {
+      background-color: hsl(var(--bg-color-two));
+      padding: 10px;
+      margin-top: 10px;
+      filter: var(--drop-shadow);
+
+      .splide {
+        &__arrow {
+          height: 40px;
+          width: 30px;
+          background-color: hsl(var(--t-color-two));
+          border-radius: 0;
+          opacity: 1;
+
+          &--prev {
+            @include appDir() {
+              #{dirs(left, right)}: -20px;
+            }
+          }
+
+          &--next {
+            @include appDir() {
+              #{dirs(right, left)}: -20px;
+            }
+          }
+
+          svg path {
+            fill: hsl(var(--bg-color-two));
+            transition: all 0.3s ease-in-out;
+          }
+
+          &:hover {
+            background-color: hsl(var(--main-color-one));
+
+            svg path {
+              fill: hsl(var(--light-color));
+            }
+          }
+
+          &:focus {
+            @include focusStyle();
+          }
+        }
+
+        &__slide {
+          border: none !important;
+          opacity: 0.5;
+
+          &.is-active {
+            opacity: 1;
+          }
+
+          &:focus {
+            @include focusStyle(null, true);
+          }
+        }
+      }
+    }
+
+    .splide__slide.video {
+      position: relative;
+
+      &::after {
+        content: "\f04b";
+        font-family: FontAwesome;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: grid;
+        place-items: center;
+        width: 40px;
+        height: 40px;
+        background: #333;
+        color: #fff;
+        font-size: 1.125rem;
+        border-radius: 50%;
+        opacity: 0.8;
+      }
+
+      &:hover {
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__desc {
+    &__text {
+      margin: 0;
+    }
+  }
+
+  &__details {
+    &__table {
+      @media #{$min_577} {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      &__item {
+        line-height: 2rem;
+        padding: 0.25rem 1rem;
+
+        @media #{$min_577} {
+          &:nth-of-type(4n + 1),
+          &:nth-of-type(4n + 2) {
+            background-color: hsl(var(--inputs-bg-color));
+          }
+        }
+
+        @media #{$max_576} {
+          &:nth-of-type(odd) {
+            background-color: hsl(var(--inputs-bg-color));
+          }
+
+          &:nth-of-type(even) {
+            @include appDir() {
+              padding-#{dirs(left, right)}: 1rem;
+            }
+          }
+
+          > div {
+            padding-top: 7px;
+            margin-bottom: 7px;
+          }
+        }
+      }
+    }
+  }
+
+  &__floorPlans {
+    .splide {
+      &__list {
+        @media #{$min_768} {
+          height: 450px;
+        }
+
+        @media #{$max_767} {
+          height: 300px;
+        }
+      }
+
+      &__arrow {
+        height: 40px;
+        width: 40px;
+        background-color: hsl(var(--t-color-two));
+        border-radius: 0;
+        opacity: 1;
+
+        &--prev {
+          @include appDir() {
+            #{dirs(left, right)}: -30px;
+          }
+        }
+
+        &--next {
+          @include appDir() {
+            #{dirs(right, left)}: -30px;
+          }
+        }
+
+        svg path {
+          fill: hsl(var(--bg-color-two));
+          transition: all 0.3s ease-in-out;
+        }
+
+        &:hover {
+          background-color: hsl(var(--main-color-one));
+
+          svg path {
+            fill: hsl(var(--light-color));
+          }
+        }
+
+        &:focus {
+          @include focusStyle();
+        }
+      }
+    }
+
+    &__link {
+      display: block;
+      height: 100%;
+      cursor: zoom-in;
+    }
+
+    &__img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__nearby {
+    &__group {
+      &:not(:last-of-type) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    &__heading {
+      font-size: 1.125rem;
+      margin-bottom: 0.75rem;
+
+      .fa {
+        width: 1.25rem;
+        text-align: center;
+
+        @include appDir() {
+          margin-#{dirs(right, left)}: 0.5rem;
+        }
+      }
+    }
+
+    &__item {
+      @media #{$min_768} {
+        @include flexbox(flex, "", "", between, "", "");
+      }
+
+      @media #{$max_767} {
+        margin-bottom: 0.5rem;
+      }
+
+      .ratingScore {
+        &__star {
+          height: 14px;
+          width: 14px;
+
+          &::after {
+            background-color: hsl(var(--warning-color));
+          }
+        }
+      }
+    }
+  }
+
+  &__location {
+    &__map {
+      @media #{$min_768} {
+        height: 350px;
+      }
+
+      @media #{$max_767} {
+        height: 250px;
+      }
+    }
+  }
+}

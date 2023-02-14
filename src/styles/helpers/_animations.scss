@@ -1,0 +1,70 @@
+//------------------------------------------------------------------------------------------/
+// Global Animations
+//------------------------------------------------------------------------------------------/
+
+/* Fade Effects */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Spinner Effects */
+@keyframes spinner-left {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner-right {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+/* Slide Effects */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Pulse Effect */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 hsla(var(--primary-color), 50%);
+  }
+
+  100% {
+    box-shadow: 0 0 0 10px transparent;
+  }
+}

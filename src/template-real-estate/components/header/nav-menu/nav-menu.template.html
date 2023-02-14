@@ -1,0 +1,195 @@
+<div :class="['sideMenuWrapper', {'sideMenuWrapper--open': isSideMenuOpen}]" ref="sideMenuWrapper" tabindex="-1">
+
+  <!-- /** for tablet/mobile screen -->
+  <!-- search form -->
+  <form class="sideMenuWrapper__searchForm form-styled" action="#">
+    <div class="group d-flex">
+      <div class="control">
+        <input class="sideMenuWrapper__searchForm__searchInput" type="search" name="search"
+          placeholder="${{ index.header.actions.search.search }}$..." required>
+      </div>
+      <button class="sideMenuWrapper__searchForm__btn btn btn-primary"
+        title="${{ index.header.actions.search.search }}$">
+        <i class="sideMenuWrapper__searchForm__faSearch fa fa-search" aria-hidden="true"></i>
+      </button>
+    </div>
+  </form>
+  <!-- **/ -->
+
+  <!-- links list -->
+  <ul class="header__links">
+    <li class="header__links__item">
+      <a class="header__links__link" href="${{ index.prefix }}$index.html">${{ index.header.navbarLinks.home }}$</a>
+    </li>
+    <li class="header__links__item">
+      <a class="header__links__link" href="${{ index.prefix }}$places.html">${{ index.header.navbarLinks.places }}$</a>
+    </li>
+    <li class="header__links__item hasDropdown">
+      <a class="header__links__link" href="${{ index.prefix }}$properties.html">${{ index.header.navbarLinks.properties.properties }}$
+        <i class="fa fa-angle-down arrow" aria-hidden="true"></i>
+      </a>
+
+      <!-- sub-menu toggle button (in side menu only) -->
+      <button class="hasDropdown__toggle" @click="toggleSubMenu">
+        <i class="hasDropdown__toggle__arrow fa fa-angle-down" aria-hidden="true"></i>
+      </button>
+
+      <!-- navbar dropdown menu -->
+      <div class="dropdown dropdown--end">
+        <ul class="dropdown__menu">
+          <li class="dropdown__item">
+            <a class="dropdown__link" href="${{ index.prefix }}$properties.html">${{ index.header.navbarLinks.properties.allProperties }}$</a>
+          </li>
+          <li class="dropdown__item">
+            <a class="dropdown__link" href="${{ index.prefix }}$property-details.html">${{ index.header.navbarLinks.properties.propertyDetails }}$</a>
+          </li>
+          <li class="dropdown__item">
+            <a class="dropdown__link" href="${{ index.prefix }}$compare-props.html">${{ index.header.navbarLinks.properties.compareProps }}$</a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="header__links__item hasDropdown">
+      <a class="header__links__link" href="#">${{ index.header.navbarLinks.pages.pages }}$
+        <i class="fa fa-angle-down arrow" aria-hidden="true"></i>
+      </a>
+
+      <!-- sub-menu toggle button (in side menu only) -->
+      <button class="hasDropdown__toggle" @click="toggleSubMenu">
+        <i class="hasDropdown__toggle__arrow fa fa-angle-down" aria-hidden="true"></i>
+      </button>
+
+      <!-- navbar dropdown menu -->
+      <div class="dropdown dropdown--end">
+        <ul class="dropdown__menu">
+          <li class="dropdown__item dropdown__item--hasDropdown">
+            <a class="dropdown__link" href="${{ index.prefix }}$news.html">${{ index.header.navbarLinks.pages.news.news }}$</a>
+
+            <!-- navbar dropdown sub menu -->
+            <div class="dropdown dropdown--end dropdown--subMenu">
+              <ul class="dropdown__menu dropdown__menu--subMenu">
+                <li class="dropdown__item">
+                  <a class="dropdown__link" href="${{ index.prefix }}$news.html">${{ index.header.navbarLinks.pages.news.allNews }}$</a>
+                </li>
+                <li class="dropdown__item">
+                  <a class="dropdown__link" href="${{ index.prefix }}$news-details.html">${{ index.header.navbarLinks.pages.news.newsDetails }}$</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="dropdown__item dropdown__item--hasDropdown">
+            <a class="dropdown__link" href="${{ index.prefix }}$agents.html">${{ index.header.navbarLinks.pages.agents.agents }}$</a>
+
+            <!-- navbar dropdown sub menu -->
+            <div class="dropdown dropdown--end dropdown--subMenu">
+              <ul class="dropdown__menu dropdown__menu--subMenu">
+                <li class="dropdown__item">
+                  <a class="dropdown__link" href="${{ index.prefix }}$agents.html">${{ index.header.navbarLinks.pages.agents.allAgents }}$</a>
+                </li>
+                <li class="dropdown__item">
+                  <a class="dropdown__link" href="${{ index.prefix }}$agent-details.html">${{ index.header.navbarLinks.pages.agents.agentDetails }}$</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="dropdown__item">
+            <a class="dropdown__link" href="${{ index.prefix }}$reviews.html">${{ index.header.navbarLinks.pages.reviews }}$</a>
+          </li>
+          <li class="dropdown__item">
+            <a class="dropdown__link" href="${{ index.prefix }}$sign-in.html">${{ index.header.navbarLinks.pages.signIn }}$</a>
+          </li>
+          <li class="dropdown__item">
+            <a class="dropdown__link" href="${{ index.prefix }}$sign-up.html">${{ index.header.navbarLinks.pages.signUp }}$</a>
+          </li>
+          <li class="dropdown__item dropdown__item--hasDropdown">
+            <a class="dropdown__link" href="${{ index.prefix }}$user-dashboard.html">${{ index.header.navbarLinks.pages.user.dashboard }}$</a>
+
+            <!-- navbar dropdown sub menu -->
+            <div class="dropdown dropdown--end dropdown--subMenu">
+              <ul class="dropdown__menu dropdown__menu--subMenu">
+                <li class="dropdown__item">
+                  <a class="dropdown__link" href="${{ index.prefix }}$user-profile.html">${{ index.header.navbarLinks.pages.user.profile }}$</a>
+                </li>
+                <li class="dropdown__item">
+                  <a class="dropdown__link" href="${{ index.prefix }}$user-properties.html">${{ index.header.navbarLinks.pages.user.properties }}$</a>
+                </li>
+                <li class="dropdown__item">
+                  <a class="dropdown__link" href="${{ index.prefix }}$user-add-property.html">${{ index.header.navbarLinks.pages.user.addProperty }}$</a>
+                </li>
+                <li class="dropdown__item">
+                  <a class="dropdown__link" href="${{ index.prefix }}$user-favorites.html">${{ index.header.navbarLinks.pages.user.favorites }}$</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="dropdown__item">
+            <a class="dropdown__link" href="${{ index.prefix }}$404.html">${{ index.header.navbarLinks.pages.page404 }}$</a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="header__links__item">
+      <a class="header__links__link" href="${{ index.prefix }}$about-us.html">${{ index.header.navbarLinks.about }}$</a>
+    </li>
+    <li class="header__links__item">
+      <a class="header__links__link" href="${{ index.prefix }}$contact-us.html">${{ index.header.navbarLinks.contact }}$</a>
+    </li>
+
+    <!-- /** for tablet/mobile screen -->
+    <li class="header__links__item header__links__item--user hasDropdown">
+      <a class="header__links__link" href="${{ index.prefix }}$user-dashboard.html">${{ index.header.actions.user.title }}$
+        <i class="fa fa-angle-down arrow" aria-hidden="true"></i>
+      </a>
+
+      <!-- sub-menu toggle button (in side menu only) -->
+      <button class="hasDropdown__toggle" @click="toggleSubMenu">
+        <i class="hasDropdown__toggle__arrow fa fa-angle-down" aria-hidden="true"></i>
+      </button>
+
+      <!-- navbar dropdown menu -->
+      <div class="dropdown">
+        <ul class="dropdown__menu">
+          <li class="dropdown__item">
+            <a class="dropdown__link" href="${{ index.prefix }}$user-profile.html">${{ index.header.actions.user.account }}$</a>
+          </li>
+          <li class="dropdown__item">
+            <a class="dropdown__link" href="${{ index.prefix }}$sign-up.html">${{ index.header.actions.user.signUp }}$</a>
+          </li>
+          <li class="dropdown__item">
+            <a class="dropdown__link" href="${{ index.prefix }}$sign-in.html">${{ index.header.actions.user.signIn }}$</a>
+          </li>
+          <li class="dropdown__item">
+            <a class="dropdown__link" href="#">${{ index.header.actions.user.logout }}$</a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="header__links__item header__links__item--langs hasDropdown">
+      <a class="header__links__link" href="#">${{ index.languages }}$
+        <i class="fa fa-angle-down arrow" aria-hidden="true"></i>
+      </a>
+
+      <!-- sub-menu toggle button (in side menu only) -->
+      <button class="hasDropdown__toggle" @click="toggleSubMenu">
+        <i class="hasDropdown__toggle__arrow fa fa-angle-down" aria-hidden="true"></i>
+      </button>
+
+      <!-- navbar dropdown menu -->
+      <div class="dropdown">
+        <ul class="dropdown__menu">
+          <li class="dropdown__item">
+            <a class="dropdown__link" href="${{ index.prefix }}$index.html">${{ index.i18n.langTitle }}$</a>
+          </li>
+          <li class="dropdown__item">
+            <a class="dropdown__link" href="${{ index.i18n.otherLang.prefix }}$index.html">${{ index.i18n.otherLang.title }}$</a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <!-- **/ -->
+  </ul>
+
+  <!-- dark overlay behind the side menu -->
+  <button class="sideMenuWrapper__overlay" title="${{ index.header.sideMenu.close }}$"
+    aria-label="${{ index.header.sideMenu.close }}$" @click="closeSideMenu"></button>
+</div>

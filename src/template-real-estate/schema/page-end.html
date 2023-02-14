@@ -1,0 +1,30 @@
+      <!-- toast notifications -->
+      <ul class="notificationsContainer">
+        <transition-group name="notify">
+          <li v-for="notify of notifications"
+            :key="notify.id"
+            :id="notify.id"
+            :class="['notification', 'show', notify.className, notify.time && 'timer']"
+          >
+            {{ notify.msg }}
+            <i class="fa fa-times link-hover" aria-hidden="true" @click="dismissNotify(notify.id)"></i>
+            <span v-if="notify.time"
+              class="disappearing-time"
+              :style="{ 'animation-duration': notify.time + 'ms' }"></span>
+          </li>
+        </transition-group>
+      </ul>
+
+      <!-- ajax loading -->
+      <div v-show="isAjaxLoading" class="ajaxLoading">
+        <span></span>
+      </div>
+    </div>
+
+    <!-- js plugins file -->
+    <script src="scripts/plugins.min.js"></script>
+
+    <!-- main script file -->
+    <script src="scripts/script.js"></script>
+  </body>
+</html>

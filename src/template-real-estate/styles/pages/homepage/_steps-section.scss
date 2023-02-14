@@ -1,0 +1,175 @@
+/* 2. Steps Section Styles */
+/*-------------------------*/
+.stepsSC {
+  &__stepsList {
+    $parent: &;
+    $imgBox_size: 180px;
+
+    margin-bottom: -40px;
+
+    &__item {
+      text-align: center;
+      margin-bottom: 40px;
+
+      &:not(:last-of-type) {
+        #{$parent}__imgBox {
+          &:before {
+            content: "";
+            position: absolute;
+            border-color: hsl(var(--t-color-two)) !important;
+            border-radius: 50%;
+
+            @media #{$min_992} {
+              height: 100%;
+              width: 150%;
+
+              @include appDir() {
+                #{dirs(left, right)}: 50%;
+              }
+            }
+          }
+        }
+      }
+
+      &:nth-of-type(1),
+      &:nth-of-type(3) {
+        #{$parent}__imgBox {
+          &:before {
+            height: 100%;
+
+            @media #{$min_768} {
+              top: 70%;
+              border-top: 2px dashed;
+
+              @include appDir() {
+                transform: dirs(
+                  translateY(-50%) rotate(10deg),
+                  translateY(-50%) rotate(-10deg)
+                );
+              }
+            }
+
+            @media #{$min_768} and #{$max_991} {
+              width: 200%;
+
+              @include appDir() {
+                #{dirs(left, right)}: 50%;
+              }
+            }
+
+            @media #{$max_767} {
+              top: 30%;
+              height: 230%;
+              width: 230%;
+
+              @include appDir() {
+                #{dirs(right, left)}: -50%;
+                border-#{dirs(right, left)}: 2px dashed;
+              }
+            }
+          }
+        }
+      }
+
+      &:nth-of-type(2) {
+        @media #{$min_768} {
+          transform: translateY(40px);
+        }
+
+        #{$parent}__imgBox {
+          &:before {
+            top: 30%;
+
+            @media #{$min_992} {
+              border-bottom: 2px dashed;
+
+              @include appDir() {
+                transform: dirs(
+                  translateY(-50%) rotate(-10deg),
+                  translateY(-50%) rotate(10deg)
+                );
+              }
+            }
+
+            @media #{$min_768} and #{$max_991} {
+              height: 300%;
+              width: 100%;
+
+              @include appDir() {
+                #{dirs(left, right)}: -60%;
+                border-#{dirs(left, right)}: 2px dashed;
+                transform: dirs(
+                  translateY(-14%) rotate(45deg),
+                  translateY(-14%) rotate(-45deg)
+                );
+              }
+            }
+
+            @media #{$max_767} {
+              height: 230%;
+              width: 230%;
+
+              @include appDir() {
+                #{dirs(left, right)}: -50%;
+                border-#{dirs(left, right)}: 2px dashed;
+              }
+            }
+          }
+        }
+      }
+
+      &:nth-of-type(4) {
+        @media #{$min_768} {
+          transform: translateY(20px);
+        }
+      }
+    }
+
+    &__imgBox {
+      position: relative;
+      height: $imgBox_size;
+      width: $imgBox_size;
+      margin: 0 auto 30px;
+      border-radius: 50%;
+      filter: var(--drop-shadow);
+
+      &:after {
+        content: attr(data-index);
+        @include flexbox(flex, "", center, center, "", "");
+        position: absolute;
+        top: 7px;
+        height: 56px;
+        width: 56px;
+        background-color: hsl(var(--main-color-two));
+        color: #fff;
+        font-size: 1.125rem;
+        border: 6px solid hsl(var(--bg-color-two));
+        border-radius: 50%;
+
+        @include appDir() {
+          #{dirs(right, left)}: 7px;
+        }
+      }
+    }
+
+    &__img {
+      position: relative;
+      display: block;
+      height: $imgBox_size;
+      width: $imgBox_size;
+      background-color: hsl(var(--bg-color-two));
+      padding: 20px;
+      border: 1px solid hsl(var(--border-color));
+      border-radius: 50%;
+    }
+
+    &__heading {
+      font-size: 1.25rem;
+    }
+
+    &__desc {
+      font-size: 0.875rem;
+      margin: 0;
+    }
+  }
+}

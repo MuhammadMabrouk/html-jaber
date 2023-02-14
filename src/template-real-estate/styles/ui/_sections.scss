@@ -1,0 +1,94 @@
+/* Sections Styles */
+/*-----------------*/
+.section {
+  padding: {
+    top: 80px;
+    bottom: 80px;
+  }
+  outline: none;
+
+  /* for changing the active mode */
+  transition: background var(--global-transition);
+
+  &__title {
+    text-align: center;
+    margin-bottom: 60px;
+
+    &__heading {
+      position: relative;
+      width: fit-content;
+      max-width: 100%;
+      line-height: 2.5rem;
+      padding: 0 50px;
+      margin: 0 auto;
+
+      @include appDir() {
+        text-transform: dirs(uppercase, null);
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        background-color: hsl(var(--main-color-one));
+
+        @include appDir() {
+          top: dirs(20%, 30%);
+          height: dirs(58%, 55%);
+        }
+      }
+
+      span {
+        display: block;
+        position: relative;
+        z-index: 2;
+      }
+    }
+
+    &__leading {
+      @media #{$min_768} {
+        font-size: 2.8125rem;
+      }
+
+      @media #{$max_767} {
+        font-size: 2.4rem;
+      }
+    }
+
+    &__tagline {
+      @media #{$min_768} {
+        font-size: 1.5rem;
+      }
+
+      @media #{$max_767} {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .textbox {
+    > *:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    &__title {
+      line-height: 1.4;
+
+      @media #{$min_768} {
+        font-size: 2.375rem;
+      }
+
+      @media #{$max_767} {
+        font-size: 2rem;
+      }
+    }
+
+    &__paragraph {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

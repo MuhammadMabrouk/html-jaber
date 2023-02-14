@@ -1,0 +1,204 @@
+/* Blog Item Styles */
+/*------------------*/
+.blogItem {
+  position: relative;
+  height: 100%;
+  @include flexbox(flex, "", "", "", column, "");
+  transition: all 0.3s ease-in-out;
+
+  &.grid {
+    .blogItem__imgBox {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: grey;
+
+      &__img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.4s ease-in-out;
+      }
+    }
+
+    &:hover,
+    &:focus-within {
+      .blogItem__contentBox {
+        background-color: hsla(var(--bg-color-one), 80%);
+        border-color: hsl(var(--main-color-two));
+      }
+    }
+  }
+
+  &.list {
+    .blogItem__imgBox {
+      height: 250px;
+      width: 100%;
+      background-color: grey;
+
+      &__img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      &:focus {
+        @include focusStyle();
+      }
+    }
+  }
+
+  &__contentBox {
+    position: relative;
+    z-index: 2;
+    @include flexbox(flex, "", "", "", column, "");
+    flex-grow: 1;
+    background-color: hsl(var(--bg-color-two));
+    padding: 14px;
+    border: 2px solid transparent;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease-in-out;
+
+    &__meta {
+      display: flex;
+      margin: {
+        left: -10px;
+        right: -10px;
+        bottom: 12px;
+      }
+
+      @include appDir() {
+        font-size: dirs(0.75rem, 0.875rem);
+      }
+
+      > * {
+        margin: 0 10px;
+      }
+
+      &__fa {
+        @include appDir() {
+          margin-#{dirs(right, left)}: 5px;
+        }
+      }
+
+      &__cats {
+        &__link:not(:last-of-type) {
+          @include appDir() {
+            margin-#{dirs(right, left)}: 5px;
+          }
+        }
+
+        &__link {
+          &:not(:last-of-type) {
+            &:after {
+              @include appDir() {
+                content: dirs(",", "،");
+              }
+            }
+          }
+
+          &:hover {
+            text-decoration: underline;
+          }
+
+          &:focus {
+            @include focusStyle();
+          }
+        }
+      }
+    }
+
+    &__title {
+      font-size: 1.125rem;
+      line-height: 1.8rem;
+      margin-bottom: 0;
+
+      &__link {
+        &:hover {
+          color: hsl(var(--main-color-one));
+        }
+
+        &:focus {
+          @include focusStyle();
+        }
+      }
+    }
+
+    &__excerpt {
+      flex-grow: 1;
+      margin: 15px 0 20px;
+    }
+
+    &__more {
+      $arrow_width: 25px;
+
+      position: relative;
+      width: fit-content;
+      font-size: 0.875rem;
+
+      @include appDir() {
+        text-transform: dirs(uppercase, null);
+        padding-#{dirs(right, left)}: calc($arrow_width + 15px);
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        border-style: solid;
+        border-color: hsl(var(--t-color-two));
+        transition: all 0.3s ease-in-out;
+
+        @include appDir() {
+          #{dirs(right, left)}: 0;
+        }
+      }
+
+      &::before {
+        transform: translateY(-50%);
+        width: $arrow_width;
+        border-width: 0 0 2px;
+      }
+
+      &::after {
+        height: 8px;
+        width: 8px;
+
+        @include appDir() {
+          border-width: dirs(2px 2px 0 0, 2px 0 0 2px);
+          transform: dirs(
+            translate(-1px, -50%) rotate(45deg),
+            translate(-1px, -50%) rotate(-45deg)
+          );
+        }
+      }
+
+      &:hover {
+        color: hsl(var(--main-color-one));
+
+        @include appDir() {
+          padding-#{dirs(right, left)}: calc($arrow_width + 25px);
+        }
+
+        &::before,
+        &::after {
+          border-color: hsl(var(--main-color-one));
+        }
+      }
+
+      &:focus {
+        @include focusStyle();
+      }
+    }
+  }
+
+  &:hover {
+    transform: translateY(-10px);
+  }
+}

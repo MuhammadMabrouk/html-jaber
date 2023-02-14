@@ -1,0 +1,207 @@
+@@include('./schema/page-start.html')
+
+    <!-- start skip links -->
+    @@include('./components/skip-links/skip-links.template.html')
+    <!-- end skip links -->
+
+    <!-- start of header -->
+    @@include('./components/header/header.template.html')
+    <!-- end of header -->
+
+    <!-- start of inner pages header -->
+    @@include('./components/inner-pages-header/inner-pages-header.template.html', { pageTitle: "index.signUpPage.title" })
+    <!-- end of inner pages header -->
+
+    <!-- start page content -->
+    <section id="signUp-section" class="section section--signUpPage">
+      <div class="section__content section__content--signUpPage">
+        <div class="container">
+          <div class="signUpSC">
+            <div class="signUpSC__textBox">
+              <h3 class="signUpSC__leading">${{ index.signUpPage.createAccount }}$</h3>
+              <p class="signUpSC__tagline">${{ index.signUpPage.signBySocial }}$</p>
+              <ul class="signUpSC__social d-flex justify-content-center"
+                data-or="${{ index.signUpPage.or }}$">
+                <li class="signUpSC__social__item mx-2">
+                  <a href="#" class="signUpSC__social__link btn btn-circle text-light btn-lg"
+                    title="${{ index.global.social.google }}$"
+                    style="background-color: #ea4335;">
+                    <i class="fa fa-google" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li class="signUpSC__social__item mx-2">
+                  <a href="#" class="signUpSC__social__link btn btn-circle text-light btn-lg"
+                    title="${{ index.global.social.facebook }}$"
+                    style="background-color: #4267b2;">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li class="signUpSC__social__item mx-2">
+                  <a href="#" class="signUpSC__social__link btn btn-circle text-light btn-lg"
+                    title="${{ index.global.social.twitter }}$"
+                    style="background-color: #2aa9e0;">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- action value is only test url, you can remove it -->
+            <form class="signUpSC__form form-styled pt-4"
+              action="https://reqres.in/api/users"
+              data-success-msg="${{ index.toastNotifications.successfullyRegistered }}$"
+              data-err-msg="${{ index.toastNotifications.oopsSomethingWrong }}$"
+              ref="signUpForm">
+              <div class="row">
+                <div class="group col-lg-6">
+                  <label for="firstName">${{ index.signUpPage.form.firstNameLabel }}$</label>
+                  <div class="control has-prefix-icon">
+                    <input id="firstName" type="text"
+                      name="firstName"
+                      placeholder="${{ index.signUpPage.form.firstNamePlaceholder }}$"
+                      minlength="3"
+                      required>
+                    <i class="fa fa-pencil prefix-icon" aria-hidden="true"></i>
+
+                    <!-- validation errors messages -->
+                    <div class="errors-msgs">
+                      <input class="required" type="hidden" value="${{ index.signUpPage.form.firstNameLabel }}$ ${{ index.toastNotifications.formsValidation.isRequired }}$">
+                      <input class="minLength" type="hidden" value="${{ index.signUpPage.form.firstNameLabel }}$ ${{ index.toastNotifications.formsValidation.mustBeAtLeast }}$ ${{ index.numbers.3 }}$ ${{ index.toastNotifications.formsValidation.characters }}$">
+                    </div>
+                  </div>
+                </div>
+                <div class="group col-lg-6">
+                  <label for="lastName">${{ index.signUpPage.form.lastNameLabel }}$</label>
+                  <div class="control has-prefix-icon">
+                    <input id="lastName" type="text"
+                      name="lastName"
+                      placeholder="${{ index.signUpPage.form.lastNamePlaceholder }}$"
+                      minlength="3"
+                      required>
+                    <i class="fa fa-pencil prefix-icon" aria-hidden="true"></i>
+
+                    <!-- validation errors messages -->
+                    <div class="errors-msgs">
+                      <input class="required" type="hidden" value="${{ index.signUpPage.form.lastNameLabel }}$ ${{ index.toastNotifications.formsValidation.isRequired }}$">
+                      <input class="minLength" type="hidden" value="${{ index.signUpPage.form.lastNameLabel }}$ ${{ index.toastNotifications.formsValidation.mustBeAtLeast }}$ ${{ index.numbers.3 }}$ ${{ index.toastNotifications.formsValidation.characters }}$">
+                    </div>
+                  </div>
+                </div>
+                <div class="group col-lg-6">
+                  <label for="email">${{ index.signUpPage.form.emailLabel }}$</label>
+                  <div class="control has-prefix-icon">
+                    <input id="email" class="ltr-dir"
+                      type="email"
+                      inputmode="email"
+                      name="email"
+                      placeholder="${{ index.signUpPage.form.emailPlaceholder }}$"
+                      required>
+                    <i class="fa fa-envelope prefix-icon" aria-hidden="true"></i>
+
+                    <!-- validation errors messages -->
+                    <div class="errors-msgs">
+                      <input class="required" type="hidden" value="${{ index.signUpPage.form.emailLabel }}$ ${{ index.toastNotifications.formsValidation.isRequired }}$">
+                      <input class="invalid" type="hidden" value="${{ index.toastNotifications.formsValidation.enterValidEmail }}$">
+                    </div>
+                  </div>
+                </div>
+                <div class="group phone-number col-lg-6">
+                  <label for="phone">${{ index.signUpPage.form.phoneLabel }}$ <span class="optional">${{ index.global.optional }}$</span></label>
+                  <div class="control has-prefix-icon">
+                    <input id="phoneNumber"
+                      type="tel"
+                      inputmode="tel"
+                      name="phone"
+                      placeholder="${{ index.signUpPage.form.phonePlaceholder }}$">
+                    <i class="fa fa-phone prefix-icon" aria-hidden="true"></i>
+
+                    <!-- validation errors messages -->
+                    <div class="errors-msgs">
+                      <input class="invalid" type="hidden" value="${{ index.toastNotifications.formsValidation.enterValidPhone }}$">
+                    </div>
+                  </div>
+                </div>
+                <div class="group col-lg-6">
+                  <label for="password">${{ index.signUpPage.form.passwordLabel }}$</label>
+                  <div class="control has-prefix-icon">
+                    <input id="password"
+                      type="password"
+                      name="password"
+                      placeholder="${{ index.signUpPage.form.passwordPlaceholder }}$"
+                      minlength="6"
+                      required>
+                    <i class="fa fa-lock prefix-icon" aria-hidden="true"></i>
+                    <i class="fa fa-eye action-icon" aria-hidden="true" @click="togglePasswordVisibility"></i>
+      
+                    <!-- validation errors messages -->
+                    <div class="errors-msgs">
+                      <input class="required" type="hidden" value="${{ index.signUpPage.form.passwordLabel }}$ ${{ index.toastNotifications.formsValidation.isRequired }}$">
+                      <input class="minLength" type="hidden" value="${{ index.signUpPage.form.passwordLabel }}$ ${{ index.toastNotifications.formsValidation.minimum }}$ ${{ index.numbers.6 }}$ ${{ index.toastNotifications.formsValidation.characters }}$">
+                      <input class="hasSpaces" type="hidden" value="${{ index.signUpPage.form.passwordLabel }}$ ${{ index.toastNotifications.formsValidation.cannotContainSpaces }}$">
+                    </div>
+                  </div>
+                </div>
+                <div class="group col-lg-6">
+                  <label for="confirmPassword">${{ index.signUpPage.form.confirmPasswordLabel }}$</label>
+                  <div class="control has-prefix-icon">
+                    <input id="confirmPassword"
+                      type="password"
+                      name="confirmPassword"
+                      placeholder="${{ index.signUpPage.form.passwordPlaceholder }}$"
+                      minlength="6"
+                      required>
+                    <i class="fa fa-lock prefix-icon" aria-hidden="true"></i>
+                    <i class="fa fa-eye action-icon" aria-hidden="true" @click="togglePasswordVisibility"></i>
+      
+                    <!-- validation errors messages -->
+                    <div class="errors-msgs">
+                      <input class="required" type="hidden" value="${{ index.toastNotifications.formsValidation.confirmYourPassword }}$">
+                      <input class="notEqual" type="hidden" value="${{ index.toastNotifications.formsValidation.passwordsMustMatch }}$">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="group terms">
+                <div class="control">
+                  <div class="checkboxContainer justify-content-center">
+                    <div class="checkbox">
+                      <input id="terms" type="checkbox" name="terms">
+                      <label for="terms"></label>
+                    </div>
+                    <label for="terms">
+                      ${{ index.signUpPage.form.iHaveRead }}$
+                      <a class="btn-link" href="#" target="_blank" rel="noopener noreferrer">${{ index.signUpPage.form.termsConditions }}$</a>
+                    </label>
+                  </div>
+      
+                  <!-- validation errors messages -->
+                  <div class="errors-msgs">
+                    <input class="required" type="hidden" value="${{ index.signUpPage.form.termsConditions }}$ ${{ index.toastNotifications.formsValidation.isRequired }}$">
+                  </div>
+                </div>
+              </div>
+              <div class="group">
+                <div class="control mt-3">
+                  <button class="submit-btn w-btn w-btn--s1 w-btn--primary w-100" type="button" @click="signUpFormValidation">${{ index.signUpPage.form.submitBtn }}$</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- newsletter banner -->
+    @@include('./components/newsletter/newsletter.template.html')
+
+    <!-- start of footer -->
+    @@include('./components/footer/footer.template.html')
+    <!-- end of footer -->
+
+    <!-- back to top button -->
+    <webrouk-back-top-scroll-indicator
+      title="${{ index.scrollToTop }}$"
+      show-at="50">
+    </webrouk-back-top-scroll-indicator>
+
+@@include('./schema/page-end.html')

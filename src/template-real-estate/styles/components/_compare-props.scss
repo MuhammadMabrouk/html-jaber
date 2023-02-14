@@ -1,0 +1,96 @@
+/* Compare Properties Styles */
+/*---------------------------*/
+.compareProps {
+  --box-width: 240px;
+
+  position: fixed;
+  z-index: 3000;
+  top: 220px;
+  width: var(--box-width);
+  background-color: hsl(var(--bg-color-two));
+  padding: 0.875rem;
+  transition: all 0.3s ease-in-out;
+
+  @include appDir() {
+    #{dirs(right, left)}: calc(var(--box-width) * -1);
+  }
+
+  &__close {
+    position: absolute;
+    bottom: 100%;
+    @include flexbox(flex, "", center, center, "", "");
+    height: 1.5rem;
+    width: 1.75rem;
+    background-color: hsl(var(--main-color-one));
+
+    @include appDir() {
+      #{dirs(right, left)}: 0;
+    }
+
+    span {
+      display: block;
+      height: 1rem;
+      width: 1rem;
+      background-color: hsl(var(--light-color));
+      clip-path: polygon(
+        16% 0,
+        0 16%,
+        34% 50%,
+        0 84%,
+        16% 100%,
+        50% 66%,
+        84% 100%,
+        100% 84%,
+        66% 50%,
+        100% 16%,
+        84% 0,
+        50% 34%
+      );
+    }
+
+    &:focus {
+      @include focusStyle();
+    }
+  }
+
+  &__title {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__list {
+    --item-height: 60px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+
+    &__item {
+      height: var(--item-height);
+
+      img {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        opacity: 0;
+        animation: fadeIn 0.4s ease-out 0.2s forwards;
+      }
+    }
+
+    &__btn {
+      width: 100%;
+      height: var(--item-height);
+      line-height: var(--item-height);
+      padding: 0;
+    }
+  }
+
+  &--open {
+    filter: var(--drop-shadow);
+
+    @include appDir() {
+      #{dirs(right, left)}: 0;
+    }
+  }
+}

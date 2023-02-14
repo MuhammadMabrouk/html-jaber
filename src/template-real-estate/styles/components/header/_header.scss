@@ -1,0 +1,425 @@
+/* Header Styles */
+/*---------------*/
+
+// minimized header style mixin
+@mixin minimizedHeader {
+  box-shadow: var(--card-shadow);
+
+  .header__navbar {
+    &__container {
+      height: var(--small-nav-height);
+    }
+  }
+
+  .header__logo__link {
+    line-height: var(--small-nav-height);
+  }
+}
+
+.header {
+  position: fixed;
+  z-index: 4010;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: hsl(var(--bg-color-two));
+  transition: top var(--header-minimize-transition),
+    background-color var(--header-minimize-transition),
+    box-shadow var(--header-minimize-transition);
+
+  // header top bar
+  &__topbar {
+    font-size: 0.875rem;
+    border-bottom: 1px solid hsl(var(--border-color));
+    transition: visibility var(--header-minimize-transition);
+
+    &__container {
+      @include flexbox(flex, "", center, between, "", "");
+      height: var(--topbar-height);
+    }
+
+    &__listsGroup {
+      @include flexbox(flex, "", center, center, "", "");
+    }
+  }
+
+  // info list
+  &__infoList {
+    @include flexbox(flex, "", center, center, "", "");
+    line-height: initial;
+
+    &__item {
+      &:not(:last-of-type) {
+        @include appDir() {
+          margin-#{dirs(right, left)}: 24px;
+        }
+      }
+
+      &:focus-within {
+        @include focusStyle();
+      }
+    }
+
+    &__link {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &__fa {
+      @include appDir() {
+        margin-#{dirs(right, left)}: 8px;
+      }
+    }
+  }
+
+  // social list
+  &__socialList {
+    @include flexbox(flex, "", center, center, "", "");
+    line-height: initial;
+
+    &__item {
+      &:not(:last-of-type) {
+        @include appDir() {
+          margin-#{dirs(right, left)}: 14px;
+        }
+      }
+    }
+
+    &__link {
+      &:focus {
+        @include focusStyle();
+      }
+    }
+  }
+
+  // options list
+  &__optionsList {
+    @include flexbox(flex, "", center, center, "", "");
+    line-height: initial;
+    border-width: 0;
+    border-style: solid;
+    border-color: hsl(var(--border-color));
+
+    @include appDir() {
+      padding-#{dirs(left, right)}: 14px;
+      margin-#{dirs(left, right)}: 14px;
+      border-#{dirs(left, right)}-width: 1px;
+    }
+
+    &__item {
+      &:not(:last-of-type) {
+        @include appDir() {
+          margin-#{dirs(right, left)}: 14px;
+        }
+      }
+    }
+
+    &--langs {
+      position: relative;
+      z-index: 1;
+
+      & .header__optionsList__btn {
+        &:after {
+          content: "\f107";
+          font-family: FontAwesome;
+          margin-left: 4px;
+        }
+
+        &:focus {
+          @include focusStyle();
+        }
+      }
+
+      &:hover,
+      &:focus-within {
+        .header__optionsList__langsDropdown {
+          @include showElement();
+
+          @include appDir() {
+            transform: dirs(translate(-50%, 0), translate(50%, 0));
+          }
+        }
+      }
+    }
+
+    &__langsDropdown {
+      position: absolute;
+      z-index: -1;
+      top: calc(100% + 7px);
+      width: fit-content;
+      background-color: hsl(var(--bg-color-two));
+      text-align: center;
+      padding: 6px 0;
+      border-radius: var(--radius-size);
+      filter: var(--drop-shadow);
+      @include hideElement();
+
+      @include appDir() {
+        #{dirs(left, right)}: 50%;
+        transform: dirs(translate(-50%, 20px), translate(50%, 20px));
+      }
+
+      &:before,
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: -1;
+
+        @include appDir() {
+          #{dirs(left, right)}: 50%;
+        }
+      }
+
+      &:before {
+        top: -25px;
+        height: 35px;
+        width: 100%;
+
+        @include appDir() {
+          transform: dirs(translateX(-50%), translateX(50%));
+        }
+      }
+
+      &:after {
+        top: -5px;
+        height: 6px;
+        width: 12px;
+        background-color: inherit;
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+
+        @include appDir() {
+          transform: dirs(translateX(-50%), translateX(50%));
+        }
+      }
+
+      &__item {
+        &:first-of-type:not(:only-of-type) {
+          border-radius: var(--radius-size) var(--radius-size) 0 0;
+        }
+
+        &:last-of-type:not(:only-of-type) {
+          border-radius: 0 0 var(--radius-size) var(--radius-size);
+        }
+
+        &:only-of-type {
+          border-radius: var(--radius-size);
+        }
+
+        &:focus-within {
+          @include focusStyle();
+        }
+      }
+
+      &__btn {
+        display: block;
+        height: 30px;
+        line-height: 30px;
+        font-weight: bold;
+        padding: 0 14px;
+        white-space: nowrap;
+
+        &:hover {
+          color: hsl(var(--main-color-one));
+        }
+      }
+    }
+  }
+
+  // header navbar
+  &__navbar {
+    &__container {
+      @include flexbox(flex, "", center, between, "", "");
+      height: var(--big-nav-height);
+      transition: height var(--header-minimize-transition);
+    }
+  }
+
+  // navbar logo
+  &__logo {
+    @include flexbox(flex, "", center, center, "", "");
+    height: 100%;
+
+    svg {
+      width: 100px;
+    }
+
+    &:focus {
+      @include focusStyle(null, true);
+    }
+  }
+
+  // actions icons
+  &__actions {
+    $btn_size: 40px;
+    $triangle_width: 12px;
+    $y_point: calc(100% + 15px);
+    $x_point: calc((#{$btn_size} - #{$triangle_width}) / 2);
+
+    @include flexbox(flex, "", center, "", "", "");
+
+    &__item {
+      &:not(:first-of-type) {
+        @include appDir() {
+          margin-#{dirs(left, right)}: 14px;
+        }
+      }
+
+      &--search {
+        position: relative;
+
+        &:not(.open) {
+          .header__actions__faClose {
+            display: none;
+          }
+        }
+
+        &.open {
+          .header__actions__faSearch {
+            display: none;
+          }
+        }
+      }
+
+      &--user {
+        position: relative;
+
+        .header__actions__btn {
+          &:after {
+            display: none;
+          }
+        }
+
+        .dropdown {
+          top: $y_point;
+
+          &:before {
+            @include appDir() {
+              #{dirs(right, left)}: $x_point !important;
+            }
+          }
+        }
+
+        &.open {
+          .dropdown {
+            @include showElement();
+            transform: translateY(0);
+          }
+        }
+      }
+
+      &:not(&--mode):not(&--hamburgerBtn) {
+        @media #{$max_991} {
+          display: none;
+        }
+      }
+
+      &--mode {
+        @media #{$min_992} {
+          display: none;
+        }
+      }
+
+      &--hamburgerBtn {
+        @media #{$min_992} {
+          display: none;
+        }
+      }
+    }
+
+    &__btn {
+      &:focus {
+        @include focusStyle();
+      }
+    }
+
+    // search form
+    &__searchForm {
+      position: absolute;
+      z-index: 4000;
+      top: $y_point;
+      width: 300px;
+      background-color: hsl(var(--bg-color-two));
+      padding: 12px 16px;
+      box-shadow: var(--card-shadow);
+      @include baseTopBorder();
+
+      @include appDir() {
+        #{dirs(right, left)}: 0;
+        transform-origin: dirs(calc(100% - #{$x_point}) top, $x_point top);
+      }
+
+      &:not(&--open) {
+        visibility: hidden;
+        transform: scale(0, 0);
+        transition: all 0.3s ease-in-out;
+      }
+
+      &--open {
+        visibility: visible;
+        transform: scale(1, 1);
+        transition: all 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: -8px;
+        height: 6px;
+        width: $triangle_width;
+        background-color: hsl(var(--main-color-one));
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+
+        @include appDir() {
+          #{dirs(right, left)}: $x_point;
+        }
+      }
+
+      &__btn {
+        min-width: 42px;
+        padding: 0 !important;
+        border-radius: var(--radius-size);
+
+        @include appDir() {
+          margin-#{dirs(left, right)}: 12px;
+        }
+
+        &:focus {
+          @include focusStyle();
+        }
+      }
+    }
+  }
+
+  /* for minimizing the header on scrolling down */
+  &:not(&--minimized) {
+    top: 0;
+  }
+
+  @media #{$min_992} {
+    &:not(&--expanded) {
+      @include minimizedHeader();
+    }
+
+    &--minimized {
+      top: calc(var(--topbar-height) * -1);
+
+      .header__topbar {
+        visibility: hidden;
+      }
+    }
+  }
+
+  @media #{$max_991} {
+    @include minimizedHeader();
+
+    &--minimized {
+      top: calc(var(--small-nav-height) * -1);
+    }
+
+    .header__topbar {
+      display: none;
+    }
+  }
+}

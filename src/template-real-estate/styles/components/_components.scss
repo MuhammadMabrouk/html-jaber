@@ -1,0 +1,42 @@
+/*------------------------------------------------------------------------------------------*/
+/* 7. Components Styles */
+/*------------------------------------------------------------------------------------------*/
+
+// Import 'Global UI Styles' File
+@import "../../../styles/components/components";
+
+// Import 'Circle Cursor' Styles File
+@import "circle-cursor";
+
+// Import 'Preloader' Styles File
+@import "preloader";
+
+// Import 'Skip Links' Styles File
+@import "skip-links";
+
+// Import 'Header' Styles File
+@import "header/header";
+
+// Import 'Hamburger Button' Styles File
+@import "header/hamburger-btn";
+
+// Import 'Navigation Menu' Styles File
+@import "header/nav-menu";
+
+// Import 'Inner Pages Header' File
+@import "inner-pages-header";
+
+// Import 'Blog Sidebar' File
+@import "sidebar/blog-sidebar";
+
+// Import 'Filter Sidebar' File
+@import "sidebar/filter-sidebar";
+
+// Import 'User Sidebar' Styles File
+@import "sidebar/user-sidebar";
+
+// Import 'Compare Properties' File
+@import "compare-props";
+
+// Import 'Footer' File
+@import "footer";

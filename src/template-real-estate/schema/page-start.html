@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="${{ index.i18n.lang }}$" dir="${{ index.i18n.dir }}$">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+
+    <!-- title of the browser tab -->
+    <title>${{ index.homepage.browserTitle }}$</title>
+
+    <!-- favicon -->
+    <link rel="icon" href="assets/favicon.ico">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="${{ index.i18n.fonts }}$">
+
+    <!-- css libraries file -->
+    <link rel="stylesheet" href="styles/libraries.min.css">
+
+    <!-- main style file -->
+    <link rel="stylesheet" href="styles/style.css">
+  </head>
+  <body id="app">
+
+    <!-- start preloader-->
+    <div class="preloader" ref="preloader">
+      <div class="preloader-content">
+        <div class="logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+            <path d="M52.3887 95.6562H31V90.4531H52.3887C54.9421 90.4531 57.0859 89.4896 58.8203 87.5625C60.5547 85.6354 61.4219 83.082 61.4219 79.9023V2H66.625V79.9023C66.625 84.4792 65.252 88.2611 62.5059 91.248C59.7598 94.1868 56.3874 95.6562 52.3887 95.6562ZM52.3887 106.062H31V100.859H52.3887C57.7845 100.859 62.3613 98.8118 66.1191 94.7168C69.9251 90.6217 71.8281 85.6836 71.8281 79.9023V2H77.0312V79.9023C77.0312 87.1289 74.6224 93.2956 69.8047 98.4023C65.0352 103.509 59.2298 106.062 52.3887 106.062ZM52.3887 116.469H31V111.266H52.3887C60.6751 111.266 67.709 108.206 73.4902 102.088C79.3197 95.9694 82.2344 88.5742 82.2344 79.9023V2H87.4375V79.9023C87.4375 86.5026 85.8717 92.6211 82.7402 98.2578C79.6569 103.846 75.4173 108.279 70.0215 111.555C64.6257 114.831 58.748 116.469 52.3887 116.469ZM52.3887 126.875H31V121.672H52.3887C57.8809 121.672 63.1081 120.564 68.0703 118.348C73.0326 116.132 77.2962 113.169 80.8613 109.459C84.4746 105.701 87.3411 101.245 89.4609 96.0898C91.5807 90.9349 92.6406 85.5391 92.6406 79.9023V2H97.8438V79.9023C97.8438 86.2617 96.6393 92.332 94.2305 98.1133C91.8698 103.895 88.6419 108.905 84.5469 113.145C80.5 117.336 75.6582 120.66 70.0215 123.117C64.4329 125.622 58.5553 126.875 52.3887 126.875Z"/>
+          </svg>
+        </div>
+        <div class="loading-bar">
+          <span class="loading-bar-progress"></span>
+        </div>
+      </div>
+    </div>
+    <!-- end preloader-->
+
+    <div id="app-inner" ref="appRef"
+      :class="{'enable-focus-style': isAnyFocus}"
+      @click="isAnyFocus = false"
+      @keyup.tab="isAnyFocus = true">
+
+      <div class="circlecursor circlecursor--outer" ref="circleCursorOuter"></div>
+      <div class="circlecursor circlecursor--inner" ref="circleCursorInner"></div>

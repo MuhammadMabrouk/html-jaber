@@ -1,0 +1,354 @@
+@@include('./schema/page-start.html')
+
+    <!-- start skip links -->
+    @@include('./components/skip-links/skip-links.template.html')
+    <!-- end skip links -->
+
+    <!-- start of header -->
+    @@include('./components/header/header.template.html')
+    <!-- end of header -->
+
+    <!-- start of inner pages header -->
+    @@include('./components/inner-pages-header/inner-pages-header.template.html', { pageTitle: "index.userPropertiesPage.title" })
+    <!-- end of inner pages header -->
+
+    <!-- start page content -->
+    <div class="section section--userPropertiesPage section--propertiesPage">
+      <div class="section__content section__content--userPropertiesPage">
+        <div class="container">
+          <div class="userPropertiesSC hasStickySidebar uDSH">
+            <!-- user sidebar -->
+            @@include('./components/sidebar/user-sidebar/user-sidebar.template.html')
+
+            <!-- main content -->
+            <div class="userPropertiesSC__mainCont uDSH__mainCont">
+
+              <!-- properties list controls bar -->
+              <div class="propertiesSC__controlsBar">
+                <div class="propertiesSC__controlsBar__item propertiesSC__controlsBar__item--layout">
+                  <button class="propertiesSC__controlsBar__btn"
+                    title="${{ index.propertiesPage.listLayout }}$"
+                    @click="changePropertiesLayout('layout-list')">
+                    <i class="fa fa-th-list" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="propertiesSC__controlsBar__item propertiesSC__controlsBar__item--layout">
+                  <button class="propertiesSC__controlsBar__btn"
+                    title="${{ index.propertiesPage.gridLayout }}$"
+                    @click="changePropertiesLayout('layout-grid')">
+                    <i class="fa fa-th-large" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="propertiesSC__controlsBar__item propertiesSC__controlsBar__item--results">
+                  <span class="firstPart">${{ index.propertiesPage.results }}$</span>
+                  <strong>13,474</strong>
+                </div>
+              </div>
+
+              <!-- properties list -->
+              <ul :class="['propertiesSC__list', propertiesLayout]">
+                <li class="propertiesSC__list__item">
+                  <!-- property item component -->
+                  @@include('./ui/property-item/property-item.template.html', {
+                  "id": "property1",
+                  "sale": true,
+                  "rent": false,
+                  "new": true,
+                  "featured": false,
+                  "views": "index.homepage.hot.content.propertiesList.i1.views",
+                  "slides": [
+                  {
+                  "id": "property1",
+                  "type": "image",
+                  "title": "index.homepage.hot.content.propertiesList.i1.title",
+                  "imgUrl": "assets/images/properties/properties-1200-1.jpg",
+                  "imgPlaceholder": "1200x800",
+                  "thumbUrl": "assets/images/properties/properties-420-1.jpg",
+                  "thumbPlaceholder": "415x250"
+                  },
+                  {
+                  "id": "property1",
+                  "type": "image",
+                  "title": "index.homepage.hot.content.propertiesList.i1.title",
+                  "imgUrl": "assets/images/properties/properties-1200-2.jpg",
+                  "imgPlaceholder": "1200x800",
+                  "thumbUrl": "assets/images/properties/properties-420-2.jpg",
+                  "thumbPlaceholder": "415x250"
+                  },
+                  {
+                  "id": "property1",
+                  "type": "image",
+                  "title": "index.homepage.hot.content.propertiesList.i1.title",
+                  "imgUrl": "assets/images/properties/properties-1200-3.jpg",
+                  "imgPlaceholder": "1200x800",
+                  "thumbUrl": "assets/images/properties/properties-420-3.jpg",
+                  "thumbPlaceholder": "415x250"
+                  }
+                  ],
+                  "hasMultipleImgs": true,
+                  "hasVideo": false,
+                  "location": "index.homepage.hot.content.propertiesList.i1.location",
+                  "title": "index.homepage.hot.content.propertiesList.i1.title",
+                  "desc": "index.homepage.hot.content.propertiesList.i1.desc",
+                  "price": "index.homepage.hot.content.propertiesList.i1.price",
+                  "rooms": "index.homepage.hot.content.propertiesList.i1.features.rooms",
+                  "beds": "index.homepage.hot.content.propertiesList.i1.features.beds",
+                  "baths": "index.homepage.hot.content.propertiesList.i1.features.baths",
+                  "space": "index.homepage.hot.content.propertiesList.i1.features.space",
+                  "agentName": "index.homepage.hot.content.propertiesList.i1.agentName",
+                  "agentImg": "assets/images/agents/agents-96-1.jpg"
+                  })
+                </li>
+                <li class="propertiesSC__list__item">
+                  <!-- property item component -->
+                  @@include('./ui/property-item/property-item.template.html', {
+                  "id": "property2",
+                  "sale": false,
+                  "rent": true,
+                  "new": false,
+                  "featured": true,
+                  "views": "index.homepage.hot.content.propertiesList.i2.views",
+                  "slides": [
+                  {
+                  "id": "property2",
+                  "type": "image",
+                  "title": "index.homepage.hot.content.propertiesList.i2.title",
+                  "imgUrl": "assets/images/properties/properties-1200-4.jpg",
+                  "imgPlaceholder": "1200x800",
+                  "thumbUrl": "assets/images/properties/properties-420-4.jpg",
+                  "thumbPlaceholder": "415x250"
+                  },
+                  {
+                  "id": "property2",
+                  "type": "image",
+                  "title": "index.homepage.hot.content.propertiesList.i2.title",
+                  "imgUrl": "assets/images/properties/properties-1200-5.jpg",
+                  "imgPlaceholder": "1200x800",
+                  "thumbUrl": "assets/images/properties/properties-420-5.jpg",
+                  "thumbPlaceholder": "415x250"
+                  },
+                  {
+                  "id": "property2",
+                  "type": "video",
+                  "title": "index.homepage.hot.content.propertiesList.i2.title",
+                  "videoUrl": "https://youtu.be/Wlfe8Pg6Yxc",
+                  "imgUrl": "assets/images/properties/properties-1200-6.jpg",
+                  "imgPlaceholder": "1200x800",
+                  "thumbUrl": "assets/images/properties/properties-420-6.jpg",
+                  "thumbPlaceholder": "415x250"
+                  }
+                  ],
+                  "hasMultipleImgs": true,
+                  "hasVideo": true,
+                  "location": "index.homepage.hot.content.propertiesList.i2.location",
+                  "title": "index.homepage.hot.content.propertiesList.i2.title",
+                  "desc": "index.homepage.hot.content.propertiesList.i2.desc",
+                  "price": "index.homepage.hot.content.propertiesList.i2.price",
+                  "rooms": "index.homepage.hot.content.propertiesList.i2.features.rooms",
+                  "beds": "index.homepage.hot.content.propertiesList.i2.features.beds",
+                  "baths": "index.homepage.hot.content.propertiesList.i2.features.baths",
+                  "space": "index.homepage.hot.content.propertiesList.i2.features.space",
+                  "agentName": "index.homepage.hot.content.propertiesList.i2.agentName",
+                  "agentImg": "assets/images/agents/agents-96-2.jpg"
+                  })
+                </li>
+                <li class="propertiesSC__list__item">
+                  <!-- property item component -->
+                  @@include('./ui/property-item/property-item.template.html', {
+                  "id": "property3",
+                  "sale": false,
+                  "rent": true,
+                  "new": false,
+                  "featured": false,
+                  "views": "index.homepage.hot.content.propertiesList.i3.views",
+                  "slides": [
+                  {
+                  "id": "property3",
+                  "type": "image",
+                  "title": "index.homepage.hot.content.propertiesList.i3.title",
+                  "imgUrl": "assets/images/properties/properties-1200-7.jpg",
+                  "imgPlaceholder": "1200x800",
+                  "thumbUrl": "assets/images/properties/properties-420-7.jpg",
+                  "thumbPlaceholder": "415x250"
+                  }
+                  ],
+                  "hasMultipleImgs": false,
+                  "hasVideo": false,
+                  "location": "index.homepage.hot.content.propertiesList.i3.location",
+                  "title": "index.homepage.hot.content.propertiesList.i3.title",
+                  "desc": "index.homepage.hot.content.propertiesList.i3.desc",
+                  "price": "index.homepage.hot.content.propertiesList.i3.price",
+                  "rooms": "index.homepage.hot.content.propertiesList.i3.features.rooms",
+                  "beds": "index.homepage.hot.content.propertiesList.i3.features.beds",
+                  "baths": "index.homepage.hot.content.propertiesList.i3.features.baths",
+                  "space": "index.homepage.hot.content.propertiesList.i3.features.space",
+                  "agentName": "index.homepage.hot.content.propertiesList.i3.agentName",
+                  "agentImg": "assets/images/agents/agents-96-3.jpg"
+                  })
+                </li>
+                <li class="propertiesSC__list__item">
+                  <!-- property item component -->
+                  @@include('./ui/property-item/property-item.template.html', {
+                  "id": "property4",
+                  "sale": true,
+                  "rent": false,
+                  "new": true,
+                  "featured": false,
+                  "views": "index.homepage.hot.content.propertiesList.i1.views",
+                  "slides": [
+                  {
+                  "id": "property4",
+                  "type": "image",
+                  "title": "index.homepage.hot.content.propertiesList.i1.title",
+                  "imgUrl": "assets/images/properties/properties-1200-1.jpg",
+                  "imgPlaceholder": "1200x800",
+                  "thumbUrl": "assets/images/properties/properties-420-1.jpg",
+                  "thumbPlaceholder": "415x250"
+                  },
+                  {
+                  "id": "property4",
+                  "type": "image",
+                  "title": "index.homepage.hot.content.propertiesList.i1.title",
+                  "imgUrl": "assets/images/properties/properties-1200-2.jpg",
+                  "imgPlaceholder": "1200x800",
+                  "thumbUrl": "assets/images/properties/properties-420-2.jpg",
+                  "thumbPlaceholder": "415x250"
+                  },
+                  {
+                  "id": "property4",
+                  "type": "image",
+                  "title": "index.homepage.hot.content.propertiesList.i1.title",
+                  "imgUrl": "assets/images/properties/properties-1200-3.jpg",
+                  "imgPlaceholder": "1200x800",
+                  "thumbUrl": "assets/images/properties/properties-420-3.jpg",
+                  "thumbPlaceholder": "415x250"
+                  }
+                  ],
+                  "hasMultipleImgs": true,
+                  "hasVideo": false,
+                  "location": "index.homepage.hot.content.propertiesList.i1.location",
+                  "title": "index.homepage.hot.content.propertiesList.i1.title",
+                  "desc": "index.homepage.hot.content.propertiesList.i1.desc",
+                  "price": "index.homepage.hot.content.propertiesList.i1.price",
+                  "rooms": "index.homepage.hot.content.propertiesList.i1.features.rooms",
+                  "beds": "index.homepage.hot.content.propertiesList.i1.features.beds",
+                  "baths": "index.homepage.hot.content.propertiesList.i1.features.baths",
+                  "space": "index.homepage.hot.content.propertiesList.i1.features.space",
+                  "agentName": "index.homepage.hot.content.propertiesList.i1.agentName",
+                  "agentImg": "assets/images/agents/agents-96-1.jpg"
+                  })
+                </li>
+                <li class="propertiesSC__list__item">
+                  <!-- property item component -->
+                  @@include('./ui/property-item/property-item.template.html', {
+                  "id": "property5",
+                  "sale": false,
+                  "rent": true,
+                  "new": false,
+                  "featured": true,
+                  "views": "index.homepage.hot.content.propertiesList.i2.views",
+                  "slides": [
+                  {
+                  "id": "property5",
+                  "type": "image",
+                  "title": "index.homepage.hot.content.propertiesList.i2.title",
+                  "imgUrl": "assets/images/properties/properties-1200-4.jpg",
+                  "imgPlaceholder": "1200x800",
+                  "thumbUrl": "assets/images/properties/properties-420-4.jpg",
+                  "thumbPlaceholder": "415x250"
+                  },
+                  {
+                  "id": "property5",
+                  "type": "image",
+                  "title": "index.homepage.hot.content.propertiesList.i2.title",
+                  "imgUrl": "assets/images/properties/properties-1200-5.jpg",
+                  "imgPlaceholder": "1200x800",
+                  "thumbUrl": "assets/images/properties/properties-420-5.jpg",
+                  "thumbPlaceholder": "415x250"
+                  },
+                  {
+                  "id": "property5",
+                  "type": "video",
+                  "title": "index.homepage.hot.content.propertiesList.i2.title",
+                  "videoUrl": "https://youtu.be/Wlfe8Pg6Yxc",
+                  "imgUrl": "assets/images/properties/properties-1200-6.jpg",
+                  "imgPlaceholder": "1200x800",
+                  "thumbUrl": "assets/images/properties/properties-420-6.jpg",
+                  "thumbPlaceholder": "415x250"
+                  }
+                  ],
+                  "hasMultipleImgs": true,
+                  "hasVideo": true,
+                  "location": "index.homepage.hot.content.propertiesList.i2.location",
+                  "title": "index.homepage.hot.content.propertiesList.i2.title",
+                  "desc": "index.homepage.hot.content.propertiesList.i2.desc",
+                  "price": "index.homepage.hot.content.propertiesList.i2.price",
+                  "rooms": "index.homepage.hot.content.propertiesList.i2.features.rooms",
+                  "beds": "index.homepage.hot.content.propertiesList.i2.features.beds",
+                  "baths": "index.homepage.hot.content.propertiesList.i2.features.baths",
+                  "space": "index.homepage.hot.content.propertiesList.i2.features.space",
+                  "agentName": "index.homepage.hot.content.propertiesList.i2.agentName",
+                  "agentImg": "assets/images/agents/agents-96-2.jpg"
+                  })
+                </li>
+                <li class="propertiesSC__list__item">
+                  <!-- property item component -->
+                  @@include('./ui/property-item/property-item.template.html', {
+                  "id": "property6",
+                  "sale": false,
+                  "rent": true,
+                  "new": false,
+                  "featured": false,
+                  "views": "index.homepage.hot.content.propertiesList.i3.views",
+                  "slides": [
+                  {
+                  "id": "property6",
+                  "type": "image",
+                  "title": "index.homepage.hot.content.propertiesList.i3.title",
+                  "imgUrl": "assets/images/properties/properties-1200-7.jpg",
+                  "imgPlaceholder": "1200x800",
+                  "thumbUrl": "assets/images/properties/properties-420-7.jpg",
+                  "thumbPlaceholder": "415x250"
+                  }
+                  ],
+                  "hasMultipleImgs": false,
+                  "hasVideo": false,
+                  "location": "index.homepage.hot.content.propertiesList.i3.location",
+                  "title": "index.homepage.hot.content.propertiesList.i3.title",
+                  "desc": "index.homepage.hot.content.propertiesList.i3.desc",
+                  "price": "index.homepage.hot.content.propertiesList.i3.price",
+                  "rooms": "index.homepage.hot.content.propertiesList.i3.features.rooms",
+                  "beds": "index.homepage.hot.content.propertiesList.i3.features.beds",
+                  "baths": "index.homepage.hot.content.propertiesList.i3.features.baths",
+                  "space": "index.homepage.hot.content.propertiesList.i3.features.space",
+                  "agentName": "index.homepage.hot.content.propertiesList.i3.agentName",
+                  "agentImg": "assets/images/agents/agents-96-3.jpg"
+                  })
+                </li>
+              </ul>
+
+              <!-- pagination -->
+              @@include('../ui/pagination/pagination.template.html')
+
+              <!-- compare properties -->
+              @@include('./components/compare-props/compare-props.template.html')
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- newsletter banner -->
+    @@include('./components/newsletter/newsletter.template.html')
+
+    <!-- start of footer -->
+    @@include('./components/footer/footer.template.html')
+    <!-- end of footer -->
+
+    <!-- back to top button -->
+    <webrouk-back-top-scroll-indicator
+      title="${{ index.scrollToTop }}$"
+      show-at="50">
+    </webrouk-back-top-scroll-indicator>
+
+@@include('./schema/page-end.html')

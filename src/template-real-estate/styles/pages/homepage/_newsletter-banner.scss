@@ -1,0 +1,69 @@
+/* 10. Newsletter Banner Styles */
+/*------------------------------*/
+.newsletter_banner {
+  $parent: &;
+
+  &--fluid {
+    background-image: url("../assets/images/topography-pattern.png");
+    background-attachment: fixed;
+    background-color: hsl(var(--main-color-two));
+    padding: 50px 0;
+  }
+
+  &:not(&--fluid) {
+    $banner_height: 150px;
+
+    position: relative;
+    z-index: 1;
+    margin-bottom: -(calc($banner_height / 2));
+
+    #{$parent}__content {
+      background-image: url("../assets/images/topography-pattern.png");
+      background-attachment: fixed;
+      background-color: hsl(var(--main-color-two));
+
+      @media #{$min_992} {
+        min-height: $banner_height;
+        @include flexbox(flex, "", center, "", "", wrap);
+        padding: 0 50px;
+      }
+
+      @media #{$max_991} {
+        padding: 24px 12px;
+      }
+    }
+
+    ~ .footer {
+      padding-top: calc($banner_height / 2);
+    }
+  }
+
+  &__text {
+    @media #{$max_991} {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    &__title {
+      color: hsl(var(--light-color)) !important;
+    }
+  }
+
+  &__subscribeForm {
+    &__btn {
+      &__text {
+        @media #{$max_576} {
+          display: none;
+        }
+      }
+
+      &__icon {
+        font-size: 1.25rem;
+
+        @media #{$min_577} {
+          display: none;
+        }
+      }
+    }
+  }
+}

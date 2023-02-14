@@ -1,0 +1,12 @@
+<section class="innerPagesHeader" style="background-image: url(assets/images/inner-header-bg.jpg);">
+  <div class="container">
+    <div class="innerPagesHeader__content">
+
+      <!-- page title -->
+      <h2 class="innerPagesHeader__title">${{ @@pageTitle }}$</h2>
+  
+      <!-- breadcrumbs component -->
+      @@include('../ui/breadcrumbs/breadcrumbs.template.html', { pageTitle: "@@pageTitle" })
+    </div>
+  </div>
+</section>

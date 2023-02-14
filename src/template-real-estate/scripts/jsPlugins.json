@@ -1,0 +1,16 @@
+{
+  "vue": "node_modules/vue/dist/vue.global.prod.js",
+  "bootstrap": "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+  "webrouk-back-top-scroll-indicator": "node_modules/webrouk-back-top-scroll-indicator/webrouk-back-top-scroll-indicator.js",
+  "webrouk-custom-select": "node_modules/webrouk-custom-select/webrouk-custom-select.js",
+  "webrouk-custom-range": "node_modules/webrouk-custom-range/webrouk-custom-range.js",
+  "webrouk-custom-number": "node_modules/webrouk-custom-number/webrouk-custom-number.js",
+  "leaflet": "node_modules/leaflet/dist/leaflet.js",
+  "leaflet-fullscreen": "node_modules/leaflet-fullscreen/dist/leaflet.fullscreen.min.js",
+  "leaflet-gesture-handling": "node_modules/leaflet-gesture-handling/dist/leaflet-gesture-handling.min.js",
+  "leaflet.markercluster": "node_modules/leaflet.markercluster/dist/leaflet.markercluster.js",
+  "splide": "node_modules/@splidejs/splide/dist/js/splide.min.js",
+  "glightbox": "node_modules/glightbox/dist/js/glightbox.min.js",
+  "domSlider": "node_modules/dom-slider/dist/dom-slider.js",
+  "sticky-sidebar-v2": "node_modules/sticky-sidebar-v2/dist/sticky-sidebar.min.js"
+}

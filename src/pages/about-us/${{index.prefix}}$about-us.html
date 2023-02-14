@@ -1,0 +1,227 @@
+@@include('./schema/page-start.html')
+
+    <!-- start skip links -->
+    @@include('./components/skip-links/skip-links.template.html')
+    <!-- end skip links -->
+
+    <!-- start of header -->
+    @@include('./components/header/header.template.html')
+    <!-- end of header -->
+
+    <!-- start of inner pages header -->
+    @@include('./components/inner-pages-header/inner-pages-header.template.html', { pageTitle: "index.aboutUsPage.title" })
+    <!-- end of inner pages header -->
+
+    <!-- start of about us brief -->
+    <section id="aboutBrief-section" class="section section--aboutBrief">
+      <div class="section__content section__content--aboutBrief">
+        <div class="container">
+          <div class="aboutBriefSC row">
+            <div class="col-lg-6">
+              <div class="aboutBriefSC__imgBox">
+                <img class="aboutBriefSC__imgBox__img" loading="lazy" src="assets/images/house.jpg" data-placeholder="700x467" alt="house">
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="aboutBriefSC__textBox">
+                <h2 class="aboutBriefSC__textBox__title">${{ index.aboutUsPage.brief.title }}$</h2>
+                <p class="aboutBriefSC__textBox__paragraph">${{ index.aboutUsPage.brief.paragraph1 }}$</p>
+                <br>
+                <ul class="aboutBriefSC__textBox__list list-styled ticks">
+                  <li>${{ index.aboutUsPage.brief.list.i1 }}$</li>
+                  <li>${{ index.aboutUsPage.brief.list.i2 }}$</li>
+                  <li>${{ index.aboutUsPage.brief.list.i3 }}$</li>
+                </ul>
+                <br>
+                <p class="aboutBriefSC__textBox__paragraph">${{ index.aboutUsPage.brief.paragraph2 }}$</p>
+                <a href="${{ index.prefix }}$properties.html" class="aboutBriefSC__textBox__btn w-btn w-btn--s2 w-btn--primary">${{ index.aboutUsPage.brief.btn }}$</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of about us brief -->
+
+    <!-- start of about us features -->
+    <section id="aboutFeatures-section" class="section section--aboutFeatures">
+      <div class="section__content section__content--aboutFeatures">
+        <div class="container">
+          <div class="aboutFeaturesSC">
+            <div class="aboutFeaturesSC__infoItems row">
+              <div class="aboutFeaturesSC__infoItem col-lg-4">
+                <div class="aboutFeaturesSC__infoItem__content">
+                  <svg class="aboutFeaturesSC__infoItem__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 65">
+                    <path fill="hsl(var(--main-color-one))" d="M43.3094 1.33556C42.3496 2.36761 42.6239 2.56112 47.5602 4.75422C51.948 6.68932 57.9812 12.4946 60.1066 16.8808C61.6835 20.106 63.1918 21.267 64.083 19.9124C64.6315 19.0739 61.8891 13.9137 58.9411 10.366C56.0616 6.88283 50.851 3.07714 46.5318 1.46457C44.4064 0.626028 43.9265 0.626028 43.3094 1.33556Z"/>
+                    <path fill="hsl(var(--main-color-one))" d="M40.1557 7.52786C39.4701 8.55991 40.2243 9.20494 43.5837 10.753C47.2173 12.4301 53.1135 18.2354 54.279 21.396C54.8275 22.8151 55.6502 23.6536 56.4043 23.6536C57.9127 23.6536 57.9127 23.0086 56.61 19.977C55.0332 16.4938 51.0567 12.2366 47.0802 9.78547C43.0352 7.26985 40.7727 6.56031 40.1557 7.52786Z"/>
+                    <path fill="hsl(var(--main-color-one))" d="M26.3066 13.2041C21.7131 14.7522 18.2166 17.3323 15.7484 20.9445C12.6633 25.5887 11.3606 33.3291 13.8973 32.555C14.3087 32.426 15.0628 30.6845 15.4742 28.7494C16.434 24.4277 17.8052 21.9765 20.7533 19.3964C24.6612 15.9133 27.2665 14.9457 32.9569 14.9457C38.7845 14.9457 42.0754 16.2358 45.709 19.9124C49.4798 23.6536 50.4397 26.0402 50.4397 31.7165C50.4397 36.7477 50.3711 37.0058 46.4632 43.8431C44.2693 47.8423 42.5553 51.648 42.5553 52.7445C42.5553 55.1956 41.047 58.4853 39.2644 59.9688C38.5103 60.6139 36.522 61.5169 34.9452 61.9684C31.7914 62.8715 30.763 64.0325 32.6141 64.6776C34.1224 65.2581 38.5103 63.968 40.8413 62.2265C43.1038 60.5494 45.2291 56.3567 45.2977 53.454C45.2977 52.2285 46.8746 48.6163 49.2741 44.2301C53.1135 37.2638 53.1821 37.0058 53.1821 31.8455C53.1821 25.8467 51.8109 22.3636 48.1086 18.2999C43.1723 13.0751 33.5054 10.753 26.3066 13.2041Z"/>
+                    <path fill="hsl(var(--main-color-one))" d="M27.1293 18.4289C21.9188 20.622 17.3939 26.8143 18.0109 30.8135C18.3537 33.4581 20.0677 32.5551 20.959 29.2654C21.4389 27.5238 22.3987 25.3307 23.1529 24.4277C24.8669 22.1056 29.8717 19.7834 32.9569 19.7834C36.0421 19.7834 41.047 22.1056 42.761 24.4277C43.5151 25.3307 44.475 27.5238 44.9549 29.2654C45.4348 31.0715 46.1889 32.3615 46.7374 32.3615C48.1772 32.3615 48.3143 29.6524 47.0802 26.5563C44.8863 21.2025 38.8531 17.2033 32.9569 17.2033C31.2429 17.2033 28.6377 17.7838 27.1293 18.4289Z"/>
+                    <path fill="hsl(var(--main-color-one))" d="M30.9001 29.7814C29.8717 30.9425 30.2145 32.6841 31.7914 33.5871C34.1224 35.0062 36.7963 31.8455 35.0137 29.7814C33.9168 28.5559 31.9971 28.5559 30.9001 29.7814Z"/>
+                    <path fill="hsl(var(--main-color-one))" d="M22.673 37.5218C21.6446 38.6828 21.9874 40.4244 23.5642 41.3275C25.8953 42.7465 28.5691 39.5859 26.7865 37.5218C25.6896 36.2962 23.7699 36.2962 22.673 37.5218Z"/>
+                    <path fill="hsl(var(--main-color-one))" d="M14.9257 42.8755C13.8288 43.9721 13.9659 44.2301 17.3939 47.3908C20.8904 50.6804 21.0961 50.7449 22.193 49.5839C23.29 48.4873 23.1529 48.2293 19.7249 45.0686C16.2283 41.779 16.0227 41.7145 14.9257 42.8755Z"/>
+                    <path fill="hsl(var(--main-color-one))" d="M8.96102 50.4224C7.17847 52.4865 9.8523 55.6471 12.2519 54.2281C13.7602 53.325 14.103 51.5834 13.0746 50.4224C11.9777 49.1968 10.058 49.1968 8.96102 50.4224Z"/>
+                    <path fill="hsl(var(--main-color-one))" d="M0.73386 58.1627C-1.04869 60.2268 1.62514 63.3875 4.02473 61.9684C4.64176 61.5814 5.2588 60.7429 5.39592 60.1623C5.9444 57.7112 2.44785 56.2277 0.73386 58.1627Z"/>
+                  </svg>
+                  <h3 class="aboutFeaturesSC__infoItem__title">${{ index.aboutUsPage.features.i1.title }}$</h3>
+                  <p class="aboutFeaturesSC__infoItem__desc">${{ index.aboutUsPage.features.i1.desc }}$</p>
+                </div>
+              </div>
+              <div class="aboutFeaturesSC__infoItem col-lg-4">
+                <div class="aboutFeaturesSC__infoItem__content">
+                  <svg class="aboutFeaturesSC__infoItem__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58 64">
+                    <path fill="hsl(var(--main-color-one))" d="M20.5867 1.347C20.16 2.09287 19.7333 5.60911 19.6267 9.12535C19.52 18.9282 16 26.4934 7.36 35.7635C3.30667 40.2387 0 44.714 0 45.886C0 47.0581 2.02667 50.2547 4.37333 52.812C10.0267 58.992 12.8 59.0986 18.6667 53.3447L23.04 49.0826L28.6933 54.4103C32.8533 58.3527 34.1333 60.1641 33.28 61.0165C32.4267 61.8689 30.6133 61.2296 26.7733 58.8855C23.7867 57.0741 21.12 55.902 20.9067 56.4348C20.2667 57.3937 30.2933 64 32.4267 64C34.1333 64 36.2667 61.7624 36.2667 59.951C36.2667 59.0986 33.7067 56.1151 30.72 53.1316L25.0667 47.9105L28.2667 45.2467C30.08 43.8615 33.6 41.837 36.2667 40.8781C41.6 38.9601 43.4133 37.6815 42.3467 36.7225C41.6 35.8701 30.5067 40.8781 25.28 44.5009L21.2267 47.2712L17.0667 43.2222C11.52 37.788 10.1333 39.2798 15.4667 44.8205L19.6267 49.0826L16.5333 52.2792C14.8267 53.984 12.5867 55.4758 11.52 55.4758C9.49333 55.4758 8.96 53.8775 10.6667 52.812C12.8 51.5333 11.7333 50.0416 9.49333 51.3202C6.50667 52.9185 4.37333 51.0006 6.4 48.5499C8 46.5254 6.93333 44.9271 5.12 46.7385C3.30667 48.5499 2.13333 48.3368 2.13333 46.2057C2.13333 45.2467 5.01333 41.5174 8.53333 37.788C14.8267 31.2883 21.3333 19.9937 21.3333 15.5185C21.44 9.87122 23.1467 10.9367 36.2667 24.1493C43.6267 31.5014 50.4533 38.0011 51.52 38.5339C54.2933 40.1322 57.6 37.8946 57.6 34.4849C57.6 32.1407 54.2933 28.3048 41.8133 15.8382C26.3467 0.388031 22.8267 -2.06268 20.5867 1.347ZM40.2133 17.3299C54.72 31.8211 57.28 35.3373 53.9733 36.616C51.84 37.4684 20.8 6.03532 21.6533 3.90427C22.08 2.9453 22.9333 2.19943 23.68 2.19943C24.4267 2.19943 31.8933 9.0188 40.2133 17.3299Z"/>
+                    <path fill="hsl(var(--main-color-one))" d="M40.5333 4.33048C40.5333 5.50256 41.0667 6.46153 41.6 6.46153C42.24 6.46153 42.6667 5.50256 42.6667 4.33048C42.6667 3.1584 42.24 2.19942 41.6 2.19942C41.0667 2.19942 40.5333 3.1584 40.5333 4.33048Z"/>
+                    <path fill="hsl(var(--main-color-one))" d="M51.7333 4.43704C51.3067 5.07636 51.2 5.82222 51.52 6.14188C52.2667 6.88775 54.4 5.50257 54.4 4.22393C54.4 2.9453 52.5867 2.9453 51.7333 4.43704Z"/>
+                    <path fill="hsl(var(--main-color-one))" d="M48 8.59259C48 9.12536 48.5333 9.65812 49.1733 9.65812C49.7067 9.65812 49.92 9.12536 49.6 8.59259C49.28 7.95328 48.7467 7.52707 48.4267 7.52707C48.2133 7.52707 48 7.95328 48 8.59259Z"/>
+                    <path fill="hsl(var(--main-color-one))" d="M51.2 16.0513C51.2 16.584 52.16 17.1168 53.3333 17.1168C54.5067 17.1168 55.4667 16.584 55.4667 16.0513C55.4667 15.412 54.5067 14.9858 53.3333 14.9858C52.16 14.9858 51.2 15.412 51.2 16.0513Z"/>
+                  </svg>
+                  <h3 class="aboutFeaturesSC__infoItem__title">${{ index.aboutUsPage.features.i2.title }}$</h3>
+                  <p class="aboutFeaturesSC__infoItem__desc">${{ index.aboutUsPage.features.i2.desc }}$</p>
+                </div>
+              </div>
+              <div class="aboutFeaturesSC__infoItem col-lg-4">
+                <div class="aboutFeaturesSC__infoItem__content">
+                  <svg class="aboutFeaturesSC__infoItem__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58 65">
+                    <path fill="hsl(var(--main-color-one))" d="M23.484 1.7039C23.2791 2.25004 23.2109 4.63939 23.3474 7.02875C23.484 10.3738 23.8253 11.3979 24.5762 11.3979C25.3954 11.3979 25.6002 10.3738 25.6002 6.34607C25.6002 2.86444 25.3272 1.15776 24.781 1.02123C24.3032 0.816425 23.757 1.15776 23.484 1.7039Z"/>
+                    <path fill="hsl(var(--main-color-one))" d="M11.1958 5.66339C10.9228 6.073 12.2881 7.98448 14.2679 9.89597C16.9986 12.6949 17.886 13.2411 18.5687 12.5584C19.2514 11.8757 18.7052 10.9882 16.0428 8.32582C12.4929 4.70765 11.9468 4.43458 11.1958 5.66339Z"/>
+                    <path fill="hsl(var(--main-color-one))" d="M33.1096 8.32582C30.5155 10.9882 29.9011 11.8757 30.5837 12.5584C31.2664 13.2411 32.1539 12.6267 34.8163 10.0325C36.7278 8.18929 38.1614 6.34607 38.0249 6.00474C37.547 4.50285 36.3182 5.04899 33.1096 8.32582Z"/>
+                    <path fill="hsl(var(--main-color-one))" d="M35.8403 19.2486C28.6723 26.3484 22.5965 32.2194 22.3917 32.2194C22.1186 32.2194 21.1629 30.9223 20.2071 29.2839C16.862 23.5494 11.3324 19.9313 6.14406 19.9313C4.1643 19.9313 0 22.8668 0 24.2321C0 24.6417 1.77495 26.8945 4.02777 29.1473C7.78247 33.0386 8.19207 33.7213 10.8545 41.8451L13.7217 50.4467L20.685 57.2735C28.1944 64.7146 30.0376 65.6021 35.2942 64.6463C37.4787 64.305 39.5268 62.53 47.6506 54.4745C58.5051 43.62 59.0512 42.5277 55.2965 39.0461C54.2042 38.0221 53.2485 36.4519 53.2485 35.6327C53.2485 34.8135 52.361 33.2434 51.2005 32.2194C50.1082 31.1954 49.1524 29.6252 49.1524 28.8743C49.1524 28.0551 48.3332 26.6215 47.3775 25.5974L45.6708 23.8908L50.7909 18.5659C56.5936 12.6267 57.1397 10.8517 54.2725 7.98448C50.9274 4.57112 50.0399 5.11726 35.8403 19.2486ZM52.4293 9.8277C52.9071 10.3056 53.2485 11.1248 53.2485 11.6027C53.2485 12.1488 50.1765 15.767 46.4218 19.5217C41.37 24.6417 39.7998 26.6897 40.346 27.2359C40.8921 27.782 41.5748 27.782 42.7353 27.3041C43.8959 26.758 44.5785 26.758 45.3977 27.4407C46.7631 28.6012 46.6948 29.6252 45.0564 31.6732C43.418 33.8578 44.3737 35.2231 46.8314 34.1309C47.9919 33.5847 48.6746 33.5847 49.4938 34.2674C50.8591 35.4279 50.7909 36.4519 49.1524 38.5C47.4458 40.6845 48.4698 42.0499 50.9957 40.8893C53.0437 40.0018 55.0234 41.572 54.3408 43.62C54.0677 44.3709 50.1082 48.6718 45.5343 53.1774C33.724 64.7829 32.0856 64.9194 22.4599 55.6351L16.4524 49.8323L13.3121 40.4797C10.4449 31.878 9.96702 30.854 6.82673 27.782C3.20856 24.2321 3.1403 22.662 6.69019 22.662C10.3766 22.662 14.3361 25.3926 17.1351 29.7617C22.1186 37.6808 19.8658 38.5 35.6355 22.7985C43.2815 15.2208 50.0399 9.00849 50.5861 9.00849C51.1322 9.00849 51.9514 9.34983 52.4293 9.8277Z"/>
+                  </svg>
+                  <h3 class="aboutFeaturesSC__infoItem__title">${{ index.aboutUsPage.features.i3.title }}$</h3>
+                  <p class="aboutFeaturesSC__infoItem__desc">${{ index.aboutUsPage.features.i3.desc }}$</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of about us features -->
+
+    <!-- start of stats section -->
+    @@include('./components/stats/stats.template.html')
+    <!-- end of stats section -->
+
+    <!-- start of agents section -->
+    <section class="section section--agents">
+
+      <!-- section title -->
+      <div class="section__title">
+        <div class="container">
+          <h2 class="section__title__heading">
+            <span class="section__title__leading">${{ index.aboutUsPage.agents.leading }}$</span>
+            <span class="section__title__tagline">${{ index.aboutUsPage.agents.tagline }}$</span>
+          </h2>
+        </div>
+      </div>
+
+      <!-- section content -->
+      <div class="section__content section__content--agents">
+        <div class="container">
+          <div class="agentsSC">
+            <div class="splide" data-splide='{
+              "direction": "${{ index.i18n.dir }}$",
+              "type": "loop",
+              "perPage": 4,
+              "perMove": 1,
+              "autoplay": true,
+              "gap": "24px",
+              "arrows": false,
+              "pagination": true,
+              "lazyLoad": true,
+              "slideFocus": false,
+              "breakpoints": {
+                "991": {
+                  "perPage": 3
+                },
+                "767": {
+                  "perPage": 2
+                },
+                "575": {
+                  "perPage": 1
+                }
+              }
+            }'>
+              <div class="splide__track">
+                <ul class="agentsSC__agentsList splide__list">
+                  <li class="agentsSC__agentsList__item splide__slide">
+                    <!-- agent item component -->
+                    @@include('./ui/agent-item/agent-item.template.html', {
+                      "imgUrl": "assets/images/agents/agents-600-1.jpg",
+                      "imgPlaceholder": "233",
+                      "title": "index.homepage.agents.content.agentsList.i1.name",
+                      "position": "index.homepage.agents.content.agentsList.i1.position"
+                    })
+                  </li>
+                  <li class="agentsSC__agentsList__item splide__slide">
+                    <!-- agent item component -->
+                    @@include('./ui/agent-item/agent-item.template.html', {
+                      "imgUrl": "assets/images/agents/agents-600-2.jpg",
+                      "imgPlaceholder": "233",
+                      "title": "index.homepage.agents.content.agentsList.i2.name",
+                      "position": "index.homepage.agents.content.agentsList.i2.position"
+                    })
+                  </li>
+                  <li class="agentsSC__agentsList__item splide__slide">
+                    <!-- agent item component -->
+                    @@include('./ui/agent-item/agent-item.template.html', {
+                      "imgUrl": "assets/images/agents/agents-600-3.jpg",
+                      "imgPlaceholder": "233",
+                      "title": "index.homepage.agents.content.agentsList.i3.name",
+                      "position": "index.homepage.agents.content.agentsList.i3.position"
+                    })
+                  </li>
+                  <li class="agentsSC__agentsList__item splide__slide">
+                    <!-- agent item component -->
+                    @@include('./ui/agent-item/agent-item.template.html', {
+                      "imgUrl": "assets/images/agents/agents-600-4.jpg",
+                      "imgPlaceholder": "233",
+                      "title": "index.homepage.agents.content.agentsList.i1.name",
+                      "position": "index.homepage.agents.content.agentsList.i1.position"
+                    })
+                  </li>
+                  <li class="agentsSC__agentsList__item splide__slide">
+                    <!-- agent item component -->
+                    @@include('./ui/agent-item/agent-item.template.html', {
+                      "imgUrl": "assets/images/agents/agents-600-5.jpg",
+                      "imgPlaceholder": "233",
+                      "title": "index.homepage.agents.content.agentsList.i2.name",
+                      "position": "index.homepage.agents.content.agentsList.i2.position"
+                    })
+                  </li>
+                  <li class="agentsSC__agentsList__item splide__slide">
+                    <!-- agent item component -->
+                    @@include('./ui/agent-item/agent-item.template.html', {
+                      "imgUrl": "assets/images/agents/agents-600-3.jpg",
+                      "imgPlaceholder": "233",
+                      "title": "index.homepage.agents.content.agentsList.i3.name",
+                      "position": "index.homepage.agents.content.agentsList.i3.position"
+                    })
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of agents section -->
+
+    <!-- start of ratings section -->
+    @@include('./components/ratings/ratings.template.html')
+    <!-- end of ratings section -->
+
+    <!-- newsletter banner -->
+    @@include('./components/newsletter/newsletter.template.html')
+
+    <!-- start of footer -->
+    @@include('./components/footer/footer.template.html')
+    <!-- end of footer -->
+
+    <!-- back to top button -->
+    <webrouk-back-top-scroll-indicator
+      title="${{ index.scrollToTop }}$"
+      show-at="50">
+    </webrouk-back-top-scroll-indicator>
+
+@@include('./schema/page-end.html')

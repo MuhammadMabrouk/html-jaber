@@ -1,0 +1,339 @@
+/* News Details Page Styles */
+/*--------------------------*/
+.newsDetailsSC {
+  .mainContent > *:not(:last-child),
+  &__postBody > *:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+
+  .mainContent > * {
+    background-color: hsl(var(--bg-color-two));
+    padding: 20px;
+    filter: var(--drop-shadow);
+  }
+
+  &__preview {
+    margin: {
+      top: -20px;
+      left: -20px;
+      right: -20px;
+    }
+
+    &__img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+
+    @media #{$max_767} {
+      font-size: 1.125rem;
+    }
+  }
+
+  &__meta {
+    &__item {
+      display: inline-block;
+      font-size: 0.75rem;
+      margin-bottom: 8px;
+
+      &:not(:last-of-type) {
+        @include appDir() {
+          margin-#{dirs(right, left)}: 12px;
+        }
+      }
+
+      .fa {
+        @include appDir() {
+          margin-#{dirs(right, left)}: 4px;
+        }
+      }
+
+      a {
+        &:hover {
+          text-decoration: underline;
+        }
+
+        &:focus {
+          @include focusStyle();
+        }
+      }
+    }
+  }
+
+  &__text {
+    p {
+      margin: 1.8em 0 0.4em;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+
+      &:not(.alignleft):not(.alignright) {
+        width: 100%;
+      }
+    }
+
+    .alignleft {
+      float: left;
+      margin: 5px 20px 20px 0;
+
+      @media #{$min_768} {
+        max-width: 50%;
+      }
+
+      @media #{$max_767} {
+        width: 100%;
+        margin: {
+          left: auto;
+          right: auto;
+        }
+      }
+    }
+
+    .alignright {
+      float: right;
+      margin: 5px 0 20px 20px;
+
+      @media #{$min_768} {
+        max-width: 50%;
+      }
+
+      @media #{$max_767} {
+        width: 100%;
+        margin: {
+          left: auto;
+          right: auto;
+        }
+      }
+    }
+
+    a {
+      color: hsl(var(--main-color-one));
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &:focus {
+        @include focusStyle();
+      }
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+
+      @media #{$max_767} {
+        height: 200px;
+      }
+    }
+  }
+
+  &__TagsShares {
+    padding-top: 1.5rem;
+
+    &__content {
+      @include flexbox(flex, "", baseline, between, "", wrap);
+      margin-bottom: -1.5rem;
+    }
+
+    &__title {
+      font-size: 1rem;
+      margin-bottom: 0;
+
+      @include appDir() {
+        margin-#{dirs(right, left)}: 14px;
+      }
+    }
+
+    &__tags,
+    &__shares {
+      @include flexbox(flex, "", baseline, "", "", "");
+      margin-bottom: 1.5rem;
+
+      > .fa {
+        @include appDir() {
+          margin-#{dirs(right, left)}: 8px;
+        }
+      }
+
+      ul {
+        @include flexbox(inline-flex, "", center, "", "", wrap);
+      }
+    }
+
+    &__tags {
+      &:not(:only-child) {
+        @include appDir() {
+          margin-#{dirs(right, left)}: 1.5rem;
+        }
+      }
+
+      ul {
+        li {
+          &:not(:last-of-type) {
+            @include appDir() {
+              margin-#{dirs(right, left)}: 4px;
+            }
+
+            a:after {
+              content: ",";
+            }
+          }
+
+          a {
+            &:hover {
+              color: hsl(var(--main-color-one));
+              text-decoration: underline;
+            }
+
+            &:focus {
+              @include focusStyle();
+            }
+          }
+        }
+      }
+    }
+
+    &__shares {
+      ul {
+        margin-bottom: -5px;
+        cursor: default;
+
+        li {
+          &:not(:last-of-type) {
+            @include appDir() {
+              margin-#{dirs(right, left)}: 8px;
+            }
+          }
+
+          a {
+            @include flexbox(flex, "", center, center, "", "");
+            height: 2rem;
+            width: 2rem;
+            color: #fff;
+            margin-bottom: 8px;
+            border-radius: 50%;
+
+            &:hover {
+              transform: translateY(-6px);
+            }
+
+            &:focus {
+              @include focusStyle();
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__commentsArea {
+    &__list {
+      margin-top: 40px;
+    }
+
+    &__comment {
+      @include flexbox(flex, "", "", between, "", "");
+
+      &:not(:last-child) {
+        margin-bottom: 2.5rem;
+      }
+
+      &__avatar {
+        display: block;
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+
+        &__img {
+          display: block;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 50%;
+          box-shadow: var(--card-shadow);
+        }
+
+        &:focus {
+          @include focusStyle();
+        }
+      }
+
+      &__body {
+        width: calc(100% - 5.25rem);
+
+        &__NameDate {
+          margin-bottom: 14px;
+        }
+
+        &__name {
+          font-size: 1.125rem;
+          margin: 0;
+
+          a {
+            &:hover {
+              color: hsl(var(--main-color-one));
+            }
+
+            &:focus {
+              @include focusStyle();
+            }
+          }
+        }
+
+        &__date {
+          font-size: 0.875rem;
+
+          &:hover {
+            text-decoration: underline;
+          }
+
+          &:focus {
+            @include focusStyle();
+          }
+        }
+      }
+
+      &__content {
+        @media #{$max_767} {
+          @include appDir() {
+            margin-#{dirs(left, right)}: -5.25rem;
+          }
+        }
+      }
+
+      &__text {
+        font-size: 0.875rem;
+        margin: 0;
+      }
+
+      &__children {
+        margin-top: 2.5rem;
+      }
+    }
+  }
+
+  &__newComments {
+    .group {
+      &.comment {
+        @media #{$max_991} {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}

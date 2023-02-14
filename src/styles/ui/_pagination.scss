@@ -1,0 +1,47 @@
+/* Pagination */
+/*------------*/
+.numericPagination {
+  @include flexbox(flex, "", center, "", "", wrap);
+  width: fit-content;
+  margin: 50px auto -16px;
+
+  &__item {
+    margin: 0 8px 16px;
+
+    @media #{$max_576} {
+      &:not(:first-of-type):not(:last-of-type):not(.active) {
+        display: none;
+      }
+    }
+  }
+
+  &__dots,
+  &__link {
+    @include flexbox(flex, "", center, center, "", "");
+    height: 2.5rem;
+    width: 2.5rem;
+    color: hsl(var(--t-color-one));
+    font-family: var(--headings-font-family);
+    font-weight: bold;
+  }
+
+  &__link {
+    background-color: hsl(var(--bg-color-two));
+    border-radius: 50%;
+    box-shadow: var(--card-shadow);
+
+    &.active,
+    &:hover {
+      background-color: hsl(var(--main-color-one));
+      color: hsl(var(--light-color));
+    }
+
+    .fa {
+      font-size: 1.25rem;
+    }
+
+    &:focus {
+      @include focusStyle();
+    }
+  }
+}

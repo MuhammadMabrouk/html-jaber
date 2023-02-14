@@ -1,0 +1,39 @@
+<article class="blogItem @@style">
+
+  <!-- image box -->
+  <a class="blogItem__imgBox" href="${{ index.prefix }}$news-details.html">
+    <img class="blogItem__imgBox__img" loading="lazy" src="@@imgUrl" data-placeholder="@@imgPlaceholder" alt="${{ @@title }}$">
+  </a>
+
+  <!-- content box -->
+  <div class="blogItem__contentBox">
+
+    <!-- post meta -->
+    <div class="blogItem__contentBox__meta">
+  
+      <!-- date -->
+      <div class="blogItem__contentBox__meta__date">
+        <i class="blogItem__contentBox__meta__fa fa fa-clock-o" aria-hidden="true"></i>
+        <span class="blogItem__contentBox__meta__date__span">${{ @@date }}$</span>
+      </div>
+
+      <!-- categories -->
+      <div class="blogItem__contentBox__meta__cats">
+        <i class="blogItem__contentBox__meta__fa fa fa-folder-open" aria-hidden="true"></i>
+        <a class="blogItem__contentBox__meta__cats__link" href="${{ index.prefix }}$news.html">${{ @@cats.c1 }}$</a>
+        <a class="blogItem__contentBox__meta__cats__link" href="${{ index.prefix }}$news.html">${{ @@cats.c2 }}$</a>
+      </div>
+    </div>
+
+    <!-- post title -->
+    <h3 class="blogItem__contentBox__title">
+      <a class="blogItem__contentBox__title__link" href="${{ index.prefix }}$news-details.html">${{ @@title }}$</a>
+    </h3>
+
+    <!-- post excerpt -->
+    <p class="blogItem__contentBox__excerpt">${{ @@excerpt }}$...</p>
+
+    <!-- read more button -->
+    <a class="blogItem__contentBox__more" href="${{ index.prefix }}$news-details.html">${{ index.global.readMore }}$</a>
+  </div>
+</article>

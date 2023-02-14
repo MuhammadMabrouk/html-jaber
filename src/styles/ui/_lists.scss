@@ -1,0 +1,66 @@
+/* Lists */
+/*-------*/
+.list-styled {
+  li {
+    line-height: 1.5;
+
+    &:not(:last-of-type) {
+      margin-bottom: 12px;
+    }
+
+    @include appDir() {
+      padding-#{dirs(left, right)}: 30px;
+    }
+
+    &:before {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-color: hsl(var(--main-color-one));
+      vertical-align: middle;
+
+      @include appDir() {
+        margin-#{dirs(left, right)}: -30px;
+        margin-#{dirs(right, left)}: 14px;
+      }
+    }
+  }
+}
+
+ol.list-styled,
+.ordered {
+  counter-reset: li;
+
+  li {
+    &:before {
+      content: counter(li);
+      counter-increment: li;
+      line-height: 20px;
+      color: hsl(var(--light-color));
+      text-align: center;
+      font-size: 0.7em;
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+  }
+}
+
+ul.list-styled:not(.ticks):not(.ordered) {
+  li {
+    &:before {
+      content: "";
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    }
+  }
+}
+
+ul.list-styled.ticks {
+  li {
+    &:before {
+      content: "✔";
+      background-color: transparent;
+      color: hsl(var(--main-color-one));
+      text-align: center;
+      vertical-align: initial;
+    }
+  }
+}

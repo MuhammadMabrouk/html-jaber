@@ -1,0 +1,163 @@
+@@include('./schema/page-start.html')
+
+    <!-- start skip links -->
+    @@include('./components/skip-links/skip-links.template.html')
+    <!-- end skip links -->
+
+    <!-- start of header -->
+    @@include('./components/header/header.template.html')
+    <!-- end of header -->
+
+    <!-- start of inner pages header -->
+    @@include('./components/inner-pages-header/inner-pages-header.template.html', { pageTitle: "index.placesPage.title" })
+    <!-- end of inner pages header -->
+
+    <!-- start page content -->
+    <section id="places-section" class="section section--placesPage">
+      <div class="section__content section__content--placesPage">
+        <div class="container">
+          <div class="placesSC">
+            <ul class="placesSC__placesList row">
+              <li class="placesSC__placesList__item col-md-6 col-lg-7">
+                <a class="placesSC__placesList__link" href="${{ index.prefix }}$properties.html" title="${{ index.placesPage.placesList.i1 }}$">
+                  <img class="placesSC__placesList__img" loading="lazy" src="assets/images/places/places-1.jpg" data-placeholder="740x350"
+                    alt="${{ index.placesPage.placesList.i1 }}$">
+                  <div class="placesSC__placesList__contentText">
+                    <h3 class="placesSC__placesList__heading">${{ index.placesPage.placesList.i1 }}$</h3>
+                    <p class="placesSC__placesList__count">
+                      ${{ index.numbers.8 }}$ ${{ index.placesPage.properties }}$
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="placesSC__placesList__item col-md-6 col-lg-5">
+                <a class="placesSC__placesList__link" href="${{ index.prefix }}$properties.html" title="${{ index.placesPage.placesList.i2 }}$">
+                  <img class="placesSC__placesList__img" loading="lazy" src="assets/images/places/places-2.jpg" data-placeholder="525x350"
+                    alt="${{ index.placesPage.placesList.i2 }}$">
+                  <div class="placesSC__placesList__contentText">
+                    <h3 class="placesSC__placesList__heading">${{ index.placesPage.placesList.i2 }}$</h3>
+                    <p class="placesSC__placesList__count">
+                      ${{ index.numbers.6 }}$ ${{ index.placesPage.properties }}$
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="placesSC__placesList__item col-md-6 col-lg-4">
+                <a class="placesSC__placesList__link" href="${{ index.prefix }}$properties.html" title="${{ index.placesPage.placesList.i3 }}$">
+                  <img class="placesSC__placesList__img" loading="lazy" src="assets/images/places/places-3.jpg" data-placeholder="415x350"
+                    alt="${{ index.placesPage.placesList.i3 }}$">
+                  <div class="placesSC__placesList__contentText">
+                    <h3 class="placesSC__placesList__heading">${{ index.placesPage.placesList.i3 }}$</h3>
+                    <p class="placesSC__placesList__count">
+                      ${{ index.numbers.4 }}$ ${{ index.placesPage.properties }}$
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="placesSC__placesList__item col-md-6 col-lg-4">
+                <a class="placesSC__placesList__link" href="${{ index.prefix }}$properties.html" title="${{ index.placesPage.placesList.i4 }}$">
+                  <img class="placesSC__placesList__img" loading="lazy" src="assets/images/places/places-4.jpg" data-placeholder="415x350"
+                    alt="${{ index.placesPage.placesList.i4 }}$">
+                  <div class="placesSC__placesList__contentText">
+                    <h3 class="placesSC__placesList__heading">${{ index.placesPage.placesList.i4 }}$</h3>
+                    <p class="placesSC__placesList__count">
+                      ${{ index.numbers.5 }}$ ${{ index.placesPage.properties }}$
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="placesSC__placesList__item col-md-6 col-lg-4">
+                <a class="placesSC__placesList__link" href="${{ index.prefix }}$properties.html" title="${{ index.placesPage.placesList.i5 }}$">
+                  <img class="placesSC__placesList__img" loading="lazy" src="assets/images/places/places-5.jpg" data-placeholder="415x350"
+                    alt="${{ index.placesPage.placesList.i5 }}$">
+                  <div class="placesSC__placesList__contentText">
+                    <h3 class="placesSC__placesList__heading">${{ index.placesPage.placesList.i5 }}$</h3>
+                    <p class="placesSC__placesList__count">
+                      ${{ index.numbers.7 }}$ ${{ index.placesPage.properties }}$
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="placesSC__placesList__item col-md-6 col-lg-6">
+                <a class="placesSC__placesList__link" href="${{ index.prefix }}$properties.html" title="${{ index.placesPage.placesList.i6 }}$">
+                  <img class="placesSC__placesList__img" loading="lazy" src="assets/images/places/places-6.jpg" data-placeholder="636x350"
+                    alt="${{ index.placesPage.placesList.i6 }}$">
+                  <div class="placesSC__placesList__contentText">
+                    <h3 class="placesSC__placesList__heading">${{ index.placesPage.placesList.i6 }}$</h3>
+                    <p class="placesSC__placesList__count">
+                      ${{ index.numbers.5 }}$ ${{ index.placesPage.properties }}$
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="placesSC__placesList__item col-md-6 col-lg-6">
+                <a class="placesSC__placesList__link" href="${{ index.prefix }}$properties.html" title="${{ index.placesPage.placesList.i7 }}$">
+                  <img class="placesSC__placesList__img" loading="lazy" src="assets/images/places/places-7.jpg" data-placeholder="636x350"
+                    alt="${{ index.placesPage.placesList.i7 }}$">
+                  <div class="placesSC__placesList__contentText">
+                    <h3 class="placesSC__placesList__heading">${{ index.placesPage.placesList.i7 }}$</h3>
+                    <p class="placesSC__placesList__count">
+                      ${{ index.numbers.7 }}$ ${{ index.placesPage.properties }}$
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="placesSC__placesList__item col-md-6 col-lg-3">
+                <a class="placesSC__placesList__link" href="${{ index.prefix }}$properties.html" title="${{ index.placesPage.placesList.i8 }}$">
+                  <img class="placesSC__placesList__img" loading="lazy" src="assets/images/places/places-8.jpg" data-placeholder="636x350"
+                    alt="${{ index.placesPage.placesList.i8 }}$">
+                  <div class="placesSC__placesList__contentText">
+                    <h3 class="placesSC__placesList__heading">${{ index.placesPage.placesList.i8 }}$</h3>
+                    <p class="placesSC__placesList__count">
+                      ${{ index.numbers.9 }}$ ${{ index.placesPage.properties }}$
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="placesSC__placesList__item col-md-6 col-lg-6">
+                <a class="placesSC__placesList__link" href="${{ index.prefix }}$properties.html" title="${{ index.placesPage.placesList.i9 }}$">
+                  <img class="placesSC__placesList__img" loading="lazy" src="assets/images/places/places-9.jpg" data-placeholder="636x350"
+                    alt="${{ index.placesPage.placesList.i9 }}$">
+                  <div class="placesSC__placesList__contentText">
+                    <h3 class="placesSC__placesList__heading">${{ index.placesPage.placesList.i9 }}$</h3>
+                    <p class="placesSC__placesList__count">
+                      ${{ index.numbers.8 }}$ ${{ index.placesPage.properties }}$
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="placesSC__placesList__item col-md-6 col-lg-3">
+                <a class="placesSC__placesList__link" href="${{ index.prefix }}$properties.html" title="${{ index.placesPage.placesList.i10 }}$">
+                  <img class="placesSC__placesList__img" loading="lazy" src="assets/images/places/places-10.jpg" data-placeholder="636x350"
+                    alt="${{ index.placesPage.placesList.i10 }}$">
+                  <div class="placesSC__placesList__contentText">
+                    <h3 class="placesSC__placesList__heading">${{ index.placesPage.placesList.i10 }}$</h3>
+                    <p class="placesSC__placesList__count">
+                      ${{ index.numbers.7 }}$ ${{ index.placesPage.properties }}$
+                    </p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+
+            <!-- pagination -->
+            @@include('../ui/pagination/pagination.template.html')
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- newsletter banner -->
+    @@include('./components/newsletter/newsletter.template.html')
+
+    <!-- start of footer -->
+    @@include('./components/footer/footer.template.html')
+    <!-- end of footer -->
+
+    <!-- back to top button -->
+    <webrouk-back-top-scroll-indicator
+      title="${{ index.scrollToTop }}$"
+      show-at="50">
+    </webrouk-back-top-scroll-indicator>
+
+@@include('./schema/page-end.html')

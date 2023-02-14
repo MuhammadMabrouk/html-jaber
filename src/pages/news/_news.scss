@@ -1,0 +1,11 @@
+/* News Page Styles */
+/*------------------*/
+.newsSC {
+  &__blogList {
+    margin-bottom: -50px;
+
+    &__item {
+      margin-bottom: 50px;
+    }
+  }
+}

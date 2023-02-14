@@ -1,0 +1,84 @@
+/* About us Page Styles */
+/*----------------------*/
+.aboutBriefSC {
+  &__imgBox {
+    height: 100%;
+    mask-image: url("../assets/images/black-shape.png");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 100% 100%;
+
+    &__img {
+      display: block;
+      height: 100%;
+      width: 110%;
+      margin: 0 -5%;
+      object-fit: cover;
+    }
+  }
+
+  &__textBox {
+    @media #{$min_992} {
+      @include appDir() {
+        padding-#{dirs(left, right)}: 32px;
+      }
+    }
+
+    @media #{$max_991} {
+      margin-top: 40px;
+    }
+
+    &__title {
+      line-height: 1.5;
+      margin-bottom: 24px;
+    }
+
+    &__paragraph {
+      margin: 0;
+    }
+
+    &__list {
+      color: hsl(var(--t-color-one));
+    }
+
+    &__btn {
+      margin-top: 30px;
+
+      @media #{$max_767} {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.aboutFeaturesSC {
+  &__infoItems {
+    margin-bottom: -24px;
+  }
+
+  &__infoItem {
+    margin-bottom: 24px;
+
+    &__content {
+      height: 100%;
+      background-color: hsl(var(--bg-color-two));
+      text-align: center;
+      padding: 20px;
+      box-shadow: var(--card-shadow);
+    }
+
+    &__icon {
+      width: 64px;
+      margin-bottom: 24px;
+    }
+
+    &__title {
+      font-size: 1.5rem;
+      margin-bottom: 14px;
+    }
+
+    &__desc {
+      margin: 0;
+    }
+  }
+}

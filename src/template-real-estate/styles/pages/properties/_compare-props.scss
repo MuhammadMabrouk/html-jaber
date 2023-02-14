@@ -1,0 +1,86 @@
+/* Compare Properties Page Styles */
+/*--------------------------------*/
+.section--comparePropertiesPage {
+  .comparePropsSC {
+    &__cols {
+      @media #{$min_992} {
+        display: flex;
+      }
+    }
+
+    &__col {
+      @media #{$min_992} {
+        flex: 1;
+        min-width: 0;
+      }
+
+      @media #{$max_991} {
+        margin-bottom: -1rem;
+
+        &:nth-of-type(1n + 2) {
+          display: none;
+        }
+      }
+
+      &__item {
+        @media #{$min_992} {
+          padding: 0 1rem;
+
+          &:nth-of-type(even) {
+            background-color: hsl(var(--bg-color-two));
+          }
+
+          &:not(.prop__imgBox) {
+            height: 2.5rem;
+            line-height: 2.5rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          &.prop__imgBox {
+            height: 200px;
+            padding-bottom: 1rem;
+
+            @include appDir() {
+              padding-#{dirs(right, left)}: 0;
+            }
+          }
+        }
+
+        @media #{$max_991} {
+          padding-bottom: 1rem;
+
+          &:not(.prop__imgBox) {
+            > strong {
+              display: block;
+              background-color: hsl(var(--bg-color-two));
+              padding: 0.25rem 1rem;
+            }
+
+            > div {
+              padding-top: 0.75rem;
+
+              @include appDir() {
+                padding-#{dirs(left, right)}: 1rem;
+              }
+            }
+          }
+
+          &.prop__imgBox {
+            div {
+              padding-bottom: 1rem;
+            }
+          }
+        }
+
+        &__img {
+          display: block;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

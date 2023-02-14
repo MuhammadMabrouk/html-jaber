@@ -1,0 +1,108 @@
+/* Filter Sidebar Styles */
+/*-----------------------*/
+.filterSidebar {
+  &__form {
+    background-color: hsl(var(--bg-color-two));
+    padding: 20px;
+    filter: var(--drop-shadow);
+  }
+
+  &__widget {
+    &__title {
+      position: relative;
+      height: 3rem;
+      line-height: 3rem !important;
+      font-size: 1.125rem;
+      margin: 0;
+      border-top: 1px solid hsl(var(--border-color));
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &::after {
+        content: "\f106";
+        font-family: FontAwesome;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: transform 0.3s ease-in-out;
+
+        @include appDir() {
+          #{dirs(right, left)}: 0;
+        }
+      }
+
+      &:hover {
+        color: hsl(var(--main-color-one));
+      }
+    }
+
+    &:last-of-type {
+      .filterSidebar__widget__title {
+        border-bottom: 1px solid hsl(var(--border-color));
+      }
+    }
+
+    &.active {
+      .filterSidebar__widget__title {
+        &::after {
+          transform: translateY(-50%) rotate(-180deg);
+        }
+      }
+    }
+
+    &__content {
+      padding: 1rem 0;
+    }
+
+    &--price {
+      --primary-color: hsl(var(--main-color-one));
+      --text-color: hsl(var(--light-color));
+      --line-color: hsl(var(--inputs-bg-color));
+
+      @media #{$max_991} {
+        .filterSidebar__widget__content {
+          padding: 0 1.75rem;
+        }
+      }
+    }
+
+    &--radioGrid {
+      .filterSidebar__widget__content {
+        --border-width: 2px;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        input {
+          position: absolute;
+          height: 0;
+          width: 0;
+          opacity: 0;
+
+          &:focus + label {
+            @include focusStyle();
+          }
+        }
+
+        label {
+          position: relative;
+          @include flexbox(flex, "", center, center, "", "");
+          height: 2.5rem;
+          margin-top: calc(var(--border-width) * -1);
+          margin-bottom: 0;
+          border: var(--border-width) solid hsl(var(--border-color));
+          cursor: pointer;
+
+          @include appDir() {
+            margin-#{dirs(right, left)}: calc(var(--border-width) * -1);
+          }
+        }
+
+        input:checked + label {
+          z-index: 1;
+          border-color: hsl(var(--main-color-one));
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,176 @@
+@@include('./schema/page-start.html')
+
+    <!-- start skip links -->
+    @@include('./components/skip-links/skip-links.template.html')
+    <!-- end skip links -->
+
+    <!-- start of header -->
+    @@include('./components/header/header.template.html')
+    <!-- end of header -->
+
+    <!-- start of inner pages header -->
+    @@include('./components/inner-pages-header/inner-pages-header.template.html', { pageTitle: "index.contactUsPage.title" })
+    <!-- end of inner pages header -->
+
+    <!-- start of contact info -->
+    <div id="contactInfo-section" class="section section--contactInfo pb-0">
+      <div class="section__content section__content--contactInfo">
+        <div class="container">
+          <div class="contactInfoSC">
+            <div class="contactInfoSC__infoItems row">
+              <div class="contactInfoSC__infoItem col-lg-4">
+                <div class="contactInfoSC__infoItem__content">
+                  <svg class="contactInfoSC__infoItem__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                    <path fill="hsl(var(--main-color-one))" d="M32.1431 55.5597C33.1092 55.5597 36.2101 54.3245 40.6468 50.3903C47.6954 44.1687 55.9248 33.2352 55.9248 22.9421C55.9248 16.8575 53.4041 11.0221 48.9174 6.71959C44.4306 2.41711 38.3452 0 32 0C25.6548 0 19.5694 2.41711 15.0826 6.71959C10.5959 11.0221 8.07523 16.8575 8.07523 22.9421C8.07523 39.1137 27.7183 55.2166 32.1431 55.5597ZM32 9.2752C34.2551 9.2752 36.4595 9.91644 38.3345 11.1178C40.2095 12.3192 41.6709 14.0268 42.5339 16.0246C43.3969 18.0225 43.6227 20.2208 43.1828 22.3417C42.7428 24.4626 41.6569 26.4108 40.0623 27.9399C38.4677 29.469 36.4361 30.5103 34.2244 30.9322C32.0126 31.354 29.7201 31.1375 27.6367 30.31C25.5533 29.4824 23.7726 28.0811 22.5197 26.2831C21.2669 24.4851 20.5982 22.3712 20.5982 20.2087C20.6013 17.3099 21.8036 14.5307 23.9412 12.4809C26.0787 10.4311 28.977 9.27822 32 9.2752V9.2752ZM58 57.7098C58 59.8485 48.8284 64 32 64C15.1716 64 6 59.8485 6 57.7098C6 56.2802 10.2936 53.6269 19.8587 52.2545C20.0249 52.2293 20.1859 52.1791 20.3358 52.1058C24.8202 56.1658 29.2092 58.7734 31.8569 58.9678H32.1908C35.7688 58.9678 40.9807 54.7477 43.0798 52.8949C43.3422 52.6662 43.6046 52.4146 43.867 52.163C43.9569 52.191 44.0485 52.214 44.1413 52.2316C53.7064 53.6269 58 56.2802 58 57.7098Z"/>
+                  </svg>
+                  <div class="lh-lg">${{ index.contactUsPage.contactInfo.location }}$</div>
+                </div>
+              </div>
+              <div class="contactInfoSC__infoItem col-lg-4">
+                <div class="contactInfoSC__infoItem__content">
+                  <svg class="contactInfoSC__infoItem__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                    <path fill="hsl(var(--main-color-one))" d="M23.45 20.93a3 3 0 0 0-4.25 0l-1.45 1.45a26.14 26.14 0 0 1-4.51-3.62 26.14 26.14 0 0 1-3.62-4.51l1.45-1.45a3 3 0 0 0 0-4.25L8.24 5.73a2.93 2.93 0 0 0-2.11-.88h0A3 3 0 0 0 4 5.73L2.64 7.08A6.37 6.37 0 0 0 1 12.33c.32 3.75 2.78 8.26 6.57 12.06S15.92 30.64 19.67 31a7.87 7.87 0 0 0 .84 0 6.07 6.07 0 0 0 4.41-1.64L26.27 28a3 3 0 0 0 .88-2.13 2.93 2.93 0 0 0-.88-2.11zM26.6 5.39A14.92 14.92 0 0 0 16 1a1 1 0 1 0 0 2A13 13 0 0 1 29 16.11a1 1 0 0 0 1 1h0a1 1 0 0 0 1-1A14.91 14.91 0 0 0 26.6 5.39z"/>
+                    <path fill="hsl(var(--main-color-one))" d="M20.91,11.11a6,6,0,0,1,1.77,4.31,1,1,0,0,0,1,1h0a1,1,0,0,0,1-1,8,8,0,0,0-8-8.1,1,1,0,1,0,0,2A6,6,0,0,1,20.91,11.11Z"/>
+                  </svg>
+                  <div>
+                    <ul>
+                      <li><a href="tel:02966202290" class="ltr-dir">(02) 966 202 290</a></li>
+                      <li><a href="tel:02966202291" class="ltr-dir">(02) 966 202 291</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="contactInfoSC__infoItem col-lg-4">
+                <div class="contactInfoSC__infoItem__content">
+                  <svg class="contactInfoSC__infoItem__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <path fill="hsl(var(--main-color-one))" d="M30.5488 50L0 71.9558V28.0442L30.5488 50ZM69.4512 50L100 71.9558V28.0442L69.4512 50ZM64.9878 53.2173L51.3293 63.0308C50.9268 63.3135 50.4634 63.4615 50 63.4615C49.5366 63.4615 49.0732 63.3135 48.6707 63.0308L35.0122 53.2173L2.02439 76.9231L0.109756 78.2961C0.707317 82.0923 3.70732 85 7.31707 85H92.6829C96.2927 85 99.2927 82.1058 99.8903 78.2961L97.9634 76.9231L64.9878 53.2173ZM50 57.5519L97.9634 23.0769L99.8903 21.7038C99.2927 17.8942 96.2927 15 92.6829 15H7.31707C3.70732 15 0.707317 17.9077 0.109756 21.7038L2.02439 23.0769L50 57.5519Z"/>
+                  </svg>
+                  <div>
+                    <ul>
+                      <li><a href="mailto:info@jaber.com">info@jaber.com</a></li>
+                      <li><a href="mailto:support@jaber.com">support@jaber.com</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of contact info -->
+
+    <!-- start of contact form -->
+    <div id="contactForm-section" class="section section--contactForm">
+      <div class="section__content section__content--contactForm">
+        <div class="container">
+          <div class="contactFormSC">
+            <form class="contactFormSC__form form-styled"
+              action="contact_form.php"
+              data-success-msg="${{ index.toastNotifications.messageSent }}$"
+              data-err-msg="${{ index.toastNotifications.oopsSomethingWrong }}$"
+              ref="contactUsForm">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="group">
+                    <label for="name">${{ index.contactUsPage.form.nameLabel }}$</label>
+                    <div class="control has-prefix-icon">
+                      <input id="name" type="text"
+                        name="name"
+                        placeholder="${{ index.contactUsPage.form.namePlaceholder }}$"
+                        minlength="3"
+                        required>
+                      <i class="fa fa-user-circle prefix-icon" aria-hidden="true"></i>
+
+                      <!-- validation errors messages -->
+                      <div class="errors-msgs">
+                        <input class="required" type="hidden" value="${{ index.contactUsPage.form.nameLabel }}$ ${{ index.toastNotifications.formsValidation.isRequired }}$">
+                        <input class="minLength" type="hidden" value="${{ index.contactUsPage.form.nameLabel }}$ ${{ index.toastNotifications.formsValidation.mustBeAtLeast }}$ ${{ index.numbers.3 }}$ ${{ index.toastNotifications.formsValidation.characters }}$">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="group">
+                    <label for="email">${{ index.contactUsPage.form.emailLabel }}$</label>
+                    <div class="control has-prefix-icon">
+                      <input id="email" class="ltr-dir"
+                        type="email"
+                        inputmode="email"
+                        name="email"
+                        placeholder="${{ index.contactUsPage.form.emailPlaceholder }}$"
+                        required>
+                      <i class="fa fa-envelope prefix-icon" aria-hidden="true"></i>
+
+                      <!-- validation errors messages -->
+                      <div class="errors-msgs">
+                        <input class="required" type="hidden" value="${{ index.contactUsPage.form.emailLabel }}$ ${{ index.toastNotifications.formsValidation.isRequired }}$">
+                        <input class="invalid" type="hidden" value="${{ index.toastNotifications.formsValidation.enterValidEmail }}$">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="group phone-number">
+                    <label for="phone">${{ index.contactUsPage.form.phoneLabel }}$ <span class="optional">${{ index.global.optional }}$</span></label>
+                    <div class="control has-prefix-icon">
+                      <input id="phoneNumber"
+                        type="tel"
+                        inputmode="tel"
+                        name="phone"
+                        placeholder="${{ index.contactUsPage.form.phonePlaceholder }}$">
+                      <i class="fa fa-phone prefix-icon" aria-hidden="true"></i>
+
+                      <!-- validation errors messages -->
+                      <div class="errors-msgs">
+                        <input class="invalid" type="hidden" value="${{ index.toastNotifications.formsValidation.enterValidPhone }}$">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="group message">
+                    <label for="message">${{ index.contactUsPage.form.messageLabel }}$</label>
+                    <div class="control has-prefix-icon">
+                      <textarea id="message"
+                        name="message"
+                        placeholder="${{ index.contactUsPage.form.messagePlaceholder }}$"
+                        required></textarea>
+                      <i class="fa fa-comments prefix-icon" aria-hidden="true"></i>
+
+                      <!-- validation errors messages -->
+                      <div class="errors-msgs">
+                        <input class="required" type="hidden" value="${{ index.contactUsPage.form.messageLabel }}$ ${{ index.toastNotifications.formsValidation.isRequired }}$">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="group">
+                <div class="control mt-4">
+                  <button class="submit-btn w-btn w-btn--s1 w-btn--primary w-100" type="button" @click="contactUsFormValidation">${{ index.contactUsPage.form.submitBtn }}$</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of contact form -->
+
+    <!-- start of contact map -->
+    <div id="contactMap-section" class="section section--contactMap p-0">
+      <div id="contactMap" class="contactMap" data-coords="30.044420,31.235712"></div>
+    </div>
+    <!-- end of contact map -->
+
+    <!-- newsletter banner -->
+    @@include('./components/newsletter/newsletter.template.html')
+
+    <!-- start of footer -->
+    @@include('./components/footer/footer.template.html')
+    <!-- end of footer -->
+
+    <!-- back to top button -->
+    <webrouk-back-top-scroll-indicator
+      title="${{ index.scrollToTop }}$"
+      show-at="50">
+    </webrouk-back-top-scroll-indicator>
+
+@@include('./schema/page-end.html')

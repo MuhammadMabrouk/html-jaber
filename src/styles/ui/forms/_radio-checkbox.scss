@@ -1,0 +1,142 @@
+/* Input Radio & Checkbox Styles */
+/*-------------------------------*/
+.form-styled {
+  .radioContainer,
+  .checkboxContainer {
+    @include flexbox(flex, "", center, "", "", "");
+
+    .radio,
+    .checkbox {
+      --btn-size: 18px;
+
+      position: relative;
+
+      input {
+        position: absolute;
+        height: 0;
+        width: 0;
+        opacity: 0;
+      }
+
+      label {
+        position: relative;
+        display: block;
+        height: var(--btn-size);
+        width: var(--btn-size);
+        margin: 0;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          transition: all 0.3s ease-in-out;
+        }
+      }
+
+      &.radio {
+        label,
+        label:after {
+          border-radius: 50%;
+        }
+      }
+
+      input:not(:checked) + label {
+        background-color: hsl(var(--inputs-bg-color));
+        border-color: hsl(var(--border-color));
+
+        &:after {
+          height: 0;
+          width: 0;
+          background-color: hsl(var(--bg-color-one));
+        }
+      }
+
+      input:checked + label,
+      input[type="checkbox"]:indeterminate + label {
+        border-color: hsl(var(--main-color-one));
+
+        &:after {
+          width: calc((var(--btn-size) / 2) + 1px);
+          background-color: hsl(var(--main-color-one));
+        }
+      }
+
+      input:checked + label:after {
+        height: calc((var(--btn-size) / 2) + 1px);
+      }
+
+      input[type="checkbox"]:indeterminate + label:after {
+        height: 2px;
+      }
+
+      input:disabled + label {
+        border-color: hsl(var(--bg-color-one));
+
+        &:after {
+          height: 100%;
+          width: 100%;
+          background-color: hsl(var(--inputs-disabled-bg-color));
+        }
+      }
+
+      label {
+        border: 1px solid;
+      }
+
+      &:focus-within {
+        @include focusStyle();
+      }
+    }
+
+    > label {
+      font-size: 0.875rem;
+      margin: 0;
+      cursor: pointer;
+
+      @include appDir() {
+        margin-#{dirs(left, right)}: 12px;
+      }
+    }
+
+    &.disabled {
+      .radio,
+      .checkbox {
+        label {
+          cursor: not-allowed;
+        }
+      }
+
+      > label {
+        cursor: not-allowed;
+      }
+    }
+
+    &.invalid {
+      label {
+        color: hsl(var(--danger-color)) !important;
+        border-color: hsl(var(--danger-color)) !important;
+      }
+    }
+
+    &.valid {
+      label {
+        color: hsl(var(--success-color)) !important;
+        border-color: hsl(var(--success-color)) !important;
+      }
+    }
+  }
+
+  .radioContainer ~ .radioContainer,
+  .checkboxContainer ~ .checkboxContainer {
+    margin-top: 0.5rem;
+  }
+
+  .checkboxContainer + .checkboxesGroup {
+    margin-top: 0.5rem;
+  }
+}

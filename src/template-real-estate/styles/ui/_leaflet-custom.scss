@@ -1,0 +1,230 @@
+/* Leaflet Custom Styles */
+/*-----------------------*/
+
+// leaflet directions
+.leaflet-left {
+  @include appDir() {
+    #{dirs(left, right)}: 0;
+    #{dirs(right, left)}: initial;
+  }
+
+  .leaflet-control {
+    @include appDir() {
+      margin-#{dirs(left, right)}: 10px;
+      margin-#{dirs(right, left)}: initial;
+    }
+  }
+}
+
+.leaflet-right {
+  @include appDir() {
+    #{dirs(right, left)}: 0;
+    #{dirs(left, right)}: initial;
+  }
+
+  .leaflet-control {
+    @include appDir() {
+      margin-#{dirs(right, left)}: 10px;
+      margin-#{dirs(left, right)}: initial;
+    }
+  }
+}
+
+// leaflet cluster
+.leaflet-div-icon {
+  background: none;
+  border: none;
+
+  &:focus {
+    .leaflet-cluster-count {
+      @include focusStyle();
+    }
+  }
+}
+
+.leaflet-cluster-icon {
+  width: 40px;
+  height: 40px;
+  background-color: hsla(
+    var(--primary-h),
+    var(--primary-s),
+    var(--primary-l),
+    40%
+  );
+  padding: 5px;
+  border-radius: 50%;
+  animation: pulse 1s ease-out infinite;
+
+  @include appDir() {
+    transform: dirs(
+      translate(calc(-50% + 6px), calc(-50% + 6px)),
+      translate(calc(50% - 6px), calc(-50% + 6px))
+    );
+  }
+}
+
+.leaflet-cluster-count {
+  display: block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background-color: hsl(var(--primary-color));
+  color: hsl(var(--light-color));
+  text-align: center;
+  border-radius: 50%;
+}
+
+// leaflet marker icon
+.leaflet-marker-icon {
+  &:focus {
+    @include focusStyle();
+  }
+}
+
+// leaflet controls icon
+.leaflet-control-container {
+  a {
+    &:focus {
+      @include focusStyle();
+    }
+  }
+}
+
+// leaflet popup
+.leaflet-container {
+  .leaflet-popup {
+    filter: var(--drop-shadow);
+
+    &-content-wrapper,
+    &-content,
+    a.leaflet-popup-close-button {
+      all: initial;
+    }
+
+    .popupContent {
+      width: 240px;
+      background-color: hsl(var(--bg-color-two));
+
+      &__imgBox {
+        display: block;
+        position: relative;
+        height: 180px;
+
+        &__img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          transition: all 0.3s ease-in-out;
+        }
+
+        &__label {
+          display: block;
+          position: absolute;
+          top: 8px;
+          color: #fff;
+          font-family: var(--body-font-family);
+          font-size: 0.75rem;
+          padding: 2px 8px;
+          box-shadow: var(--card-shadow);
+
+          @include appDir() {
+            #{dirs(left, right)}: 8px;
+            text-transform: dirs(uppercase, null);
+          }
+
+          &.rentals {
+            background-color: hsl(var(--rent-label-color));
+          }
+
+          &.sales {
+            background-color: hsl(var(--sale-label-color));
+          }
+        }
+
+        &__fa {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: hsl(var(--t-color-one));
+          background-color: hsl(var(--bg-color-two));
+          width: 40px;
+          height: 40px;
+          font-size: 1.125rem;
+          border-radius: 50%;
+          opacity: 0;
+          display: grid;
+          place-items: center;
+          transition: all 0.3s ease-in-out;
+        }
+
+        &:hover {
+          img {
+            opacity: 0.8;
+          }
+
+          .fa {
+            opacity: 1;
+          }
+        }
+      }
+
+      &__textBox {
+        color: hsl(var(--t-color-two));
+        padding: 8px 12px;
+
+        &__title {
+          line-height: 1.25rem;
+          font-size: 0.875rem;
+          margin: 0 0 10px;
+
+          &__link {
+            color: hsl(var(--t-color-one));
+
+            &:focus {
+              @include focusStyle();
+            }
+          }
+        }
+
+        &__price {
+          display: block;
+          color: hsl(var(--main-color-one));
+          font-size: 1.25rem;
+          text-align: center;
+        }
+      }
+    }
+
+    &-tip-container {
+      .leaflet-popup-tip {
+        background-color: hsl(var(--bg-color-two));
+      }
+    }
+
+    a.leaflet-popup-close-button {
+      display: block;
+      position: absolute;
+      top: 8px;
+      width: 18px;
+      height: 18px;
+      line-height: 18px;
+      background-color: hsl(var(--bg-color-two));
+      color: hsl(var(--t-color-two));
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.2rem;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: var(--card-shadow);
+
+      @include appDir() {
+        #{dirs(right, left)}: 8px;
+      }
+
+      &:focus {
+        @include focusStyle();
+      }
+    }
+  }
+}

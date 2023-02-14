@@ -1,0 +1,21 @@
+/*------------------------------------------------------------------------------------------*/
+/* 8. Pages Styles */
+/*------------------------------------------------------------------------------------------*/
+
+// Import 'Homepage' Styles File
+@import "homepage/homepage";
+
+// Import 'Properties Pages' Styles File
+@import "properties/properties-pages";
+
+// Import 'Agents Pages' Styles File
+@import "agents/agents-pages";
+
+// Import 'Reviews' Styles File
+@import "reviews";
+
+// Import 'User Pages' Styles File
+@import "user/user-pages";
+
+// Import 'Global Pages' Styles File
+@import "../../../pages/pages";

@@ -1,0 +1,1125 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/apartment-1.jpg",
+        "title": "Apartments 130 M² Semi Finished in Fourth Neighborhood",
+        "category": "sales",
+        "type": "apartment",
+        "state": "giza",
+        "city": "sixth_of_october",
+        "price": "400000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.96171498298645,
+          29.960195754582198
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/villa-1.jpg",
+        "title": "Villa for sale 327m in Hyde Park",
+        "category": "sales",
+        "type": "villa",
+        "state": "giza",
+        "city": "sixth_of_october",
+        "price": "2950000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.96269130706787,
+          29.960911480024564
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/house-1.jpg",
+        "title": "One-storey family house with garage",
+        "category": "sales",
+        "type": "house",
+        "state": "giza",
+        "city": "sixth_of_october",
+        "price": "1250000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.96153259277344,
+          29.960939365327103
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/apartment-2.jpg",
+        "title": "Apartments 130 M² Semi Finished in Fourth Neighborhood",
+        "category": "rentals",
+        "type": "apartment",
+        "state": "giza",
+        "city": "sixth_of_october",
+        "price": "1500"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.956640243530273,
+          29.966720749087546
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/villa-2.jpg",
+        "title": "Villa for sale 327m in Hyde Park",
+        "category": "sales",
+        "type": "villa",
+        "state": "giza",
+        "city": "sixth_of_october",
+        "price": "2750000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.957337617874146,
+          29.966181663212527
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/commercial-1.jpg",
+        "title": "Long Term Tenanted Investment",
+        "category": "rentals",
+        "type": "commercial",
+        "state": "giza",
+        "city": "sixth_of_october",
+        "price": "850000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.955438613891598,
+          29.966395438995615
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/house-2.jpg",
+        "title": "One-storey family house with garage",
+        "category": "rentals",
+        "type": "house",
+        "state": "giza",
+        "city": "sixth_of_october",
+        "price": "3000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.95641493797302,
+          29.96750148896317
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/apartment-3.jpg",
+        "title": "Apartments 130 M² Semi Finished in Fourth Neighborhood",
+        "category": "sales",
+        "type": "apartment",
+        "state": "giza",
+        "city": "sixth_of_october",
+        "price": "350000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.948625802993774,
+          29.962259260698257
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/house-3.jpg",
+        "title": "One-storey family house with garage",
+        "category": "rentals",
+        "type": "house",
+        "state": "giza",
+        "city": "sixth_of_october",
+        "price": "4000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.94823956489563,
+          29.962031533522715
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/commercial-2.jpg",
+        "title": "Long Term Tenanted Investment",
+        "category": "sales",
+        "type": "commercial",
+        "state": "giza",
+        "city": "sixth_of_october",
+        "price": "102000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.949076414108276,
+          29.961780568275948
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/villa-3.jpg",
+        "title": "Villa for sale 327m in Hyde Park",
+        "category": "sales",
+        "type": "villa",
+        "state": "giza",
+        "city": "sixth_of_october",
+        "price": "2800000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.9479820728302,
+          29.961069496635492
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/apartment-4.jpg",
+        "title": "Apartments 130 M² Semi Finished in Fourth Neighborhood",
+        "category": "rentals",
+        "type": "apartment",
+        "state": "giza",
+        "city": "sixth_of_october",
+        "price": "1200"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.942891240119934,
+          29.967687378505634
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/commercial-3.jpg",
+        "title": "Long Term Tenanted Investment",
+        "category": "sales",
+        "type": "commercial",
+        "state": "giza",
+        "city": "sixth_of_october",
+        "price": "90000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.943191647529606,
+          29.96787326770032
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/house-4.jpg",
+        "title": "One-storey family house with garage",
+        "category": "rentals",
+        "type": "house",
+        "state": "giza",
+        "city": "sixth_of_october",
+        "price": "5000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.942606925964352,
+          29.96807774541286
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/house-1.jpg",
+        "title": "One-storey family house with garage",
+        "category": "rentals",
+        "type": "house",
+        "state": "giza",
+        "city": "sixth_of_october",
+        "price": "3700"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.94216167926788,
+          29.962217433296946
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/villa-4.jpg",
+        "title": "Villa for sale 327m in Hyde Park",
+        "category": "sales",
+        "type": "villa",
+        "state": "giza",
+        "city": "sixth_of_october",
+        "price": "2500000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.943143367767334,
+          29.96245445500484
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/apartment-1.jpg",
+        "title": "Apartments 130 M² Semi Finished in Fourth Neighborhood",
+        "category": "sales",
+        "type": "apartment",
+        "state": "giza",
+        "city": "sixth_of_october",
+        "price": "450000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.94691455364227,
+          29.96596788696953
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/apartment-2.jpg",
+        "title": "Apartments 130 M² Semi Finished in Fourth Neighborhood",
+        "category": "rentals",
+        "type": "apartment",
+        "state": "giza",
+        "city": "sixth_of_october",
+        "price": "1650"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.946592688560482,
+          29.966437264638536
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/commercial-4.jpg",
+        "title": "Long Term Tenanted Investment",
+        "category": "sales",
+        "type": "commercial",
+        "state": "giza",
+        "city": "sixth_of_october",
+        "price": "110000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.947349071502682,
+          29.966920581901718
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/house-2.jpg",
+        "title": "One-storey family house with garage",
+        "category": "rentals",
+        "type": "house",
+        "state": "giza",
+        "city": "sixth_of_october",
+        "price": "3700"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.956135988235474,
+          29.961729445647986
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/villa-1.jpg",
+        "title": "Villa for sale 327m in Hyde Park",
+        "category": "sales",
+        "type": "villa",
+        "state": "giza",
+        "city": "sixth_of_october",
+        "price": "2950000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.956481993198395,
+          29.96189907972144
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/apartment-3.jpg",
+        "title": "Apartments 130 M² Semi Finished in Fourth Neighborhood",
+        "category": "sales",
+        "type": "apartment",
+        "state": "giza",
+        "city": "sixth_of_october",
+        "price": "500000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.956675112247463,
+          29.961594667684594
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/commercial-1.jpg",
+        "title": "Long Term Tenanted Investment",
+        "category": "rentals",
+        "type": "commercial",
+        "state": "giza",
+        "city": "sixth_of_october",
+        "price": "740"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.956449806690216,
+          29.96143897567182
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/apartment-4.jpg",
+        "title": "Apartments 130 M² Semi Finished in Fourth Neighborhood",
+        "category": "rentals",
+        "type": "apartment",
+        "state": "giza",
+        "city": "sixth_of_october",
+        "price": "1400"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.95596432685852,
+          29.962059418511018
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/villa-2.jpg",
+        "title": "Villa for sale 327m in Hyde Park",
+        "category": "rentals",
+        "type": "villa",
+        "state": "giza",
+        "city": "sixth_of_october",
+        "price": "800000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.947005748748776,
+          29.964843230465444
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/house-3.jpg",
+        "title": "One-storey family house with garage",
+        "category": "sales",
+        "type": "house",
+        "state": "giza",
+        "city": "sixth_of_october",
+        "price": "1600000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.962380170822144,
+          29.96481302257389
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/apartment-1.jpg",
+        "title": "Apartments 130 M² Semi Finished in Fourth Neighborhood",
+        "category": "rentals",
+        "type": "apartment",
+        "state": "giza",
+        "city": "sixth_of_october",
+        "price": "1100"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.959598720073704,
+          29.963500132262418
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/commercial-2.jpg",
+        "title": "Long Term Tenanted Investment",
+        "category": "sales",
+        "type": "commercial",
+        "state": "giza",
+        "city": "sixth_of_october",
+        "price": "200000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.951843112707135,
+          29.964392434822415
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/villa-3.jpg",
+        "title": "Villa for sale 327m in Hyde Park",
+        "category": "sales",
+        "type": "villa",
+        "state": "giza",
+        "city": "sixth_of_october",
+        "price": "2500000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.94449520111084,
+          29.965091864300845
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/villa-4.jpg",
+        "title": "Villa for sale 327m in Hyde Park",
+        "category": "sales",
+        "type": "villa",
+        "state": "giza",
+        "city": "sheikh_zayed",
+        "price": "2888000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.981847643852234,
+          30.04751334483378
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/commercial-3.jpg",
+        "title": "Long Term Tenanted Investment",
+        "category": "rentals",
+        "type": "commercial",
+        "state": "giza",
+        "city": "sheikh_zayed",
+        "price": "760000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.98222315311432,
+          30.047234734655962
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/apartment-2.jpg",
+        "title": "Apartments 130 M² Semi Finished in Fourth Neighborhood",
+        "category": "sales",
+        "type": "apartment",
+        "state": "giza",
+        "city": "sheikh_zayed",
+        "price": "350000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.982582569122318,
+          30.048989965692517
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/house-4.jpg",
+        "title": "One-storey family house with garage",
+        "category": "sales",
+        "type": "house",
+        "state": "giza",
+        "city": "sheikh_zayed",
+        "price": "2000000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.98384857177734,
+          30.04912462498997
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/villa-1.jpg",
+        "title": "Villa for sale 327m in Hyde Park",
+        "category": "rentals",
+        "type": "villa",
+        "state": "giza",
+        "city": "sheikh_zayed",
+        "price": "900000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.98340332508087,
+          30.0482098668497
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/apartment-3.jpg",
+        "title": "Apartments 130 M² Semi Finished in Fourth Neighborhood",
+        "category": "rentals",
+        "type": "apartment",
+        "state": "giza",
+        "city": "sheikh_zayed",
+        "price": "2500"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.983773469924927,
+          30.047935902107838
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/commercial-4.jpg",
+        "title": "Long Term Tenanted Investment",
+        "category": "sales",
+        "type": "commercial",
+        "state": "giza",
+        "city": "sheikh_zayed",
+        "price": "250000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.98311364650726,
+          30.047996267285548
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/house-1.jpg",
+        "title": "One-storey family house with garage",
+        "category": "rentals",
+        "type": "house",
+        "state": "giza",
+        "city": "sheikh_zayed",
+        "price": "10000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.98543643951416,
+          30.04873457686689
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/villa-2.jpg",
+        "title": "Villa for sale 327m in Hyde Park",
+        "category": "sales",
+        "type": "villa",
+        "state": "giza",
+        "city": "sheikh_zayed",
+        "price": "2400000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.98533987998962,
+          30.0490363999537
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/house-2.jpg",
+        "title": "One-storey family house with garage",
+        "category": "rentals",
+        "type": "house",
+        "state": "giza",
+        "city": "sheikh_zayed",
+        "price": "10000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.98493218421936,
+          30.04858134325541
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/house-3.jpg",
+        "title": "One-storey family house with garage",
+        "category": "rentals",
+        "type": "house",
+        "state": "cairo",
+        "city": "new_cairo",
+        "price": "15000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.47559404373169,
+          30.029875775499537
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/villa-3.jpg",
+        "title": "Villa for sale 327m in Hyde Park",
+        "category": "sales",
+        "type": "villa",
+        "state": "cairo",
+        "city": "new_cairo",
+        "price": "2250000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.476194858551025,
+          30.030581710092722
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/apartment-4.jpg",
+        "title": "Apartments 130 M² Semi Finished in Fourth Neighborhood",
+        "category": "rentals",
+        "type": "apartment",
+        "state": "cairo",
+        "city": "new_cairo",
+        "price": "3000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.47646307945251,
+          30.03011263569324
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/commercial-1.jpg",
+        "title": "Long Term Tenanted Investment",
+        "category": "rentals",
+        "type": "commercial",
+        "state": "cairo",
+        "city": "new_cairo",
+        "price": "960000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.476988792419437,
+          30.03223506354107
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/house-4.jpg",
+        "title": "One-storey family house with garage",
+        "category": "sales",
+        "type": "house",
+        "state": "cairo",
+        "city": "new_cairo",
+        "price": "1750000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.476988792419437,
+          30.031947121946363
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/house-1.jpg",
+        "title": "One-storey family house with garage",
+        "category": "sales",
+        "type": "house",
+        "state": "cairo",
+        "city": "new_cairo",
+        "price": "2000000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.482283473014828,
+          30.030809280041257
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/apartment-1.jpg",
+        "title": "Apartments 130 M² Semi Finished in Fourth Neighborhood",
+        "category": "rentals",
+        "type": "apartment",
+        "state": "cairo",
+        "city": "new_cairo",
+        "price": "2500"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.481945514678955,
+          30.0308046357618
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/house-2.jpg",
+        "title": "One-storey family house with garage",
+        "category": "rentals",
+        "type": "house",
+        "state": "cairo",
+        "city": "new_cairo",
+        "price": "8000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.482406854629513,
+          30.030479535660167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/villa-4.jpg",
+        "title": "Villa for sale 327m in Hyde Park",
+        "category": "sales",
+        "type": "villa",
+        "state": "cairo",
+        "city": "new_cairo",
+        "price": "2300000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.48150026798248,
+          30.030382005421725
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/villa-1.jpg",
+        "title": "Villa for sale 327m in Hyde Park",
+        "category": "sales",
+        "type": "villa",
+        "state": "cairo",
+        "city": "katameya_heights",
+        "price": "2999000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.395862698554993,
+          29.990428339569355
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/villa-2.jpg",
+        "title": "Villa for sale 327m in Hyde Park",
+        "category": "sales",
+        "type": "villa",
+        "state": "cairo",
+        "city": "katameya_heights",
+        "price": "2970000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.396366953849792,
+          29.990251784940686
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/house-3.jpg",
+        "title": "One-storey family house with garage",
+        "category": "rentals",
+        "type": "house",
+        "state": "cairo",
+        "city": "katameya_heights",
+        "price": "7500"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.39596462249756,
+          29.989945136681467
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/commercial-2.jpg",
+        "title": "Long Term Tenanted Investment",
+        "category": "sales",
+        "type": "commercial",
+        "state": "cairo",
+        "city": "katameya_heights",
+        "price": "12400"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.398512721061707,
+          29.990498032099485
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/villa-3.jpg",
+        "title": "Villa for sale 327m in Hyde Park",
+        "category": "sales",
+        "type": "villa",
+        "state": "cairo",
+        "city": "katameya_heights",
+        "price": "2770000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.398121118545532,
+          29.990316831419353
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/commercial-3.jpg",
+        "title": "Long Term Tenanted Investment",
+        "category": "rentals",
+        "type": "commercial",
+        "state": "cairo",
+        "city": "katameya_heights",
+        "price": "11500"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.398523449897766,
+          29.99093941698763
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/apartment-2.jpg",
+        "title": "Apartments 130 M² Semi Finished in Fourth Neighborhood",
+        "category": "sales",
+        "type": "apartment",
+        "state": "cairo",
+        "city": "katameya_heights",
+        "price": "702900"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.398523449897766,
+          29.989982306217872
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "url": "property-details.html",
+        "imgUrl": "assets/images/map/apartment-3.jpg",
+        "title": "Apartments 130 M² Semi Finished in Fourth Neighborhood",
+        "category": "rentals",
+        "type": "apartment",
+        "state": "cairo",
+        "city": "katameya_heights",
+        "price": "9000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.397198438644406,
+          29.99060489388402
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+/*-----------------------------------------------------------------------------------------*/
+/* 1. Color Codes */
+/*-----------------------------------------------------------------------------------------*/
+
+:root {
+  /* primary color */
+  --primary-h: 33;
+  --primary-s: 29%;
+  --primary-l: 47%;
+  --primary-color: var(--primary-h), var(--primary-s), var(--primary-l);
+
+  /* secondary color */
+  --secondary-h: 224;
+  --secondary-s: 28%;
+  --secondary-l: 19%;
+  --secondary-color: var(--secondary-h), var(--secondary-s), var(--secondary-l);
+
+  /* light color */
+  --light-h: 60;
+  --light-s: 7%;
+  --light-l: 97%;
+  --light-color: var(--light-h), var(--light-s), var(--light-l);
+
+  /* dark color */
+  --dark-h: 0;
+  --dark-s: 0%;
+  --dark-l: 13%;
+  --dark-color: var(--dark-h), var(--dark-s), var(--dark-l);
+
+  /* success color */
+  --success-h: 135;
+  --success-s: 60%;
+  --success-l: 40%;
+  --success-color: var(--success-h), var(--success-s), var(--success-l);
+
+  /* danger color */
+  --danger-h: 355;
+  --danger-s: 70%;
+  --danger-l: 55%;
+  --danger-color: var(--danger-h), var(--danger-s), var(--danger-l);
+
+  /* warning color */
+  --warning-h: 45;
+  --warning-s: 100%;
+  --warning-l: 50%;
+  --warning-color: var(--warning-h), var(--warning-s), var(--warning-l);
+
+  /* info color */
+  --info-h: 180;
+  --info-s: 80%;
+  --info-l: 40%;
+  --info-color: var(--info-h), var(--info-s), var(--info-l);
+
+  /* rent label color */
+  --rent-label-h: 152;
+  --rent-label-s: 37%;
+  --rent-label-l: 46%;
+  --rent-label-color: var(--rent-label-h), var(--rent-label-s), var(--rent-label-l);
+
+  /* sale label color */
+  --sale-label-h: 350;
+  --sale-label-s: 89%;
+  --sale-label-l: 53%;
+  --sale-label-color: var(--sale-label-h), var(--sale-label-s), var(--sale-label-l);
+
+  /* new label color */
+  --new-label-h: 207;
+  --new-label-s: 90%;
+  --new-label-l: 54%;
+  --new-label-color: var(--new-label-h), var(--new-label-s), var(--new-label-l);
+
+  /* featured label color */
+  --featured-label-h: 302;
+  --featured-label-s: 59%;
+  --featured-label-l: 65%;
+  --featured-label-color: var(--featured-label-h), var(--featured-label-s), var(--featured-label-l);
+}
+
+// theme definitions
+[data-theme="lightTheme"] {
+  --main-color-one: var(--primary-color);
+  --main-color-two: var(--secondary-color);
+
+  --bg-color-one: var(--light-color);
+  --bg-color-two: var(--light-h), var(--light-s), calc(var(--light-l) + 3%);
+  --bg-color-reverse: var(--dark-color);
+
+  --inputs-bg-color: var(--light-h), var(--light-s), calc(var(--light-l) - 6%);
+  --inputs-disabled-bg-color: var(--light-h), var(--light-s), calc(var(--light-l) - 10%);
+
+  --t-color-one: var(--dark-color);
+  --t-color-two: var(--dark-h), var(--dark-s), calc(var(--dark-l) + 25%);
+
+  --border-color: var(--light-h), var(--light-s), calc(var(--light-l) - 5%);
+
+  --card-shadow: 0px 8px 32px hsla(0, 0%, 0%, 10%);
+  --inset-shadow: inset 0 2px 4px hsla(0, 0%, 0%, 0.08);
+  --drop-shadow: drop-shadow(0 0 7px hsla(0, 0%, 0%, 12%));
+
+  --filter-invert-true: invert(1);
+  --filter-invert-false: invert(0);
+}
+
+[data-theme="darkTheme"] {
+  --main-color-one: var(--primary-color);
+  --main-color-two: var(--secondary-h), var(--secondary-s), calc(var(--secondary-l) + 20%);
+
+  --bg-color-one: var(--dark-color);
+  --bg-color-two: var(--dark-h), var(--dark-s), calc(var(--dark-l) + 5%);
+  --bg-color-reverse: var(--light-color);
+
+  --inputs-bg-color: var(--dark-h), var(--dark-s), calc(var(--dark-l) + 2%);
+  --inputs-disabled-bg-color: var(--dark-h), var(--dark-s), calc(var(--dark-l) + 4%);
+
+  --t-color-one: var(--light-color);
+  --t-color-two: var(--dark-h), var(--dark-s), calc(var(--dark-l) + 50%);
+
+  --border-color: var(--dark-h), var(--dark-s), calc(var(--dark-l) + 8%);
+
+  --card-shadow: 0px 8px 32px hsla(0, 0%, 0%, 10%);
+  --inset-shadow: inset 0 2px 4px hsla(0, 0%, 0%, 0.08);
+  --drop-shadow: drop-shadow(0 0 8px hsla(0, 0%, 0%, 38%));
+
+  --filter-invert-true: invert(0);
+  --filter-invert-false: invert(1);
+}

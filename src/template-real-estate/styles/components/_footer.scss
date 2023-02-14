@@ -1,0 +1,128 @@
+/* Footer Styles */
+/*---------------*/
+.footer {
+  position: relative;
+  background-color: hsl(var(--bg-color-two));
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url("../assets/images/footer-bg.png") no-repeat center;
+    background-size: cover;
+    filter: var(--filter-invert-true);
+  }
+
+  .footer__logo {
+    display: inline-block;
+
+    svg {
+      width: 100px;
+    }
+  }
+
+  > * {
+    position: relative;
+  }
+
+  &__top {
+    padding: {
+      top: 70px;
+      bottom: 50px;
+    }
+    margin-bottom: -50px;
+  }
+
+  &__widget {
+    margin-bottom: 50px;
+
+    &__title {
+      margin-bottom: 20px;
+
+      &__heading {
+        font-size: 1.125rem;
+        margin: 0;
+      }
+    }
+
+    &__text {
+      &:not(:only-child):not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    // social list
+    &__socialList {
+      @include flexbox(flex, "", center, "", "", wrap);
+      margin-bottom: -12px;
+
+      &:not(:only-child):not(:first-child) {
+        margin-top: 1.5rem;
+      }
+
+      &__item {
+        margin-bottom: 12px;
+
+        &:not(:last-of-type) {
+          @include appDir() {
+            margin-#{dirs(right, left)}: 12px;
+          }
+        }
+      }
+    }
+
+    &--contact {
+      @media #{$max_991} {
+        .info-block {
+          &:not(:last-child) {
+            margin-bottom: 1.5rem;
+          }
+        }
+      }
+    }
+
+    &__links {
+      &__link {
+        display: inline-block;
+
+        &:hover {
+          color: hsl(var(--main-color-one));
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    line-height: 2rem;
+    padding: {
+      top: 30px;
+      bottom: 30px;
+    }
+    border-top: 2px solid hsl(var(--border-color));
+
+    @media #{$min_768} {
+      &__copyright {
+        text-align: end;
+      }
+    }
+
+    @media #{$max_767} {
+      text-align: center;
+    }
+
+    &__link {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  a {
+    &:focus {
+      @include focusStyle();
+    }
+  }
+}

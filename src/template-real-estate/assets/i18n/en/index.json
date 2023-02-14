@@ -1,0 +1,1078 @@
+{
+  "prefix": "",
+  "languages": "Languages",
+  "i18n": {
+    "langTitle": "English",
+    "lang": "en",
+    "dir": "ltr",
+    "startDir": "left",
+    "endDir": "right",
+    "fonts": "https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@600;700&display=swap",
+    "currency": "$",
+    "currencies": {
+      "us": "$",
+      "eg": ""
+    },
+    "otherLang": {
+      "id": "ar",
+      "title": "العربية",
+      "prefix": "rtl-"
+    }
+  },
+  "themes": {
+    "changeMode": "Switch Dark/Light Theme",
+    "light": "Light Mode",
+    "dark": "Dark Mode"
+  },
+
+  "skipLinks": {
+    "title": "Skip to:",
+    "places": "Places",
+    "blog": "News"
+  },
+
+  "header": {
+    "logo": "Jaber",
+    "navbarLinks": {
+      "home": "Home",
+      "places": "Places",
+      "properties": {
+        "properties": "Properties",
+        "allProperties": "Properties",
+        "propertyDetails": "Property Details",
+        "compareProps": "Compare Properties"
+      },
+      "pages": {
+        "pages": "Pages",
+        "news": {
+          "news": "News",
+          "allNews": "News List",
+          "newsDetails": "News Details"
+        },
+        "agents": {
+          "agents": "Agents",
+          "allAgents": "Agents List",
+          "agentDetails": "Agent Details"
+        },
+        "reviews": "Reviews",
+        "signIn": "Sign In",
+        "signUp": "Sign Up",
+        "user": {
+          "dashboard": "Dashboard",
+          "profile": "My Profile",
+          "properties": "My Properties",
+          "addProperty": "Add Property",
+          "favorites": "Favorites"
+        },
+        "page404": "Page 404"
+      },
+      "about": "About",
+      "contact": "Contact"
+    },
+    "actions": {
+      "search": {
+        "search": "Search",
+        "close": "Close"
+      },
+      "user": {
+        "title": "User Menu",
+        "account": "My Account",
+        "signUp": "Sign Up",
+        "signIn": "Sign In",
+        "logout": "Logout"
+      }
+    },
+    "sideMenu": {
+      "toggle": "Toggle Side Menu",
+      "close": "Close Side Menu"
+    }
+  },
+
+  "footer": {
+    "footerTop": {
+      "about": "Jaber services allow you to buy or sell a property while providing essential information to help you take one of life’s biggest financial decisions.",
+      "links": {
+        "title": "Hot links",
+        "places": "Places",
+        "singleProperty": "Single Property",
+        "submitProperty": "Submit Property",
+        "compare": "Compare",
+        "about": "About Us",
+        "contact": "Contact Us",
+        "allNews": "Latest News",
+        "singleNews": "Single Post",
+        "signIn": "Sign In",
+        "signUp": "Sign Up",
+        "reviews": "Reviews",
+        "page404": "Page 404"
+      },
+      "contact": {
+        "title": "Contact Info",
+        "address": "Custodian of the two Holy Mosques Road Cross Prince Bandar Street (Suwaiket) P.O.Box 1402, Al Khobar 31952",
+        "tel": "Telephone",
+        "email": "Email"
+      }
+    },
+    "footerBottom": {
+      "tempName": "Jaber",
+      "packageName": "Real Estate HTML Template",
+      "poweredBy": "Proudly Powered by",
+      "webrouk": "Webrouk"
+    }
+  },
+
+  "scrollToTop": "Back To Top",
+
+  "homepage": {
+    "browserTitle": "Jaber - Real Estate HTML Template",
+    "title": "Home",
+    "hero": {
+      "map": {
+        "filters": {
+          "all": "All",
+          "sales": "Sales",
+          "rentals": "Rentals",
+          "type": "Type",
+          "typePlaceholder": "Select a Type",
+          "house": "House",
+          "apartment": "Apartment",
+          "villa": "Villa",
+          "commercial": "Commercial",
+          "state": "State",
+          "statePlaceholder": "Select a State",
+          "cairo": "Cairo",
+          "giza": "Giza",
+          "city": "City",
+          "cityPlaceholder": "Select a City",
+          "new_cairo": "New Cairo",
+          "katameya_heights": "Katameya Heights",
+          "sheikh_zayed": "Sheikh Zayed",
+          "sixth_of_october": "Sixth of October",
+          "price": "Price range",
+          "open": "Open map filters",
+          "close": "Close map filters"
+        }
+      }
+    },
+    "steps": {
+      "title": {
+        "leading": "Steps",
+        "tagline": "How it works"
+      },
+      "content": {
+        "stepsList": {
+          "i1": {
+            "heading": "Choose a Category",
+            "desc": "Category to browse the<br>properties under it"
+          },
+          "i2": {
+            "heading": "Find a Real Estate",
+            "desc": "Search and discover new<br>homes for sale & rent"
+          },
+          "i3": {
+            "heading": "Take Your Keys",
+            "desc": "Take your keys to your new<br>home and enjoy"
+          },
+          "i4": {
+            "heading": "Live Happy",
+            "desc": "Enjoy the splendor of your new<br>home and live happily"
+          }
+        }
+      }
+    },
+    "statistics": {
+      "stepsList": {
+        "i1": {
+          "title": "Properties on Map"
+        },
+        "i2": {
+          "title": "Professional Agents"
+        },
+        "i3": {
+          "title": "Happy Clients"
+        },
+        "i4": {
+          "title": "New Apartments Daily"
+        }
+      }
+    },
+    "places": {
+      "title": {
+        "leading": "Places",
+        "tagline": "Properties by area"
+      },
+      "content": {
+        "placesList": {
+          "i1": "New York",
+          "i2": "Chicago",
+          "i3": "San Francisco",
+          "i4": "Boston",
+          "i5": "Miami Beach"
+        },
+        "properties": "Properties"
+      }
+    },
+    "hot": {
+      "title": {
+        "leading": "Hot",
+        "tagline": "Latest properties"
+      },
+      "content": {
+        "propertiesList": {
+          "i1": {
+            "title": "Apartment with Subunits",
+            "desc": "Modern home near the ocean shore",
+            "views": "47",
+            "location": {
+              "city": "New York",
+              "town": "Albany"
+            },
+            "price": "230,000",
+            "features": {
+              "rooms": "4",
+              "beds": "3",
+              "baths": "2",
+              "space": "105"
+            },
+            "agentName": "Matteo Augustine"
+          },
+          "i2": {
+            "title": "Apartment with Subunits",
+            "desc": "Modern home near the ocean shore",
+            "views": "39",
+            "location": {
+              "city": "California",
+              "town": "Oakland"
+            },
+            "price": "1150",
+            "features": {
+              "rooms": "3",
+              "beds": "3",
+              "baths": "1",
+              "space": "125"
+            },
+            "agentName": "Roob Howard"
+          },
+          "i3": {
+            "title": "Apartment with Subunits",
+            "desc": "Modern home near the ocean shore",
+            "views": "26",
+            "location": {
+              "city": "Florida",
+              "town": "Miami"
+            },
+            "price": "900",
+            "features": {
+              "rooms": "3",
+              "beds": "3",
+              "baths": "1",
+              "space": "120"
+            },
+            "agentName": "Nathan Rowland"
+          }
+        }
+      }
+    },
+    "agents": {
+      "textbox": {
+        "title": "Our dedicated real estate agents",
+        "paragraph": "Our Real Estate team strive to get the best possible result for our clients by tailoring to your individual needs and providing superior friendly."
+      },
+      "content": {
+        "agentsList": {
+          "i1": {
+            "name": "Matteo Augustine",
+            "position": "Real Estate Broker"
+          },
+          "i2": {
+            "name": "Roob Howard",
+            "position": "Real Estate Broker"
+          },
+          "i3": {
+            "name": "Nathan Rowland",
+            "position": "Real Estate Broker"
+          },
+          "i4": {
+            "name": "Bill Yates",
+            "position": "Real Estate Broker"
+          },
+          "i5": {
+            "name": "Scott Swanson",
+            "position": "Real Estate Broker"
+          }
+        }
+      }
+    },
+    "featured": {
+      "title": {
+        "leading": "Featured Property",
+        "tagline": "Feature your property and be seen higher up in the search results, above all Standard listings."
+      },
+      "content": {
+        "list": {
+          "i1": "Donec auctor dui vel urna ultrices feugiat.",
+          "i2": "Vivamus aliquam augue a risus lacinia viverra.",
+          "i3": "Integer vitae neque ac arcu molestie suscipit."
+        },
+        "viewDetailsBtn": "View details ⇒"
+      }
+    },
+    "ratings": {
+      "textbox": {
+        "title": "Highlight and display the best reviews on your website",
+        "paragraph": "A website without reviews is a business without trust. So potential customers can hear how fantastic your business is right from another customer's mouth. And you can't get much more trustworthy than that!",
+        "viewAll": "View All Ratings ⇒"
+      },
+      "content": {
+        "ratingsList": {
+          "i1": {
+            "name": "Gordon Morales",
+            "review": "Lorem ipsum dolor sit amet."
+          },
+          "i2": {
+            "name": "Richard Ivy",
+            "review": "Lorem ipsum dolor sit amet."
+          },
+          "i3": {
+            "name": "Vincent Jones",
+            "review": "Lorem ipsum dolor sit amet."
+          },
+          "i4": {
+            "name": "Chris Dirksen",
+            "review": "Lorem ipsum dolor sit amet."
+          },
+          "i5": {
+            "name": "Robert Mohler",
+            "review": "Lorem ipsum dolor sit amet."
+          }
+        }
+      }
+    },
+    "blog": {
+      "title": {
+        "leading": "Blog",
+        "tagline": "News & Insights"
+      },
+      "content": {
+        "blogList": {
+          "i1": {
+            "date": "23 Feb 2022",
+            "cats": {
+              "c1": "Tax",
+              "c2": "Selling"
+            },
+            "title": "How to avoid a tax bomb when selling your home",
+            "excerpt": "With soaring home values, many sellers expect a sizable"
+          },
+          "i2": {
+            "date": "16 Feb 2022",
+            "cats": {
+              "c1": "Real Estate",
+              "c2": "Agents"
+            },
+            "title": "How to Find the Right Real Estate Agent",
+            "excerpt": "There are a lot of real estate agents out there. So how"
+          },
+          "i3": {
+            "date": "06 Feb 2022",
+            "cats": {
+              "c1": "Real Estate",
+              "c2": "Agents"
+            },
+            "title": "Why do you need to consult a real estate agent",
+            "excerpt": "Many people buy or sell real estate nowadays. This has"
+          },
+          "i4": {
+            "date": "27 Jan 2021",
+            "cats": {
+              "c1": "Guide",
+              "c2": "Selling"
+            },
+            "title": "The Complete Guide to Selling Your Home",
+            "excerpt": "No matter how great your home looks at first glance"
+          },
+          "i5": {
+            "date": "19 Jan 2021",
+            "cats": {
+              "c1": "Guide",
+              "c2": "Buying"
+            },
+            "title": "First Time Home Buyer Guide",
+            "excerpt": "Looking to buy your first home? You've come to the right place"
+          }
+        }
+      }
+    },
+    "newsletter": {
+      "text": {
+        "title": "Subscribe to our newsletter"
+      },
+      "form": {
+        "placeholder": "Your email address",
+        "submitBtn": "Subscribe"
+      }
+    }
+  },
+
+  "placesPage": {
+    "title": "Places",
+    "placesList": {
+      "i1": "New York",
+      "i2": "Chicago",
+      "i3": "San Francisco",
+      "i4": "Boston",
+      "i5": "Miami Beach",
+      "i6": "Charleston",
+      "i7": "Seattle",
+      "i8": "Milwaukee",
+      "i9": "Las Vegas",
+      "i10": "San Diego"
+    },
+    "properties": "Properties"
+  },
+
+  "propertiesPage": {
+    "title": "Properties",
+    "listLayout": "List Layout",
+    "gridLayout": "Grid Layout",
+    "results": "Results",
+    "filters": {
+      "sorting": {
+        "title": "Sort By",
+        "newest": "Newest",
+        "mostViewed": "Most Viewed",
+        "priceLowToHigh": "Price (low to high)",
+        "priceHighToLow": "Price (high to low)"
+      },
+      "category": {
+        "title": "Category",
+        "all": "All",
+        "sales": "Sales",
+        "rentals": "Rentals"
+      },
+      "type": {
+        "title": "Property Type",
+        "all": "All",
+        "house": "House",
+        "apartment": "Apartment",
+        "villa": "Villa",
+        "commercial": "Commercial"
+      },
+      "price": {
+        "title": "Price Range"
+      },
+      "beds": {
+        "title": "Bedrooms",
+        "any": "Any"
+      },
+      "baths": {
+        "title": "Bathrooms",
+        "any": "Any"
+      },
+      "open": "Open properties filters",
+      "close": "Close properties filters"
+    }
+  },
+
+  "aboutUsPage": {
+    "title": "About Us",
+    "brief": {
+      "title": "The leading company in the real estate market",
+      "paragraph1": "Our aspiration is to create living, vibrant and integrated communities and to enhance the quality of life for those living in and visiting the Middle East.",
+      "list": {
+        "i1": "The nation’s trusted master developer",
+        "i2": "Building a modern way of living",
+        "i3": "Led by people, driven by passion, delivered with pride"
+      },
+      "paragraph2": "We will do this by continuing to provide market-leading lifestyle destinations for tenants and customers alike.",
+      "btn": "Explore All Listings ⇒"
+    },
+    "features": {
+      "i1": {
+        "title": "We Like to Listen",
+        "desc": "We listen, find out what you want to achieve and plan how we get you there. Things work better when we do it together."
+      },
+      "i2": {
+        "title": "We Like to Talk",
+        "desc": "We'll keep you updated with the progress of the market. We'll earn your trust and make the process stress-free."
+      },
+      "i3": {
+        "title": "We Make it Easy",
+        "desc": "We love a challenge. We'll talk to you about it in plain English. You'll find us honest, reliable and a safe pair of hands."
+      }
+    },
+    "agents": {
+      "leading": "Agents",
+      "tagline": "Our Expert Team"
+    }
+  },
+
+  "newsPage": {
+    "title": "Our News"
+  },
+
+  "newsDetailsPage": {
+    "postText": {
+      "p1": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.",
+      "p2": "tay focused and remember we design the best WordPress News and Magazine Themes. It’s the ones closest to you that want to see you fail. Another one. It’s important to use cocoa butter. It’s the key to more success, why not live smooth? Why live rough? The key to success is to keep your head above the water, never give up. Watch your back, but more importantly when you get out the shower, dry your back, it’s a cold world out there.",
+      "p3": "Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of “de Finibus Bonorum et Malorum” (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, “Lorem ipsum dolor sit amet..”, comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.",
+      "p4": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn’t anything embarrassing hidden in the middle of text.",
+      "p5": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of &#8220;de Finibus Bonorum et Malorum&#8221; (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, &#8220;Lorem ipsum dolor sit amet..&#8221;, comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.",
+      "p6": "ections 1.10.32 and 1.10.33 from &#8220;de Finibus Bonorum et Malorum&#8221; by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of &#8220;de Finibus Bonorum et Malorum&#8221; (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, &#8220;Lorem ipsum dolor sit amet..&#8221;, comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from &#8220;de Finibus Bonorum et Malorum&#8221; by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
+      "p7": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of &#8220;de Finibus Bonorum et Malorum&#8221; (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, &#8220;Lorem ipsum dolor sit amet..&#8221;, comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from &#8220;de Finibus Bonorum et Malorum&#8221; by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham., comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from &#8220;de Finibus Bonorum et Malorum&#8221; by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
+      "p8": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "p9": "has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "p10": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of “de Finibus Bonorum et Malorum” (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.",
+      "dropcaps": "S",
+      "link": "Lorem Ipsum",
+      "quote": "I’ve learned that goodbyes will always hurt, pictures will never replace having been there, memories good and bad will bring tears, and words can never replace feelings.",
+      "list": {
+        "i1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "i2": "Morbi et nulla ornare magna sodales tristique et nec magna.",
+        "i3": "Nam maximus diam eget dolor elementum consequat.",
+        "i4": "Integer vitae neque ac arcu molestie suscipit."
+      },
+      "tags": {
+        "i1": "Agency",
+        "i2": "Corporate",
+        "i3": "Business"
+      },
+      "comments": {
+        "i1": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "i2": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+        "i3": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
+        "i4": "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      },
+      "commentsForm": {
+        "title": "Write a Comment",
+        "nameLabel": "Name",
+        "namePlaceholder": "e.g. John Doe",
+        "emailLabel": "Email",
+        "emailPlaceholder": "e.g. john.doe@gmail.com",
+        "commentLabel": "Comment",
+        "commentPlaceholder": "Write a Comment...",
+        "submitBtn": "Post Comment"
+      }
+    }
+  },
+
+  "agentsPage": {
+    "title": "Our Agents"
+  },
+
+  "agentDetailsPage": {
+    "title": "Scott Swanson",
+    "info": {
+      "office": "Office",
+      "mobile": "Mobile",
+      "fax": "Fax",
+      "email": "Email",
+      "website": "Website",
+      "listings": "Listings",
+      "viewListings": "View My Listings ⇒"
+    },
+    "overview": {
+      "title": "Overview",
+      "text": "With over a decade of experience as an agent, Scott is passionate about professionalising the way real estate agents do business in his area. His experienced team is focussed on quality of service to selected clients- not minimum of service to many clients. With the market's highest list-to-sell ratio and shortest average days on market, they focus on delivering results every time through a marketing based model designed to ensure that every property is sold to the ideal buyer or leased to the ideal tenant. The team has built a continually growing repeat client base by emphasizing the outcome for the client above all else, resulting in a level of service unrivalled in their market. Contact them to understand how they do it, or ask to see their long list of testimonials."
+    },
+    "reviews": {
+      "title": "Agent Reviews",
+      "text1": "We were referred to Scott through our close friends and are so happy with the service he provided! This was our first house, so we had a lot of questions and he was happy to answer them all!",
+      "text2": "Beautiful home, very picturesque and close to everything in jtree! A little warm for a hot weekend, but would love to come back during the cooler seasons!"
+    },
+    "reviewsForm": {
+      "title": "Write a Review",
+      "form": {
+        "ratingLabel": "Rating",
+        "reviewLabel": "Review",
+        "reviewPlaceholder": "Write a message for Scott...",
+        "submitBtn": "Submit Review"
+      }
+    }
+  },
+
+  "reviewsPage": {
+    "title": "Our Reviews",
+    "list": {
+      "i1": "It's always a pleasure to work with Jaber company and their team. They are personable, responsive, and results-oriented!",
+      "i2": "Their guidance and advice was invaluable in purchasing this home which easily exceeded my expectations...the whole family was thrilled!",
+      "i3": "Jaber company is attentive, personable, and professional. John and his team provide great support for my company's needs.",
+      "i4": "Always available to answer any questions. Very knowledgeable about the services they provide. Would recommend to anyone!",
+      "i5": "Greatest appreciation to you and your team for the outstanding job you did for us. The house is just what we wanted, and we were thrilled with the speed your team done!"
+    }
+  },
+
+  "contactUsPage": {
+    "title": "Contact Us",
+    "contactInfo": {
+      "location": "941 Saqrqorish Road, alandalos, grnata, wa 47122-4194"
+    },
+    "form": {
+      "nameLabel": "Name",
+      "namePlaceholder": "e.g. John Doe",
+      "emailLabel": "Email",
+      "emailPlaceholder": "e.g. john.doe@gmail.com",
+      "phoneLabel": "Phone",
+      "phonePlaceholder": "Phone Number",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Write message...",
+      "submitBtn": "Send Message ⇒"
+    }
+  },
+
+  "userDashboardPage": {
+    "title": "User Dashboard",
+    "list": {
+      "profile": "My Profile",
+      "myProperties": "My Properties",
+      "addProperty": "Add Property",
+      "favorites": "Favorites",
+      "logout": "Logout"
+    }
+  },
+
+  "userProfilePage": {
+    "title": "My Profile",
+    "settingsForm": {
+      "title": "Account Settings"
+    },
+    "securityForm": {
+      "title": "Security Settings",
+      "oldPasswordLabel": "Old Password",
+      "newPasswordLabel": "New Password"
+    },
+    "imageForm": {
+      "title": "User Image"
+    }
+  },
+
+  "userPropertiesPage": {
+    "title": "My Properties"
+  },
+
+  "userAddPropertyPage": {
+    "title": "Add New Property",
+    "form": {
+      "title": "Property Details",
+      "category": {
+        "label": "Category",
+        "placeholder": "Select a Category",
+        "sales": "Sales",
+        "rentals": "Rentals"
+      },
+      "type": {
+        "label": "Type",
+        "placeholder": "Select a Type",
+        "house": "House",
+        "apartment": "Apartment",
+        "villa": "Villa",
+        "commercial": "Commercial"
+      },
+      "propertyTitle": {
+        "label": "Title",
+        "placeholder": "Enter your property title"
+      },
+      "price": {
+        "label": "Price",
+        "placeholder": "USD"
+      },
+      "desc": {
+        "label": "Description",
+        "placeholder": "Describe about your property..."
+      },
+      "location": {
+        "label": "Location",
+        "placeholder": "Enter your property location..."
+      },
+      "rooms": "Rooms",
+      "beds": "Bedrooms",
+      "baths": "Bathrooms",
+      "area": {
+        "label": "Area",
+        "placeholder": "Sqft"
+      },
+      "media": "Media",
+      "newLabel": "Show New Label",
+      "featuredLabel": "Show Featured Label",
+      "submitBtn": "Submit Property"
+    }
+  },
+
+  "userFavoritesPage": {
+    "title": "Favorites"
+  },
+
+  "propertyDetailsPage": {
+    "title": "Luxury Villa in Spain's Balearic Islands",
+    "gallery": {
+      "title": "Gallery"
+    },
+    "desc": {
+      "title": "Description",
+      "text": "Planned after the principles of Spanish architecture, its layout enables you to entertain with aplomb and be the perfect host while safeguarding your privacy. For instance, its entrance is positioned so that your guests can access your living area and its accompanying lawn directly, without having to traverse your family’s personal spaces. Seamlessly skirted by grassy paths, it blurs the line between the outdoors and in, enveloping you in nature’s warm embrace. With seven spacious bedrooms as well as a maid’s room, large balcony decks opening from the bedrooms, a central family area, and a commodious kitchen, it promises you a life that is convenient and comfortable even as it is elegant and classy."
+    },
+    "details": {
+      "title": "Property Details"
+    },
+    "floorPlans": {
+      "title": "Floor Plans",
+      "i1": {
+        "title": "Floor one",
+        "desc": "Some description for floor one."
+      },
+      "i2": {
+        "title": "Floor two",
+        "desc": "Some description for floor two."
+      },
+      "i3": {
+        "title": "Floor three",
+        "desc": "Some description for floor three."
+      }
+    },
+    "nearby": {
+      "title": "What's Nearby",
+      "education": {
+        "title": "Education",
+        "i1": {
+          "title": "Kent College",
+          "miles": "(1.89 miles)"
+        },
+        "i2": {
+          "title": "Malvern College",
+          "miles": "(5.45 miles)"
+        },
+        "i3": {
+          "title": "Metropolitan School",
+          "miles": "(6.10 miles)"
+        }
+      },
+      "health": {
+        "title": "Health & Medical",
+        "i1": {
+          "title": "Cleopatra Hospital",
+          "miles": "(2.34 miles)"
+        },
+        "i2": {
+          "title": "Agial Hospital",
+          "miles": "(4.61 miles)"
+        },
+        "i3": {
+          "title": "German Hospital",
+          "miles": "(7.43 miles)"
+        }
+      },
+      "transport": {
+        "title": "Transportation",
+        "i1": {
+          "title": "Metro",
+          "miles": "(15.21 miles)"
+        },
+        "i2": {
+          "title": "Railways",
+          "miles": "(25.30 miles)"
+        },
+        "i3": {
+          "title": "Midwest Airlines",
+          "miles": "(44.74 miles)"
+        }
+      }
+    },
+    "location": {
+      "title": "Location"
+    }
+  },
+
+  "comparePropertiesPage": {
+    "title": "Compare Properties",
+    "compare": "Compare",
+    "compareItem": {
+      "title": "Title",
+      "price": "Price",
+      "cat": "Category",
+      "type": "Type",
+      "address": "Address",
+      "area": "Area",
+      "rooms": "Rooms",
+      "beds": "Bedrooms",
+      "baths": "Bathrooms",
+      "garage": "Garage",
+      "balcony": "Balcony",
+      "pool": "Pool",
+      "basement": "Basement",
+      "airCond": "Air Conditioning",
+      "elevator": "Elevator",
+      "naturalGas": "Natural Gas",
+      "yearBuilt": "Year Built",
+      "availableFrom": "Available From"
+    },
+    "prop1": {
+      "title": "Apartment with Subunits",
+      "price": "2,300,000",
+      "cat": "For Sale",
+      "type": "Villa",
+      "address": "New York, Albany",
+      "area": "485",
+      "rooms": "8",
+      "beds": "7",
+      "baths": "6",
+      "garage": "3",
+      "balcony": "4",
+      "yearBuilt": "2004",
+      "availableFrom": "2022-02"
+    },
+    "prop2": {
+      "title": "Apartment with Subunits",
+      "price": "230,000",
+      "cat": "For Sale",
+      "type": "House",
+      "address": "California, Oakland",
+      "area": "240",
+      "rooms": "4",
+      "beds": "3",
+      "baths": "2",
+      "garage": "1",
+      "balcony": "2",
+      "yearBuilt": "1998",
+      "availableFrom": "2022-04"
+    },
+    "prop3": {
+      "title": "Apartment with Subunits",
+      "price": "7,000",
+      "cat": "For Rent",
+      "type": "Apartment",
+      "address": "Florida, Miami",
+      "area": "180",
+      "rooms": "4",
+      "beds": "3",
+      "baths": "2",
+      "yearBuilt": "2007",
+      "availableFrom": "2022-03"
+    }
+  },
+
+  "signInPage": {
+    "title": "Sign In",
+    "signToAccount": "Sign In to Your Account",
+    "signBySocial": "Sign in using social networks",
+    "or": "OR",
+    "form": {
+      "emailLabel": "Email",
+      "emailPlaceholder": "e.g. john.doe@gmail.com",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "********",
+      "rememberMe": "Remember Me",
+      "forgotPassword": "Forgot password?",
+      "submitBtn": "Sign In"
+    }
+  },
+
+  "signUpPage": {
+    "title": "Sign Up",
+    "createAccount": "Create New Account",
+    "signBySocial": "Sign up using social networks",
+    "or": "OR",
+    "form": {
+      "firstNameLabel": "First Name",
+      "firstNamePlaceholder": "e.g. John",
+      "lastNameLabel": "Last Name",
+      "lastNamePlaceholder": "e.g. Doe",
+      "emailLabel": "Email",
+      "emailPlaceholder": "e.g. john.doe@gmail.com",
+      "phoneLabel": "Phone",
+      "phonePlaceholder": "Phone Number",
+      "passwordLabel": "Password",
+      "confirmPasswordLabel": "Confirm Password",
+      "passwordPlaceholder": "********",
+      "iHaveRead": "I have read the",
+      "termsConditions": "Term & Conditions",
+      "submitBtn": "Sign Up"
+    }
+  },
+
+  "404Page": {
+    "title": "Not Found",
+    "heading": "Oops! That page can’t be found",
+    "desc": "We're sorry, we couldn't find the page you requested.",
+    "backHome": "⇐ Back to Home"
+  },
+
+  "components": {
+    "propertyItem": {
+      "labels": {
+        "sale": "For Sale",
+        "rent": "For Rent",
+        "new": "New",
+        "featured": "Featured"
+      },
+      "media": {
+        "multipleImgs": "Multiple images",
+        "video": "Video"
+      },
+      "features": {
+        "rooms": "Rooms",
+        "beds": "Beds",
+        "baths": "Baths",
+        "space": "Sqft",
+        "area": "Area"
+      },
+      "actions": {
+        "addToFavorites": "Add to Favorites",
+        "addToCompare": "Add to Compare"
+      }
+    },
+    "sidebar": {
+      "search": {
+        "title": "Search Blog",
+        "placeholder": "Type Keyword...",
+        "submitBtn": "Search"
+      },
+      "favCompSha": {
+        "favorite": "Favorite",
+        "compare": "Compare",
+        "share": "Share"
+      },
+      "agent": {
+        "viewProfile": "View Profile ⇒"
+      },
+      "contact": {
+        "title": "Contact Me"
+      },
+      "propertyDocs": {
+        "title": "Documents",
+        "i1": "Home Brochure",
+        "i2": "Notes and Information",
+        "i3": "Home Tour Video"
+      },
+      "featured": {
+        "title": "Featured Properties",
+        "i1": {
+          "title": "When Sustainability Requires Change",
+          "date": "28 April 2022"
+        },
+        "i2": {
+          "title": "Need better user experience?",
+          "date": "21 April 2022"
+        },
+        "i3": {
+          "title": "Become the best sale marketer",
+          "date": "14 April 2022"
+        },
+        "i4": {
+          "title": "Success is not an illusion",
+          "date": "08 April 2022"
+        }
+      },
+      "categories": {
+        "title": "Categories",
+        "i1": "Houses",
+        "i2": "Gardens",
+        "i3": "Properties",
+        "i4": "Baths",
+        "i5": "Beds"
+      },
+      "tags": {
+        "title": "Popular Tags",
+        "i1": "Houses",
+        "i2": "Gardens",
+        "i3": "Properties",
+        "i4": "Baths",
+        "i5": "Beds",
+        "i6": "Garages",
+        "i7": "Real Estates",
+        "i8": "Price",
+        "i9": "Location",
+        "i10": "Buy House",
+        "i11": "Sell House"
+      }
+    }
+  },
+
+  "toastNotifications": {
+    "formsValidation": {
+      "isRequired": "is required",
+      "mustBeAtLeast": "must be at least",
+      "mustBeAtMost": "must be at most",
+      "characters": "characters",
+      "minimum": "should be minimum",
+      "maximum": "should be maximum",
+      "enterValidEmail": "Please enter a valid email address",
+      "enterValidPhone": "Please enter a valid Phone Number",
+      "enterValidUrl": "Please enter a valid URL",
+      "enterValidDate": "Please enter a valid Date",
+      "cannotContainSpaces": "cannot contain spaces",
+      "passwordsMustMatch": "Passwords must match",
+      "equalsOldPassword": "New password cannot be the same as your old password",
+      "enterPasswordFirst": "Please enter your password first",
+      "confirmYourPassword": "Please confirm your password",
+      "enterOldPassword": "Please enter your old password",
+      "notValidFileFormat": "Not a valid file format, we only support",
+      "for": "for"
+    },
+    "changesSaved": "Changes saved successfully!",
+    "oopsSomethingWrong": "Oops! something went wrong, please try again.",
+    "messageSent": "Message sent successfully!",
+    "requestSent": "Your request has been sent successfully!",
+    "successfullyRegistered": "Great! successfully registered!",
+    "successfullyLoggedIn": "Successfully logged in!",
+    "successfullyReviewPosted": "Your review has been posted!",
+    "successfullyCommentPosted": "Your comment has been posted!"
+  },
+  "numbers": {
+    "0": "0",
+    "1": "1",
+    "2": "2",
+    "3": "3",
+    "4": "4",
+    "5": "5",
+    "6": "6",
+    "7": "7",
+    "8": "8",
+    "9": "9"
+  },
+  "global": {
+    "social": {
+      "title": "Social Networks",
+      "google": "Google",
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn",
+      "dribbble": "Dribbble",
+      "pinterest": "Pinterest",
+      "vimeo": "Vimeo",
+      "youtube": "YouTube",
+      "email": "Email"
+    },
+    "loading": "Loading",
+    "star": "Star",
+    "stars": "Stars",
+    "yes": "Yes",
+    "no": "No",
+    "optional": "(Optional)",
+    "readMore": "Read More",
+    "prevPage": "Previous",
+    "nextPage": "Next",
+    "curPage": "Current Page",
+    "postedBy": "Posted by",
+    "johnDoe": "John Doe",
+    "comments": "Comments",
+    "views": "Views",
+    "reviews": "Reviews",
+    "monthsAgoTime": "Months ago",
+    "tags": "Tags",
+    "share": "Share",
+    "pct": "%",
+    "download": "Download",
+    "chooseFile": "Choose File",
+    "browse": "Browse",
+    "dropFiles": "Drop files here",
+    "select": "Select...",
+    "search": "Search...",
+    "noResults": "No results found...",
+    "default": "Default",
+    "addNew": "Add New",
+    "remove": "Remove",
+    "close": "Close",
+    "saveChanges": "Save Changes"
+  }
+}

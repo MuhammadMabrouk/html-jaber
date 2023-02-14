@@ -1,0 +1,94 @@
+<div :class="['hero', isPropsMapFiltersOpen && 'filters-open']" ref="propertiesMap">
+  <div id="propertiesMap" class="hero__propsMap"></div>
+
+  <!-- properties map filters -->
+  <div class="hero__propsMap__filters">
+    <form id="propsMapFilterForm" class="form-styled" @change="propsMapFilterMarkers">
+
+      <!-- category tabs -->
+      <div class="hero__propsMap__filters__tabs">
+        <input id="propsMap__filters__all" type="radio" name="category" value="all" checked>
+        <label for="propsMap__filters__all">${{ index.homepage.hero.map.filters.all }}$</label>
+
+        <input id="propsMap__filters__sales" type="radio" name="category" value="sales">
+        <label for="propsMap__filters__sales">${{ index.homepage.hero.map.filters.sales }}$</label>
+
+        <input id="propsMap__filters__rentals" type="radio" name="category" value="rentals">
+        <label for="propsMap__filters__rentals">${{ index.homepage.hero.map.filters.rentals }}$</label>
+
+        <div class="hero__propsMap__filters__count">{{ propertiesCount }}</div>
+      </div>
+
+      <!-- filter options -->
+      <div class="row">
+        <div class="group col-lg-4">
+          <label>${{ index.homepage.hero.map.filters.type }}$</label>
+          <div class="control">
+            <webrouk-custom-select search-placeholder="${{ index.global.search }}$" no-results="${{ index.global.noResults }}$">
+              <select class="customSelect__select" name="type" form="propsMapFilterForm">
+                <option value="">${{ index.homepage.hero.map.filters.typePlaceholder }}$</option>
+                <option value="house">${{ index.homepage.hero.map.filters.house }}$</option>
+                <option value="apartment">${{ index.homepage.hero.map.filters.apartment }}$</option>
+                <option value="villa">${{ index.homepage.hero.map.filters.villa }}$</option>
+                <option value="commercial">${{ index.homepage.hero.map.filters.commercial }}$</option>
+              </select>
+            </webrouk-custom-select>
+          </div>
+        </div>
+        <div class="group col-lg-4">
+          <label>${{ index.homepage.hero.map.filters.state }}$</label>
+          <div class="control">
+            <webrouk-custom-select search-placeholder="${{ index.global.search }}$" no-results="${{ index.global.noResults }}$">
+              <select class="customSelect__select" name="state" form="propsMapFilterForm" @change="propsMapCitiesReset">
+                <option value="">${{ index.homepage.hero.map.filters.statePlaceholder }}$</option>
+                <option value="cairo">${{ index.homepage.hero.map.filters.cairo }}$</option>
+                <option value="giza">${{ index.homepage.hero.map.filters.giza }}$</option>
+              </select>
+            </webrouk-custom-select>
+          </div>
+        </div>
+        <div class="group col-lg-4">
+          <label>${{ index.homepage.hero.map.filters.city }}$</label>
+          <div class="control">
+            <webrouk-custom-select search-placeholder="${{ index.global.search }}$" no-results="${{ index.global.noResults }}$">
+              <select class="customSelect__select" name="city" form="propsMapFilterForm" ref="propsMapCitiesSelect">
+                <option value="">${{ index.homepage.hero.map.filters.cityPlaceholder }}$</option>
+                <option value="new_cairo">${{ index.homepage.hero.map.filters.new_cairo }}$</option>
+                <option value="katameya_heights">${{ index.homepage.hero.map.filters.katameya_heights }}$</option>
+                <option value="sheikh_zayed">${{ index.homepage.hero.map.filters.sheikh_zayed }}$</option>
+                <option value="sixth_of_october">${{ index.homepage.hero.map.filters.sixth_of_october }}$</option>
+              </select>
+            </webrouk-custom-select>
+          </div>
+        </div>
+      </div>
+      <div class="group">
+        <div class="hero__propsMap__filters__price control">
+          <webrouk-custom-range
+            start="0"
+            end="3000000"
+            from="700000"
+            to="2300000"
+            prefix-char="${{ index.i18n.currencies.us }}$"
+            suffix-char="${{ index.i18n.currencies.eg }}$">
+            <input type="hidden" name="price">
+          </webrouk-custom-range>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- open filters button in small devices -->
+  <button class="hero__propsMap__openFilters btn btn-circle btn-primary"
+    title="${{ index.homepage.hero.map.filters.open }}$"
+    aria-label="${{ index.homepage.hero.map.filters.open }}$"
+    @click="propsMapOpenFilters">
+    <i class="fa fa-filter" aria-hidden="true"></i>
+  </button>
+
+  <!-- dark overlay behind the filters -->
+  <button class="hero__overlay"
+    title="${{ index.homepage.hero.map.filters.close }}$"
+    aria-label="${{ index.homepage.hero.map.filters.close }}$"
+    @click="propsMapCloseFilters"></button>
+</div>

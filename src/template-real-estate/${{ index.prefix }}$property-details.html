@@ -1,0 +1,358 @@
+@@include('./schema/page-start.html')
+
+    <!-- start skip links -->
+    @@include('./components/skip-links/skip-links.template.html')
+    <!-- end skip links -->
+
+    <!-- start of header -->
+    @@include('./components/header/header.template.html')
+    <!-- end of header -->
+
+    <!-- start of inner pages header -->
+    @@include('./components/inner-pages-header/inner-pages-header.template.html', { pageTitle: "index.propertyDetailsPage.title" })
+    <!-- end of inner pages header -->
+
+    <!-- start page content -->
+    <section class="section section--propertyDetailsPage" ref="propertyDetailsPage">
+      <div class="section__content section__content--propertyDetailsPage">
+        <div class="container">
+          <div class="propertyDetailsSC hasStickySidebar row">
+            <!-- main content -->
+            <div class="mainContent col-lg-8">
+
+              <!-- images gallery -->
+              <div class="propertyDetailsSC__gallery">
+                <div class="propertyDetailsSC__gallery__imgBox spotlight-group">
+
+                  <!-- main slider -->
+                  <div id="propDetailsMainSlider" class="splide" data-splide='{
+                    "direction": "${{ index.i18n.dir }}$",
+                    "type": "slide",
+                    "rewind": true,
+                    "pagination": false,
+                    "arrows": false
+                  }'>
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                        <li class="splide__slide">
+                          <a class="propertyDetailsSC__gallery__imgBox__link glightbox"
+                            href="assets/images/properties/properties-1200-1.jpg" data-placeholder="1200x800"
+                            data-gallery="property-imgs-gallery">
+                            <img class="propertyDetailsSC__gallery__imgBox__img" loading="lazy"
+                              src="assets/images/properties/properties-1200-1.jpg" data-placeholder="1200x800"
+                              alt="${{ index.homepage.hot.content.propertiesList.i1.title }}$">
+                          </a>
+                        </li>
+                        <li class="splide__slide">
+                          <a class="propertyDetailsSC__gallery__imgBox__link glightbox"
+                            href="assets/images/properties/properties-1200-2.jpg" data-placeholder="1200x800"
+                            data-gallery="property-imgs-gallery">
+                            <img class="propertyDetailsSC__gallery__imgBox__img" loading="lazy"
+                              src="assets/images/properties/properties-1200-2.jpg" data-placeholder="1200x800"
+                              alt="${{ index.homepage.hot.content.propertiesList.i2.title }}$">
+                          </a>
+                        </li>
+                        <li class="splide__slide">
+                          <a class="propertyDetailsSC__gallery__imgBox__link glightbox"
+                            href="assets/images/properties/properties-1200-3.jpg" data-placeholder="1200x800"
+                            data-gallery="property-imgs-gallery">
+                            <img class="propertyDetailsSC__gallery__imgBox__img" loading="lazy"
+                              src="assets/images/properties/properties-1200-3.jpg" data-placeholder="1200x800"
+                              alt="${{ index.homepage.hot.content.propertiesList.i3.title }}$">
+                          </a>
+                        </li>
+                        <li class="splide__slide">
+                          <a class="propertyDetailsSC__gallery__imgBox__link glightbox"
+                            href="assets/images/properties/properties-1200-4.jpg" data-placeholder="1200x800"
+                            data-gallery="property-imgs-gallery">
+                            <img class="propertyDetailsSC__gallery__imgBox__img" loading="lazy"
+                              src="assets/images/properties/properties-1200-4.jpg" data-placeholder="1200x800"
+                              alt="${{ index.homepage.hot.content.propertiesList.i1.title }}$">
+                          </a>
+                        </li>
+                        <li class="splide__slide">
+                          <a class="propertyDetailsSC__gallery__imgBox__link glightbox"
+                            href="assets/images/properties/properties-1200-5.jpg" data-placeholder="1200x800"
+                            data-gallery="property-imgs-gallery">
+                            <img class="propertyDetailsSC__gallery__imgBox__img" loading="lazy"
+                              src="assets/images/properties/properties-1200-5.jpg" data-placeholder="1200x800"
+                              alt="${{ index.homepage.hot.content.propertiesList.i2.title }}$">
+                          </a>
+                        </li>
+                        <li class="splide__slide">
+                          <a class="propertyDetailsSC__gallery__imgBox__link glightbox"
+                            href="assets/images/properties/properties-1200-6.jpg" data-placeholder="1200x800"
+                            data-gallery="property-imgs-gallery">
+                            <img class="propertyDetailsSC__gallery__imgBox__img" loading="lazy"
+                              src="assets/images/properties/properties-1200-6.jpg" data-placeholder="1200x800"
+                              alt="${{ index.homepage.hot.content.propertiesList.i3.title }}$">
+                          </a>
+                        </li>
+                        <li class="splide__slide video">
+                          <a class="propertyDetailsSC__gallery__imgBox__link glightbox"
+                            href="https://youtu.be/Wlfe8Pg6Yxc" data-placeholder="1200x800"
+                            data-gallery="property-imgs-gallery">
+                            <img class="propertyDetailsSC__gallery__imgBox__img" loading="lazy"
+                              src="assets/images/properties/properties-1200-7.jpg" data-placeholder="1200x800"
+                              alt="${{ index.homepage.hot.content.propertiesList.i1.title }}$">
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- property price -->
+                  <div class="propertyDetailsSC__gallery__imgBox__price">
+                    <strong class="propertyDetailsSC__gallery__imgBox__price__val">${{ index.i18n.currencies.us }}$${{ index.homepage.hot.content.propertiesList.i1.price }}$${{ index.i18n.currencies.eg }}$</strong>
+                  </div>
+
+                  <!-- property labels -->
+                  <ul class="propertyDetailsSC__gallery__imgBox__labels">
+                    <li class="propertyDetailsSC__gallery__imgBox__labels__item propertyDetailsSC__gallery__imgBox__labels__item--new">${{ index.components.propertyItem.labels.new }}$</li>
+                    <li class="propertyDetailsSC__gallery__imgBox__labels__item propertyDetailsSC__gallery__imgBox__labels__item--sale">${{ index.components.propertyItem.labels.sale }}$</li>
+                  </ul>
+                </div>
+
+                <!-- thumbnail slider -->
+                <div class="propertyDetailsSC__gallery__thumbnail">
+                  <div id="propDetailsThumbSlider" class="splide" data-splide='{
+                    "direction": "${{ index.i18n.dir }}$",
+                    "fixedWidth": 100,
+                    "fixedHeight": 60,
+                    "cover": true,
+                    "gap": 10,
+                    "rewind": true,
+                    "pagination": false,
+                    "isNavigation": true,
+                    "breakpoints" : {
+                      "600": {
+                        "fixedWidth" : 60,
+                        "fixedHeight": 44
+                      }
+                    }
+                  }'>
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                        <li class="splide__slide">
+                          <img loading="lazy" src="assets/images/properties/properties-420-1.jpg" data-placeholder="100x60" alt="${{ index.homepage.hot.content.propertiesList.i1.title }}$">
+                        </li>
+                        <li class="splide__slide">
+                          <img loading="lazy" src="assets/images/properties/properties-420-2.jpg" data-placeholder="100x60" alt="${{ index.homepage.hot.content.propertiesList.i2.title }}$">
+                        </li>
+                        <li class="splide__slide">
+                          <img loading="lazy" src="assets/images/properties/properties-420-3.jpg" data-placeholder="100x60" alt="${{ index.homepage.hot.content.propertiesList.i3.title }}$">
+                        </li>
+                        <li class="splide__slide">
+                          <img loading="lazy" src="assets/images/properties/properties-420-4.jpg" data-placeholder="100x60" alt="${{ index.homepage.hot.content.propertiesList.i1.title }}$">
+                        </li>
+                        <li class="splide__slide">
+                          <img loading="lazy" src="assets/images/properties/properties-420-5.jpg" data-placeholder="100x60" alt="${{ index.homepage.hot.content.propertiesList.i2.title }}$">
+                        </li>
+                        <li class="splide__slide">
+                          <img loading="lazy" src="assets/images/properties/properties-420-6.jpg" data-placeholder="100x60" alt="${{ index.homepage.hot.content.propertiesList.i3.title }}$">
+                        </li>
+                        <li class="splide__slide video">
+                          <img loading="lazy" src="assets/images/properties/properties-420-7.jpg" data-placeholder="100x60" alt="${{ index.homepage.hot.content.propertiesList.i1.title }}$">
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- property description -->
+              <div class="propertyDetailsSC__desc">
+                <h4 class="blockTitle">${{ index.propertyDetailsPage.desc.title }}$</h4>
+
+                <p class="propertyDetailsSC__desc__text">${{ index.propertyDetailsPage.desc.text }}$</p>
+              </div>
+
+              <!-- property details -->
+              <div class="propertyDetailsSC__details">
+                <h4 class="blockTitle">${{ index.propertyDetailsPage.details.title }}$</h4>
+
+                <div class="propertyDetailsSC__details__table">
+                  <div class="propertyDetailsSC__details__table__item"><strong>${{ index.comparePropertiesPage.compareItem.cat }}$</strong></div>
+                  <div class="propertyDetailsSC__details__table__item">${{ index.comparePropertiesPage.prop1.cat }}$</div>
+                  <div class="propertyDetailsSC__details__table__item"><strong>${{ index.comparePropertiesPage.compareItem.type }}$</strong></div>
+                  <div class="propertyDetailsSC__details__table__item">${{ index.comparePropertiesPage.prop1.type }}$</div>
+                  <div class="propertyDetailsSC__details__table__item"><strong>${{ index.comparePropertiesPage.compareItem.address }}$</strong></div>
+                  <div class="propertyDetailsSC__details__table__item">${{ index.comparePropertiesPage.prop1.address }}$</div>
+                  <div class="propertyDetailsSC__details__table__item"><strong>${{ index.comparePropertiesPage.compareItem.area }}$</strong></div>
+                  <div class="propertyDetailsSC__details__table__item">${{ index.comparePropertiesPage.prop1.area }}$ ${{ index.components.propertyItem.features.space }}$</div>
+                  <div class="propertyDetailsSC__details__table__item"><strong>${{ index.comparePropertiesPage.compareItem.rooms }}$</strong></div>
+                  <div class="propertyDetailsSC__details__table__item">${{ index.comparePropertiesPage.prop1.rooms }}$</div>
+                  <div class="propertyDetailsSC__details__table__item"><strong>${{ index.comparePropertiesPage.compareItem.beds }}$</strong></div>
+                  <div class="propertyDetailsSC__details__table__item">${{ index.comparePropertiesPage.prop1.beds }}$</div>
+                  <div class="propertyDetailsSC__details__table__item"><strong>${{ index.comparePropertiesPage.compareItem.baths }}$</strong></div>
+                  <div class="propertyDetailsSC__details__table__item">${{ index.comparePropertiesPage.prop1.baths }}$</div>
+                  <div class="propertyDetailsSC__details__table__item"><strong>${{ index.comparePropertiesPage.compareItem.garage }}$</strong></div>
+                  <div class="propertyDetailsSC__details__table__item">${{ index.comparePropertiesPage.prop1.garage }}$</div>
+                  <div class="propertyDetailsSC__details__table__item"><strong>${{ index.comparePropertiesPage.compareItem.balcony }}$</strong></div>
+                  <div class="propertyDetailsSC__details__table__item">${{ index.comparePropertiesPage.prop1.balcony }}$</div>
+                  <div class="propertyDetailsSC__details__table__item"><strong>${{ index.comparePropertiesPage.compareItem.pool }}$</strong></div>
+                  <div class="propertyDetailsSC__details__table__item">
+                    <div class="d-flex align-items-center h-100"><span class="positiveMark positiveMark--circle"></span></div>
+                  </div>
+                  <div class="propertyDetailsSC__details__table__item"><strong>${{ index.comparePropertiesPage.compareItem.basement }}$</strong></div>
+                  <div class="propertyDetailsSC__details__table__item">
+                    <div class="d-flex align-items-center h-100"><span class="positiveMark positiveMark--circle"></span></div>
+                  </div>
+                  <div class="propertyDetailsSC__details__table__item"><strong>${{ index.comparePropertiesPage.compareItem.airCond }}$</strong></div>
+                  <div class="propertyDetailsSC__details__table__item">
+                    <div class="d-flex align-items-center h-100"><span class="positiveMark positiveMark--circle"></span></div>
+                  </div>
+                  <div class="propertyDetailsSC__details__table__item"><strong>${{ index.comparePropertiesPage.compareItem.elevator }}$</strong></div>
+                  <div class="propertyDetailsSC__details__table__item">
+                    <div class="d-flex align-items-center h-100"><span class="negativeMark negativeMark--circle"></span></div>
+                  </div>
+                  <div class="propertyDetailsSC__details__table__item"><strong>${{ index.comparePropertiesPage.compareItem.naturalGas }}$</strong></div>
+                  <div class="propertyDetailsSC__details__table__item">
+                    <div class="d-flex align-items-center h-100"><span class="positiveMark positiveMark--circle"></span></div>
+                  </div>
+                  <div class="propertyDetailsSC__details__table__item"><strong>${{ index.comparePropertiesPage.compareItem.yearBuilt }}$</strong></div>
+                  <div class="propertyDetailsSC__details__table__item">${{ index.comparePropertiesPage.prop1.yearBuilt }}$</div>
+                  <div class="propertyDetailsSC__details__table__item"><strong>${{ index.comparePropertiesPage.compareItem.availableFrom }}$</strong></div>
+                  <div class="propertyDetailsSC__details__table__item">${{ index.comparePropertiesPage.prop1.availableFrom }}$</div>
+                </div>
+              </div>
+
+              <!-- floor plans -->
+              <div class="propertyDetailsSC__floorPlans">
+                <h4 class="blockTitle">${{ index.propertyDetailsPage.floorPlans.title }}$</h4>
+
+                <div class="splide" data-splide='{
+                  "direction": "${{ index.i18n.dir }}$",
+                  "type": "slide",
+                  "pagination": false,
+                  "arrows": true
+                }'>
+                  <div class="splide__track">
+                    <ul class="splide__list">
+                      <li class="splide__slide">
+                        <a class="propertyDetailsSC__floorPlans__link glightbox"
+                          href="assets/images/floorplan/floorplan-1.jpg" data-placeholder="815x450"
+                          data-glightbox="title: ${{ index.propertyDetailsPage.floorPlans.i1.title }}$; description: ${{ index.propertyDetailsPage.floorPlans.i1.desc }}$"
+                          data-gallery="property-floor-plans">
+                          <img class="propertyDetailsSC__floorPlans__img" loading="lazy" src="assets/images/floorplan/floorplan-1.jpg" data-placeholder="815x450" alt="floor plan 1">
+                        </a>
+                      </li>
+                      <li class="splide__slide">
+                        <a class="propertyDetailsSC__floorPlans__link glightbox"
+                          href="assets/images/floorplan/floorplan-2.jpg" data-placeholder="815x450"
+                          data-glightbox="title: ${{ index.propertyDetailsPage.floorPlans.i2.title }}$; description: ${{ index.propertyDetailsPage.floorPlans.i2.desc }}$"
+                          data-gallery="property-floor-plans">
+                          <img class="propertyDetailsSC__floorPlans__img" loading="lazy" src="assets/images/floorplan/floorplan-2.jpg" data-placeholder="815x450" alt="floor plan 2">
+                        </a>
+                      </li>
+                      <li class="splide__slide">
+                        <a class="propertyDetailsSC__floorPlans__link glightbox"
+                          href="assets/images/floorplan/floorplan-3.jpg" data-placeholder="815x450"
+                          data-glightbox="title: ${{ index.propertyDetailsPage.floorPlans.i3.title }}$; description: ${{ index.propertyDetailsPage.floorPlans.i3.desc }}$"
+                          data-gallery="property-floor-plans">
+                          <img class="propertyDetailsSC__floorPlans__img" loading="lazy" src="assets/images/floorplan/floorplan-3.jpg" data-placeholder="815x450" alt="floor plan 3">
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- what's nearby -->
+              <div class="propertyDetailsSC__nearby">
+                <h4 class="blockTitle">${{ index.propertyDetailsPage.nearby.title }}$</h4>
+
+                <div class="propertyDetailsSC__nearby__group">
+                  <h5 class="propertyDetailsSC__nearby__heading text-info"><i class="fa fa-graduation-cap" aria-hidden="true"></i> ${{ index.propertyDetailsPage.nearby.education.title }}$</h5>
+                  <ul class="propertyDetailsSC__nearby__list">
+                    <li class="propertyDetailsSC__nearby__item">
+                      <div><strong>${{ index.propertyDetailsPage.nearby.education.i1.title }}$</strong> ${{ index.propertyDetailsPage.nearby.education.i1.miles }}$</div>
+                      @@include('../ui/rating-score/rating-score.template.html', { "score": "100" })
+                    </li>
+                    <li class="propertyDetailsSC__nearby__item">
+                      <div><strong>${{ index.propertyDetailsPage.nearby.education.i2.title }}$</strong> ${{ index.propertyDetailsPage.nearby.education.i2.miles }}$</div>
+                      @@include('../ui/rating-score/rating-score.template.html', { "score": "80" })
+                    </li>
+                    <li class="propertyDetailsSC__nearby__item">
+                      <div><strong>${{ index.propertyDetailsPage.nearby.education.i3.title }}$</strong> ${{ index.propertyDetailsPage.nearby.education.i3.miles }}$</div>
+                      @@include('../ui/rating-score/rating-score.template.html', { "score": "90" })
+                    </li>
+                  </ul>
+                </div>
+                <div class="propertyDetailsSC__nearby__group">
+                  <h5 class="propertyDetailsSC__nearby__heading text-success"><i class="fa fa-medkit" aria-hidden="true"></i> ${{ index.propertyDetailsPage.nearby.health.title }}$</h5>
+                  <ul class="propertyDetailsSC__nearby__list">
+                    <li class="propertyDetailsSC__nearby__item">
+                      <div><strong>${{ index.propertyDetailsPage.nearby.health.i1.title }}$</strong> ${{ index.propertyDetailsPage.nearby.health.i1.miles }}$</div>
+                      @@include('../ui/rating-score/rating-score.template.html', { "score": "90" })
+                    </li>
+                    <li class="propertyDetailsSC__nearby__item">
+                      <div><strong>${{ index.propertyDetailsPage.nearby.health.i2.title }}$</strong> ${{ index.propertyDetailsPage.nearby.health.i2.miles }}$</div>
+                      @@include('../ui/rating-score/rating-score.template.html', { "score": "80" })
+                    </li>
+                    <li class="propertyDetailsSC__nearby__item">
+                      <div><strong>${{ index.propertyDetailsPage.nearby.health.i3.title }}$</strong> ${{ index.propertyDetailsPage.nearby.health.i3.miles }}$</div>
+                      @@include('../ui/rating-score/rating-score.template.html', { "score": "100" })
+                    </li>
+                  </ul>
+                </div>
+                <div class="propertyDetailsSC__nearby__group">
+                  <h5 class="propertyDetailsSC__nearby__heading text-danger"><i class="fa fa-bus" aria-hidden="true"></i> ${{ index.propertyDetailsPage.nearby.transport.title }}$</h5>
+                  <ul class="propertyDetailsSC__nearby__list">
+                    <li class="propertyDetailsSC__nearby__item">
+                      <div><strong>${{ index.propertyDetailsPage.nearby.transport.i1.title }}$</strong> ${{ index.propertyDetailsPage.nearby.transport.i1.miles }}$</div>
+                      @@include('../ui/rating-score/rating-score.template.html', { "score": "80" })
+                    </li>
+                    <li class="propertyDetailsSC__nearby__item">
+                      <div><strong>${{ index.propertyDetailsPage.nearby.transport.i2.title }}$</strong> ${{ index.propertyDetailsPage.nearby.transport.i2.miles }}$</div>
+                      @@include('../ui/rating-score/rating-score.template.html', { "score": "90" })
+                    </li>
+                    <li class="propertyDetailsSC__nearby__item">
+                      <div><strong>${{ index.propertyDetailsPage.nearby.transport.i3.title }}$</strong> ${{ index.propertyDetailsPage.nearby.transport.i3.miles }}$</div>
+                      @@include('../ui/rating-score/rating-score.template.html', { "score": "70" })
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- property location -->
+              <div class="propertyDetailsSC__location">
+                <h4 class="blockTitle">${{ index.propertyDetailsPage.location.title }}$</h4>
+
+                <div id="propertyLocationMap" class="propertyDetailsSC__location__map" data-coords="30.044420,31.235712"></div>
+              </div>
+            </div>
+
+            <!-- sidebar -->
+            <div class="col-lg-4">
+              @@include('./components/sidebar/blog-sidebar/blog-sidebar.template.html', {
+                "search": false,
+                "favCompSha": true,
+                "agent": true,
+                "contactForm": true,
+                "propertyDocs": true,
+                "featuredProps": false,
+                "categories": false,
+                "tags": false,
+                "social": false
+              })
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- newsletter banner -->
+    @@include('./components/newsletter/newsletter.template.html')
+
+    <!-- start of footer -->
+    @@include('./components/footer/footer.template.html')
+    <!-- end of footer -->
+
+    <!-- back to top button -->
+    <webrouk-back-top-scroll-indicator
+      title="${{ index.scrollToTop }}$"
+      show-at="50">
+    </webrouk-back-top-scroll-indicator>
+
+@@include('./schema/page-end.html')

@@ -1,0 +1,7 @@
+{
+  "styles": {
+    "leaflet-imgs": "node_modules/leaflet/dist/images*/**/*",
+    "leaflet-fullscreen": "node_modules/leaflet-fullscreen/dist/*.png"
+  },
+  "scripts": {}
+}

@@ -1,0 +1,275 @@
+/* Agent Details Page Styles */
+/*---------------------------*/
+.agentDetailsSC {
+  &__info {
+    &__agent,
+    &__details {
+      position: relative;
+      filter: var(--drop-shadow);
+
+      @media #{$min_992} {
+        height: 100%;
+      }
+    }
+
+    &__agent {
+      @include flexbox(flex, "", start, "", "", "");
+
+      &__socials {
+        position: relative;
+        width: 25px;
+        padding-top: 40px;
+
+        @include appDir() {
+          margin-#{dirs(right, left)}: 8px;
+        }
+
+        &__item {
+          margin-bottom: 14px;
+        }
+
+        &__link {
+          @include flexbox(flex, "", center, center, "", "");
+          height: 25px;
+          width: 25px;
+
+          &:focus {
+            @include focusStyle();
+          }
+        }
+
+        &::after {
+          content: "";
+          display: block;
+          height: 40px;
+          width: 1px;
+          background-color: hsl(var(--t-color-two));
+          margin: auto;
+        }
+      }
+
+      &__imgBox {
+        height: 100%;
+        flex-grow: 1;
+      }
+
+      &__img {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+
+        @include appDir() {
+          clip-path: dirs(
+            polygon(
+              calc(0% + 40px) 0,
+              100% 0,
+              100% 100%,
+              0 100%,
+              0 calc(0% + 40px)
+            ),
+            polygon(
+              calc(100% - 40px) 0,
+              100% calc(0% + 40px),
+              100% 100%,
+              0 100%,
+              0 0
+            )
+          );
+        }
+      }
+
+      &__label {
+        position: absolute;
+        z-index: 2;
+        top: 14px;
+        display: inline-block;
+        background-color: hsl(var(--main-color-two));
+        color: #fff;
+        line-height: 24px;
+        font-size: 0.75rem;
+        padding: 0px 12px;
+        box-shadow: var(--card-shadow);
+
+        @include appDir() {
+          #{dirs(right, left)}: 14px;
+          text-transform: dirs(uppercase, null);
+        }
+      }
+    }
+
+    &__details {
+      @media #{$max_991} {
+        margin-top: 24px;
+      }
+
+      &__content {
+        @include flexbox(flex, "", "", between, column, "");
+        height: 100%;
+        background-color: hsl(var(--bg-color-two));
+        padding: 20px;
+
+        @include appDir() {
+          clip-path: dirs(
+            polygon(
+              100% 0,
+              100% calc(100% - 40px),
+              calc(100% - 40px) 100%,
+              0 100%,
+              0 0
+            ),
+            polygon(
+              100% 0,
+              100% 100%,
+              calc(0% + 40px) 100%,
+              0 calc(100% - 40px),
+              0 0
+            )
+          );
+        }
+      }
+
+      &__title {
+        font-size: 2rem;
+      }
+
+      &__contacts {
+        width: fit-content;
+        margin: 20px 0 25px;
+
+        th {
+          color: hsl(var(--t-color-one));
+
+          @include appDir() {
+            padding-#{dirs("right", "left")}: 30px;
+          }
+        }
+
+        a {
+          &:hover span {
+            text-decoration: underline;
+          }
+
+          &:focus {
+            @include focusStyle();
+          }
+        }
+      }
+
+      &__listingsBtn {
+        width: 100%;
+
+        @include appDir() {
+          clip-path: dirs(
+            polygon(
+              100% 0,
+              100% calc(100% - 30px),
+              calc(100% - 30px) 100%,
+              0 100%,
+              0 0
+            ),
+            polygon(
+              100% 0,
+              100% 100%,
+              calc(0% + 30px) 100%,
+              0 calc(100% - 30px),
+              0 0
+            )
+          );
+        }
+      }
+    }
+  }
+
+  &__block {
+    background-color: hsl(var(--bg-color-two));
+    padding: 20px;
+    filter: var(--drop-shadow);
+  }
+
+  &__pushStart {
+    @media #{$min_992} {
+      @include appDir() {
+        margin-#{dirs("left", "right")}: 33px;
+      }
+    }
+  }
+
+  &__reviews {
+    &__list {
+      margin-top: 2.5rem;
+    }
+
+    &__item {
+      @include flexbox(flex, "", "", between, "", "");
+
+      &:not(:last-of-type) {
+        margin-bottom: 2.5rem;
+      }
+    }
+
+    &__avatar {
+      height: 4rem;
+      width: 4rem;
+
+      &__img {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: var(--card-shadow);
+      }
+    }
+
+    &__itemBody {
+      width: calc(100% - 5.25rem);
+
+      &__meta {
+        position: relative;
+        margin-bottom: 14px;
+
+        @media #{$max_576} {
+          padding-top: 34px;
+        }
+
+        .ratingScore {
+          position: absolute;
+          top: 0;
+
+          @media #{$min_577} {
+            @include appDir() {
+              #{dirs(right, left)}: 0;
+            }
+          }
+
+          @media #{$max_576} {
+            @include appDir() {
+              #{dirs(left, right)}: 0;
+            }
+          }
+        }
+      }
+
+      &__authorName {
+        font-size: 1.125rem;
+        margin: 0;
+      }
+
+      &__reviewDate {
+        font-size: 0.875rem;
+      }
+
+      &__text {
+        font-size: 0.875rem;
+        margin: 0;
+
+        @media #{$max_576} {
+          @include appDir() {
+            margin-#{dirs(left, right)}: -5.25rem;
+          }
+        }
+      }
+    }
+  }
+}

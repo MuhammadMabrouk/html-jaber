@@ -1,0 +1,179 @@
+<header :class="['header', {
+  'header--expanded': isHeaderExpanded,
+  'header--semi-minimized': !isHeaderExpanded && !isHeaderMinimized,
+  'header--minimized': isHeaderMinimized
+}]">
+  <!-- header top bar -->
+  <div class="header__topbar">
+    <div class="container header__topbar__container">
+      <!-- info list -->
+      <ul class="header__infoList">
+        <li class="header__infoList__item">
+          <a class="header__infoList__link" href="mailto:info@jaber.com">
+            <i class="header__infoList__fa fa fa-envelope" aria-hidden="true"></i>
+            <span class="ltr-dir">info@jaber.com</span>
+          </a>
+        </li>
+        <li class="header__infoList__item">
+          <a class="header__infoList__link" href="tel:02966202290">
+            <i class="header__infoList__fa fa fa-phone rtl-mirror" aria-hidden="true"></i>
+            <span class="ltr-dir">(02) 966 202 290</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="header__topbar__listsGroup">
+        <!-- social list -->
+        <ul class="header__socialList">
+          <li class="header__socialList__item">
+            <a class="header__socialList__link" title="${{ index.global.social.facebook }}$" href="#" target="_blank"
+              rel="noopener noreferrer">
+              <i class="header__socialList__fa fa fa-facebook" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="header__socialList__item">
+            <a class="header__socialList__link" title="${{ index.global.social.twitter }}$" href="#" target="_blank"
+              rel="noopener noreferrer">
+              <i class="header__socialList__fa fa fa-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="header__socialList__item">
+            <a class="header__socialList__link" title="${{ index.global.social.linkedin }}$" href="#" target="_blank"
+              rel="noopener noreferrer">
+              <i class="header__socialList__fa fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="header__socialList__item">
+            <a class="header__socialList__link" title="${{ index.global.social.vimeo }}$" href="#" target="_blank"
+              rel="noopener noreferrer">
+              <i class="header__socialList__fa fa fa-vimeo" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="header__socialList__item">
+            <a class="header__socialList__link" title="${{ index.global.social.youtube }}$" href="#" target="_blank"
+              rel="noopener noreferrer">
+              <i class="header__socialList__fa fa fa-youtube-play" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+
+        <!-- options list -->
+        <ul class="header__optionsList">
+          <!-- languages switcher button -->
+          <li class="header__optionsList__item header__optionsList--langs text-uppercase">
+            <!-- current language -->
+            <a class="header__optionsList__btn" href="#">${{ index.i18n.lang }}$</a>
+
+            <!-- other languages dropdown list -->
+            <ul class="header__optionsList__langsDropdown">
+              <li class="header__optionsList__langsDropdown__item">
+                <a class="header__optionsList__langsDropdown__btn"
+                  href="${{ index.i18n.otherLang.prefix }}$index.html">${{ index.i18n.otherLang.title }}$</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- mode switcher button -->
+          <li class="header__optionsList__item header__optionsList--mode">
+            @@include('./ui/mode-switcher/mode-switcher.template.html')
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- header navbar -->
+  <nav class="header__navbar">
+    <div class="container header__navbar__container">
+
+      <!-- navbar logo -->
+      <a class="header__logo" href="${{ index.prefix }}$index.html" title="${{ index.header.logo }}$">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 29">
+          <path fill="hsl(var(--main-color-one))" d="M6.09545 21.4873H1.41667V20.3491H6.09545C6.65401 20.3491 7.12296 20.1383 7.50236 19.7168C7.88176 19.2952 8.07146 18.7367 8.07146 18.0411V1H9.20964V18.0411C9.20964 19.0423 8.9093 19.8696 8.30859 20.523C7.70788 21.1659 6.97016 21.4873 6.09545 21.4873ZM6.09545 23.7636H1.41667V22.6254H6.09545C7.27578 22.6254 8.27696 22.1776 9.09897 21.2818C9.93154 20.386 10.3478 19.3058 10.3478 18.0411V1H11.486V18.0411C11.486 19.6219 10.9591 20.9709 9.9052 22.088C8.86187 23.2051 7.59194 23.7636 6.09545 23.7636ZM6.09545 26.0401H1.41667V24.9019H6.09545C7.9081 24.9019 9.44676 24.2326 10.7114 22.8942C11.9866 21.5558 12.6242 19.9381 12.6242 18.0411V1H13.7624V18.0411C13.7624 19.4849 13.4199 20.8234 12.7348 22.0564C12.0604 23.2788 11.133 24.2485 9.95262 24.9652C8.77229 25.6818 7.48655 26.0401 6.09545 26.0401ZM6.09545 28.3164H1.41667V27.1782H6.09545C7.29687 27.1782 8.44032 26.9359 9.5258 26.4511C10.6113 25.9664 11.544 25.3182 12.3238 24.5067C13.1142 23.6846 13.7413 22.7098 14.205 21.5821C14.6687 20.4545 14.9006 19.2742 14.9006 18.0411V1H16.0388V18.0411C16.0388 19.4322 15.7753 20.7601 15.2483 22.0248C14.7319 23.2895 14.0258 24.3855 13.1301 25.313C12.2448 26.2297 11.1857 26.9569 9.95262 27.4943C8.73012 28.0423 7.44439 28.3164 6.09545 28.3164Z"/>
+          <path fill="hsl(var(--t-color-one))" d="M37.5768 27.4167L37.5408 14.8527C37.5048 10.6407 34.7328 8.12066 29.8008 8.12066C26.1648 8.12066 24.2208 8.94866 21.5568 10.5327L23.2488 13.4127C25.1568 12.1167 27.0648 11.4687 28.9008 11.4687C31.9248 11.4687 33.4728 12.9087 33.4728 15.3207V15.8967H27.6768C23.0688 15.9327 20.4408 18.1647 20.4408 21.6567C20.4408 25.0407 23.0328 27.5967 27.1728 27.5967C29.9448 27.5967 32.1408 26.7687 33.5088 25.0767V27.4167H37.5768ZM28.0368 24.3207C25.7328 24.3207 24.3288 23.2047 24.3288 21.4767C24.3288 19.6407 25.5888 18.9207 28.2888 18.9207H33.4728V20.6847C33.2568 22.7727 30.9888 24.3207 28.0368 24.3207ZM54.1346 8.12066C51.1466 8.12066 48.8426 9.34466 47.4386 11.5767V0.704663H43.2986V27.4167H47.4386V24.1047C48.8426 26.3367 51.1466 27.5607 54.2066 27.5607C59.6786 27.5607 63.2786 23.6367 63.2786 17.9127C63.2786 12.0807 59.5706 8.12066 54.1346 8.12066ZM53.2706 24.0327C49.8506 24.0327 47.4386 21.4767 47.4386 17.7687C47.4386 14.1687 49.8506 11.5767 53.2706 11.5767C56.6906 11.5767 59.1026 14.2047 59.1026 17.7687C59.1026 21.4407 56.6906 24.0327 53.2706 24.0327ZM75.4713 8.12066C69.7833 8.15666 65.7873 12.0807 65.7873 17.8767C65.7873 23.6367 69.6753 27.5607 75.5793 27.5607C78.8913 27.5607 81.6273 26.3727 83.4993 24.3207L81.3033 21.9807C79.8993 23.4207 77.9913 24.2127 75.9033 24.2127C72.8793 24.2127 70.6113 22.3767 69.9633 19.4247H84.4353C84.9393 12.5127 82.2033 8.12066 75.4713 8.12066ZM69.8913 16.4007C70.3233 13.3407 72.4833 11.4327 75.5073 11.4327C78.6393 11.4327 80.6913 13.3047 80.8353 16.4007H69.8913ZM92.8914 12.0807V8.26466H88.7514V27.4167H92.8914V17.4087C93.2154 14.1327 95.6634 11.8647 99.5154 12.0807V8.12066C96.4914 8.12066 94.1874 9.48866 92.8914 12.0807Z"/>
+        </svg>
+      </a>
+
+      <!-- navigation menu -->
+      @@include('./components/header/nav-menu/nav-menu.template.html')
+
+      <!-- actions icons -->
+      <ul class="header__actions">
+
+        <!-- search icon -->
+        <li :class="['header__actions__item header__actions__item--search', { 'open': isHeaderSearchFormOpen }]"
+          v-click-away="closeHeaderSearchForm">
+          <button class="header__actions__btn btn btn-circle btn-primary"
+            :title="isHeaderSearchFormOpen ? '${{ index.header.actions.search.close }}$' : '${{ index.header.actions.search.search }}$'"
+            @click="toggleHeaderSearchForm">
+            <i class="header__actions__faSearch fa fa-search" aria-hidden="true"></i>
+            <i class="header__actions__faClose fa fa-times" aria-hidden="true"></i>
+          </button>
+
+          <!-- search form -->
+          <form
+            :class="['header__actions__searchForm form-styled', { 'header__actions__searchForm--open': isHeaderSearchFormOpen }]"
+            action="#">
+            <div class="group d-flex">
+              <div class="control">
+                <input ref="headerSearchInput" class="header__actions__searchForm__searchInput" type="search"
+                  name="search" placeholder="${{ index.header.actions.search.search }}$..." required>
+              </div>
+              <button class="header__actions__searchForm__btn btn btn-primary"
+                title="${{ index.header.actions.search.search }}$">
+                <i class="header__actions__searchForm__faSearch fa fa-search" aria-hidden="true"></i>
+              </button>
+            </div>
+          </form>
+        </li>
+
+        <!-- user icon -->
+        <li :class="['header__actions__item header__actions__item--user', { open: isHeaderUserMenuOpen }]"
+          v-click-away="closeHeaderUserMenu">
+          <button class="header__actions__btn btn btn-circle btn-primary"
+            title="${{ index.header.actions.user.title }}$" @click="toggleHeaderUserMenu">
+            <i class="header__actions__fa fa fa-user" aria-hidden="true"></i>
+          </button>
+
+          <!-- navbar dropdown menu -->
+          <div class="dropdown dropdown--start">
+            <ul class="dropdown__menu">
+              <li class="dropdown__item">
+                <a class="dropdown__link" href="${{index.prefix}}$user-dashboard.html">
+                  <i class="dropdown__link__fa fa fa-user-circle" aria-hidden="true"></i> ${{ index.header.actions.user.account }}$
+                </a>
+              </li>
+              <li class="dropdown__item">
+                <a class="dropdown__link" href="${{ index.prefix }}$sign-up.html">
+                  <i class="dropdown__link__fa fa fa-user-plus" aria-hidden="true"></i> ${{ index.header.actions.user.signUp }}$
+                </a>
+              </li>
+              <li class="dropdown__item">
+                <a class="dropdown__link" href="${{ index.prefix }}$sign-in.html">
+                  <i class="dropdown__link__fa fa fa-sign-in" aria-hidden="true"></i> ${{ index.header.actions.user.signIn }}$
+                </a>
+              </li>
+              <li class="dropdown__item">
+                <a class="dropdown__link" href="#">
+                  <i class="dropdown__link__fa fa fa-sign-out" aria-hidden="true"></i> ${{ index.header.actions.user.logout }}$
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- /** for tablet/mobile screen -->
+        <!-- mode switcher button -->
+        <li class="header__actions__item header__actions__item--mode">
+          @@include('./ui/mode-switcher/mode-switcher.template.html')
+        </li>
+
+        <!-- hamburger button -->
+        <li class="header__actions__item header__actions__item--hamburgerBtn">
+          @@include('./components/header/hamburger-btn/hamburger-btn.template.html')
+        </li>
+        <!-- **/ -->
+      </ul>
+    </div>
+  </nav>
+</header>

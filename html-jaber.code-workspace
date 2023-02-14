@@ -1,0 +1,38 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "cSpell.words": [
+      "bottomleft",
+      "circlecursor",
+      "clickeffect",
+      "filterbody",
+      "filterslist",
+      "filtertoggle",
+      "fontawesome",
+      "fullscreen",
+      "glightbox",
+      "iife",
+      "imgs",
+      "Jaber",
+      "jsbeautifier",
+      "Katameya",
+      "linkhover",
+      "markercluster",
+      "orderedlist",
+      "Parens",
+      "splidejs",
+      "sunray",
+      "Tajawal",
+      "textbox",
+      "topbar",
+      "unicons",
+      "webfont",
+      "zayed"
+    ],
+    "git.ignoreLimitWarning": true
+  }
+}

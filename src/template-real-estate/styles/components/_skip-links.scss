@@ -1,0 +1,48 @@
+/* Skip Links Styles */
+/*-------------------*/
+.skipLinks {
+  @include flexbox(flex, "", start, center, "", wrap);
+  position: absolute;
+  z-index: 4030;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: hsl(var(--bg-color-two));
+  color: hsl(var(--t-color-one));
+  padding: 7px 11px 4px;
+  border: 3px solid hsl(var(--dark-color));
+  border-top: none;
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s ease-in-out;
+
+  &:not(:focus-within) {
+    top: -100%;
+  }
+
+  &:focus-within {
+    top: 0%;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      @include appDir() {
+        margin-#{dirs(right, left)}: 8px;
+      }
+
+      .skipLinks__link {
+        &:after {
+          content: ",";
+        }
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 0 4px;
+    margin-bottom: 4px;
+
+    &:focus {
+      @include focusStyle();
+    }
+  }
+}

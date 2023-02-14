@@ -1,0 +1,55 @@
+/* Breadcrumbs */
+/*-------------*/
+.breadcrumbs {
+  @include flexbox(flex, "", center, center, "", "");
+
+  &__item {
+    color: hsl(var(--t-color-two));
+    padding: 3px;
+    display: inline-block;
+    flex-shrink: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.3s ease-in-out;
+
+    &:first-child,
+    &:hover {
+      flex-shrink: 0;
+    }
+
+    &:not(:last-of-type) {
+      position: relative;
+
+      @include appDir() {
+        padding-#{dirs(right, left)}: 25px;
+      }
+
+      &:after {
+        content: "/";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @include appDir() {
+          #{dirs(right, left)}: 10px;
+        }
+      }
+    }
+  }
+
+  &__link {
+    &,
+    &:hover {
+      color: hsl(var(--t-color-one));
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:focus-within {
+      @include focusStyle();
+    }
+  }
+}

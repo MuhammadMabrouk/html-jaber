@@ -1,0 +1,39 @@
+<div class="agentItem">
+
+  <!-- image box -->
+  <div class="agentItem__imgBox">
+    <a class="agentItem__imgBox__link" href="${{ index.prefix }}$agent-details.html">
+      <img class="agentItem__imgBox__img" loading="lazy" src="@@imgUrl" data-placeholder="@@imgPlaceholder" alt="${{ @@title }}$">
+    </a>
+
+    <!-- social icons -->
+    <ul class="agentItem__imgBox__socialList">
+      <li class="agentItem__imgBox__socialList__item">
+        <a class="agentItem__imgBox__socialList__link" title="${{ index.global.social.linkedin }}$" href="#" target="_blank"
+          rel="noopener noreferrer">
+          <i class="agentItem__imgBox__socialList__fa fa fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li class="agentItem__imgBox__socialList__item">
+        <a class="agentItem__imgBox__socialList__link" title="${{ index.global.social.twitter }}$" href="#" target="_blank"
+          rel="noopener noreferrer">
+          <i class="agentItem__imgBox__socialList__fa fa fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li class="agentItem__imgBox__socialList__item">
+        <a class="agentItem__imgBox__socialList__link" title="${{ index.global.social.facebook }}$" href="#" target="_blank"
+          rel="noopener noreferrer">
+          <i class="agentItem__imgBox__socialList__fa fa fa-facebook" aria-hidden="true"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- content box -->
+  <div class="agentItem__contentBox">
+    <h3 class="agentItem__contentBox__title">
+      <a class="agentItem__contentBox__title__link" href="${{ index.prefix }}$agent-details.html">${{ @@title }}$</a>
+    </h3>
+    <span class="agentItem__contentBox__position">${{ @@position }}$</span>
+  </div>
+</div>

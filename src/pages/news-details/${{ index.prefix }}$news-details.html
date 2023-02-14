@@ -1,0 +1,345 @@
+@@include('./schema/page-start.html')
+
+    <!-- start skip links -->
+    @@include('./components/skip-links/skip-links.template.html')
+    <!-- end skip links -->
+
+    <!-- start of header -->
+    @@include('./components/header/header.template.html')
+    <!-- end of header -->
+
+    <!-- start of inner pages header -->
+    @@include('./components/inner-pages-header/inner-pages-header.template.html', { pageTitle: "index.homepage.blog.content.blogList.i5.title" })
+    <!-- end of inner pages header -->
+
+    <!-- start page content -->
+    <section class="section section--newsDetailsPage">
+      <div class="section__content section__content--newsDetailsPage">
+        <div class="container">
+          <div class="newsDetailsSC hasStickySidebar row">
+            <!-- main content -->
+            <div class="mainContent col-lg-8">
+              <div class="newsDetailsSC__postBody">
+                <!-- post preview image -->
+                <div class="newsDetailsSC__preview">
+                  <img loading="lazy" src="assets/images/places/places-9.jpg" data-placeholder="850x500"
+                    class="newsDetailsSC__preview__img"
+                    title="${{ index.homepage.blog.content.blogList.i5.title }}$"
+                    alt="${{ index.homepage.blog.content.blogList.i5.title }}$">
+                </div>
+
+                <!-- post title & meta -->
+                <div>
+                  <h3 class="newsDetailsSC__title">${{ index.homepage.blog.content.blogList.i5.title }}$</h3>
+                  <div class="newsDetailsSC__meta">
+                    <span class="newsDetailsSC__meta__item">
+                      <i class="fa fa-user" aria-hidden="true"></i>
+                      <a href="#" title="${{ index.global.postedBy }}$ ${{ index.global.johnDoe }}$">${{ index.global.johnDoe }}$</a>
+                    </span>
+                    <span class="newsDetailsSC__meta__item">
+                      <i class="fa fa-clock-o" aria-hidden="true"></i>
+                      ${{ index.numbers.2 }}$ ${{ index.global.monthsAgoTime }}$
+                    </span>
+                    <span class="newsDetailsSC__meta__item">
+                      <i class="fa fa-folder" aria-hidden="true"></i>
+                      <a href="#">${{ index.homepage.blog.content.blogList.i5.cats.c1 }}$</a>
+                    </span>
+                    <span class="newsDetailsSC__meta__item">
+                      <i class="fa fa-comments" aria-hidden="true"></i>
+                      <a href="#comments-area">${{ index.numbers.4 }}$ ${{ index.global.comments }}$</a>
+                    </span>
+                    <span class="newsDetailsSC__meta__item">
+                      <i class="fa fa-eye" aria-hidden="true"></i>
+                      ${{ index.numbers.7 }}$${{ index.numbers.4 }}$ ${{ index.global.views }}$
+                    </span>
+                  </div>
+                </div>
+
+                <!-- post text -->
+                <div class="newsDetailsSC__text">
+                  <p>${{ index.newsDetailsPage.postText.p1 }}$</p>
+                  <p><span class="dropcaps">${{ index.newsDetailsPage.postText.dropcaps }}$</span>${{ index.newsDetailsPage.postText.p2 }}$</p>
+                  <p>${{ index.newsDetailsPage.postText.p3 }}$</p>
+                  <p><span class="dropcaps square">${{ index.newsDetailsPage.postText.dropcaps }}$</span>${{ index.newsDetailsPage.postText.p2 }}$</p>
+                  <p>${{ index.newsDetailsPage.postText.p4 }}$</p>
+                  <p><img loading="lazy" src="assets/images/places/places-1.jpg" data-placeholder="816x376" alt=""></p>
+                  <p>${{ index.newsDetailsPage.postText.p1 }}$</p>
+                  <p>${{ index.newsDetailsPage.postText.p7 }}$</p>
+                  <p><img class="alignleft" loading="lazy" src="assets/images/steps/steps-1.jpg" data-placeholder="410x410" alt="">${{ index.newsDetailsPage.postText.p5 }}$</p>
+                  <p>${{ index.newsDetailsPage.postText.p2 }}$</p>
+                  <p><span class="dropcaps circle">${{ index.newsDetailsPage.postText.dropcaps }}$</span>${{ index.newsDetailsPage.postText.p6 }}$</p>
+                  <p><img class="alignright" loading="lazy" src="assets/images/steps/steps-3.jpg" data-placeholder="410x410" alt="">${{ index.newsDetailsPage.postText.p7 }}$</p>
+                  <p>${{ index.newsDetailsPage.postText.p1 }}$</p>
+                  <ul class="list-styled ticks">
+                    <li>${{ index.newsDetailsPage.postText.list.i1 }}$</li>
+                    <li>${{ index.newsDetailsPage.postText.list.i2 }}$</li>
+                    <li>${{ index.newsDetailsPage.postText.list.i3 }}$</li>
+                    <li>${{ index.newsDetailsPage.postText.list.i4 }}$</li>
+                  </ul>
+                  <p>${{ index.newsDetailsPage.postText.p1 }}$</p>
+                  <ol class="list-styled">
+                    <li>${{ index.newsDetailsPage.postText.list.i1 }}$</li>
+                    <li>${{ index.newsDetailsPage.postText.list.i2 }}$</li>
+                    <li>${{ index.newsDetailsPage.postText.list.i3 }}$</li>
+                    <li>${{ index.newsDetailsPage.postText.list.i4 }}$</li>
+                  </ol>
+                  <p>${{ index.newsDetailsPage.postText.p8 }}$ <a href="#">${{ index.newsDetailsPage.postText.link }}$</a> ${{ index.newsDetailsPage.postText.p9 }}$</p>
+                  <ul class="list-styled">
+                    <li>${{ index.newsDetailsPage.postText.list.i1 }}$</li>
+                    <li>${{ index.newsDetailsPage.postText.list.i2 }}$</li>
+                    <li>${{ index.newsDetailsPage.postText.list.i3 }}$</li>
+                    <li>${{ index.newsDetailsPage.postText.list.i4 }}$</li>
+                  </ul>
+                  <p>${{ index.newsDetailsPage.postText.p4 }}$</p>
+                  <blockquote>
+                    <p>${{ index.newsDetailsPage.postText.quote }}$</p>
+                  </blockquote>
+                  <p>${{ index.newsDetailsPage.postText.p10 }}$</p>
+                </div>
+              </div>
+
+              <!-- tags & shares -->
+              <div class="newsDetailsSC__TagsShares">
+                <div class="newsDetailsSC__TagsShares__content">
+                  <div class="newsDetailsSC__TagsShares__tags">
+                    <i class="fa fa-tags" aria-hidden="true"></i>
+                    <h5 class="newsDetailsSC__TagsShares__title">${{ index.global.tags }}$</h5>
+                    <ul>
+                      <li><a href="#">${{ index.newsDetailsPage.postText.tags.i1 }}$</a></li>
+                      <li><a href="#">${{ index.newsDetailsPage.postText.tags.i2 }}$</a></li>
+                      <li><a href="#">${{ index.newsDetailsPage.postText.tags.i3 }}$</a></li>
+                    </ul>
+                  </div>
+                  <div class="newsDetailsSC__TagsShares__shares">
+                    <i class="fa fa-share-alt" aria-hidden="true"></i>
+                    <h5 class="newsDetailsSC__TagsShares__title">${{ index.global.share }}$</h5>
+                    <ul>
+                      <li>
+                        <a href="#" title="${{ index.global.social.facebook }}$" style="background-color: #5472bb;">
+                          <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" title="${{ index.global.social.twitter }}$" style="background-color: #61d3f8;">
+                          <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" title="${{ index.global.social.linkedin }}$" style="background-color: #047aaa;">
+                          <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" title="${{ index.global.social.pinterest }}$" style="background-color: #f74c54;">
+                          <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- comments area -->
+              <div id="comments-area" class="newsDetailsSC__commentsArea">
+                <h4 class="blockTitle">${{ index.global.comments }}$ (${{ index.numbers.4 }}$)</h4>
+
+                <!-- comments list -->
+                <ul class="newsDetailsSC__commentsArea__list">
+                  <li class="newsDetailsSC__commentsArea__comment">
+
+                    <!-- comment author image -->
+                    <a class="newsDetailsSC__commentsArea__comment__avatar" href="#">
+                      <img class="newsDetailsSC__commentsArea__comment__avatar__img" loading="lazy" src="assets/images/ratings/ratings-1.jpg" data-placeholder="64" alt="comment author">
+                    </a>
+
+                    <!-- comment body -->
+                    <div class="newsDetailsSC__commentsArea__comment__body">
+
+                      <!-- name & date -->
+                      <div class="newsDetailsSC__commentsArea__comment__body__NameDate">
+                        <h5 class="newsDetailsSC__commentsArea__comment__body__name"><a href="#">${{ index.homepage.ratings.content.ratingsList.i1.name }}$</a></h5>
+                        <a class="newsDetailsSC__commentsArea__comment__body__date" href="#">${{ index.numbers.1 }}$ ${{ index.global.monthsAgoTime }}$</a>
+                      </div>
+
+                      <!-- comment content -->
+                      <div class="newsDetailsSC__commentsArea__comment__content">
+                        <p class="newsDetailsSC__commentsArea__comment__text">${{ index.newsDetailsPage.postText.comments.i1 }}$</p>
+
+                        <ul class="newsDetailsSC__commentsArea__comment__children">
+                          <li class="newsDetailsSC__commentsArea__comment">
+
+                            <!-- comment author image -->
+                            <a class="newsDetailsSC__commentsArea__comment__avatar" href="#">
+                              <img class="newsDetailsSC__commentsArea__comment__avatar__img" loading="lazy" src="assets/images/ratings/ratings-2.jpg" data-placeholder="64" alt="comment author">
+                            </a>
+        
+                            <!-- comment body -->
+                            <div class="newsDetailsSC__commentsArea__comment__body">
+        
+                              <!-- name & date -->
+                              <div class="newsDetailsSC__commentsArea__comment__body__NameDate">
+                                <h5 class="newsDetailsSC__commentsArea__comment__body__name"><a href="#">${{ index.homepage.ratings.content.ratingsList.i2.name }}$</a></h5>
+                                <a class="newsDetailsSC__commentsArea__comment__body__date" href="#">${{ index.numbers.1 }}$ ${{ index.global.monthsAgoTime }}$</a>
+                              </div>
+        
+                              <!-- comment content -->
+                              <div class="newsDetailsSC__commentsArea__comment__content">
+                                <p class="newsDetailsSC__commentsArea__comment__text">${{ index.newsDetailsPage.postText.comments.i2 }}$</p>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="newsDetailsSC__commentsArea__comment">
+
+                    <!-- comment author image -->
+                    <a class="newsDetailsSC__commentsArea__comment__avatar" href="#">
+                      <img class="newsDetailsSC__commentsArea__comment__avatar__img" loading="lazy" src="assets/images/ratings/ratings-3.jpg" data-placeholder="64" alt="comment author">
+                    </a>
+
+                    <!-- comment body -->
+                    <div class="newsDetailsSC__commentsArea__comment__body">
+
+                      <!-- name & date -->
+                      <div class="newsDetailsSC__commentsArea__comment__body__NameDate">
+                        <h5 class="newsDetailsSC__commentsArea__comment__body__name"><a href="#">${{ index.homepage.ratings.content.ratingsList.i3.name }}$</a></h5>
+                        <a class="newsDetailsSC__commentsArea__comment__body__date" href="#">${{ index.numbers.2 }}$ ${{ index.global.monthsAgoTime }}$</a>
+                      </div>
+
+                      <!-- comment content -->
+                      <div class="newsDetailsSC__commentsArea__comment__content">
+                        <p class="newsDetailsSC__commentsArea__comment__text">${{ index.newsDetailsPage.postText.comments.i3 }}$</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="newsDetailsSC__commentsArea__comment">
+
+                    <!-- comment author image -->
+                    <a class="newsDetailsSC__commentsArea__comment__avatar" href="#">
+                      <img class="newsDetailsSC__commentsArea__comment__avatar__img" loading="lazy" src="assets/images/ratings/ratings-4.jpg" data-placeholder="64" alt="comment author">
+                    </a>
+
+                    <!-- comment body -->
+                    <div class="newsDetailsSC__commentsArea__comment__body">
+
+                      <!-- name & date -->
+                      <div class="newsDetailsSC__commentsArea__comment__body__NameDate">
+                        <h5 class="newsDetailsSC__commentsArea__comment__body__name"><a href="#">${{ index.homepage.ratings.content.ratingsList.i4.name }}$</a></h5>
+                        <a class="newsDetailsSC__commentsArea__comment__body__date" href="#">${{ index.numbers.2 }}$ ${{ index.global.monthsAgoTime }}$</a>
+                      </div>
+
+                      <!-- comment content -->
+                      <div class="newsDetailsSC__commentsArea__comment__content">
+                        <p class="newsDetailsSC__commentsArea__comment__text">${{ index.newsDetailsPage.postText.comments.i4 }}$</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- add new comments form -->
+              <div class="newsDetailsSC__newComments">
+                <h4 class="blockTitle">${{ index.newsDetailsPage.postText.commentsForm.title }}$</h4>
+
+                <!-- action value is only test url, you can remove it -->
+                <form class="newsDetailsSC__newComments__form form-styled"
+                  action="https://reqres.in/api/users"
+                  data-success-msg="${{ index.toastNotifications.successfullyCommentPosted }}$"
+                  data-err-msg="${{ index.toastNotifications.oopsSomethingWrong }}$"
+                  ref="postCommentsForm">
+                  <div class="row">
+                    <div class="group col-lg-6">
+                      <label for="name">${{ index.newsDetailsPage.postText.commentsForm.nameLabel }}$</label>
+                      <div class="control has-prefix-icon">
+                        <input id="name" type="text"
+                          name="name"
+                          placeholder="${{ index.newsDetailsPage.postText.commentsForm.namePlaceholder }}$"
+                          minlength="3"
+                          required>
+                        <i class="fa fa-user-circle prefix-icon" aria-hidden="true"></i>
+
+                        <!-- validation errors messages -->
+                        <div class="errors-msgs">
+                          <input class="required" type="hidden" value="${{ index.newsDetailsPage.postText.commentsForm.nameLabel }}$ ${{ index.toastNotifications.formsValidation.isRequired }}$">
+                          <input class="minLength" type="hidden" value="${{ index.newsDetailsPage.postText.commentsForm.nameLabel }}$ ${{ index.toastNotifications.formsValidation.mustBeAtLeast }}$ ${{ index.numbers.3 }}$ ${{ index.toastNotifications.formsValidation.characters }}$">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group col-lg-6">
+                      <label for="email">${{ index.newsDetailsPage.postText.commentsForm.emailLabel }}$</label>
+                      <div class="control has-prefix-icon">
+                        <input id="email" class="ltr-dir"
+                          type="email"
+                          inputmode="email"
+                          name="email"
+                          placeholder="${{ index.newsDetailsPage.postText.commentsForm.emailPlaceholder }}$"
+                          required>
+                        <i class="fa fa-envelope prefix-icon" aria-hidden="true"></i>
+
+                        <!-- validation errors messages -->
+                        <div class="errors-msgs">
+                          <input class="required" type="hidden" value="${{ index.newsDetailsPage.postText.commentsForm.emailLabel }}$ ${{ index.toastNotifications.formsValidation.isRequired }}$">
+                          <input class="invalid" type="hidden" value="${{ index.toastNotifications.formsValidation.enterValidEmail }}$">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="group comment">
+                    <label for="comment">${{ index.newsDetailsPage.postText.commentsForm.commentLabel }}$</label>
+                    <div class="control has-prefix-icon">
+                      <textarea id="comment"
+                        name="comment"
+                        placeholder="${{ index.newsDetailsPage.postText.commentsForm.commentPlaceholder }}$"
+                        required></textarea>
+                      <i class="fa fa-comments prefix-icon" aria-hidden="true"></i>
+
+                      <!-- validation errors messages -->
+                      <div class="errors-msgs">
+                        <input class="required" type="hidden" value="${{ index.newsDetailsPage.postText.commentsForm.commentLabel }}$ ${{ index.toastNotifications.formsValidation.isRequired }}$">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="group">
+                    <div class="control">
+                      <button class="submit-btn w-btn w-btn--s1 w-btn--primary w-100" type="button" @click="postCommentsFormValidation">${{ index.newsDetailsPage.postText.commentsForm.submitBtn }}$</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <!-- sidebar -->
+            <div class="col-lg-4">
+              @@include('./components/sidebar/blog-sidebar/blog-sidebar.template.html', {
+                "search": true,
+                "favCompSha": false,
+                "agent": false,
+                "contactForm": false,
+                "propertyDocs": false,
+                "featuredProps": true,
+                "categories": true,
+                "tags": true,
+                "social": true
+              })
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- newsletter banner -->
+    @@include('./components/newsletter/newsletter.template.html')
+
+    <!-- start of footer -->
+    @@include('./components/footer/footer.template.html')
+    <!-- end of footer -->
+
+    <!-- back to top button -->
+    <webrouk-back-top-scroll-indicator
+      title="${{ index.scrollToTop }}$"
+      show-at="50">
+    </webrouk-back-top-scroll-indicator>
+
+@@include('./schema/page-end.html')

@@ -1,0 +1,29 @@
+/* User Profile Page Styles */
+/*--------------------------*/
+.userProfileSC {
+  &__mainCont {
+    > * {
+      background-color: hsl(var(--bg-color-two));
+      padding: 20px;
+      filter: var(--drop-shadow);
+    }
+
+    > *:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__settings {
+    &__form {
+      .group {
+        &.phone-number {
+          .prefix-icon {
+            @include appDir() {
+              transform: dirs(null, rotateY(180deg) translateY(-50%));
+            }
+          }
+        }
+      }
+    }
+  }
+}
